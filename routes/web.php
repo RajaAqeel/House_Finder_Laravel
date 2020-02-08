@@ -24,3 +24,5 @@ Route::get('/about', 'PagesController@about');
 Route::get('/testimonials', 'PagesController@testimonials');
 Route::get('/blog', 'PagesController@blog');
 Route::get('/contact', 'PagesController@contact');
+
+Route::resource('/comments','CommentsController');
