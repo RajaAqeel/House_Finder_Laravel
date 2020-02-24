@@ -31,7 +31,6 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-xs-6 col-sm-4">
-										<!-- <time datetime="2011-01-12" class="TopBarTime">Mon - Sat: 08.00 AM - 18.00 PM</time> -->
 									</div>
 									<div class="col-xs-6 col-sm-8 text-right">
 										<!-- topBarPanelList -->
@@ -45,18 +44,7 @@
 													<li><a href="#"><i class="fab fa-google"></i></a></li>
 												</ul>
 											</li>
-											<!-- <li> -->
-												<!-- topBarPanelListDropdown -->
-												<!-- <div class="dropdown topBarPanelListDropdown">
-													<button class="dropdown-toggle buttonReset" type="button" id="dropdownDol" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD ( )<span class="caret"></span></button> -->
-													<!-- dropdownDol -->
-													<!-- <ul class="dropdown-menu" aria-labelledby="dropdownDol">
-														<li><a href="#">USD</a></li>
-														<li><a href="#">EURO</a></li>
-														<li><a href="#">YTL</a></li>
-													</ul>
-												</div>
-											</li> -->
+
 											<li>
 												<!-- topBarPanelListDropdown -->
 												<div class="dropdown topBarPanelListDropdown">
@@ -132,106 +120,17 @@
 										<ul class="nav navbar-nav pageMainNav pageMainNav1">
 											<li>
 												<a href="home.html">Home<span></span></a>
-												<!-- <div class="frame-wrap">
-													<div class="frame">
-														<ul class="dropdown-menu pageMainNavDropdown pageMainNavDropdown1">
-															<li><a href="home.html">Homepage 1</a></li>
-															<li><a href="home2.html">Homepage 2</a></li>
-															<li><a href="home3.html">Homepage 3</a></li>
-															<li><a href="home4.html">Homepage 4</a></li>
-															<li><a href="home5.html">Homepage 5</a></li>
-															<li><a href="home6.html">Homepage 6</a></li>
-														</ul>
-													</div>
-												</div> -->
+
 											</li>
 											<!-- remove dropdownFull class when its just regular dropdown -->
 											<li>
 												<a href="about.html">About <span></span></a>
-												<!-- <div class="frame-wrap">
-													<div class="frame">
-														<ul class="dropdown-menu pageMainNavDropdown pageMainNavDropdown1 pageMainNavDropdownFull pageMainNavDropdownFull1">
-															<li>
-																<div class="dropdownColumnsHolder">
-																	<div class="dropdownCol">
-																		<strong class="fontNeuron elemenBlock dropdownTitle text-uppercase hidden-xs">Properties</strong>
-																		<ul class="list-unstyled dropdownColList">
-																			<li><a href="properties-grid.html">Properties Grid</a></li>
-																			<li><a href="properties-list.html">Properties List</a></li>
-																			<li><a href="properties-map-grid.html">Properties Map Grid</a></li>
-																			<li><a href="properties-map-list.html">Properties Map List</a></li>
-																			<li><a href="properties-grid-left-search.html">Properties Grid Left</a></li>
-																			<li><a href="properties-half-map-grid.html">Properties Half Map Grid</a></li>
-																			<li><a href="properties-half-map-list.html">Properties Half Map List</a></li>
-																			<li><a href="properties-full-width-list.html">Properties Full Width List</a></li>
-																			<li><a href="properties-full-width-grid.html">Properties Full Width Grid</a></li>
-																		</ul>
-																	</div>
-																	<div class="dropdownCol">
-																		<strong class="fontNeuron elemenBlock dropdownTitle text-uppercase hidden-xs">Properties Single</strong>
-																		<ul class="list-unstyled dropdownColList">
-																			<li><a href="properties-single1.html">Properties Single 1</a></li>
-																			<li><a href="properties-single2.html">Properties Single 2</a></li>
-																			<li><a href="properties-single3.html">Properties Single 3</a></li>
-																			<li><a href="properties-single4.html">Properties Single 4</a></li>
-																			<li><a href="properties-single5.html">Properties Single 5</a></li>
-																		</ul>
-																	</div>
-																	<div class="dropdownCol">
-																		<strong class="fontNeuron elemenBlock dropdownTitle text-uppercase hidden-xs">New Properties</strong>
-																		<ul class="list-unstyled dropdownColList">
-																			<li><a href="add-step-01.html">Add step 01</a></li>
-																			<li><a href="add-step-02.html">Add step 02</a></li>
-																			<li><a href="add-step-03.html">Add step 03</a></li>
-																			<li><a href="add-step-04.html">Add step 04</a></li>
-																			<li><a href="add-step-05.html">Add step 05</a></li>
-																		</ul>
-																	</div>
-																	<div class="dropdownCol">
-																		<strong class="fontNeuron elemenBlock dropdownTitle text-uppercase hidden-xs">Other Pages</strong>
-																		<ul class="list-unstyled dropdownColList">
-																			<li><a href="user-profile.html">User Profile</a></li>
-																			<li><a href="my-properties.html">My Properties</a></li>
-																			<li><a href="favourite-properties.html">Favourite Properties</a></li>
-																			<li><a href="membership.html">Membership</a></li>
-																			<li><a href="properties-faqs.html">Properties Faqs</a></li>
-																		</ul>
-																	</div>
-																</div>
-															</li>
-														</ul>
-													</div>
-												</div> -->
 											</li>
 											<li>
 												<a href="testimonials.html">Testimonials<span></span></a>
-												<!-- <div class="frame-wrap">
-													<div class="frame">
-														<ul class="dropdown-menu pageMainNavDropdown pageMainNavDropdown1">
-															<li><a href="404.html">404</a></li>
-															<li><a href="about.html">About</a></li>
-															<li><a href="agencies.html">Agencies</a></li>
-															<li><a href="agencies-detail.html">Agencies detail</a></li>
-															<li><a href="agent.html">Agent</a></li>
-															<li><a href="agent-detail.html">Agent detail</a></li>
-														</ul>
-													</div>
-												</div> -->
 											</li>
 											<li>
 												<a href="blog-full-width.html">Blog<span></span></a>
-												<!-- <div class="frame-wrap">
-													<div class="frame">
-														<ul class="dropdown-menu pageMainNavDropdown pageMainNavDropdown1">
-															<li><a href="blog.html">Blog</a></li>
-															<li><a href="blog2.html">Blog 2</a></li>
-															<li><a href="blog-detail.html">Blog detail</a></li>
-															<li><a href="blog-list.html">Blog list</a></li>
-															<li><a href="blog-full-width.html">Blog full width</a></li>
-															<li><a href="blog-list-full-width.html">Blog list full width</a></li>
-														</ul>
-													</div>
-												</div> -->
 											</li>
 											<li>
 												<a href="contact.html">Contact</a>
@@ -477,14 +376,12 @@
 					<!-- signupFormAside -->
 					<form action="#" class="bgWhite signupFormAside">
 						<div class="container signupFormAsideHolder">
-							<span class="icnAbsolute elemenBlock fi flaticon-message"></span>
 							<div class="col-xs-12 col-md-offset-2 col-md-6">
 								<h3 class="fontNeuron textSecondary">Download our app</h3>
 								<p>Download our app from google play store</p>
 							</div>
 							<div class="col-xs-12 col-md-4">
 								<div class="form-group">
-									<input type="email" id="email" class="form-control elemenBlock" placeholder="Your email">
 									<button type="button" class="buttonReset fi flaticon-navigation"></button>
 								</div>
 							</div>

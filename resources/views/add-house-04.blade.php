@@ -61,20 +61,11 @@
                             <span class="text">Amenities and Services</span>
                           </a>
                         </li>
-                        <!-- <li>
-                          <a href="add-house-05.html">
-                            <span class="text">Private Notes</span>
-                          </a>
-                        </li> -->
                       </ol>
                       <div class="formContent">
                         <form>
                           <header class="contentHead">
                             <h2 class="fontNeuron">Amenities</h2>
-                            <!-- <div class="btnArea">
-                              <a href="add-step-03.html" class="btn btn-lighter"><i class="fi flaticon-arrows-1"></i> Back</a>
-                              <a href="add-step-05.html" class="btn btn-info">Next <i class="fi flaticon-arrows"></i></a>
-                            </div> -->
                           </header>
                           <ul class="list-unstyled checkList text-primary">
                             <li>
@@ -140,117 +131,13 @@
                                 <span class="fakeLabel">Roof</span>
                               </label>
                             </li>
-                            <!-- <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Bedding</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Microwave</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Cable TV</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Oven</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Cable TV</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck"> 
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Oven</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Coffee Pot</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck"> 
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Toaster</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Coffee Pot</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck"> 
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Toaster</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Dishwasher</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck"> 
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Parking</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Dishwasher</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck"> 
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Parking</span>
-                              </label>
-                            </li> -->
                           </ul>
-                          <!-- <div class="btnArea">
-                            <a href="add-step-03.html" class="btn btn-lighter"><i class="fi flaticon-arrows-1"></i> Back</a>
-                            <a href="add-step-05.html" class="btn btnDark">Next <i class="fi flaticon-arrows"></i></a>
-                          </div> -->
+
                         </form>
                         <form>
                           <header class="contentHead">
                             <h2 class="fontNeuron">Surrounding Services</h2>
-                            <!-- <div class="btnArea">
-                              <a href="add-step-03.html" class="btn btn-lighter"><i class="fi flaticon-arrows-1"></i> Back</a>
-                              <a href="add-step-05.html" class="btn btn-info">Next <i class="fi flaticon-arrows"></i></a>
-                            </div> -->
+
                           </header>
                           <ul class="list-unstyled checkList text-primary">
                             <li>
@@ -302,125 +189,6 @@
                                 <span class="fakeLabel">School van</span>
                               </label>
                             </li>
-                            <!-- <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset" >
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Internet</span>
-                              </label>
-                            </li> -->
-                            <!-- <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Bedding</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Microwave</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Bedding</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Microwave</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Cable TV</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Oven</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Cable TV</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck"> 
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Oven</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Coffee Pot</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck"> 
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Toaster</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Coffee Pot</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck"> 
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Toaster</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Dishwasher</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck"> 
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Parking</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck">
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Dishwasher</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="fwNormal customLabelCheck"> 
-                                <input type="checkbox" class="customFormInputReset">
-                                <span class="fakeCheckbox"></span>
-                                <span class="fakeLabel">Parking</span>
-                              </label>
-                            </li> -->
                           </ul>
                           <div class="btnArea">
                             <a href="add-house-03.html" class="btn btn-lighter"><i class="fi flaticon-arrows-1"></i> Back</a>
@@ -433,14 +201,12 @@
                   <!-- signupFormAside -->
 					<form action="#" class="bgWhite signupFormAside">
 						<div class="container signupFormAsideHolder">
-							<!-- <span class="icnAbsolute elemenBlock fi flaticon-message"></span> -->
 							<div class="col-xs-12 col-md-offset-2 col-md-6">
 								<h3 class="fontNeuron textSecondary">Download our app</h3>
 								<p>Download our app from google play store</p>
 							</div>
 							<div class="col-xs-12 col-md-4">
 								<div class="form-group">
-									<!-- <input type="email" id="email" class="form-control elemenBlock" placeholder="Your email"> -->
 									<button type="button" class="buttonReset fi flaticon-navigation"></button>
 								</div>
 							</div>

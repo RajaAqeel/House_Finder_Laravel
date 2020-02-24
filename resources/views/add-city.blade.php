@@ -42,40 +42,10 @@
                   <section id="content" class="container pEqual">
                     <div class="addProperty">
                       <h1 class="fontNeuron">Add New City</h1>
-                      <!-- <ol class="navSteps">
-                        <li class="current">
-                          <a href="add-house-01.html">
-                            <span class="text">Basic Info</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="add-house-02.html">
-                            <span class="text">Photos &amp; EPC</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="add-house-03.html">
-                            <span class="text">Location</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="add-house-04.html">
-                            <span class="text">Amenities and Services</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="add-house-05.html">
-                            <span class="text">Private Notes</span>
-                          </a>
-                        </li>
-                      </ol> -->
                       <div class="formContent">
                         <form>
                           <header class="contentHead">
                             <h2 class="fontNeuron">Add City</h2>
-                            <!-- <div class="btnArea">
-                              <a href="add-step-02.html" class="btn btn-info">Next <i class="fi flaticon-arrows"></i></a>
-                            </div> -->
                           </header>
                           <div class="row">
                             <div class="col-xs-12">
@@ -90,72 +60,6 @@
                                   <input type="text" class="form-control" placeholder="46000" id="itemN-16">
                                 </div>
                               </div>
-                            <!-- <div class="col-xs-12 col-sm-6">
-                              <div class="form-group">
-                                <label for="itemN-17">Price</label>
-                                <select data-placeholder="Select Option" class="chosen-select" id="itemN-17">
-									<option value="1">Negotiable</option>
-									<option value="2">Not Negotiable</option>
-								  </select>
-                              </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-4">
-                              <div class="form-group">
-                                <label for="itemN-18">Bedrooms</label>
-                                <input type="number" class="form-control" placeholder="5" min="0" max="9999" id="itemN-18">
-                              </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-4">
-                              <div class="form-group">
-                                <label for="itemN-19">Bathrooms</label>
-                                <input type="number" class="form-control" placeholder="3" min="0" max="9999" id="itemN-19">
-                              </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-4">
-                              <div class="form-group">
-                                <label for="itemN-20">Garages</label>
-                                <input type="number" class="form-control" placeholder="8" min="0" max="9999" id="itemN-20">
-                              </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="form-group">
-                                <label for="itemN-21">Area in length</label>
-                                <input type="number" class="form-control" placeholder="1500" id="itemN-21">
-                              </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="form-group">
-                                <label for="itemN-22">Area in width</label>
-                                <input type="number" class="form-control" placeholder="1500" id="itemN-22">
-                              </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="form-group">
-                                <label for="itemN-23">Property Type</label>
-                                <select data-placeholder="Select Option" class="chosen-select" id="itemN-23">
-                                  <option value="1">Flat</option>
-                                  <option value="2">Home</option>
-                                  <option value="2">Room</option>
-                                </select>
-                              </div>
-                            </div> -->
-                            <!-- <div class="col-xs-12 col-sm-6">
-                              <div class="form-group">
-                                <label for="itemN-24">Property Status</label>
-                                <select data-placeholder="Select Option" class="chosen-select" id="itemN-24">
-                                  <option value="1">All Areas</option>
-                                  <option value="2">All Areas</option>
-                                  <option value="2">All Areas</option>
-                                  <option value="2">All Areas</option>
-                                </select>
-                              </div>
-                            </div> -->
-                            <!-- <div class="col-xs-12">
-                              <div class="form-group">
-                              <label for="itemN-25">Description</label>
-                                <textarea class="form-control" id="itemN-25" placeholder=""></textarea>
-                              </div>
-                            </div> -->
                           </div>
                           <div class="btnArea">
                             <button type="submit" class="btn btnDark"><a href="admin-profile.html">Save</a></button>
@@ -167,14 +71,12 @@
                   <!-- signupFormAside -->
 					<form action="#" class="bgWhite signupFormAside">
 						<div class="container signupFormAsideHolder">
-							<!-- <span class="icnAbsolute elemenBlock fi flaticon-message"></span> -->
 							<div class="col-xs-12 col-md-offset-2 col-md-6">
 								<h3 class="fontNeuron textSecondary">Download our app</h3>
 								<p>Download our app from google play store</p>
 							</div>
 							<div class="col-xs-12 col-md-4">
 								<div class="form-group">
-									<!-- <input type="email" id="email" class="form-control elemenBlock" placeholder="Your email"> -->
 									<button type="button" class="buttonReset fi flaticon-navigation"></button>
 								</div>
 							</div>

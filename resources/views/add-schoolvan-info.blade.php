@@ -160,14 +160,12 @@
                   <!-- signupFormAside -->
 					<form action="#" class="bgWhite signupFormAside">
 						<div class="container signupFormAsideHolder">
-							<!-- <span class="icnAbsolute elemenBlock fi flaticon-message"></span> -->
 							<div class="col-xs-12 col-md-offset-2 col-md-6">
 								<h3 class="fontNeuron textSecondary">Download our app</h3>
 								<p>Download our app from google play store</p>
 							</div>
 							<div class="col-xs-12 col-md-4">
 								<div class="form-group">
-									<!-- <input type="email" id="email" class="form-control elemenBlock" placeholder="Your email"> -->
 									<button type="button" class="buttonReset fi flaticon-navigation"></button>
 								</div>
 							</div>

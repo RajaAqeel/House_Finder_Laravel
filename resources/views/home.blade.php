@@ -31,7 +31,6 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-xs-6 col-sm-4">
-										<!-- <time datetime="2011-01-12" class="TopBarTime">Mon - Sat: 08.00 AM - 18.00 PM</time> -->
 									</div>
 									<div class="col-xs-6 col-sm-8 text-right">
 										<!-- topBarPanelList -->
@@ -152,7 +151,7 @@
 											</a>
 										</li>
 										<li>
-											<a href="#popup1" class="lightbox">
+											<a href="#popup2" class="lightbox">
 												<i class="fi flaticon-edit icn"></i>
 												<strong class="text fwNormal hidden-xs hidden-sm">Register</strong>
 											</a>
@@ -248,16 +247,6 @@
 							<h2 class="fontNeuron">FIND YOUR <span class="text-info">HOME</span></h2>
 							<hr class="sep elemenBlock">
 							<div class="row">
-								<!-- <div class="col-xs-12 col-sm-6 col-md-3">
-									<div class="form-group">
-										<input type="text" class="form-control elemenBlock" placeholder="Enter Your Keyword&hellip;">
-									</div>
-								</div> -->
-								<!-- <div class="col-xs-12 col-sm-6 col-md-3">
-									<div class="form-group">
-										<input type="text" class="form-control elemenBlock" placeholder="Location">
-									</div>
-								</div> -->
 								<div class="col-xs-12 col-sm-4">
 									<div class="form-group">
 										<select data-placeholder="All Property Types" class="chosen-select">
@@ -296,17 +285,6 @@
 												</select>
 											</div>
 										</div>
-										<!-- <div class="col-xs-6">
-											<div class="form-group">
-												<select data-placeholder="Baths" class="chosen-select">
-													<option value="1">Baths</option>
-													<option value="1">Baths</option>
-													<option value="1">Baths</option>
-													<option value="1">Baths</option>
-													<option value="1">Baths</option>
-												</select>
-											</div>
-										</div> -->
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-4">
@@ -389,97 +367,6 @@
 													<span class="fakeLabel">Housemaid</span>
 												</label>
 											</li>
-											<!-- <li>
-												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Internet</span>
-												</label>
-											</li>
-											<li>
-												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Bedding</span>
-												</label>
-											</li>
-											<li>
-												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Cot</span>
-												</label>
-											</li>
-											<li>
-												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Grill</span>
-												</label>
-											</li>
-											<li>
-												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Iron</span>
-												</label>
-											</li>
-											<li>
-												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Cable TV</span>
-												</label>
-											</li>
-											<li>
-												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Dishwasher</span>
-												</label>
-											</li>
-											<li>
-												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Hairdryer</span>
-												</label>
-											</li>
-											<li>
-												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Juicer</span>
-												</label>
-											</li>
-											<li>
-												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Cleaning after exit</span>
-												</label>
-											</li>
-											<li>
-												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">DVD</span>
-												</label>
-											</li>
-											<li>
-												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Heating</span>
-												</label>
-											</li>
-											<li>
-												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Lift</span>
-												</label>
-											</li> -->
 										</ul>
 									</div>
 								</div>
@@ -1017,12 +904,6 @@
 						<h1 class="fontNeuron blockH text-uppercase"><span class="bdrBottom">OUR</span> <span class="textSecondary">SERVICE</span></h1>
 						<!-- servicesFetauresList -->
 						<ul class="servicesFetauresList list-unstyled text-center">
-							<!-- <li>
-								<a href="#">
-									<span class="icnHolder roundedCircle"><i class="fi flaticon-house"></i></span>
-									<h2 class="fontNeuron text-capitalize">Saling Service</h2>
-								</a>
-							</li> -->
 							<li>
 								<a href="#">
 									<span class="icnHolder roundedCircle"><i class="fi flaticon-rent"></i></span>
@@ -1043,217 +924,6 @@
 							</li>
 						</ul>
 					</section>
-					<!-- ourAgentBlock -->
-					<!-- <section class="bgWhite ourAgentBlock">
-						<div class="container">
-							<h1 class="fontNeuron blockH text-uppercase"><span class="bdrBottom">OUR</span> <span class="textSecondary">AGENT</span></h1>
-							<div class="row"> -->
-								<!-- profilesSlider -->
-								<!-- <div class="four-slider slickSlider profilesSlider">
-									<div>
-										<div class="col-xs-12"> -->
-											<!-- profileColumn -->
-											<!-- <article class="profileColumn hasOver">
-												<div class="aligncenter">
-													<a href="agent-detail.html">
-														<img src="https://via.placeholder.com/260x260" alt="Veronica Green Sales Executive">
-													</a>
-												</div>
-												<div class="textWrap">
-													<h2 class="fontNeuron text-capitalize"><a href="agent-detail.html">Veronica Green</a></h2>
-													<h3 class="fwNormal text-capitalize">Sales Executive</h3>
-													<div class="collapseWrap"> -->
-														<!-- profileColumnSocial -->
-														<!-- <ul class="list-unstyled socialNetworks profileColumnSocial">
-															<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-															<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-															<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-															<li><a href="#"><i class="fab fa-google"></i></a></li>
-														</ul>
-													</div>
-												</div>
-											</article>
-										</div>
-									</div>
-									<div>
-										<div class="col-xs-12"> -->
-											<!-- profileColumn -->
-											<!-- <article class="profileColumn hasOver">
-												<div class="aligncenter">
-													<a href="agent-detail.html">
-														<img src="https://via.placeholder.com/260x260" alt="Guti Salvio Real Estate Broker">
-													</a>
-												</div>
-												<div class="textWrap">
-													<h2 class="fontNeuron text-capitalize"><a href="agent-detail.html">Guti Salvio</a></h2>
-													<h3 class="fwNormal text-capitalize">Real Estate Broker</h3>
-													<div class="collapseWrap"> -->
-														<!-- profileColumnSocial -->
-														<!-- <ul class="list-unstyled socialNetworks profileColumnSocial">
-															<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-															<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-															<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-															<li><a href="#"><i class="fab fa-google"></i></a></li>
-														</ul>
-													</div>
-												</div>
-											</article>
-										</div>
-									</div>
-									<div>
-										<div class="col-xs-12"> -->
-											<!-- profileColumn -->
-											<!-- <article class="profileColumn hasOver">
-												<div class="aligncenter">
-													<a href="agent-detail.html">
-														<img src="https://via.placeholder.com/260x260" alt="Elenia Jesse Selling Agent">
-													</a>
-												</div>
-												<div class="textWrap">
-													<h2 class="fontNeuron text-capitalize"><a href="agent-detail.html">Elenia Jesse</a></h2>
-													<h3 class="fwNormal text-capitalize">Selling Agent</h3>
-													<div class="collapseWrap"> -->
-														<!-- profileColumnSocial -->
-														<!-- <ul class="list-unstyled socialNetworks profileColumnSocial">
-															<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-															<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-															<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-															<li><a href="#"><i class="fab fa-google"></i></a></li>
-														</ul>
-													</div>
-												</div>
-											</article>
-										</div>
-									</div>
-									<div>
-										<div class="col-xs-12"> -->
-											<!-- profileColumn -->
-											<!-- <article class="profileColumn hasOver">
-												<div class="aligncenter">
-													<a href="agent-detail.html">
-														<img src="https://via.placeholder.com/260x260" alt="Emmy Ramos Buying Agent">
-													</a>
-												</div>
-												<div class="textWrap">
-													<h2 class="fontNeuron text-capitalize"><a href="agent-detail.html">Emmy Ramos</a></h2>
-													<h3 class="fwNormal text-capitalize">Buying Agent</h3>
-													<div class="collapseWrap"> -->
-														<!-- profileColumnSocial -->
-														<!-- <ul class="list-unstyled socialNetworks profileColumnSocial">
-															<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-															<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-															<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-															<li><a href="#"><i class="fab fa-google"></i></a></li>
-														</ul>
-													</div>
-												</div>
-											</article>
-										</div>
-									</div>
-									<div>
-										<div class="col-xs-12"> -->
-											<!-- profileColumn -->
-											<!-- <article class="profileColumn hasOver">
-												<div class="aligncenter">
-													<a href="agent-detail.html">
-														<img src="https://via.placeholder.com/260x260" alt="Veronica Green Sales Executive">
-													</a>
-												</div>
-												<div class="textWrap">
-													<h2 class="fontNeuron text-capitalize"><a href="agent-detail.html">Veronica Green</a></h2>
-													<h3 class="fwNormal text-capitalize">Sales Executive</h3>
-													<div class="collapseWrap"> -->
-														<!-- profileColumnSocial -->
-														<!-- <ul class="list-unstyled socialNetworks profileColumnSocial">
-															<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-															<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-															<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-															<li><a href="#"><i class="fab fa-google"></i></a></li>
-														</ul>
-													</div>
-												</div>
-											</article>
-										</div>
-									</div>
-									<div>
-										<div class="col-xs-12"> -->
-											<!-- profileColumn -->
-											<!-- <article class="profileColumn hasOver">
-												<div class="aligncenter">
-													<a href="#">
-														<img src="https://via.placeholder.com/260x260" alt="Guti Salvio Real Estate Broker">
-													</a>
-												</div>
-												<div class="textWrap">
-													<h2 class="fontNeuron text-capitalize"><a href="agent.html">Guti Salvio</a></h2>
-													<h3 class="fwNormal text-capitalize">Real Estate Broker</h3>
-													<div class="collapseWrap"> -->
-														<!-- profileColumnSocial -->
-														<!-- <ul class="list-unstyled socialNetworks profileColumnSocial">
-															<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-															<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-															<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-															<li><a href="#"><i class="fab fa-google"></i></a></li>
-														</ul>
-													</div>
-												</div>
-											</article>
-										</div>
-									</div>
-									<div>
-										<div class="col-xs-12"> -->
-											<!-- profileColumn -->
-											<!-- <article class="profileColumn hasOver">
-												<div class="aligncenter">
-													<a href="#">
-														<img src="https://via.placeholder.com/260x260" alt="Elenia Jesse Selling Agent">
-													</a>
-												</div>
-												<div class="textWrap">
-													<h2 class="fontNeuron text-capitalize"><a href="agent.html">Elenia Jesse</a></h2>
-													<h3 class="fwNormal text-capitalize">Selling Agent</h3>
-													<div class="collapseWrap"> -->
-														<!-- profileColumnSocial -->
-														<!-- <ul class="list-unstyled socialNetworks profileColumnSocial">
-															<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-															<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-															<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-															<li><a href="#"><i class="fab fa-google"></i></a></li>
-														</ul>
-													</div>
-												</div>
-											</article>
-										</div>
-									</div>
-									<div>
-										<div class="col-xs-12"> -->
-											<!-- profileColumn -->
-											<!-- <article class="profileColumn hasOver">
-												<div class="aligncenter">
-													<a href="#">
-														<img src="https://via.placeholder.com/260x260" alt="Emmy Ramos Buying Agent">
-													</a>
-												</div>
-												<div class="textWrap">
-													<h2 class="fontNeuron text-capitalize"><a href="agent.html">Emmy Ramos</a></h2>
-													<h3 class="fwNormal text-capitalize">Buying Agent</h3>
-													<div class="collapseWrap"> -->
-														<!-- profileColumnSocial -->
-														<!-- <ul class="list-unstyled socialNetworks profileColumnSocial">
-															<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-															<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-															<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-															<li><a href="#"><i class="fab fa-google"></i></a></li>
-														</ul>
-													</div>
-												</div>
-											</article>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section> -->
 					<!-- testimonilasBlock -->
 					<section class="testimonilasBlock">
 						<div class="container">
@@ -1430,77 +1100,6 @@
 							</div>
 						</div>
 					</section>
-					<!-- sponsorsBlock -->
-					<!-- <section class="container sponsorsBlock">
-						<h1 class="fontNeuron blockH text-uppercase"><span class="bdrBottom">OUR</span> <span class="textSecondary">PARTNERS</span></h1> -->
-						<!-- LogosCarousel -->
-						<!-- <div class="logos-slider slickSlider LogosCarousel">
-							<div> -->
-								<!-- logoColumn -->
-								<!-- <div class="logoColumn">
-									<a href="#">
-										<img src="images/sponsor01.png" alt="helsinki">
-									</a>
-								</div>
-							</div>
-							<div> -->
-								<!-- logoColumn -->
-								<!-- <div class="logoColumn">
-									<a href="#">
-										<img src="images/sponsor02.png" alt="norway">
-									</a>
-								</div>
-							</div>
-							<div> -->
-								<!-- logoColumn -->
-								<!-- <div class="logoColumn">
-									<a href="#">
-										<img src="images/sponsor03.png" alt="lars grondahl">
-									</a>
-								</div>
-							</div>
-							<div> -->
-								<!-- logoColumn -->
-								<!-- <div class="logoColumn">
-									<a href="#">
-										<img src="images/sponsor04.png" alt="kirsten">
-									</a>
-								</div>
-							</div>
-							<div> -->
-								<!-- logoColumn -->
-								<!-- <div class="logoColumn">
-									<a href="#">
-										<img src="images/sponsor05.png" alt="only oslo">
-									</a>
-								</div>
-							</div>
-							<div> -->
-								<!-- logoColumn -->
-								<!-- <div class="logoColumn">
-									<a href="#">
-										<img src="images/sponsor02.png" alt="norway">
-									</a>
-								</div>
-							</div>
-							<div> -->
-								<!-- logoColumn -->
-								<!-- <div class="logoColumn">
-									<a href="#">
-										<img src="images/sponsor03.png" alt="lars grondahl">
-									</a>
-								</div>
-							</div>
-							<div> -->
-								<!-- logoColumn -->
-								<!-- <div class="logoColumn">
-									<a href="#">
-										<img src="images/sponsor04.png" alt="kirsten">
-									</a>
-								</div>
-							</div>
-						</div>
-					</section> -->
 					<!-- signupFormAside -->
 					<form action="#" class="bgWhite signupFormAside">
 						<div class="container signupFormAsideHolder">
@@ -1618,10 +1217,6 @@
 				<!-- popupLoginFrom -->
 				<form method="POST" action="{{ route('login') }}" class="popupHolderWrap bgLightDark center-block popupLarge popupLoginFrom">
 					@csrf
-					<ul class="list-unstyled popupTabsetList text-center fwBold text-uppercase fontNeuron">
-						<li class="active"><a href="#tab01">LOGIN</a></li>
-						<li><a href="#tab02">REGISTER</a></li>
-					</ul>
 					<div class="tab-content">
 						<div id="tab01" class="tab-active">
 							<div class="popupColsHolder">
@@ -1650,6 +1245,18 @@
 								</div>
 							</div>
 						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<div class="popup-holder">
+			<div id="popup2" class="lightbox-demo">
+				<!-- popupLoginFrom -->
+				<form method="POST" action="{{ route('login') }}" class="popupHolderWrap bgLightDark center-block popupLarge popupLoginFrom">
+					@csrf
+					<div class="tab-content">
 						<div id="tab02">
 							<div class="popupColsHolder">
 								<div class="col bgWhite">
@@ -1672,7 +1279,8 @@
 										<select data-placeholder="Type" class="chosen-select">
 											<option value="1">House Owner</option>
 											<option value="2">Service Provider</option>
-											<option value="3">Tenant</option>
+											<option value="3">Data Operator</option>
+											<option value="4">Tenant</option>
 										</select>
 									</div>
 									<div class="form-group">

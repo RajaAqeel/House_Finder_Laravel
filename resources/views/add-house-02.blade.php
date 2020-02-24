@@ -63,20 +63,13 @@
                             <span class="text">Amenities and Services</span>
                           </a>
                         </li>
-                        <!-- <li>
-                          <a href="add-house-05.html">
-                            <span class="text">Private Notes</span>
-                          </a>
-                        </li> -->
+
                       </ol>
                       <div class="formContent">
                         <form>
                           <header class="contentHead">
                             <h2 class="fontNeuron">Photos &amp; EPC</h2>
-                            <!-- <div class="btnArea">
-                              <a href="#" class="btn btn-lighter"><i class="fi flaticon-arrows-1"></i> Back</a>
-                              <a href="#" class="btn btn-info">Next <i class="fi flaticon-arrows"></i></a>
-                            </div>
+
  -->                          </header>
                           <div class="galleryUploads">
                             <div class="titleArea">
@@ -205,53 +198,6 @@
                               </div>
                             </div>
                           </div>
-                          <!-- <div class="galleryUploads">
-                            <div class="titleArea">
-                              <span class="title">Floor Plans</span>
-                            </div>
-                            <div class="imageGallery">
-                              <div class="image imageLoaded">
-                                <img src="https://via.placeholder.com/200x150" alt="" width="200" height="150">
-                                <div class="btnsArea">
-                                  <a href="#" class="link close"><i class="fa fa-window-close"></i></a>
-                                  <a href="#" class="link"><i class="fi flaticon-edit"></i></a>
-                                </div>
-                                <a href="#" class="text">
-                                  <span>
-                                    <i class="fi flaticon-cloud-computing"></i>
-                                    <span>Upload Image</span>
-                                  </span>
-                                </a>
-                              </div>
-                              <div class="image">
-                                <div class="btnsArea">
-                                  <a href="#" class="link close"><i class="fa fa-window-close"></i></a>
-                                  <a href="#" class="link"><i class="fi flaticon-edit"></i></a>
-                                </div>
-                                <a href="#" class="text">
-                                  <span>
-                                    <i class="fi flaticon-cloud-computing"></i>
-                                    <span>Upload Image</span>
-                                  </span>
-                                </a>
-                              </div>
-                            </div>
-                          </div> -->
-                          <!-- <div class="row">
-                            <div class="col-xs-12">
-                              <div class="form-group">
-                                <label for="itemN-26">Property Video</label>
-                                <p>*Put URL from video sites like youtube, vimeo etc</p>
-                                <input type="text" class="form-control" placeholder="Video URL" id="itemN-26">
-                              </div>
-                            </div>
-                            <div class="col-xs-12">
-                              <div class="form-group">
-                                <label for="itemN-27">360° Virtual Tour</label>
-                                <textarea class="form-control" placeholder="Embed Iframe code" id="itemN-27"></textarea>
-                              </div>
-                            </div>
-                          </div> -->
                           <div class="btnArea">
                             <a href="add-house-01.html" class="btn btn-lighter"><i class="fi flaticon-arrows-1"></i> Back</a>
                             <a href="add-house-03.html" class="btn btnDark">Next <i class="fi flaticon-arrows"></i></a>
@@ -263,14 +209,12 @@
                   <!-- signupFormAside -->
 					<form action="#" class="bgWhite signupFormAside">
 						<div class="container signupFormAsideHolder">
-							<!-- <span class="icnAbsolute elemenBlock fi flaticon-message"></span> -->
 							<div class="col-xs-12 col-md-offset-2 col-md-6">
 								<h3 class="fontNeuron textSecondary">Download our app</h3>
 								<p>Download our app from google play store</p>
 							</div>
 							<div class="col-xs-12 col-md-4">
 								<div class="form-group">
-									<!-- <input type="email" id="email" class="form-control elemenBlock" placeholder="Your email"> -->
 									<button type="button" class="buttonReset fi flaticon-navigation"></button>
 								</div>
 							</div>

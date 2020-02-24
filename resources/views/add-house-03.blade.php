@@ -61,33 +61,14 @@
                             <span class="text">Amenities and Services</span>
                           </a>
                         </li>
-                        <!-- <li>
-                          <a href="add-house-05.html">
-                            <span class="text">Private Notes</span>
-                          </a>
-                        </li> -->
                       </ol>
                       <div class="formContent">
                         <form>
                           <header class="contentHead">
                             <h2 class="fontNeuron">Location</h2>
-                            <!-- <div class="btnArea">
-                              <a href="add-step-02.html" class="btn btn-lighter"><i class="fi flaticon-arrows-1"></i> Back</a>
-                              <a href="add-step-04.html" class="btn btn-info">Next <i class="fi flaticon-arrows"></i></a>
-                            </div> -->
                           </header>
                           <div class="row">
                             <div class="col-xs-12">
-                              <!-- <div class="form-group">
-                                <label>Country</label>
-                                <select data-placeholder="Select Option" class="chosen-select">
-                                  <option value="1">Turkey</option>
-                                  <option value="2">All Areas</option>
-                                  <option value="2">All Areas</option>
-                                  <option value="2">All Areas</option>
-                                </select>
-                              </div>
-                            </div> -->
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label>City</label>
@@ -108,17 +89,6 @@
 								  </select>
 								</div>
 							  </div>
-                            <!-- <div class="col-xs-12 col-sm-6">
-                              <div class="form-group">
-                                <label>City</label>
-                                <select data-placeholder="Select City" class="chosen-select">
-                                  <option value="1">City</option>
-                                  <option value="2">All Areas</option>
-                                  <option value="2">All Areas</option>
-                                  <option value="2">All Areas</option>
-                                </select>
-                              </div>
-                            </div> -->
                             <div class="col-xs-12">
                               <div class="form-group">
                                 <label for="item-map">Address / Location</label>
@@ -145,14 +115,12 @@
                   <!-- signupFormAside -->
 					<form action="#" class="bgWhite signupFormAside">
 						<div class="container signupFormAsideHolder">
-							<!-- <span class="icnAbsolute elemenBlock fi flaticon-message"></span> -->
 							<div class="col-xs-12 col-md-offset-2 col-md-6">
 								<h3 class="fontNeuron textSecondary">Download our app</h3>
 								<p>Download our app from google play store</p>
 							</div>
 							<div class="col-xs-12 col-md-4">
 								<div class="form-group">
-									<!-- <input type="email" id="email" class="form-control elemenBlock" placeholder="Your email"> -->
 									<button type="button" class="buttonReset fi flaticon-navigation"></button>
 								</div>
 							</div>

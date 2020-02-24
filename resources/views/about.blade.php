@@ -31,7 +31,6 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-xs-6 col-sm-4">
-										<!-- <time datetime="2011-01-12" class="TopBarTime">Mon - Sat: 08.00 AM - 18.00 PM</time> -->
 									</div>
 									<div class="col-xs-6 col-sm-8 text-right">
 										<!-- topBarPanelList -->
@@ -181,12 +180,7 @@
 							<div class="align">
 								<div class="row alignEnd">
 									<div class="col-xs-12 col col-sm-8">
-										<!-- breadcrumb -->
-										<!-- <ol class="breadcrumb breadcrumb1">
-											<li><a href="#">Home</a></li>
-											<li><a href="#">Pages</a></li>
-											<li class="active">About</li>
-										</ol> -->
+
 										<h1 class="fontNeuron textWhite">About</h1>
 									</div>
 									<div class="col-xs-12 col-sm-4 justify-end">
@@ -268,7 +262,6 @@
 							</div>
 							<div class="col-xs-12 col-md-4">
 								<div class="form-group">
-									<!-- <input type="email" id="email" class="form-control elemenBlock" placeholder="Your email"> -->
 									<button type="button" class="buttonReset fi flaticon-navigation"></button>
 								</div>
 							</div>

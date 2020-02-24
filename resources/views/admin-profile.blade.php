@@ -31,7 +31,6 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-xs-6 col-sm-4">
-<!-- 										<time datetime="2011-01-12" class="TopBarTime">Mon - Sat: 08.00 AM - 18.00 PM</time>
  -->									</div>
 									<div class="col-xs-6 col-sm-8 text-right">
 										<!-- topBarPanelList -->
@@ -288,42 +287,6 @@
                                 </div>
                               </form>
                             </div>
-                            <!-- accountData -->
-                            <!-- <div class="accountData">
-                              <form>
-                                <div class="head">
-                                  <h4 class="fontNeuron">Change Password</h4>
-                                </div>
-                                <div class="accountHolder">
-                                  <div class="accountContent">
-                                    <div class="row">
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-5">Current Password</label>
-                                          <input type="password" class="form-control" placeholder="www.facebook.com/PolygonTheme" id="itemN-5">
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-6">New Password</label>
-                                          <input type="password" class="form-control" placeholder="PolygonTheme" id="itemN-6">
-                                        </div>
-                                      </div>
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-7">Confirm New Password</label>
-                                          <input type="password" class="form-control" placeholder="PolygonTheme" id="itemN-7">
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <button type="submit" class="btn alighRight btnSecondary buttonL fontNeuron">Change Password</button>
-                                  </div>
-                                </div>
-                              </form>
-                            </div> -->
-                            <!-- accountData -->
                             <div class="accountData">
                               <form>
                                 <div class="head">

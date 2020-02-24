@@ -35,6 +35,22 @@ class LoginController extends Controller
         {
             return 'dashboard';
         }
+        else if(Auth::user()->user_type == 'House Owner')
+        {
+            return 'ho_dashboard';
+        }
+        else if(Auth::user()->user_type == 'Service Provider')
+        {
+            return 'sp_dashboard';
+        }
+        else if(Auth::user()->user_type == 'Tenant')
+        {
+            return 't_dashboard';
+        }
+        else if(Auth::user()->user_type == 'Data Operator')
+        {
+            return 'do_dashboard';
+        }
         else
         {
             return 'home';

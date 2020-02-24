@@ -45,18 +45,6 @@
 													<li><a href="#"><i class="fab fa-google"></i></a></li>
 												</ul>
 											</li>
-											<!-- <li> -->
-												<!-- topBarPanelListDropdown -->
-												<!-- <div class="dropdown topBarPanelListDropdown">
-													<button class="dropdown-toggle buttonReset" type="button" id="dropdownDol" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD ( )<span class="caret"></span></button> -->
-													<!-- dropdownDol -->
-													<!-- <ul class="dropdown-menu" aria-labelledby="dropdownDol">
-														<li><a href="#">USD</a></li>
-														<li><a href="#">EURO</a></li>
-														<li><a href="#">YTL</a></li>
-													</ul>
-												</div>
-											</li> -->
 											<li>
 												<!-- topBarPanelListDropdown -->
 												<div class="dropdown topBarPanelListDropdown">
@@ -266,7 +254,6 @@
 							</div>
 							<div class="col-xs-12 col-md-4">
 								<div class="form-group">
-									<!-- <input type="email" id="email" class="form-control elemenBlock" placeholder="Your email"> -->
 									<button type="button" class="buttonReset fi flaticon-navigation"></button>
 								</div>
 							</div>

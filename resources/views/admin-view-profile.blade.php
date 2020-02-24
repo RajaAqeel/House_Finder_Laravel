@@ -30,7 +30,6 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-xs-6 col-sm-4">
-<!-- 										<time datetime="2011-01-12" class="TopBarTime">Mon - Sat: 08.00 AM - 18.00 PM</time>
  -->									</div>
 									<div class="col-xs-6 col-sm-8 text-right">
 										<!-- topBarPanelList -->

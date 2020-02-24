@@ -62,10 +62,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="user-type" class="col-md-4 col-form-label text-md-right">{{ __('user-type') }}</label>
+                            <label for="user_type" class="col-md-4 col-form-label text-md-right">{{ __('user_type') }}</label>
 
                             <div class="col-md-6">
-                                <input id="user-type" type="text" class="form-control" name="user-type">
+                                <input id="user_type" type="text" class="form-control" name="user_type">
                             </div>
                         </div>
 
