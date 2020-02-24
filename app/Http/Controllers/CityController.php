@@ -24,7 +24,7 @@ class CityController extends Controller
      */
     public function create()
     {
-        //
+        return view('add-city');
     }
 
     /**
@@ -36,6 +36,7 @@ class CityController extends Controller
     public function store(Request $request)
     {
         //
+        
     }
 
     /**

@@ -1616,7 +1616,8 @@
 		<div class="popup-holder">
 			<div id="popup1" class="lightbox-demo">
 				<!-- popupLoginFrom -->
-				<form action="#" class="popupHolderWrap bgLightDark center-block popupLarge popupLoginFrom">
+				<form method="POST" action="{{ route('login') }}" class="popupHolderWrap bgLightDark center-block popupLarge popupLoginFrom">
+					@csrf
 					<ul class="list-unstyled popupTabsetList text-center fwBold text-uppercase fontNeuron">
 						<li class="active"><a href="#tab01">LOGIN</a></li>
 						<li><a href="#tab02">REGISTER</a></li>
@@ -1626,10 +1627,10 @@
 							<div class="popupColsHolder">
 								<div class="col bgWhite">
 									<div class="form-group">
-										<input type="text" class="form-control elemenBlock" placeholder="User Namer">
+										<input type="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus class="form-control elemenBlock" placeholder="User Namer">
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control elemenBlock" placeholder="Password">
+										<input type="password" class="form-control elemenBlock" placeholder="Password" name="password" required autocomplete="current-password">
 									</div>
 									<div class="form-group">
 										<label class="fwNormal customLabelCheck">
@@ -1659,7 +1660,7 @@
 										<input type="text" class="form-control elemenBlock" placeholder="User Name">
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control elemenBlock" placeholder="Password">
+								<input type="password" class="form-control elemenBlock" placeholder="Password">
 									</div>
 									<div class="form-group">
 										<input type="password" class="form-control elemenBlock" placeholder="Confirm Password">

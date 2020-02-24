@@ -25,4 +25,8 @@ class PagesController extends Controller
     public function contact(){
         return view('contact');
     }
+     public function addCity()
+     {
+         return view('add-city');
+     }
 }

@@ -24,9 +24,18 @@ Route::get('/about', 'PagesController@about');
 Route::get('/testimonials', 'PagesController@testimonials');
 Route::get('/blog', 'PagesController@blog');
 Route::get('/contact', 'PagesController@contact');
+Route::get('/add-city', 'PagesController@addCity');
 
 Route::resource('/comments','CommentsController');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => ['auth', 'admin']], function()
+{
+    Route::get('/dashboard', function()
+    {
+        return view('admin-view-profile');
+    });
+});
