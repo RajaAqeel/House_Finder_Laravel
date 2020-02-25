@@ -36,6 +36,13 @@ class CityController extends Controller
     public function store(Request $request)
     {
         //
+
+        $city = new City;
+        $city->name = $request->input('name');
+        $sity->postal_code = $request->input('postal_code');
+        
+        $city->save();
+        return view('admin-view-profile');
         
     }
 

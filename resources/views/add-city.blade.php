@@ -51,13 +51,13 @@
                             <div class="col-xs-12">
                               <div class="form-group">
                                 <label for="itemN-15">City Name*</label>
-                                <input type="text" class="form-control" placeholder="Rawalpindi" id="itemN-15">
+                                <input name="name" type="text" class="form-control" placeholder="Rawalpindi" id="itemN-15">
                               </div>
                             </div>
                             <div class="col-xs-12">
                                 <div class="form-group">
                                   <label for="itemN-16">Postal Code</label>
-                                  <input type="text" class="form-control" placeholder="46000" id="itemN-16">
+                                  <input name="postal_code" type="text" class="form-control" placeholder="46000" id="itemN-16">
                                 </div>
                               </div>
                           </div>

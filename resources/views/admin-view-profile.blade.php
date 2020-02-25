@@ -227,17 +227,11 @@
                                   </a>
 								</li>
 								<li>
-									<a href="add-city.html">
+									<a href="add-city">
 									  <i class="fa fa-plus"></i>
 									  <span>Add City</span>
 									</a>
 								  </li>
-                                <li>
-                                  <a href="#">
-                                    <i class="fa fa-plus"></i>
-                                    <span>Add Public Property</span>
-                                  </a>
-                                </li>
                                 <li>
 								
                                   <a href="{{ url('/logout') }}"
@@ -388,14 +382,14 @@
 								<h2 class="fontNeuron fwSemi text-uppercase">Useful Links</h2>
 								<div class="ftNavListsHolder">
 									<ul class="list-unstyled">
-										<li><a href="about.html">About US</a></li>
-										<li><a href="contact.html">Contact Support</a></li>
-										<li><a href="properties-faqs.html">FAQs</a></li>
+										<li><a href="about">About US</a></li>
+										<li><a href="contact">Contact Support</a></li>
+										<li><a href="properties-faqs">FAQs</a></li>
 									</ul>
 									<ul class="list-unstyled">
-										<li><a href="properties-faqs.html">FAQ</a></li>
-										<li><a href="blog-full-width.html">Blog</a></li>
-										<li><a href="contact.html">Contact</a></li>
+										<li><a href="properties-faqs">FAQ</a></li>
+										<li><a href="blog-full-width">Blog</a></li>
+										<li><a href="contact">Contact</a></li>
 									</ul>
 								</div>
 							</nav>

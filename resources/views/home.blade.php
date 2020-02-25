@@ -1254,41 +1254,31 @@
 		<div class="popup-holder">
 			<div id="popup2" class="lightbox-demo">
 				<!-- popupLoginFrom -->
-				<form method="POST" action="{{ route('login') }}" class="popupHolderWrap bgLightDark center-block popupLarge popupLoginFrom">
+				<form method="POST" action="{{ route('register') }}" class="popupHolderWrap bgLightDark center-block popupLarge popupLoginFrom">
 					@csrf
 					<div class="tab-content">
 						<div id="tab02">
 							<div class="popupColsHolder">
 								<div class="col bgWhite">
 									<div class="form-group">
-										<input type="text" class="form-control elemenBlock" placeholder="Full Name">
+										<input type="text" class="form-control elemenBlock" placeholder="Full Name" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control elemenBlock" placeholder="User Name">
+										<input type="email" class="form-control elemenBlock" placeholder="Email Address" name="email" value="{{ old('email') }}" required autocomplete="email">
 									</div>
 									<div class="form-group">
-								<input type="password" class="form-control elemenBlock" placeholder="Password">
+								<input type="password" class="form-control elemenBlock" placeholder="Password" name="password" required autocomplete="new-password">
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control elemenBlock" placeholder="Confirm Password">
+										<input type="password" class="form-control elemenBlock" placeholder="Confirm Password" name="password_confirmation" required autocomplete="new-password">
 									</div>
 									<div class="form-group">
-										<input type="email" class="form-control elemenBlock" placeholder="Email Address">
-									</div>
-									<div class="form-group">
-										<select data-placeholder="Type" class="chosen-select">
+										<select name="user_type" value="{{ old('user_type') }}" data-placeholder="Type" class="chosen-select" class="form-control elemenBlock">
 											<option value="1">House Owner</option>
 											<option value="2">Service Provider</option>
 											<option value="3">Data Operator</option>
 											<option value="4">Tenant</option>
 										</select>
-									</div>
-									<div class="form-group">
-										<label class="fwNormal customLabelCheck">
-											<input type="checkbox" class="customFormInputReset" checked>
-											<span class="fakeCheckbox"></span>
-											<span class="fakeLabel">I have read and agree to the Term of Service.</span>
-										</label>
 									</div>
 									<button type="submit" class="btn btn-primary elemenBlock fontNeuron fwNormal text-uppercase btnSubmit">REGISTER</button>
 								</div>
