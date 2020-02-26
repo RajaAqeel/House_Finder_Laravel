@@ -31,7 +31,7 @@
 							<!-- headerHolder -->
 							<div class="headerHolder">
                               <!-- logo -->
-                              <div class="logo logoCentered"><a href="home.html"><img src="images/logo.png" alt="LemanHouse"></a></div>
+                              <div class="logo logoCentered"><a href="/"><img src="images/logo.png" alt="LemanHouse"></a></div>
 							</div>
 						</div>
 					</div>
@@ -43,7 +43,8 @@
                     <div class="addProperty">
                       <h1 class="fontNeuron">Add New City</h1>
                       <div class="formContent">
-                        <form method="POST" action="CityController@store">
+					  <form method="POST" action="/store">
+						@csrf
                           <header class="contentHead">
                             <h2 class="fontNeuron">Add City</h2>
                           </header>
@@ -54,17 +55,14 @@
                                 <input name="name" type="text" class="form-control" placeholder="Rawalpindi" id="itemN-15">
                               </div>
                             </div>
-                            <div class="col-xs-12">
-                                <div class="form-group">
-                                  <label for="itemN-16">Postal Code</label>
-                                  <input name="postal_code" type="text" class="form-control" placeholder="46000" id="itemN-16">
-                                </div>
-                              </div>
-                          </div>
+						  </div>
                           <div class="btnArea">
-                            <button type="submit" class="btn btnDark">Save</a></button>
+                            <button type="submit" class="btn btnDark">Save</button>
                           </div>
-                        </form>
+						</form>
+						<div class="btnArea">
+                            <button class="btn btnDark"><a href="/admin-view-profile">Back</a></button>
+                          </div>
                       </div>
                     </div>
                   </section>

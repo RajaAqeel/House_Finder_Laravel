@@ -29,4 +29,8 @@ class PagesController extends Controller
      {
          return view('add-city');
      }
+     public function adminViewProfile()
+     {
+         return view('admin-view-profile');
+     }
 }

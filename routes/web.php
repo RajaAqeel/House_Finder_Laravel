@@ -25,6 +25,7 @@ Route::get('/testimonials', 'PagesController@testimonials');
 Route::get('/blog', 'PagesController@blog');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/add-city', 'PagesController@addCity');
+Route::get('/admin-view-profile', 'PagesController@adminViewProfile');
 
 Route::resource('/comments','CommentsController');
 
@@ -39,3 +40,7 @@ Route::group(['middleware' => ['auth', 'admin']], function()
         return view('admin-view-profile');
     });
 });
+
+Route::post('/store', [
+    'uses' => 'CityController@store',
+]);
