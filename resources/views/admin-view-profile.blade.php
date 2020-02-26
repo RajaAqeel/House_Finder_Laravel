@@ -215,13 +215,13 @@
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="properties-full-width-list.html">
+                                  <a href="properties-full-width-list">
                                     <i class="fi flaticon-house"></i>
                                     <span>All Registered Properties</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="properties-full-width-list.html">
+                                  <a href="properties-full-width-list">
                                     <i class="fi flaticon-house"></i>
                                     <span>All Registered Services</span>
                                   </a>

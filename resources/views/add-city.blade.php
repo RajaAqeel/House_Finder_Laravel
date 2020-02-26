@@ -43,7 +43,7 @@
                     <div class="addProperty">
                       <h1 class="fontNeuron">Add New City</h1>
                       <div class="formContent">
-                        <form>
+                        <form method="POST" action="CityController@store">
                           <header class="contentHead">
                             <h2 class="fontNeuron">Add City</h2>
                           </header>
@@ -62,7 +62,7 @@
                               </div>
                           </div>
                           <div class="btnArea">
-                            <button type="submit" class="btn btnDark"><a href="admin-profile.html">Save</a></button>
+                            <button type="submit" class="btn btnDark">Save</a></button>
                           </div>
                         </form>
                       </div>
