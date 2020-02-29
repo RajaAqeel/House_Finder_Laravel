@@ -142,20 +142,6 @@
 								<!-- userOptions -->
 								<div class="userOptions">
 									<!-- UserLinksList -->
-									<ul class="list-unstyled UserLinksList">
-										<li>
-											<a href="#popup1" class="lightbox">
-												<i class="fi flaticon-social icn"></i>
-												<strong class="text fwNormal hidden-xs hidden-sm">Login</strong>
-											</a>
-										</li>
-										<li>
-											<a href="#popup1" class="lightbox">
-												<i class="fi flaticon-edit icn"></i>
-												<strong class="text fwNormal hidden-xs hidden-sm">Register</strong>
-											</a>
-										</li>
-									</ul>
 									<!-- headerModalOpener -->
 									<a href="#" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Submit Property</a>
 								</div>
@@ -231,7 +217,14 @@
 									  <i class="fa fa-plus"></i>
 									  <span>Add City</span>
 									</a>
-								  </li>
+								</li>
+
+								<li>
+									<a href="add-city">
+									  <i class="fa fa-plus"></i>
+									  <span>Register Data operator</span>
+									</a>
+								</li>
                                 <li>
 								
                                   <a href="{{ url('/logout') }}"
@@ -263,12 +256,12 @@
                                   </div>
                                   <div class="accountContent">
                                     <div class="form-group">
-                                      <label for="itemN-1">Full Name</label><br>
-                                      <span id="itemN-1" class="text text-center" class="form-control">Ali Tufan</span>
+									  <label for="itemN-1">Full Name</label><br>
+									<span id="itemN-1" class="text text-center" class="form-control">{{$user->name}}</span>
                                     </div>
                                     <div class="form-group">
-                                      <label for="itemN-2">Email</label><br>
-                                      <span id="itemN-2" class="text text-center" class="form-control">polygontheme@gmail.com</span>
+									  <label for="itemN-2">Email</label><br>
+									<span id="itemN-2" class="text text-center" class="form-control">{{$user->email}}</span>
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-3">Phone</label><br>

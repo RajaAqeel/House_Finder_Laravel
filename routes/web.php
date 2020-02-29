@@ -28,6 +28,7 @@ Route::get('/add-city', 'PagesController@addCity');
 Route::get('/admin-view-profile', 'PagesController@adminViewProfile');
 
 Route::resource('/comments','CommentsController');
+Route::resource('/users','UsersController');
 
 Auth::routes();
 
@@ -35,10 +36,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['auth', 'admin']], function()
 {
-    Route::get('/dashboard', function()
-    {
-        return view('admin-view-profile');
-    });
+    Route::get('/dashboard', 'UsersController@index');
 });
 
 Route::post('/store', [

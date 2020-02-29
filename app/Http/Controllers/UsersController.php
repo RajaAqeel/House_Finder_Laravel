@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\users;
 use Illuminate\Http\Request;
-
+use Auth;
 class UsersController extends Controller
 {
     /**
@@ -14,7 +14,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        $user = users::where('id', Auth::user()->id)->first();
+        return view('admin-view-profile')->with('user', $user);
     }
 
     /**
@@ -46,7 +47,8 @@ class UsersController extends Controller
      */
     public function show(users $users)
     {
-        //
+        $user = users::find($users);
+        return view('admin-view-profile')->with('user', $users);
     }
 
     /**
