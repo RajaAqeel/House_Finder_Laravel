@@ -30,6 +30,7 @@ Route::get('/admin-profile', 'PagesController@adminProfile');
 
 Route::resource('/comments','CommentsController');
 Route::resource('/users','UsersController');
+Route::resource('/admins','AdminController');
 
 Auth::routes();
 

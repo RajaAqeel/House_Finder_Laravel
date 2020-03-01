@@ -316,13 +316,7 @@
                                       </div>
                                     </div>
                                     <div class="row">
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-10">Linkedin URL</label>
-                                          <input type="text" class="form-control" placeholder="PolygonTheme" id="itemN-10">
-                                        </div>
-                                      </div>
-                                      <div class="col-xs-12 col-sm-6">
+                                      <div class="col-xs-12">
                                         <div class="form-group">
                                           <label for="itemN-11">Instagram URL</label>
                                           <input type="text" class="form-control" placeholder="PolygonTheme" id="itemN-11">
@@ -330,13 +324,7 @@
                                       </div>
                                     </div>
                                     <div class="row">
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-12">Google Plus URL</label>
-                                          <input type="text" class="form-control" placeholder="PolygonTheme" id="itemN-12">
-                                        </div>
-                                      </div>
-                                      <div class="col-xs-12 col-md-6">
+                                      <div class="col-xs-12">
                                         <div class="form-group">
                                           <label for="itemN-13">Skype</label>
                                           <input type="text" class="form-control" placeholder="PolygonTheme" id="itemN-13">
