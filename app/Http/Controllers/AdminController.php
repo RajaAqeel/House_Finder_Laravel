@@ -14,7 +14,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        $admin = admin::where('user_id', Auth::user()->id)->first();
+        return view('admin-view-profile')->with('admin', $admin);
     }
 
     /**
@@ -24,7 +25,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin-profile');
     }
 
     /**
@@ -35,7 +36,19 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'phone_number' => 'required',
+            'bio' => 'required',
+        ]);
+
+        $admin = new admin;
+        $admin->phone_number = $request->input('phone_number');
+        $admin->biography = $request->input('bio');
+        $admin->user_id = Auth::user()->id;
+
+        $admin->save();
+
+        return view('admin-view-profile');
     }
 
     /**

@@ -34,4 +34,10 @@ class PagesController extends Controller
      
          return view('admin-view-profile');
      }
+
+     public function adminProfile()
+     {
+     
+         return view('admin-profile');
+     }
 }

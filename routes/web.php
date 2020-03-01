@@ -26,6 +26,7 @@ Route::get('/blog', 'PagesController@blog');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/add-city', 'PagesController@addCity');
 Route::get('/admin-view-profile', 'PagesController@adminViewProfile');
+Route::get('/admin-profile', 'PagesController@adminProfile');
 
 Route::resource('/comments','CommentsController');
 Route::resource('/users','UsersController');

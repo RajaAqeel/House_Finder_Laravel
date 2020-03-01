@@ -240,7 +240,14 @@
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="home.html">
+
+                                  <a href="{{ url('/logout') }}"
+								  onclick="event.preventDefault();
+										   document.getElementById('logout-form').submit();">
+									<i class="fa fa-sign-out-alt"></i>
+									<form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+										{{ csrf_field() }}
+									</form>
                                     <i class="fa fa-sign-out-alt"></i>
                                     <span>Logout</span>
                                   </a>
@@ -251,7 +258,7 @@
                           <div class="col-xs-12 col-sm-8 col-lg-9">
                             <!-- accountData -->
                             <div class="accountData">
-                              <form>
+                              <form method="POST" action="AdminController@store">
                                 <div class="head">
                                   <h4 class="fontNeuron">Account Settings</h4>
                                 </div>
@@ -266,21 +273,21 @@
                                     <span class="text text-center">*minimum 200px x 200px</span>
                                   </div>
                                   <div class="accountContent">
-                                    <div class="form-group">
+                                    {{-- <div class="form-group">
                                       <label for="itemN-1">Full Name</label>
                                       <input type="text" class="form-control" placeholder="Ali Tufan" id="itemN-1">
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-2">Email</label>
                                       <input type="email" class="form-control" placeholder="polygontheme@gmail.com" id="itemN-2">
-                                    </div>
+                                    </div> --}}
                                     <div class="form-group">
                                       <label for="itemN-3">Phone</label>
-                                      <input type="tel" class="form-control" placeholder="0402 2020 202" id="itemN-3">
+                                      <input name="phone_number" type="tel" class="form-control" placeholder="0402 2020 202" id="itemN-3">
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-4">Biography</label>
-                                      <textarea id="itemN-4" class="form-control" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.Phasellus mollis imperdiet placerat"></textarea>
+                                      <textarea name="bio" id="itemN-4" class="form-control" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.Phasellus mollis imperdiet placerat"></textarea>
                                     </div>
                                     <button type="submit" class="btn alighRight btnSecondary buttonL fontNeuron">Update Profile</button>
                                   </div>
