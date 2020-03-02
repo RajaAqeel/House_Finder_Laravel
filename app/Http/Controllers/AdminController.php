@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\admin;
+use App\users;
 use Illuminate\Http\Request;
 use Auth;
 
@@ -15,8 +16,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $admin = admin::where('user_id', Auth::user()->id)->first();
-        return view('admin-view-profile')->with('admin', $admin);
+        $allUsers = users::all();
+        return('all-registered-users')->with('allUsers', $allUsers);
     }
 
     /**
@@ -48,8 +49,7 @@ class AdminController extends Controller
         $admin->user_id = Auth::user()->id;
 
         $admin->save();
-
-        return view('admin-view-profile');
+        return redirect('/dashboard');
     }
 
     /**

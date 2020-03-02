@@ -27,6 +27,7 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/add-city', 'PagesController@addCity');
 Route::get('/admin-view-profile', 'PagesController@adminViewProfile');
 Route::get('/admin-profile', 'PagesController@adminProfile');
+Route::get('/my-properties', 'PagesController@viewAllProperties');
 
 Route::resource('/comments','CommentsController');
 Route::resource('/users','UsersController');
@@ -43,4 +44,8 @@ Route::group(['middleware' => ['auth', 'admin']], function()
 
 Route::post('/store', [
     'uses' => 'CityController@store',
+]);
+
+Route::post('/store1', [
+    'uses' => 'AdminController@store',
 ]);

@@ -203,8 +203,14 @@
                                 </div>
                               </header>
                               <ul class="navUser list-unstyled">
+								<li>
+									<a href="admin-view-profile">
+									  <i class="far fa-user"></i>
+									  <span>View Profile</span>
+									</a>
+								</li>
                                 <li>
-                                  <a href="admin-profile.html">
+                                  <a href="admin-profile">
                                     <i class="far fa-user"></i>
                                     <span>Account Settings</span>
                                   </a>
@@ -258,7 +264,8 @@
                           <div class="col-xs-12 col-sm-8 col-lg-9">
                             <!-- accountData -->
                             <div class="accountData">
-                              <form method="POST" action="AdminController@store">
+							  <form method="POST" action="/store1">
+								@csrf
                                 <div class="head">
                                   <h4 class="fontNeuron">Account Settings</h4>
                                 </div>
@@ -288,14 +295,14 @@
                                     <div class="form-group">
                                       <label for="itemN-4">Biography</label>
                                       <textarea name="bio" id="itemN-4" class="form-control" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.Phasellus mollis imperdiet placerat"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn alighRight btnSecondary buttonL fontNeuron">Update Profile</button>
-                                  </div>
+									</div>
+									<button type="submit" class="btn alighRight btnSecondary buttonL fontNeuron">Update Profile</button>
+								  </div>
                                 </div>
                               </form>
                             </div>
                             <div class="accountData">
-                              <form>
+								<form>
                                 <div class="head">
                                   <h4 class="fontNeuron">Social Profiles</h4>
                                 </div>
@@ -334,7 +341,7 @@
                                     <button type="submit" class="btn alighRight btnSecondary buttonL fontNeuron">Save Changes</button>
                                   </div>
                                 </div>
-                              </form>
+                            </form>
                             </div>
                           </div>
                         </div>

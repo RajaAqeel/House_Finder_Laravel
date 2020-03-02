@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\users;
+use App\admin;
 use Illuminate\Http\Request;
 use Auth;
 class UsersController extends Controller
@@ -14,8 +15,10 @@ class UsersController extends Controller
      */
     public function index()
     {
+        $allUsers = users::all();
+        $admin = admin::where('user_id', Auth::user()->id)->first();
         $user = users::where('id', Auth::user()->id)->first();
-        return view('admin-view-profile')->with('user', $user);
+        return view('admin-view-profile')->with('user', $user)->with('admin', $admin);
     }
 
     /**
@@ -25,7 +28,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -36,7 +39,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -47,8 +50,7 @@ class UsersController extends Controller
      */
     public function show(users $users)
     {
-        $user = users::find($users);
-        return view('admin-view-profile')->with('user', $users);
+
     }
 
     /**

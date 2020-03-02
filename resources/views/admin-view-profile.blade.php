@@ -187,6 +187,12 @@
                                 </div>
                               </header>
                               <ul class="navUser list-unstyled">
+								<li>
+									<a href="admin-view-profile">
+									  <i class="far fa-user"></i>
+									  <span>View Profile</span>
+									</a>
+								</li>
                                 <li>
                                   <a href="admin-profile">
                                     <i class="far fa-user"></i>
@@ -200,7 +206,7 @@
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="properties-full-width-list">
+                                  <a href="my-properties">
                                     <i class="fi flaticon-house"></i>
                                     <span>All Registered Properties</span>
                                   </a>
@@ -264,11 +270,11 @@
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-3">Phone</label><br>
-                                      <span id="itemN-3" class="text text-center" class="form-control"></span>
+									<span id="itemN-3" class="text text-center" class="form-control">{{$admin->phone_number}}</span>
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-4">Biography</label><br>
-                                      <span id="itemN-4" class="text text-center" class="form-control"></span>
+									<span id="itemN-4" class="text text-center" class="form-control">{{$admin->biography}}</span>
                                     </div>
                                   </div>
                                 </div>

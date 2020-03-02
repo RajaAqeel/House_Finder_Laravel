@@ -40,4 +40,10 @@ class PagesController extends Controller
      
          return view('admin-profile');
      }
+
+     public function viewAllProperties()
+     {
+     
+         return view('my-properties');
+     }
 }
