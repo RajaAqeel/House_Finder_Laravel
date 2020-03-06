@@ -31,18 +31,30 @@ Route::get('/admin-profile', 'PagesController@adminProfile');
 Route::get('/my-properties', 'PagesController@viewAllProperties');
 Route::get('/all-registered-users', 'PagesController@viewAllUsers');
 
+
+
+
 //resource routes
 Route::resource('/comments','CommentsController');
 Route::resource('/users','UsersController');
 Route::resource('/admins','AdminController');
 
+
+
+
 //auth route
 Auth::routes();
+
+
+
 
 //data get routes
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/all-registered-users', 'UsersController@index1');
 Route::get('/delete/{id}', 'UsersController@delete');
+
+
+
 
 //dashboards routes
 Route::group(['middleware' => ['auth', 'admin']], function()
@@ -50,11 +62,13 @@ Route::group(['middleware' => ['auth', 'admin']], function()
     Route::get('/dashboard', 'UsersController@index');
 });
 
+
+
+
 //data post routes
 Route::post('/store', [
     'uses' => 'CityController@store',
 ]);
-
 Route::post('/store1', [
     'uses' => 'AdminController@store',
 ]);

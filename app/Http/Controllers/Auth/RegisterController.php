@@ -44,10 +44,6 @@ class RegisterController extends Controller
         {
             return 'sp_dashboard';
         }
-        else if(Auth::user()->user_type == 'Tenant')
-        {
-            return 't_dashboard';
-        }
         else if(Auth::user()->user_type == 'Data Operator')
         {
             return 'do_dashboard';

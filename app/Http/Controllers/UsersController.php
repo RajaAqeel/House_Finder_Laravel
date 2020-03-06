@@ -15,7 +15,6 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $allUsers = users::all();
         $admin = admin::where('user_id', Auth::user()->id)->first();
         $user = users::where('id', Auth::user()->id)->first();
         return view('admin-view-profile')->with('user', $user)->with('admin', $admin);
