@@ -46,4 +46,10 @@ class PagesController extends Controller
      
          return view('my-properties');
      }
+
+     public function viewAllUsers()
+     {
+     
+         return view('all-registered-users');
+     }
 }

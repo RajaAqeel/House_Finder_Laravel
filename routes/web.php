@@ -19,6 +19,7 @@
 //     return view('home');
 // });
 
+//pages routes
 Route::get('/', 'PagesController@home');
 Route::get('/about', 'PagesController@about');
 Route::get('/testimonials', 'PagesController@testimonials');
@@ -28,20 +29,28 @@ Route::get('/add-city', 'PagesController@addCity');
 Route::get('/admin-view-profile', 'PagesController@adminViewProfile');
 Route::get('/admin-profile', 'PagesController@adminProfile');
 Route::get('/my-properties', 'PagesController@viewAllProperties');
+Route::get('/all-registered-users', 'PagesController@viewAllUsers');
 
+//resource routes
 Route::resource('/comments','CommentsController');
 Route::resource('/users','UsersController');
 Route::resource('/admins','AdminController');
 
+//auth route
 Auth::routes();
 
+//data get routes
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/all-registered-users', 'UsersController@index1');
+Route::get('/delete/{id}', 'UsersController@delete');
 
+//dashboards routes
 Route::group(['middleware' => ['auth', 'admin']], function()
 {
     Route::get('/dashboard', 'UsersController@index');
 });
 
+//data post routes
 Route::post('/store', [
     'uses' => 'CityController@store',
 ]);

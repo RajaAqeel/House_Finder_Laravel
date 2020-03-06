@@ -16,8 +16,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $allUsers = users::all();
-        return('all-registered-users')->with('allUsers', $allUsers);
+        //
     }
 
     /**

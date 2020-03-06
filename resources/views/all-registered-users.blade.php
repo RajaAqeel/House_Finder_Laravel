@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- set the encoding of your site -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- set the page title -->
-	<title>Admin Profile</title>
+	<title>All Registered Users</title>
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
@@ -30,7 +31,7 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-xs-6 col-sm-4">
- -->									</div>
+									</div>
 									<div class="col-xs-6 col-sm-8 text-right">
 										<!-- topBarPanelList -->
 										<ul class="list-unstyled topBarPanelList">
@@ -66,7 +67,7 @@
 								<div class="row">
 									<div class="col-xs-6 col-sm-3">
 										<!-- logo -->
-										<div class="logo"><a href="home.html"><img src="images/houseFinderLogo.png" alt="LemanHouse"></a></div>
+										<div class="logo"><a href="home.html"><img src="images/logo.png" alt="LemanHouse"></a></div>
 									</div>
 									<div class="col-xs-6 col-sm-9 d-flex">
 										<!-- headerContactList -->
@@ -81,7 +82,7 @@
 											<li class="hidden-xs">
 												<span class="icn icnJumping text-info noShrink"><i class="fi flaticon-pin-1"></i></span>
 												<div class="descr">
-													<strong class="fwNormal elemenBlock text">Riphah International University I-14<br>Golra Mor Islamabad, Pakistan</strong>
+													<strong class="fwNormal elemenBlock text">Riphah International University I-14 <br>Golra Mor Islamabad, Pakistan</strong>
 												</div>
 											</li>
 										</ul>
@@ -118,19 +119,19 @@
 										<ul class="nav navbar-nav pageMainNav pageMainNav1">
 											<li>
 												<a href="home.html">Home<span></span></a>
-												
+
 											</li>
+											<!-- remove dropdownFull class when its just regular dropdown -->
 											<li>
-												<a href="about.html">About <span></span></a>
-												
+												<a href="about.html">About<span></span></a>
 											</li>
-											<li >
+											<li class="dropdown">
 												<a href="testimonials.html">Testimonials<span></span></a>
-												
+
 											</li>
 											<li>
 												<a href="blog-full-width.html">Blog<span></span></a>
-												
+
 											</li>
 											<li>
 												<a href="contact.html">Contact</a>
@@ -141,6 +142,13 @@
 								<!-- userOptions -->
 								<div class="userOptions">
 									<!-- UserLinksList -->
+									<ul class="list-unstyled UserLinksList">
+										<li>
+											<a href="admin-view-profile" class="lightbox">
+												<i class="fi flaticon-social icn"></i>
+												<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
+											</a>
+										</li>
 									<!-- headerModalOpener -->
 									<a href="#" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Submit Property</a>
 								</div>
@@ -152,15 +160,13 @@
 				<main>
 					<!-- findFormBlock -->
 					<form action="#" class="findFormBlock findFormBlock2 bgLightDark hasShadowTop offsetHeaderTop">
-						
 					</form>
 					<!-- content -->
 					<section id="content" class="container pabIndent">
 						<!-- contentFiltersHeadingWrap -->
 						<header class="contentFiltersHeadingWrap row">
 							<div class="col-xs-12 col-sm-10">
-								<!-- breadcrumb -->
-								
+
 								<h1 class="fontNeuron">Profile</h1>
 							</div>
 							<div class="col-xs-12 col-sm-2">
@@ -171,7 +177,7 @@
 								</ul>
 							</div>
 						</header>
-						<!-- userProfile -->
+				      <!-- userProfile -->
                       <div class="userProfile">
                         <div class="row">
                           <div class="col-xs-12 col-sm-4 col-lg-3">
@@ -183,7 +189,7 @@
                                 </div>
                                 <div class="info">
                                   <span class="text">Ali Tufan</span>
-                                  <span class="text"><a href="house-owner-profile.html" class="link">Change Password</a></span>
+                                  <span class="text"><a href="user-profile.html" class="link">Change Password</a></span>
                                 </div>
                               </header>
                               <ul class="navUser list-unstyled">
@@ -242,87 +248,47 @@
                                     <span>Logout</span>
                                   </a>
                                 </li>
-                              </ul>
+                              </ul> 	
                             </aside>
                           </div>
                           <div class="col-xs-12 col-sm-8 col-lg-9">
                             <!-- accountData -->
                             <div class="accountData">
-                              <form>
-                                <div class="head">
-                                  <h4 class="fontNeuron">Account Settings</h4>
+                              <div class="head">
+                                <h4 class="fontNeuron">All Users</h4>
+                                <div class="sortGroup">
                                 </div>
-                                <div class="accountHolder">
-                                  <div class="imgProfile">
-                                    <div class="imgThumbnail">
-                                      <img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
-                                      
-                                    </div>
-                                  </div>
-                                  <div class="accountContent">
-                                    <div class="form-group">
-									  <label for="itemN-1">Full Name</label><br>
-									<span id="itemN-1" class="text text-center" class="form-control">{{$user->name}}</span>
-                                    </div>
-                                    <div class="form-group">
-									  <label for="itemN-2">Email</label><br>
-									<span id="itemN-2" class="text text-center" class="form-control">{{$user->email}}</span>
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="itemN-3">Phone</label><br>
-									<span id="itemN-3" class="text text-center" class="form-control">{{$admin->phone_number}}</span>
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="itemN-4">Biography</label><br>
-									<span id="itemN-4" class="text text-center" class="form-control">{{$admin->biography}}</span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </form>
+                              </div>
+							  <!-- propertiesList -->
+							  @if (count($allUsers) > 0)
+								  @foreach ($allUsers as $users)
+								  <div class="propertiesList">
+									<article class="propertyRow">
+									  <div class="info">
+										<div class="imgThumbnail">
+										  <a href="properties-single2.html"><img src="https://via.placeholder.com/110x85" alt=""></a>
+										</div>
+										<div class="textBox">
+										<h4 class="fontNeuron"><a href="properties-single2.html">{{$users->name}}</a></h4>
+										  <address><i></i>{{$users->email}}</address>
+										</div>
+									  </div>
+									  <div class="btnArea">
+										<ul class="links list-unstyled">
+										  <li><a href="properties-single2.html"><i class="fa fa-eye"></i>View</a></li>
+										  <li><a href="edit-property-information.html"><i class="fa fa-edit"></i>Edit</a></li>
+										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+										</ul>
+									  </div>
+									</article>
+								  </div>
+								  @endforeach
+								  {{$allUsers->links()}}
+							  @else
+								  <p>No Users Found</p>
+							  @endif
                             </div>
-                            <!-- accountData -->
-                            <!-- accountData -->
-                            <div class="accountData">
-                              <form>
-                                <div class="head">
-                                  <h4 class="fontNeuron">Social Profiles</h4>
-                                </div>
-                                <div class="accountHolder">
-                                  <div class="accountContent">
-                                    <div class="row">
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-8">Facebook URL</label><br>
-                                          <span id="itemN-8" class="text text-center" class="form-control"></span>
-                                        </div>
-                                      </div>
-                                       <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-9">Twitter URL</label><br>
-                                          <span id="itemN-9" class="text text-center" class="form-control"></span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-xs-12">
-                                        <div class="form-group">
-                                          <label for="itemN-11">Instagram URL</label><br>
-                                          <span id="itemN-11" class="text text-center" class="form-control"></span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-xs-12">
-                                        <div class="form-group">
-                                          <label for="itemN-13">Skype</label><br>
-                                          <span id="itemN-13" class="text text-center" class="form-control">Ali Tufan</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
+                            <!-- pagination -->
                           </div>
                         </div>
                       </div>
@@ -330,6 +296,7 @@
 					<!-- signupFormAside -->
 					<form action="#" class="bgWhite signupFormAside">
 						<div class="container signupFormAsideHolder">
+							<span></span>
 							<div class="col-xs-12 col-md-offset-2 col-md-6">
 								<h3 class="fontNeuron textSecondary">Download our app</h3>
 								<p>Download our app from google play store</p>
@@ -368,14 +335,14 @@
 								<h2 class="fontNeuron fwSemi text-uppercase">Useful Links</h2>
 								<div class="ftNavListsHolder">
 									<ul class="list-unstyled">
-										<li><a href="about">About US</a></li>
-										<li><a href="contact">Contact Support</a></li>
-										<li><a href="properties-faqs">FAQs</a></li>
+										<li><a href="about.html">About US</a></li>
+										<li><a href="contact.html">Contact Support</a></li>
+										<li><a href="properties-faqs.html">FAQs</a></li>
 									</ul>
 									<ul class="list-unstyled">
-										<li><a href="properties-faqs">FAQ</a></li>
-										<li><a href="blog-full-width">Blog</a></li>
-										<li><a href="contact">Contact</a></li>
+										<li><a href="properties-faqs.html">FAQ</a></li>
+										<li><a href="blog-full-width.html">Blog</a></li>
+										<li><a href="contact.html">Contact</a></li>
 									</ul>
 								</div>
 							</nav>
@@ -492,10 +459,10 @@
 										<input type="email" class="form-control elemenBlock" placeholder="Email Address">
 									</div>
 									<div class="form-group">
-										<select name="user_type" data-placeholder="Type" class="chosen-select">
-											<option value="1">House Owner</option>
-											<option value="2">Service Owner</option>
-											<option value="3">Data Operator</option>
+										<select data-placeholder="Type" class="chosen-select">
+											<option value="House Owner">House Owner</option>
+											<option value="Service Owner">Service Owner</option>
+											<option value="Data Operator">Data Operator</option>
 										</select>
 									</div>
 									<div class="form-group">

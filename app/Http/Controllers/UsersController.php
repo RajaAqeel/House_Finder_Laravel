@@ -21,6 +21,12 @@ class UsersController extends Controller
         return view('admin-view-profile')->with('user', $user)->with('admin', $admin);
     }
 
+    public function index1()
+    {
+        $allUsers = users::orderBy('created_at', 'asc')->paginate(10);
+        return view('all-registered-users')->with('allUsers', $allUsers);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -85,5 +91,13 @@ class UsersController extends Controller
     public function destroy(users $users)
     {
         //
+    }
+
+    public function delete($id)
+    {
+        DB::table('users')->where('id', $id)->delete();
+        DB::table('admin')->where('user_id', $id)->delete();
+        return redirect('/all-registered-users');
+
     }
 }
