@@ -13,14 +13,14 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function adminData()
     {
         $admin = admin::where('user_id', Auth::user()->id)->first();
         $user = users::where('id', Auth::user()->id)->first();
         return view('admin-view-profile')->with('user', $user)->with('admin', $admin);
     }
 
-    public function index1()
+    public function allUsers()
     {
         $allUsers = users::orderBy('created_at', 'asc')->paginate(10);
         return view('all-registered-users')->with('allUsers', $allUsers);

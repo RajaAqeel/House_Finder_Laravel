@@ -1274,10 +1274,8 @@
 									</div>
 									<div class="form-group">
 										<select name="user_type" value="{{ old('user_type') }}" data-placeholder="Type" class="chosen-select" class="form-control elemenBlock">
-											<option value="1">House Owner</option>
-											<option value="2">Service Provider</option>
-											<option value="3">Data Operator</option>
-											<option value="4">Tenant</option>
+											<option value="House Owner">House Owner</option>
+											<option value="Service Provider">Service Provider</option>
 										</select>
 									</div>
 									<button type="submit" class="btn btn-primary elemenBlock fontNeuron fwNormal text-uppercase btnSubmit">REGISTER</button>

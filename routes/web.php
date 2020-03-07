@@ -50,7 +50,7 @@ Auth::routes();
 
 //data get routes
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/all-registered-users', 'UsersController@index1');
+Route::get('/all-registered-users', 'UsersController@allUsers');
 Route::get('/delete/{id}', 'UsersController@delete');
 
 
@@ -59,7 +59,19 @@ Route::get('/delete/{id}', 'UsersController@delete');
 //dashboards routes
 Route::group(['middleware' => ['auth', 'admin']], function()
 {
-    Route::get('/dashboard', 'UsersController@index');
+    Route::get('/dashboard', 'UsersController@adminData');
+});
+Route::group(['middleware' => ['auth', 'houseOwner']], function()
+{
+    Route::get('/ho_dashboard', 'UsersController@houseOwnerData');
+});
+Route::group(['middleware' => ['auth', 'serviceProvider']], function()
+{
+    Route::get('/sp_dashboard', 'UsersController@serviceProviderData');
+});
+Route::group(['middleware' => ['auth', 'dataOperator']], function()
+{
+    Route::get('/do_dashboard', 'UsersController@dataOperatorData');
 });
 
 

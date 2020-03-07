@@ -410,12 +410,9 @@
 										<input type="email" class="form-control elemenBlock" placeholder="Email Address">
 									</div>
 									<div class="form-group">
-										<select data-placeholder="Type" class="chosen-select">
-											<option value="1">For Rent</option>
-											<option value="2">For Sale</option>
-											<option value="3">House</option>
-											<option value="4">Property</option>
-											<option value="5">Real Estate</option>
+										<select name="user_type" data-placeholder="Type" class="chosen-select">
+											<option value="House Owner">House Owner</option>
+											<option value="Service Provider">Service Provider</option>
 										</select>
 									</div>
 									<div class="form-group">
