@@ -200,38 +200,43 @@
                               </header>
                               <ul class="navUser list-unstyled">
                                 <li>
-                                  <a href="house-owner-profile.html">
+									<a href="/ho_dashboard">
+									  <i class="far fa-user"></i>
+									  <span>View Profile</span>
+									</a>
+								  </li>
+                                <li>
+                                  <a href="house-owner-profile">
                                     <i class="far fa-user"></i>
                                     <span>Account Settings</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="my-properties.html">
+                                  <a href="my-properties">
                                     <i class="fi flaticon-house"></i>
                                     <span>My Properties</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="favourite-properties.html">
+                                  <a href="favourite-properties">
                                     <i class="far fa-heart"></i>
                                     <span>Favorited Properties</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="add-step-01.html">
+                                  <a href="add-house-01">
                                     <i class="fa fa-plus"></i>
-                                    <span>Submit Property</span>
+                                    <span>Add Property</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="add-step-01.html">
-                                    <i class="fa fa-plus"></i>
-                                    <span>Submit Service</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="home.html">
-                                    <i class="fa fa-sign-out-alt"></i>
+									<a href="{{ url('/logout') }}"
+									onclick="event.preventDefault();
+											 document.getElementById('logout-form').submit();">
+									  <i class="fa fa-sign-out-alt"></i>
+									  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+										  {{ csrf_field() }}
+									  </form>
                                     <span>Logout</span>
                                   </a>
                                 </li>

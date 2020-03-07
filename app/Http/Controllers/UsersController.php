@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\users;
+use App\house_owner;
 use App\admin;
 use Illuminate\Http\Request;
 use Auth;
+use DB;
 class UsersController extends Controller
 {
     /**
@@ -18,6 +20,27 @@ class UsersController extends Controller
         $admin = admin::where('user_id', Auth::user()->id)->first();
         $user = users::where('id', Auth::user()->id)->first();
         return view('admin-view-profile')->with('user', $user)->with('admin', $admin);
+    }
+
+    public function houseOwnerData()
+    {
+        $houseOwner = house_owner::where('user_id', Auth::user()->id)->first();
+        $user = users::where('id', Auth::user()->id)->first();
+        return view('house-owner-view-profle')->with('user', $user)->with('houseOwner', $houseOwner);
+    }
+
+    public function serviceProviderData()
+    {
+        $serviceOwner = service_owner::where('user_id', Auth::user()->id)->first();
+        $user = users::where('id', Auth::user()->id)->first();
+        return view('service-provider-view-profle')->with('user', $user)->with('serviceOwner', $serviceOwner);
+    }
+
+    public function dataOperatorData()
+    {
+        $dataOperator = data_operator::where('user_id', Auth::user()->id)->first();
+        $user = users::where('id', Auth::user()->id)->first();
+        return view('data-operator-view-profle')->with('user', $user)->with('dataOperator', $dataOperator);
     }
 
     public function allUsers()
@@ -95,7 +118,7 @@ class UsersController extends Controller
     public function delete($id)
     {
         DB::table('users')->where('id', $id)->delete();
-        DB::table('admin')->where('user_id', $id)->delete();
+        DB::table('admins')->where('user_id', $id)->delete();
         return redirect('/all-registered-users');
 
     }

@@ -52,4 +52,24 @@ class PagesController extends Controller
      
          return view('all-registered-users');
      }
+
+     public function houseOwnerProfile()
+     {
+         return view('house-owner-profile');
+     }
+
+     public function myProperties()
+     {
+         return view('my-properties');
+     }
+
+     public function favouriteProperties()
+     {
+         return view('favourite-properties');
+     }
+
+     public function addProperty()
+     {
+         return view('add-house-01');
+     }
 }

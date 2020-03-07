@@ -143,15 +143,9 @@
 									<!-- UserLinksList -->
 									<ul class="list-unstyled UserLinksList">
 										<li>
-											<a href="#popup1" class="lightbox">
+											<a href="/ho_dashboard">
 												<i class="fi flaticon-social icn"></i>
-												<strong class="text fwNormal hidden-xs hidden-sm">Login</strong>
-											</a>
-										</li>
-										<li>
-											<a href="#popup1" class="lightbox">
-												<i class="fi flaticon-edit icn"></i>
-												<strong class="text fwNormal hidden-xs hidden-sm">Register</strong>
+												<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
 											</a>
 										</li>
 									</ul>
@@ -199,33 +193,44 @@
                                 </div>
                               </header>
                               <ul class="navUser list-unstyled">
+								<li>
+									<a href="/ho_dashboard">
+									  <i class="far fa-user"></i>
+									  <span>View Profile</span>
+									</a>
+								  </li>
                                 <li>
-                                  <a href="house-owner-profile.html">
+                                  <a href="house-owner-profile">
                                     <i class="far fa-user"></i>
                                     <span>Account Settings</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="my-properties.html">
+                                  <a href="my-properties">
                                     <i class="fi flaticon-house"></i>
                                     <span>My Properties</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="favourite-properties.html">
+                                  <a href="favourite-properties">
                                     <i class="far fa-heart"></i>
                                     <span>Favorited Properties</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="add-house-01.html">
+                                  <a href="add-house-01">
                                     <i class="fa fa-plus"></i>
                                     <span>Add Property</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="home.html">
-                                    <i class="fa fa-sign-out-alt"></i>
+									<a href="{{ url('/logout') }}"
+									onclick="event.preventDefault();
+											 document.getElementById('logout-form').submit();">
+									  <i class="fa fa-sign-out-alt"></i>
+									  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+										  {{ csrf_field() }}
+									  </form>
                                     <span>Logout</span>
                                   </a>
                                 </li>
@@ -249,11 +254,11 @@
                                   <div class="accountContent">
                                     <div class="form-group">
                                       <label for="itemN-1">Full Name</label><br>
-                                      <span id="itemN-1" class="text text-center" class="form-control">Ali Tufan</span>
+                                      <span id="itemN-1" class="text text-center" class="form-control">{{Auth::user()->name}}</span>
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-2">Email</label><br>
-                                      <span id="itemN-2" class="text text-center" class="form-control">polygontheme@gmail.com</span>
+                                      <span id="itemN-2" class="text text-center" class="form-control">{{Auth::user()->email}}</span>
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-3">Phone</label><br>
@@ -495,9 +500,8 @@
 									</div>
 									<div class="form-group">
 										<select data-placeholder="Type" class="chosen-select">
-											<option value="1">House Owner</option>
-											<option value="2">Service Owner</option>
-											<option value="3">Data Operator</option>
+											<option value="House Owner">House Owner</option>
+											<option value="Service Owner">Service Owner</option>
 										</select>
 									</div>
 									<div class="form-group">

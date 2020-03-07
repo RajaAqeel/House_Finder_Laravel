@@ -30,6 +30,10 @@ Route::get('/admin-view-profile', 'PagesController@adminViewProfile');
 Route::get('/admin-profile', 'PagesController@adminProfile');
 Route::get('/my-properties', 'PagesController@viewAllProperties');
 Route::get('/all-registered-users', 'PagesController@viewAllUsers');
+Route::get('/house-owner-profile', 'PagesController@houseOwnerProfile');
+Route::get('/my-properties','PagesController@myProperties');
+Route::get('/favourite-properties','PagesController@favouriteProperties');
+Route::get('/add-house-01','PagesController@addProperty');
 
 
 
