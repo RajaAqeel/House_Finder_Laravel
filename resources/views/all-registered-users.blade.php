@@ -144,7 +144,7 @@
 									<!-- UserLinksList -->
 									<ul class="list-unstyled UserLinksList">
 										<li>
-											<a href="admin-view-profile" class="lightbox">
+											<a href="/dashboard">
 												<i class="fi flaticon-social icn"></i>
 												<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
 											</a>

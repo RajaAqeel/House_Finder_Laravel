@@ -146,15 +146,9 @@
 									<!-- UserLinksList -->
 									<ul class="list-unstyled UserLinksList">
 										<li>
-											<a href="#popup1" class="lightbox">
+											<a href="/dashboard">
 												<i class="fi flaticon-social icn"></i>
-												<strong class="text fwNormal hidden-xs hidden-sm">Login</strong>
-											</a>
-										</li>
-										<li>
-											<a href="#popup1" class="lightbox">
-												<i class="fi flaticon-edit icn"></i>
-												<strong class="text fwNormal hidden-xs hidden-sm">Register</strong>
+												<strong class="text fwNormal hidden-xs hidden-sm">{{$user->name}}</strong>
 											</a>
 										</li>
 									</ul>

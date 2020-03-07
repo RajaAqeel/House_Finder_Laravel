@@ -141,6 +141,14 @@
 								<!-- userOptions -->
 								<div class="userOptions">
 									<!-- UserLinksList -->
+									<ul class="list-unstyled UserLinksList">
+										<li>
+											<a href="/dashboard">
+												<i class="fi flaticon-social icn"></i>
+												<strong class="text fwNormal hidden-xs hidden-sm">{{$user->name}}</strong>
+											</a>
+										</li>
+									</ul>
 									<!-- headerModalOpener -->
 									<a href="#" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Submit Property</a>
 								</div>
