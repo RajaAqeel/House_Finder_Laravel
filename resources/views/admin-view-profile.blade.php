@@ -233,7 +233,7 @@
 								</li>
 
 								<li>
-									<a href="add-city">
+									<a href="add-data-operator">
 									  <i class="fa fa-plus"></i>
 									  <span>Register Data operator</span>
 									</a>

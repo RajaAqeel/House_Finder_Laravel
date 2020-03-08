@@ -53,6 +53,11 @@ class PagesController extends Controller
          return view('all-registered-users');
      }
 
+     public function registerDataOperator()
+     {
+         return view('add-data-operator');
+     }
+
      public function houseOwnerProfile()
      {
          return view('house-owner-profile');
@@ -71,5 +76,25 @@ class PagesController extends Controller
      public function addProperty()
      {
          return view('add-house-01');
+     }
+
+     public function dataOperatorProfile()
+     {
+        return view('data-operator-profile');
+     }
+
+     public function viewUnverifiedProperties()
+     {
+        return view('view-unverified-properties');
+     }
+
+     public function viewUnverifiedServices()
+     {
+        return view('view-unverified-services');
+     }
+
+     public function addSubArea()
+     {
+         return view ('add-sub-area');
      }
 }

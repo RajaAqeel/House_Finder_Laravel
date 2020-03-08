@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\users;
 use App\house_owner;
+use App\data_operator;
 use App\admin;
 use Illuminate\Http\Request;
 use Auth;
@@ -40,7 +41,7 @@ class UsersController extends Controller
     {
         $dataOperator = data_operator::where('user_id', Auth::user()->id)->first();
         $user = users::where('id', Auth::user()->id)->first();
-        return view('data-operator-view-profle')->with('user', $user)->with('dataOperator', $dataOperator);
+        return view('data-operator-view-profile')->with('user', $user)->with('dataOperator', $dataOperator);
     }
 
     public function allUsers()
@@ -119,7 +120,7 @@ class UsersController extends Controller
     {
         DB::table('users')->where('id', $id)->delete();
         DB::table('admins')->where('user_id', $id)->delete();
-        return redirect('/all-registered-users');
+        return redirect('/all-registered-users'); 
 
     }
 }

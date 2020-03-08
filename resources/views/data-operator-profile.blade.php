@@ -141,15 +141,9 @@
 									<!-- UserLinksList -->
 									<ul class="list-unstyled UserLinksList">
 										<li>
-											<a href="#popup1" class="lightbox">
+											<a href="/do_dashboard">
 												<i class="fi flaticon-social icn"></i>
-												<strong class="text fwNormal hidden-xs hidden-sm">Login</strong>
-											</a>
-										</li>
-										<li>
-											<a href="#popup1" class="lightbox">
-												<i class="fi flaticon-edit icn"></i>
-												<strong class="text fwNormal hidden-xs hidden-sm">Register</strong>
+												<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
 											</a>
 										</li>
 									</ul>
@@ -195,34 +189,45 @@
                                   <span class="text"><a href="change-password.html" class="link">Change Password</a></span>
                                 </div>
                               </header>
-                              <ul class="navUser list-unstyled">
+							  <ul class="navUser list-unstyled">
+								<li>
+									<a href="/do_dashboard">
+									  <i class="far fa-user"></i>
+									  <span>View Profile</span>
+									</a>
+								  </li>
                                 <li>
-                                  <a href="data-operator-profile.html">
+                                  <a href="data-operator-profile">
                                     <i class="far fa-user"></i>
                                     <span>Account Settings</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="my-properties.html">
+                                  <a href="view-unverified-properties">
                                     <i class="fi flaticon-house"></i>
-                                    <span>View Registered Properties</span>
+                                    <span>View Unverified Properties</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="my-properties.html">
-                                    <i class="far fa-heart"></i>
-                                    <span>View Registered Services</span>
+                                  <a href="view-unverified-services">
+                                    <i class="fi flaticon-house"></i>
+                                    <span>View Unverified Services</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="add-sub-area.html">
+                                  <a href="add-sub-area">
                                     <i class="fa fa-plus"></i>
                                     <span>Add sub area</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="home.html">
-                                    <i class="fa fa-sign-out-alt"></i>
+									<a href="{{ url('/logout') }}"
+									onclick="event.preventDefault();
+											 document.getElementById('logout-form').submit();">
+									  <i class="fa fa-sign-out-alt"></i>
+									  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+										  {{ csrf_field() }}
+									  </form>
                                     <span>Logout</span>
                                   </a>
                                 </li>

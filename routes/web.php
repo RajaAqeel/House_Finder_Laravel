@@ -34,7 +34,11 @@ Route::get('/house-owner-profile', 'PagesController@houseOwnerProfile');
 Route::get('/my-properties','PagesController@myProperties');
 Route::get('/favourite-properties','PagesController@favouriteProperties');
 Route::get('/add-house-01','PagesController@addProperty');
-
+Route::get('add-data-operator', 'PagesController@registerDataOperator');
+Route::get('/data-operator-profile', 'PagesController@dataOperatorProfile');
+Route::get('/view-unverified-properties', 'PagesController@viewUnverifiedProperties');
+Route::get('/view-unverified-services', 'PagesController@viewUnverifiedServices');
+Route::get('/add-sub-area', 'PagesController@addSubArea');
 
 
 
@@ -42,6 +46,7 @@ Route::get('/add-house-01','PagesController@addProperty');
 Route::resource('/comments','CommentsController');
 Route::resource('/users','UsersController');
 Route::resource('/admins','AdminController');
+Route::resource('/dataoperators', 'DataOperatorController');
 
 
 
@@ -87,4 +92,8 @@ Route::post('/store', [
 ]);
 Route::post('/store1', [
     'uses' => 'AdminController@store',
+]);
+
+Route::post('/dataOperatorStore', [
+    'uses' => 'DataOperatorController@register'
 ]);

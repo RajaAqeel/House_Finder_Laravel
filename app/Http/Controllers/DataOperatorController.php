@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\data_operator;
+use App\users;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Auth;
+
 
 class DataOperatorController extends Controller
 {
@@ -82,4 +86,33 @@ class DataOperatorController extends Controller
     {
         //
     }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function registerPage()
+    {
+        return view('add-data-operator');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function register(Request $request)
+    {
+        $user = new users;
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->password = Hash::make($request->input('password'));
+        $user->user_type = $request->input('user_type');
+        $user->save();
+        return redirect('/dashboard');
+    }
+
+ 
 }
