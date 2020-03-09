@@ -61,8 +61,8 @@
                           </div>
 						</form>
 						<div class="btnArea">
-                            <button class="btn btnDark"><a href="/admin-view-profile">Back</a></button>
-                          </div>
+                            <button class="btn btnDark"><a href="/dashboard">Back</a></button>
+                        </div>
                       </div>
                     </div>
                   </section>

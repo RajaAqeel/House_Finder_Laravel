@@ -44,29 +44,38 @@
                       <h1 class="fontNeuron">Add New Sub Area</h1>
 
                       <div class="formContent">
-                        <form>
+						<form method="POST" action="/subAreaStore">
+							@csrf
                           <header class="contentHead">
                             <h2 class="fontNeuron">Add Sub Area</h2>
 
                           </header>
                           <div class="row">
+							<div class="col-xs-12">
+                                <div class="form-group">
+									<label for="itemN-19">City</label>
+								<select id="itemN-19" name="city" value="{{ old('user_type') }}" data-placeholder="City" class="chosen-select" class="form-control elemenBlock">
+									<option>Select</option>
+									@foreach ($city as $item)
+										<option value="{{$item->id}}">{{$item->name}}</option>   
+									@endforeach
+                                </select>
+                                </div>
+                            </div>
                             <div class="col-xs-12">
                               <div class="form-group">
                                 <label for="itemN-15">Sub Area Name*</label>
-                                <input type="text" class="form-control" placeholder="Saddar" id="itemN-15">
+                                <input name="sub_area" type="text" class="form-control" placeholder="Saddar" id="itemN-15">
                               </div>
                             </div>
-                            <div class="col-xs-12">
-                                <div class="form-group">
-                                <label for="itemN-16">Description</label>
-                                  <textarea class="form-control" id="itemN-16" placeholder="Description"></textarea>
-                                </div>
-                              </div>
                           </div>
                           <div class="btnArea">
-                            <button type="submit" class="btn btnDark"><a href="admin-profile.html">Save</a></button>
+                            <button type="submit" class="btn btnDark">Save</button>
                           </div>
-                        </form>
+						</form>
+						<div class="btnArea">
+                            <button class="btn btnDark"><a href="/do_dashboard">Back</a></button>
+                        </div>
                       </div>
                     </div>
                   </section>

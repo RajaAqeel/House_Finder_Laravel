@@ -144,6 +144,7 @@
 								<div class="userOptions">
 									<!-- UserLinksList -->
 									<ul class="list-unstyled UserLinksList">
+										@guest
 										<li>
 											<a href="#popup1" class="lightbox">
 												<i class="fi flaticon-social icn"></i>
@@ -156,9 +157,45 @@
 												<strong class="text fwNormal hidden-xs hidden-sm">Register</strong>
 											</a>
 										</li>
+										<a href="/" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i>Welcome</a>
+										@endguest
+										@if(isset(Auth::user()->id))
+										@if(Auth::user()->user_type=="admin")
+										<li>
+											<a href="/dashboard">
+												<i class="fi flaticon-social icn"></i>
+											<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
+											</a>
+										</li>
+										<a href="/add-city" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add City</a>
+										@elseif(Auth::user()->user_type=="House Owner")
+										<li>
+											<a href="/ho_dashboard">
+												<i class="fi flaticon-social icn"></i>
+											<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
+											</a>
+										</li>
+										<a href="/add-house-01" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Property</a>
+										@elseif(Auth::user()->user_type=="Data Operator")
+											<li>
+												<a href="/do_dashboard">
+													<i class="fi flaticon-social icn"></i>
+												<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
+												</a>
+											</li>
+											<a href="/add-sub-area" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Service</a>
+										@elseif(Auth::user()->user_type=="Service Provider")
+										<li>
+											<a href="/sp_dashboard">
+												<i class="fi flaticon-social icn"></i>
+											<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
+											</a>
+										</li>
+										<a href="/add-internetProvider-info" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Sub Area</a>
+										@endif
+										@endif
 									</ul>
 									<!-- headerModalOpener -->
-									<a href="#" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Submit Property</a>
 								</div>
 							</nav>
 						</div>

@@ -47,7 +47,7 @@ Route::resource('/comments','CommentsController');
 Route::resource('/users','UsersController');
 Route::resource('/admins','AdminController');
 Route::resource('/dataoperators', 'DataOperatorController');
-
+Route::resource('/subareas', 'SubAreaController');
 
 
 
@@ -61,6 +61,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/all-registered-users', 'UsersController@allUsers');
 Route::get('/delete/{id}', 'UsersController@delete');
+ROute::get('/add-sub-area', 'SubAreaController@index');
 
 
 
@@ -96,4 +97,7 @@ Route::post('/store1', [
 
 Route::post('/dataOperatorStore', [
     'uses' => 'DataOperatorController@register'
+]);
+Route::post('/subAreaStore', [
+    'uses' => 'SubAreaController@store'
 ]);

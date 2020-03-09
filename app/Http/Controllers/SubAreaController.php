@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\sub_area;
+use App\city;
 use Illuminate\Http\Request;
 
 class SubAreaController extends Controller
@@ -14,7 +15,8 @@ class SubAreaController extends Controller
      */
     public function index()
     {
-        //
+        $city = city::all();
+        return view('add-sub-area')->with('city', $city);
     }
 
     /**
@@ -24,7 +26,7 @@ class SubAreaController extends Controller
      */
     public function create()
     {
-        //
+        return view('add-sub-area');
     }
 
     /**
@@ -35,7 +37,17 @@ class SubAreaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'city' => 'required',
+            'sub_area' => 'required',
+        ]);
+
+        $subArea = new sub_area;
+        $subArea->name = $request->input('sub_area');
+        $subArea->city_id = $request->input('city');
+        
+        $subArea->save();
+        return redirect('/add-sub-area');
     }
 
     /**
