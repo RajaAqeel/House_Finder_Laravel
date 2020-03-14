@@ -97,4 +97,24 @@ class PagesController extends Controller
      {
          return view ('add-sub-area');
      }
+
+     public function serviceProviderProfile()
+     {
+        return view('service-provider-profile');
+     }
+
+     public function viewAllServices()
+     {
+        return view('my-services');
+     }
+
+     public function viewFavouriteServices()
+     {
+        return view('favourited-services');
+     }
+
+     public function addService()
+     {
+        return view('add-internetProvider-info');
+     }
 }

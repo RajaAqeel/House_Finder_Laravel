@@ -236,33 +236,44 @@
                                 </div>
                               </header>
                               <ul class="navUser list-unstyled">
+								<li>
+									<a href="/sp_dashboard">
+									  <i class="far fa-user"></i>
+									  <span>View Profile</span>
+									</a>
+								  </li>
                                 <li>
-                                  <a href="service-provider-profile.html">
+                                  <a href="service-provider-profile">
                                     <i class="far fa-user"></i>
                                     <span>Account Settings</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="my-properties.html">
+                                  <a href="my-services">
                                     <i class="fi flaticon-house"></i>
                                     <span>My Services</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="favourite-properties.html">
+                                  <a href="favourited-services">
                                     <i class="far fa-heart"></i>
                                     <span>Favorited Services</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="add-service.html">
+                                  <a href="add-internetProvider-info">
                                     <i class="fa fa-plus"></i>
                                     <span>Add Service</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="home.html">
-                                    <i class="fa fa-sign-out-alt"></i>
+									<a href="{{ url('/logout') }}"
+									onclick="event.preventDefault();
+											 document.getElementById('logout-form').submit();">
+									  <i class="fa fa-sign-out-alt"></i>
+									  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+										  {{ csrf_field() }}
+									  </form>
                                     <span>Logout</span>
                                   </a>
                                 </li>
@@ -280,34 +291,25 @@
                                   <div class="imgProfile">
                                     <div class="imgThumbnail">
                                       <img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
-                                      <!-- <div class="btnArea">
-                                        <a href="#" class="btn btn-info"><i class="fa fa-upload"></i> Upload Photo</a>
-                                      </div> -->
                                     </div>
-                                    <!-- <span class="text text-center">*minimum 200px x 200px</span> -->
                                   </div>
                                   <div class="accountContent">
                                     <div class="form-group">
                                       <label for="itemN-1">Full Name</label><br>
-                                      <span id="itemN-1" class="text text-center" class="form-control">Ali Tufan</span>
-                                      <!-- <input type="text" class="form-control" placeholder="Ali Tufan" id="itemN-1"> -->
+                                      <span id="itemN-1" class="text text-center" class="form-control">{{Auth::user()->name}}</span>
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-2">Email</label><br>
-                                      <span id="itemN-2" class="text text-center" class="form-control">polygontheme@gmail.com</span>
-                                      <!-- <input type="email" class="form-control" placeholder="polygontheme@gmail.com" id="itemN-2"> -->
+                                      <span id="itemN-2" class="text text-center" class="form-control">{{Auth::user()->email}}</span>
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-3">Phone</label><br>
                                       <span id="itemN-3" class="text text-center" class="form-control">0402 2020 202</span>
-                                      <!-- <input type="tel" class="form-control" placeholder="0402 2020 202" id="itemN-3"> -->
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-4">Biography</label><br>
                                       <span id="itemN-4" class="text text-center" class="form-control">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.Phasellus mollis imperdiet placerat</span>
-                                      <!-- <textarea id="itemN-4" class="form-control" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.Phasellus mollis imperdiet placerat"></textarea> -->
                                     </div>
-                                    <!-- <button type="submit" class="btn alighRight btnSecondary buttonL fontNeuron">Update Profile</button> -->
                                   </div>
                                 </div>
                               </form>
@@ -374,7 +376,6 @@
 					<!-- signupFormAside -->
 					<form action="#" class="bgWhite signupFormAside">
 						<div class="container signupFormAsideHolder">
-							<!-- <span class="icnAbsolute elemenBlock fi flaticon-message"></span> -->
 							<div class="col-xs-12 col-md-offset-2 col-md-6">
 								<h3 class="fontNeuron textSecondary">Download our app</h3>
 								<p>Download our app from google play store</p>

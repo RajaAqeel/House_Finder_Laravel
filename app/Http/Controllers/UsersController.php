@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\users;
 use App\house_owner;
 use App\data_operator;
+use App\service_owner;
 use App\admin;
 use Illuminate\Http\Request;
 use Auth;
@@ -34,7 +35,7 @@ class UsersController extends Controller
     {
         $serviceOwner = service_owner::where('user_id', Auth::user()->id)->first();
         $user = users::where('id', Auth::user()->id)->first();
-        return view('service-provider-view-profle')->with('user', $user)->with('serviceOwner', $serviceOwner);
+        return view('service-provider-view-profile')->with('user', $user)->with('serviceOwner', $serviceOwner);
     }
 
     public function dataOperatorData()

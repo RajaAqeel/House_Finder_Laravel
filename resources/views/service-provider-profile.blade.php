@@ -238,33 +238,44 @@
                                 </div>
                               </header>
                               <ul class="navUser list-unstyled">
+								<li>
+									<a href="/sp_dashboard">
+									  <i class="far fa-user"></i>
+									  <span>View Profile</span>
+									</a>
+								  </li>
                                 <li>
-                                  <a href="service-provider-profile.html">
+                                  <a href="service-provider-profile">
                                     <i class="far fa-user"></i>
                                     <span>Account Settings</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="my-properties.html">
+                                  <a href="my-services">
                                     <i class="fi flaticon-house"></i>
                                     <span>My Services</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="favourite-properties.html">
+                                  <a href="favourited-services">
                                     <i class="far fa-heart"></i>
                                     <span>Favorited Services</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="add-service.html">
+                                  <a href="add-internetProvider-info">
                                     <i class="fa fa-plus"></i>
                                     <span>Add Service</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="home.html">
-                                    <i class="fa fa-sign-out-alt"></i>
+									<a href="{{ url('/logout') }}"
+									onclick="event.preventDefault();
+											 document.getElementById('logout-form').submit();">
+									  <i class="fa fa-sign-out-alt"></i>
+									  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+										  {{ csrf_field() }}
+									  </form>
                                     <span>Logout</span>
                                   </a>
                                 </li>
@@ -407,7 +418,6 @@
 					<!-- signupFormAside -->
 					<form action="#" class="bgWhite signupFormAside">
 						<div class="container signupFormAsideHolder">
-							<span class="icnAbsolute elemenBlock fi flaticon-message"></span>
 							<div class="col-xs-12 col-md-offset-2 col-md-6">
 								<h3 class="fontNeuron textSecondary">Download our app</h3>
 								<p>Download our app from google play store</p>
