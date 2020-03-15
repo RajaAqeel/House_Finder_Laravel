@@ -82,7 +82,7 @@
                         </li>
                       </ol>
                       <div class="formContent">
-                        <form>
+                        <form method="POST" action="/addInternetService">
                           <header class="contentHead">
                             <h2 class="fontNeuron">Basic Info</h2>
                           

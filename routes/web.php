@@ -105,3 +105,6 @@ Route::post('/dataOperatorStore', [
 Route::post('/subAreaStore', [
     'uses' => 'SubAreaController@store'
 ]);
+Route::post('/addInternetService', [
+    'uses' => 'InternetServiceProviderController@store'
+]);
