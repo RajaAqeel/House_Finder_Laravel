@@ -66,6 +66,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/all-registered-users', 'UsersController@allUsers');
 Route::get('/delete/{id}', 'UsersController@delete');
 ROute::get('/add-sub-area', 'SubAreaController@index');
+Route::get('/add-internetProvider-info', 'DropDownController@allCity');
+use App\sub_area;
+Route::get('/ajax-sub-area', function(){
+    $city_id = Request::get('city_id');
+    $subArea = sub_area::where('city_id', '=', $city_id)->get();
+    return Response::json($subArea);
+});
 
 
 

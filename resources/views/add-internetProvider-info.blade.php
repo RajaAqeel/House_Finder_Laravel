@@ -90,20 +90,32 @@
                           <div class="row">
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
-								  <label for="itemN-29">City</label>
-								  <select data-placeholder="Select Option" class="chosen-select" id="itemN-29">
-									  <option value="1">Rawalpindi</option>
-									  <option value="2">Islamabad</option>
+								  <label for="city">City</label>
+								  <select name="city" data-placeholder="Select Option"  class="chosen-select" id="city">
+									<option value="">Select Option</option>
+									  @foreach ($cities as $city)
+								  		<option value="{{$city->id}}">{{$city->name}}</option>
+									  @endforeach
+
 									</select>
 								</div>
 							  </div>
 							  <div class="col-xs-12 col-sm-6">
 								<div class="form-group">
-								  <label for="itemN-30">City</label>
-								  <select data-placeholder="Select Option" class="chosen-select" id="itemN-30">
-									  <option value="1">Chur Chok</option>
-									  <option value="2">Rehmanabad</option>
-									</select>
+								  <label for="sub_area">Sub Area</label>
+								  <select name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
+									<option value="">Select Option</option>
+
+								  </select>
+								  {{-- <select name="sub_area" data-placeholder="Select Option" class="chosen-select" id="sub_area">
+									<option value="1">test</option>
+									<option value="1">test</option>
+
+									<option value="1">test</option>
+
+								
+										
+									</select> --}}
 								</div>
 							  </div>
                             <div class="col-xs-12">
@@ -282,6 +294,24 @@
 	</div>
 	<!-- include jQuery library -->
 	<script src="js/jquery.js"></script>
+	<script>
+		
+		$('#city').on('change', function(e){
+			console.log(e);
+			var city_id = e.target.value;
+
+			$.get('/ajax-sub-area?city_id=' + city_id, function(data){
+				console.log(data);
+				$('#sub_area_chosen').empty();
+				$.each(data, function(index, subAreaObj){
+					$('#sel1').append('<option value="'+subAreaObj.id+'">'+subAreaObj.name+'</option>');
+				
+					
+				});
+
+			});
+		});
+	</script>
 	<script src="js/plugins.js"></script>
 	<!-- include bootstrap JavaScript -->
 	<script src="js/bootstrap-slider.min.js"></script>
