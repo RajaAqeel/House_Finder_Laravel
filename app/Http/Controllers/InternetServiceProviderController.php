@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\internet_service_provider;
+use App\service_owner;
 use Illuminate\Http\Request;
+use Auth;
 
 class InternetServiceProviderController extends Controller
 {
@@ -24,7 +26,7 @@ class InternetServiceProviderController extends Controller
      */
     public function create()
     {
-        //
+        return view('add-internetProvider-info');
     }
 
     /**
@@ -35,7 +37,31 @@ class InternetServiceProviderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'city' => 'required',
+            'sub_area' => 'required',
+            'service_title' => 'required',
+            'price' => 'required',
+            'address' => 'required',
+            'number' => 'required',
+            'c_hl' => 'required',
+            'cc_hl' => 'required',
+        ]);
+        $internet = new internet_service_provider;
+        $internet->title = $request->get('service_title');
+        $internet->price_mb = $request->get('price');
+        $internet->address = $request->get('address');
+        $internet->complaint_helpline = $request->get('c_hl');
+        $internet->customer_service_helpline = $request->get('cc_hl');
+        $internet->phone_number = $request->get('number');
+        $internet->city_id = $request->get('city');
+        $internet->sub_area_id = $request->get('sub_area');
+        $internet->favourite = 'no';
+        $internet->verified = 'no';
+        $so = service_owner::where('user_id',Auth::user()->id)->first();
+        $internet->service_provider_id =$so->id;
+        $internet->save();
+        return redirect('/add-internetProvider-info');
     }
 
     /**

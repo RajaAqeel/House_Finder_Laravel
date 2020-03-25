@@ -310,10 +310,10 @@
 									<article class="propertyRow">
 									  <div class="info">
 										<div class="imgThumbnail">
-										  <a href="#"><img src="https://via.placeholder.com/110x85" alt=""></a>
+										  <a href="properties-single2"><img src="https://via.placeholder.com/110x85" alt=""></a>
 										</div>
 										<div class="textBox">
-										<h4 class="fontNeuron"><a href="properties-single2.html">{{$users->name}}</a></h4>
+										<h4 class="fontNeuron"><a href="properties-single2">{{$users->name}}</a></h4>
 										  <address><i></i>{{$users->email}}</address>
 										</div>
 									  </div>

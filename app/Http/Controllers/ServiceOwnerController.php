@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\service_owner;
 use Illuminate\Http\Request;
+use Auth;
 
 class ServiceOwnerController extends Controller
 {
@@ -24,7 +25,7 @@ class ServiceOwnerController extends Controller
      */
     public function create()
     {
-        //
+        return view('service-provider-profile');
     }
 
     /**
@@ -35,7 +36,16 @@ class ServiceOwnerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'phone_number' => 'required',
+            'bio' => 'required',
+        ]);
+
+        $sp = service_owner::where('user_id', Auth::user()->id)->first();
+        $sp->phone_number = $request->input('phone_number');
+        $sp->biography = $request->input('bio');
+        $sp->update();
+        return redirect('/sp_dashboard');
     }
 
     /**

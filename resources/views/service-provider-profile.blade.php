@@ -285,7 +285,8 @@
                           <div class="col-xs-12 col-sm-8 col-lg-9">
                             <!-- accountData -->
                             <div class="accountData">
-                              <form>
+                              <form method="POST" action="/store2">
+								  @csrf
                                 <div class="head">
                                   <h4 class="fontNeuron">Account Settings</h4>
                                 </div>
@@ -301,62 +302,18 @@
                                   </div>
                                   <div class="accountContent">
                                     <div class="form-group">
-                                      <label for="itemN-1">Full Name</label>
-                                      <input type="text" class="form-control" placeholder="Ali Tufan" id="itemN-1">
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="itemN-2">Email</label>
-                                      <input type="email" class="form-control" placeholder="polygontheme@gmail.com" id="itemN-2">
-                                    </div>
-                                    <div class="form-group">
                                       <label for="itemN-3">Phone</label>
-                                      <input type="tel" class="form-control" placeholder="0402 2020 202" id="itemN-3">
+                                      <input name="phone_number" type="tel" class="form-control" placeholder="0402 2020 202" id="itemN-3">
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-4">Biography</label>
-                                      <textarea id="itemN-4" class="form-control" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.Phasellus mollis imperdiet placerat"></textarea>
+                                      <textarea name="bio" id="itemN-4" class="form-control" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.Phasellus mollis imperdiet placerat"></textarea>
                                     </div>
                                     <button type="submit" class="btn alighRight btnSecondary buttonL fontNeuron">Update Profile</button>
                                   </div>
                                 </div>
                               </form>
                             </div>
-                            <!-- accountData -->
-                            <div class="accountData">
-                              <form>
-                                <div class="head">
-                                  <h4 class="fontNeuron">Change Password</h4>
-                                </div>
-                                <div class="accountHolder">
-                                  <div class="accountContent">
-                                    <div class="row">
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-5">Current Password</label>
-                                          <input type="password" class="form-control" placeholder="www.facebook.com/PolygonTheme" id="itemN-5">
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-6">New Password</label>
-                                          <input type="password" class="form-control" placeholder="PolygonTheme" id="itemN-6">
-                                        </div>
-                                      </div>
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-7">Confirm New Password</label>
-                                          <input type="password" class="form-control" placeholder="PolygonTheme" id="itemN-7">
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <button type="submit" class="btn alighRight btnSecondary buttonL fontNeuron">Change Password</button>
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
-                            <!-- accountData -->
                             <div class="accountData">
                               <form>
                                 <div class="head">

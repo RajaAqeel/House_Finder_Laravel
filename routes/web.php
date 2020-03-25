@@ -52,6 +52,7 @@ Route::resource('/users','UsersController');
 Route::resource('/admins','AdminController');
 Route::resource('/dataoperators', 'DataOperatorController');
 Route::resource('/subareas', 'SubAreaController');
+Route::resource('/internet', 'InternetServiceProviderController');
 
 
 
@@ -105,7 +106,9 @@ Route::post('/store', [
 Route::post('/store1', [
     'uses' => 'AdminController@store',
 ]);
-
+Route::post('/store2', [
+    'uses' => 'ServiceOwnerController@store',
+]);
 Route::post('/dataOperatorStore', [
     'uses' => 'DataOperatorController@register'
 ]);

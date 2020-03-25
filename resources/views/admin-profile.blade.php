@@ -234,7 +234,7 @@
                                   <img src="https://via.placeholder.com/74x74" alt="" width="74" height="74">
                                 </div>
                                 <div class="info">
-                                  <span class="text">Ali Tufan</span>
+                                  <span class="text">{{Auth::user()->name}}</span>
                                   <span class="text"><a href="change-password.html" class="link">Change Password</a></span>
                                 </div>
                               </header>
@@ -316,14 +316,6 @@
                                     <span class="text text-center">*minimum 200px x 200px</span>
                                   </div>
                                   <div class="accountContent">
-                                    {{-- <div class="form-group">
-                                      <label for="itemN-1">Full Name</label>
-                                      <input type="text" class="form-control" placeholder="Ali Tufan" id="itemN-1">
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="itemN-2">Email</label>
-                                      <input type="email" class="form-control" placeholder="polygontheme@gmail.com" id="itemN-2">
-                                    </div> --}}
                                     <div class="form-group">
                                       <label for="itemN-3">Phone</label>
                                       <input name="phone_number" type="tel" class="form-control" placeholder="0402 2020 202" id="itemN-3">

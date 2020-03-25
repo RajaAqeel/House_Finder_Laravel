@@ -82,7 +82,8 @@
                         </li>
                       </ol>
                       <div class="formContent">
-                        <form method="POST" action="/addInternetService">
+						<form method="POST" action="/addInternetService">
+							@csrf
                           <header class="contentHead">
                             <h2 class="fontNeuron">Basic Info</h2>
                           
@@ -91,7 +92,7 @@
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="city">City</label>
-								  <select name="city" data-placeholder="Select Option"  class="chosen-select" id="city">
+								  <select name="city" data-placeholder="Select Option"  class="form-control" id="city">
 									<option value="">Select Option</option>
 									  @foreach ($cities as $city)
 								  		<option value="{{$city->id}}">{{$city->name}}</option>
@@ -107,75 +108,50 @@
 									<option value="">Select Option</option>
 
 								  </select>
-								  {{-- <select name="sub_area" data-placeholder="Select Option" class="chosen-select" id="sub_area">
-									<option value="1">test</option>
-									<option value="1">test</option>
-
-									<option value="1">test</option>
-
-								
-										
-									</select> --}}
 								</div>
 							  </div>
                             <div class="col-xs-12">
                               <div class="form-group">
                                 <label for="itemN-15">Service Title*</label>
-                                <input type="text" class="form-control" placeholder="Rawalpindi DSL Providers" id="itemN-15">
+                                <input name="service_title" type="text" class="form-control" placeholder="Rawalpindi DSL Providers" id="itemN-15">
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-16">Price/mb</label>
-                                <input type="text" class="form-control" placeholder="3000" id="itemN-16">
+                                <input name="price" type="text" class="form-control" placeholder="3000" id="itemN-16">
                               </div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="itemN-17">Address</label>
-								  <input type="text" class="form-control" placeholder="Address" id="itemN-17">
+								  <input name="address" type="text" class="form-control" placeholder="Address" id="itemN-17">
 								</div>
-							  </div>
-							  <div class="col-xs-12 col-sm-6">
-                                <div class="form-group">
-                                  <label for="itemN-18">Location From</label>
-                                  <input type="text" class="form-control" placeholder="Rawalpindi Cantt" id="itemN-18">
-                                </div>
-							  </div>
-							  <div class="col-xs-12 col-sm-6">
-                                <div class="form-group">
-                                  <label for="itemN-19">Location To</label>
-                                  <input type="text" class="form-control" placeholder="Rawalpindi Cantt" id="itemN-19">
-                                </div>
 							  </div>
 							  <div class="col-xs-12">
                                 <div class="form-group">
                                   <label for="itemN-36">Phone Number</label>
-                                  <input type="text" class="form-control" placeholder="03000000000" id="itemN-36">
+                                  <input name="number" type="text" class="form-control" placeholder="03000000000" id="itemN-36">
                                 </div>
                               </div>
 							  <div class="col-xs-12 col-sm-6">
                                 <div class="form-group">
                                   <label for="itemN-32">Complaint Helpline</label>
-                                  <input type="text" class="form-control" placeholder="1212" id="itemN-32">
+                                  <input name="c_hl" type="text" class="form-control" placeholder="1212" id="itemN-32">
                                 </div>
 							  </div>
 							  <div class="col-xs-12 col-sm-6">
                                 <div class="form-group">
                                   <label for="itemN-34">Customer Care Helpline</label>
-                                  <input type="text" class="form-control" placeholder="1213" id="itemN-34">
+                                  <input name="cc_hl" type="text" class="form-control" placeholder="1213" id="itemN-34">
                                 </div>
                               </div>
-                          
-                            <div class="col-xs-12">
-                              <div class="form-group">
-                              <label for="itemN-20">Description</label>
-                                <textarea class="form-control" id="itemN-20" placeholder=""></textarea>
-                              </div>
-                            </div>
+                        
                           </div>
                           <div class="btnArea">
-                            <button type="submit" class="btn btnDark"><a href="service-provider-view-profile.html">Register</a><i></i></button>
+							<button class="btn btnDark"><a href="/sp_dashboard">Back</a></button>
+							<button type="submit" class="btn btnDark">Register</button>
+
                           </div>
                         </form>
                       </div>

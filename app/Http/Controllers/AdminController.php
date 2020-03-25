@@ -42,12 +42,10 @@ class AdminController extends Controller
             'bio' => 'required',
         ]);
 
-        $admin = new admin;
+        $admin = admin::where('user_id', Auth::user()->id)->first();
         $admin->phone_number = $request->input('phone_number');
         $admin->biography = $request->input('bio');
-        $admin->user_id = Auth::user()->id;
-
-        $admin->save();
+        $admin->update();
         return redirect('/dashboard');
     }
 
