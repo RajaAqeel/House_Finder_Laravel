@@ -70,12 +70,10 @@
                             </div>
                           </div>
                           <div class="btnArea">
+							<button class="btn btnDark"><a href="/do_dashboard">Back</a></button>
                             <button type="submit" class="btn btnDark">Save</button>
                           </div>
 						</form>
-						<div class="btnArea">
-                            <button class="btn btnDark"><a href="/do_dashboard">Back</a></button>
-                        </div>
                       </div>
                     </div>
                   </section>

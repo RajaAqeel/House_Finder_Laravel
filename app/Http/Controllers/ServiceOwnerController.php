@@ -15,7 +15,7 @@ class ServiceOwnerController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**

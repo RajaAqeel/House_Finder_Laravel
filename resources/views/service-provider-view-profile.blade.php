@@ -304,11 +304,11 @@
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-3">Phone</label><br>
-                                      <span id="itemN-3" class="text text-center" class="form-control">0402 2020 202</span>
+                                      <span id="itemN-3" class="text text-center" class="form-control">{{$serviceOwner->phone_number}}</span>
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-4">Biography</label><br>
-                                      <span id="itemN-4" class="text text-center" class="form-control">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.Phasellus mollis imperdiet placerat</span>
+                                      <span id="itemN-4" class="text text-center" class="form-control">{{$serviceOwner->biography}}</span>
                                     </div>
                                   </div>
                                 </div>

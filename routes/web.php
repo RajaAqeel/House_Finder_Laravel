@@ -53,6 +53,7 @@ Route::resource('/admins','AdminController');
 Route::resource('/dataoperators', 'DataOperatorController');
 Route::resource('/subareas', 'SubAreaController');
 Route::resource('/internet', 'InternetServiceProviderController');
+Route::sersource('/services', 'AllServicesController');
 
 
 
@@ -66,8 +67,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/all-registered-users', 'UsersController@allUsers');
 Route::get('/delete/{id}', 'UsersController@delete');
-ROute::get('/add-sub-area', 'SubAreaController@index');
+Route::get('/add-sub-area', 'SubAreaController@index');
 Route::get('/add-internetProvider-info', 'DropDownController@allCity');
+Route::get('/my-services', 'AllServicesController@allServices');
 use App\sub_area;
 Route::get('/ajax-sub-area', function(){
     $city_id = Request::get('city_id');
