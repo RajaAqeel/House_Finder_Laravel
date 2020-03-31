@@ -40,7 +40,6 @@ Route::get('/view-unverified-properties', 'PagesController@viewUnverifiedPropert
 Route::get('/view-unverified-services', 'PagesController@viewUnverifiedServices');
 Route::get('/add-sub-area', 'PagesController@addSubArea');
 Route::get('/service-provider-profile', 'PagesController@serviceProviderProfile');
-Route::get('/my-services', 'PagesController@viewAllServices');
 Route::get('/favourited-services', 'PagesController@viewFavouriteServices');
 Route::get('/add-internetProvider-info', 'PagesController@addService');
 
