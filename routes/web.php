@@ -65,6 +65,7 @@ Auth::routes();
 //data get routes
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/all-registered-users', 'UsersController@allUsers');
+Route::get('/add-house-01','DropDownController@cities');
 Route::get('/delete/{id}', 'UsersController@delete');
 Route::get('/add-sub-area', 'SubAreaController@index');
 Route::get('/add-internetProvider-info', 'DropDownController@allCity');

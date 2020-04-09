@@ -13,4 +13,9 @@ class DropDownController extends Controller
         $cities = city::all();
         return view('add-internetProvider-info')->with('cities', $cities);
     }
+    public function cities()
+    {
+        $cities = city::all();
+        return view('add-house-01')->with('cities', $cities);
+    }
 }

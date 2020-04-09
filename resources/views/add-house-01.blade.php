@@ -52,95 +52,98 @@
 							<div class="col-xs-12">
 								<div class="form-group">
 								  <label for="itemN-17">Property Type</label>
-								  <select data-placeholder="Select Option" class="form-control" id="itemN-17">
-									  <option value="1">Flat</option>
-									  <option value="2">House</option>
-									  <option value="3">Apartment</option>
-									  <option value="4">Room</option>
-									  <option value="5">Office</option>
-									  <option value="5">Penthouse</option>
-									  <option value="5">Upper Portion</option>
-									  <option value="5">Lower Portion</option>
+								  <select name="type" data-placeholder="Select Option" class="form-control" id="itemN-17">
+									<option value="">Select Option</option>
+									  <option value="Flat">Flat</option>
+									  <option value="House">House</option>
+									  <option value="Apartment">Apartment</option>
+									  <option value="Room">Room</option>
+									  <option value="Office">Office</option>
+									  <option value="Penthouse">Penthouse</option>
+									  <option value="Upper Portion">Upper Portion</option>
+									  <option value="Lower Portion">Lower Portion</option>
 									</select>
 								</div>
 							  </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-16">Price</label>
-                                <input type="text" class="form-control" placeholder=" 158" id="itemN-16">
+                                <input name="price" type="text" class="form-control" placeholder=" 158" id="itemN-16">
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-17">Price</label>
-                                <select data-placeholder="Select Option" class="form-control" id="itemN-17">
-									<option value="1">Negotiable</option>
-									<option value="2">Not Negotiable</option>
+                                <select name="negotiable" data-placeholder="Select Option" class="form-control" id="itemN-17">
+									<option value="">Select Option</option>
+									<option value="Yes">Negotiable</option>
+									<option value="No">Not Negotiable</option>
 								  </select>
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-18">Bedrooms</label>
-                                <input type="number" class="form-control" placeholder="5" min="0" max="9999" id="itemN-18">
+                                <input name="bedroom" type="number" class="form-control" placeholder="5" min="0" max="9999" id="itemN-18">
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-19">Bathrooms</label>
-                                <input type="number" class="form-control" placeholder="3" min="0" max="9999" id="itemN-19">
+                                <input name="bathroom" type="number" class="form-control" placeholder="3" min="0" max="9999" id="itemN-19">
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-21">Land Area</label>
-                                <input type="number" class="form-control" placeholder="1500" id="itemN-21">
+                                <input name="area" type="number" class="form-control" placeholder="1500" id="itemN-21">
                               </div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="itemN-17">Area Unit</label>
-								  <select data-placeholder="Select Option" class="form-control" id="itemN-17">
-									  <option value="1">Marla</option>
-									  <option value="2">Kanal</option>
-									  <option value="2">Square Feet</option>
-									  <option value="2">Square Yards</option>
-									  <option value="2">Square Meters</option>
+								  <select name="unit" data-placeholder="Select Option" class="form-control" id="itemN-17">
+									  <option value="">Select Option</option>
+									  <option value="Marla">Marla</option>
+									  <option value="Kanal">Kanal</option>
+									  <option value="Square Feet">Square Feet</option>
+									  <option value="Square Yards">Square Yards</option>
+									  <option value="Square Meters">Square Meters</option>
 									</select>
 								</div>
 							  </div>
                             <div class="col-xs-12">
                               <div class="form-group">
                               <label for="itemN-25">Description</label>
-                                <textarea class="form-control" id="itemN-25" placeholder=""></textarea>
+                                <textarea name="description" class="form-control" id="itemN-25" placeholder=""></textarea>
                               </div>
 							</div>
 								<h3 class="fontNeuron">Location</h3><br>
 								<div class="col-xs-12 col-sm-6">
 									<div class="form-group">
-									  <label>City</label>
-									  <select data-placeholder="Choose..." class="form-control">
-										<option value="1">Select Area</option>
-										<option value="2">Islamabad</option>
-										<option value="3">Rawalpindi</option>
+									  <label for="city">City</label>
+									  <select id="city" name="city" data-placeholder="Choose..." class="form-control">
+										<option value="">Select Area</option>
+										@foreach ($cities as $city)
+										<option value="{{$city->id}}">{{$city->name}}</option>
+									@endforeach
 									  </select>
 									</div>
 								  </div>
 								  <div class="col-xs-12 col-sm-6">
-									  <div class="form-group">
-										<label>Sub Area</label>
-										<select data-placeholder="Choose..." class="form-control">
-										  <option value="1">Select Area</option>
-										  <option value="2">Rehmanabad</option>
-										  <option value="3">Chur Chok</option>
-										</select>
-									  </div>
+									<div class="form-group">
+									  <label for="sub_area">Sub Area</label>
+									  <select name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
+										<option value="">Select Option</option>
+	
+									  </select>
+									</div>
 								  </div>
 								  <div class="col-xs-12">
 									<div class="form-group">
 									  <label for="item-map">Address / Location</label>
 									  <div class="input-group">
-										<input type="text" class="form-control" id="item-map" placeholder="Your address">
+										<input name="address" type="text" class="form-control" id="item-map" placeholder="Your address">
 									  </div>
 									</div>
 								  </div>
@@ -206,7 +209,8 @@
 								  </div>
                           </div>
                           <div class="btnArea">
-							<br><button type="submit" class="btn btnDark">Save</button>
+							<br><button class="btn btnDark"><a href="/ho_dashboard">Back</a></button>
+							<button type="submit" class="btn btnDark">Save</button>
                           </div>
                         </form>
                       </div>
@@ -325,6 +329,24 @@
 	</div>
 	<!-- include jQuery library -->
 	<script src="js/jquery.js"></script>
+	<script>
+		
+		$('#city').on('change', function(e){
+			console.log(e);
+			var city_id = e.target.value;
+
+			$.get('/ajax-sub-area?city_id=' + city_id, function(data){
+				console.log(data);
+				$('#sub_area_chosen').empty();
+				$.each(data, function(index, subAreaObj){
+					$('#sel1').append('<option value="'+subAreaObj.id+'">'+subAreaObj.name+'</option>');
+				
+					
+				});
+
+			});
+		});
+	</script>
 	<script src="js/plugins.js"></script>
 	<!-- include bootstrap JavaScript -->
 	<script src="js/bootstrap-slider.min.js"></script>
