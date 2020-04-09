@@ -52,7 +52,7 @@ Route::resource('/admins','AdminController');
 Route::resource('/dataoperators', 'DataOperatorController');
 Route::resource('/subareas', 'SubAreaController');
 Route::resource('/internet', 'InternetServiceProviderController');
-Route::sersource('/services', 'AllServicesController');
+
 
 
 

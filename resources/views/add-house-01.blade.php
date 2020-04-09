@@ -42,29 +42,6 @@
                   <section id="content" class="container pEqual">
                     <div class="addProperty">
                       <h1 class="fontNeuron">Add New Property</h1>
-                      <ol class="navSteps">
-                        <li class="current">
-                          <a href="add-house-01.html">
-                            <span class="text">Basic Info</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="add-house-02.html">
-                            <span class="text">Photos &amp; EPC</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="add-house-03.html">
-                            <span class="text">Location</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="add-house-04.html">
-                            <span class="text">Amenities and Services</span>
-                          </a>
-                        </li>
-
-                      </ol>
                       <div class="formContent">
                         <form>
                           <header class="contentHead">
@@ -75,12 +52,15 @@
 							<div class="col-xs-12">
 								<div class="form-group">
 								  <label for="itemN-17">Property Type</label>
-								  <select data-placeholder="Select Option" class="chosen-select" id="itemN-17">
+								  <select data-placeholder="Select Option" class="form-control" id="itemN-17">
 									  <option value="1">Flat</option>
 									  <option value="2">House</option>
 									  <option value="3">Apartment</option>
 									  <option value="4">Room</option>
 									  <option value="5">Office</option>
+									  <option value="5">Penthouse</option>
+									  <option value="5">Upper Portion</option>
+									  <option value="5">Lower Portion</option>
 									</select>
 								</div>
 							  </div>
@@ -93,7 +73,7 @@
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-17">Price</label>
-                                <select data-placeholder="Select Option" class="chosen-select" id="itemN-17">
+                                <select data-placeholder="Select Option" class="form-control" id="itemN-17">
 									<option value="1">Negotiable</option>
 									<option value="2">Not Negotiable</option>
 								  </select>
@@ -111,34 +91,22 @@
                                 <input type="number" class="form-control" placeholder="3" min="0" max="9999" id="itemN-19">
                               </div>
                             </div>
-                            <!-- <div class="col-xs-12 col-sm-4">
-                              <div class="form-group">
-                                <label for="itemN-20">Garages</label>
-                                <input type="number" class="form-control" placeholder="8" min="0" max="9999" id="itemN-20">
-                              </div>
-                            </div> -->
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
-                                <label for="itemN-21">Area in length</label>
+                                <label for="itemN-21">Land Area</label>
                                 <input type="number" class="form-control" placeholder="1500" id="itemN-21">
-                              </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="form-group">
-                                <label for="itemN-22">Area in width</label>
-                                <input type="number" class="form-control" placeholder="1500" id="itemN-22">
-                              </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="form-group">
-								<label for="itemN-23">Area in marla</label>
-								<input type="number" class="form-control" placeholder="5" id="itemN-23">
                               </div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
-								  <label for="itemN-24">Floors</label>
-								  <input type="number" class="form-control" placeholder="1" id="itemN-24">
+								  <label for="itemN-17">Area Unit</label>
+								  <select data-placeholder="Select Option" class="form-control" id="itemN-17">
+									  <option value="1">Marla</option>
+									  <option value="2">Kanal</option>
+									  <option value="2">Square Feet</option>
+									  <option value="2">Square Yards</option>
+									  <option value="2">Square Meters</option>
+									</select>
 								</div>
 							  </div>
                             <div class="col-xs-12">
@@ -146,10 +114,99 @@
                               <label for="itemN-25">Description</label>
                                 <textarea class="form-control" id="itemN-25" placeholder=""></textarea>
                               </div>
-                            </div>
+							</div>
+								<h3 class="fontNeuron">Location</h3><br>
+								<div class="col-xs-12 col-sm-6">
+									<div class="form-group">
+									  <label>City</label>
+									  <select data-placeholder="Choose..." class="form-control">
+										<option value="1">Select Area</option>
+										<option value="2">Islamabad</option>
+										<option value="3">Rawalpindi</option>
+									  </select>
+									</div>
+								  </div>
+								  <div class="col-xs-12 col-sm-6">
+									  <div class="form-group">
+										<label>Sub Area</label>
+										<select data-placeholder="Choose..." class="form-control">
+										  <option value="1">Select Area</option>
+										  <option value="2">Rehmanabad</option>
+										  <option value="3">Chur Chok</option>
+										</select>
+									  </div>
+								  </div>
+								  <div class="col-xs-12">
+									<div class="form-group">
+									  <label for="item-map">Address / Location</label>
+									  <div class="input-group">
+										<input type="text" class="form-control" id="item-map" placeholder="Your address">
+									  </div>
+									</div>
+								  </div>
+								  <h3 class="fontNeuron">Photos</h3><br>
+								  <div class="galleryUploads">
+									<div class="titleArea">
+									  <span class="title">Photo Gallery</span>
+									  <p>*At least one image is for valid submission, minimum width of 817px.</p>
+									  <p>*You can mark an image as featured by clicking the star icon, Otherwise first image will be considered featured image.</p>
+									</div>
+									<div class="imageGallery">
+									  <div class="image imageLoaded">
+										<img src="https://via.placeholder.com/200x150" alt="" width="200" height="150">
+										<div class="btnsArea">
+										  <a href="#" class="link close"><i class="fa fa-window-close"></i></a>
+										  <a href="#" class="link"><i class="fi flaticon-edit"></i></a>
+										</div>
+										<a href="#" class="text">
+										  <span>
+											<i class="fi flaticon-cloud-computing"></i>
+											<span>Upload Image</span>
+										  </span>
+										</a>
+									  </div>
+									  <div class="image imageLoaded">
+										<img src="https://via.placeholder.com/200x150" alt="" width="200" height="150">
+										<div class="btnsArea">
+										  <a href="#" class="link close"><i class="fa fa-window-close"></i></a>
+										  <a href="#" class="link"><i class="fi flaticon-edit"></i></a>
+										</div>
+										<a href="#" class="text">
+										  <span>
+											<i class="fi flaticon-cloud-computing"></i>
+											<span>Upload Image</span>
+										  </span>
+										</a>
+									  </div>
+									  <div class="image imageLoaded">
+										<img src="https://via.placeholder.com/200x150" alt="" width="200" height="150">
+										<div class="btnsArea">
+										  <a href="#" class="link close"><i class="fa fa-window-close"></i></a>
+										</div>
+										<a href="#" class="text">
+										  <span>
+											<i class="fi flaticon-cloud-computing"></i>
+											<span>Upload Image</span>
+										  </span>
+										</a>
+									  </div>
+									  <div class="image">
+										<div class="btnsArea">
+										  <a href="#" class="link close"><i class="fa fa-window-close"></i></a>
+										  <a href="#" class="link"><i class="fi flaticon-edit"></i></a>
+										</div>
+										<a href="#" class="text">
+										  <span>
+											<i class="fi flaticon-cloud-computing"></i>
+											<span>Upload Image</span>
+										  </span>
+										</a>
+									  </div>
+									</div>
+								  </div>
                           </div>
                           <div class="btnArea">
-                            <a href="add-house-02.html" class="btn btnDark">Next <i class="fi flaticon-arrows"></i></a>
+							<br><button type="submit" class="btn btnDark">Save</button>
                           </div>
                         </form>
                       </div>
