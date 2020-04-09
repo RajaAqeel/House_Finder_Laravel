@@ -51,6 +51,12 @@
                           <div class="row">
 							<div class="col-xs-12">
 								<div class="form-group">
+								  <label for="itemN-90">Title</label>
+								  <input name="title" type="text" class="form-control" placeholder=" title" id="itemN-90">
+								</div>
+							  </div>
+							<div class="col-xs-12">
+								<div class="form-group">
 								  <label for="itemN-17">Property Type</label>
 								  <select name="type" data-placeholder="Select Option" class="form-control" id="itemN-17">
 									<option value="">Select Option</option>

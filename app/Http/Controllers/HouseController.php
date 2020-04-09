@@ -14,7 +14,10 @@ class HouseController extends Controller
      */
     public function index()
     {
-        //
+        $ho = house_owner::where('user_id',Auth::user()->id)->first();
+        $id =$ho->id;
+        $allHouses = houses::where('house_owner_id', $id)->paginate(10);
+        return view('/my-properties')->with('allHouses', $allHouses);
     }
 
     /**
@@ -24,7 +27,7 @@ class HouseController extends Controller
      */
     public function create()
     {
-        //
+        return view('/add-house-01');
     }
 
     /**
@@ -35,7 +38,41 @@ class HouseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'type' => 'required',
+            'price' => 'required',
+            'negotiable' => 'required',
+            'bedroom' => 'required',
+            'bathroom' => 'required',
+            'unit' => 'required',
+            'area' => 'required',
+            'description' => 'required',
+            'city' => 'required',
+            'address' => 'required',
+            'sub_area' => 'required',
+        ]);
+        $houses = new house;
+        $ho = house_owner::where('user_id',Auth::user()->id)->first();
+        $houses->title = $request->input('title');
+        $houses->type = $request->input('type');
+        $houses->price = $request->input('type');
+        $houses->bedrooms = $request->input('bedroom');
+        $houses->bathrooms = $request->input('bathroom');
+        $houses->area_unit = $request->input('unit');
+        $houses->area_value = $request->input('area');
+        $houses->description = $request->input('description');
+        $houses->house_owner_id = $ho->id;
+        $houses->city_id = $request->input('city');
+        $houses->sub_area_id = $request->input('sub_area');
+        $houses->address = $request->input('address');
+        $houses->favourite = 'no';
+        $houses->verified = 'no';
+        $houses->status = 'Available';
+        $houses->negotiable = $request->input('negotiable');
+        $houses->save();
+        return view('/add-house-01');
+
     }
 
     /**
@@ -57,7 +94,7 @@ class HouseController extends Controller
      */
     public function edit(house $house)
     {
-        //
+           
     }
 
     /**
@@ -81,5 +118,11 @@ class HouseController extends Controller
     public function destroy(house $house)
     {
         //
+    }
+    public function delete($id)
+    {
+        DB::table('houses')->where('id', $id)->delete();
+        return redirect('/my-properties'); 
+
     }
 }

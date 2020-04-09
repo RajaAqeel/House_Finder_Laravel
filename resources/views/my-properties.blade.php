@@ -286,127 +286,37 @@
                             <div class="accountData">
                               <div class="head">
                                 <h4 class="fontNeuron">My Properties</h4>
-                                <div class="sortGroup">
-                                  <strong class="groupTitle fwNormal">Sort by:</strong>
-                                  <div class="dropdown">
-                                    <button aria-expanded="true" aria-haspopup="false" data-toggle="dropdown" id="sortGroup" type="button" class="dropdown-toggle buttonReset">Default Order <i class="icn fas fa-chevron-down"></i></button>
-                                    <ul aria-labelledby="sortGroup" class="dropdown-menu dropdown-menu-right">
-                                      <li><a href="#">Default Order</a></li>
-                                      <li><a href="#">Default Order</a></li>
-                                      <li><a href="#">Default Order</a></li>
-                                      <li><a href="#">Default Order</a></li>
-                                    </ul>
-                                  </div>
-                                </div>
                               </div>
-                              <!-- propertiesList -->
-                              <div class="propertiesList">
+							  <!-- propertiesList -->
+							  @foreach ($allHouses as $houses)
+							  <div class="propertiesList">
                                 <article class="propertyRow">
                                   <div class="info">
                                     <div class="imgThumbnail">
                                       <a href="properties-single2.html"><img src="https://via.placeholder.com/110x85" alt=""></a>
                                     </div>
                                     <div class="textBox">
-                                      <h4 class="fontNeuron"><a href="properties-single2.html">Elegant studio flat</a></h4>
-                                      <address><i class="fi flaticon-pin-1"></i>The Village, Jersey City, NJ 07302, USA </address>
+                                      <h4 class="fontNeuron"><a href="properties-single2.html">{{$houses->title}}</a></h4>
+                                      <address><i class="fi flaticon-pin-1"></i>{{$houses->address}}</address>
                                       <div class="priceArea">
-                                        <span class="price fontNeuron">  490,000</span>
-                                        <time class="date" datetime="2017-02-27">2/27/2017</time>
+                                        <span class="price fontNeuron">{{$houses->price}}</span>
+                                        <time class="date" datetime="2017-02-27">{{$houses->created_at}}</time>
                                       </div>
                                     </div>
                                   </div>
                                   <div class="btnArea">
-                                    <span class="status fontNeuron">Published</span>
+                                    <span class="status fontNeuron">{{$houses->status}}</span>
                                     <ul class="links list-unstyled">
-                                      <li><a href="properties-single2.html"><i class="fa fa-eye"></i>View</a></li>
-                                      <li><a href="edit-property-information.html"><i class="fa fa-edit"></i>Edit</a></li>
-                                      <li><a href="#" class="delete"><i class="far fa-window-close"></i></a></li>
-                                    </ul>
-                                  </div>
-                                </article>
-                                <article class="propertyRow">
-                                  <div class="info">
-                                    <div class="imgThumbnail">
-                                      <a href="properties-single2.html"><img src="https://via.placeholder.com/110x85" alt=""></a>
-                                    </div>
-                                    <div class="textBox">
-                                      <h4 class="fontNeuron"><a href="properties-single2.html">Meridian Villas</a></h4>
-                                      <address><i class="fi flaticon-pin-1"></i>The Village, Jersey City, NJ 07302, USA </address>
-                                      <div class="priceArea">
-                                        <span class="price fontNeuron">  490,000</span>
-                                        <time class="date" datetime="2017-02-27">2/27/2017</time>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="btnArea">
-                                    <span class="status fontNeuron disabled">Pending</span>
-                                    <ul class="links list-unstyled">
-                                      <li><a href="properties-single2.html"><i class="fa fa-eye"></i>View</a></li>
-                                      <li><a href="edit-property-information.html"><i class="fa fa-edit"></i>Edit</a></li>
-                                      <li><a href="#" class="delete"><i class="far fa-window-close"></i></a></li>
-                                    </ul>
-                                  </div>
-                                </article>
-                                <article class="propertyRow">
-                                  <div class="info">
-                                    <div class="imgThumbnail">
-                                      <a href="properties-single2.html"><img src="https://via.placeholder.com/110x85" alt=""></a>
-                                    </div>
-                                    <div class="textBox">
-                                      <h4 class="fontNeuron"><a href="properties-single2.html">4 Bedroom New House For Sale</a></h4>
-                                      <address><i class="fi flaticon-pin-1"></i>The Village, Jersey City, NJ 07302, USA </address>
-                                      <div class="priceArea">
-                                        <span class="price fontNeuron">  490,000</span>
-                                        <time class="date" datetime="2017-02-27">2/27/2017</time>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="btnArea">
-                                    <span class="status fontNeuron">Published</span>
-                                    <ul class="links list-unstyled">
-                                      <li><a href="properties-single2.html"><i class="fa fa-eye"></i>View</a></li>
-                                      <li><a href="edit-property-information.html"><i class="fa fa-edit"></i>Edit</a></li>
-                                      <li><a href="#" class="delete"><i class="far fa-window-close"></i></a></li>
-                                    </ul>
-                                  </div>
-                                </article>
-                                <article class="propertyRow">
-                                  <div class="info">
-                                    <div class="imgThumbnail">
-                                      <a href="properties-single2.html"><img src="https://via.placeholder.com/110x85" alt=""></a>
-                                    </div>
-                                    <div class="textBox">
-                                      <h4 class="fontNeuron"><a href="properties-single2.html">Villa on Hollywood Boulevard</a></h4>
-                                      <address><i class="fi flaticon-pin-1"></i>The Village, Jersey City, NJ 07302, USA </address>
-                                      <div class="priceArea">
-                                        <span class="price fontNeuron">  490,000</span>
-                                        <time class="date" datetime="2017-02-27">2/27/2017</time>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="btnArea">
-                                    <span class="status fontNeuron">Published</span>
-                                    <ul class="links list-unstyled">
-                                      <li><a href="properties-single2.html"><i class="fa fa-eye"></i>View</a></li>
-                                      <li><a href="edit-property-information.html"><i class="fa fa-edit"></i>Edit</a></li>
-                                      <li><a href="#" class="delete"><i class="far fa-window-close"></i></a></li>
+                                      <li><a href="properties-single2"><i class="fa fa-eye"></i>View</a></li>
+                                      <li><a href="edit-property-information"><i class="fa fa-edit"></i>Edit</a></li>
+                                      <li><a href="/delete/{{$allHouses->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
                                     </ul>
                                   </div>
                                 </article>
                               </div>
+							  @endforeach
+							  {{$allHouses->links()}}
                             </div>
-                            <!-- pagination -->
-                            <nav role="navigation" class="navigation pagination pagination1 fontNeuron">
-                              <div class="nav-links">
-                                <a href="#" class="prev page-numbers">Previous</a>
-                                <a href="#" class="page-numbers">1</a>
-                                <span class="page-numbers current">2</span>
-                                <a href="#" class="page-numbers">3</a>
-                                <span class="page-numbers dots">…</span>
-                                <a href="#" class="page-numbers">22</a>
-                                <a href="#" class="next page-numbers">Next</a>
-                              </div>
-						    </nav>
                           </div>
                         </div>
                       </div>
