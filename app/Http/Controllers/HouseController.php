@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\house;
+use App\city;
+use App\sub_area;
 use Illuminate\Http\Request;
 
 class HouseController extends Controller
@@ -14,6 +16,7 @@ class HouseController extends Controller
      */
     public function index()
     {
+        
         $ho = house_owner::where('user_id',Auth::user()->id)->first();
         $id =$ho->id;
         $allHouses = houses::where('house_owner_id', $id)->paginate(10);
