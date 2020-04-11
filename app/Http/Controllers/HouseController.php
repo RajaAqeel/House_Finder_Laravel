@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\house;
 use App\city;
 use App\sub_area;
+use App\house_owner;
+use Auth;
+use DB;
 use Illuminate\Http\Request;
 
 class HouseController extends Controller
@@ -19,8 +22,10 @@ class HouseController extends Controller
         
         $ho = house_owner::where('user_id',Auth::user()->id)->first();
         $id =$ho->id;
-        $allHouses = houses::where('house_owner_id', $id)->paginate(10);
-        return view('/my-properties')->with('allHouses', $allHouses);
+        $city_name = city::select('name')->where('id', $ho->city_id)->get();
+        $sub_area_name = sub_area::select('name')->where('id', $ho->sub_area_id)->get();
+        $allHouses = house::where('house_owner_id', $id)->paginate(10);
+        return view('/my-properties')->with('allHouses', $allHouses)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name);
     }
 
     /**
@@ -74,7 +79,7 @@ class HouseController extends Controller
         $houses->status = 'Available';
         $houses->negotiable = $request->input('negotiable');
         $houses->save();
-        return view('/add-house-01');
+        return view('my-properties');
 
     }
 
@@ -84,9 +89,12 @@ class HouseController extends Controller
      * @param  \App\house  $house
      * @return \Illuminate\Http\Response
      */
-    public function show(house $house)
+    public function show($id)
     {
-        //
+        $house = house::find($id);
+        $city_name = city::where('id', $house->city_id)->first();
+        $sub_area_name = sub_area::where('id', $house->sub_area_id)->first();
+        return view('properties-single2')->with('house', $house)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name);
     }
 
     /**
@@ -126,6 +134,5 @@ class HouseController extends Controller
     {
         DB::table('houses')->where('id', $id)->delete();
         return redirect('/my-properties'); 
-
     }
 }

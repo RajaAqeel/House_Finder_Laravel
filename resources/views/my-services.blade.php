@@ -5,15 +5,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- set the page title -->
-	<title>My Properties</title>
+	<title>My Services</title>
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
 	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="css/fancybox.css">
+	<link rel="stylesheet" href="/css/fancybox.css">
 	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 	<!-- pageWrapper -->
@@ -237,34 +237,34 @@
                                 </div>
                               </header>
                               <ul class="navUser list-unstyled">
-                                <li>
-									<a href="/ho_dashboard">
+								<li>
+									<a href="/sp_dashboard">
 									  <i class="far fa-user"></i>
 									  <span>View Profile</span>
 									</a>
 								  </li>
                                 <li>
-                                  <a href="house-owner-profile">
+                                  <a href="service-provider-profile">
                                     <i class="far fa-user"></i>
                                     <span>Account Settings</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="my-properties">
+                                  <a href="my-services">
                                     <i class="fi flaticon-house"></i>
-                                    <span>My Properties</span>
+                                    <span>My Services</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="favourite-properties">
+                                  <a href="favourited-services">
                                     <i class="far fa-heart"></i>
-                                    <span>Favorited Properties</span>
+                                    <span>Favorited Services</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="add-house-01">
+                                  <a href="add-internetProvider-info">
                                     <i class="fa fa-plus"></i>
-                                    <span>Add Property</span>
+                                    <span>Add Service</span>
                                   </a>
                                 </li>
                                 <li>
@@ -285,37 +285,34 @@
                             <!-- accountData -->
                             <div class="accountData">
                               <div class="head">
-                                <h4 class="fontNeuron">My Properties</h4>
+                                <h4 class="fontNeuron">My Services</h4>
                               </div>
 							  <!-- propertiesList -->
-							  @foreach ($allHouses as $houses)
+							  @foreach ($allInternetServices as $internet)
 							  <div class="propertiesList">
                                 <article class="propertyRow">
                                   <div class="info">
                                     <div class="imgThumbnail">
-									<a href="/houses/{{$houses->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+									<a href="/house/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
                                     </div>
                                     <div class="textBox">
-									<h4 class="fontNeuron"><a href="/houses/{{$houses->id}}">{{$houses->title}}</a></h4>
-									<address><i class="fi flaticon-pin-1"></i>{{$houses->address}} {{$sub_area_name}} {{$city_name}}</address>
+									<h4 class="fontNeuron"><a href="/house/{{$internet->id}}">{{$internet->title}}</a></h4>
+									<address><i class="fi flaticon-pin-1"></i>{{$internet->address}}</address>
                                       <div class="priceArea">
-                                        <span class="price fontNeuron">{{$houses->price}}</span>
-                                        <time class="date" datetime="2017-02-27">{{$houses->created_at}}</time>
                                       </div>
                                     </div>
                                   </div>
                                   <div class="btnArea">
-                                    <span class="status fontNeuron">{{$houses->status}}</span>
                                     <ul class="links list-unstyled">
-                                      <li><a href="/houses/{{$houses->id}}"><i class="fa fa-eye"></i>View</a></li>
+                                      <li><a href="/house/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
                                       <li><a href="edit-property-information"><i class="fa fa-edit"></i>Edit</a></li>
-                                      <li><a href="/delete/{{$houses->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+                                      <li><a href="/delete/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
                                     </ul>
                                   </div>
                                 </article>
                               </div>
 							  @endforeach
-							  {{$allHouses->links()}}
+							  {{$allInternetServices->links()}}
                             </div>
                           </div>
                         </div>

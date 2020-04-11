@@ -16,7 +16,10 @@ class InternetServiceProviderController extends Controller
      */
     public function index()
     {
-        //
+        $so = service_owner::where('user_id',Auth::user()->id)->first();
+        $id =$so->id;
+        $allInternetServices = internet_service_provider::where('service_provider_id', $id)->paginate(10);
+        return view('/my-services')->with('allInternetServices', $allInternetServices);
     }
 
     /**
@@ -70,9 +73,9 @@ class InternetServiceProviderController extends Controller
      * @param  \App\internet_service_provider  $internet_service_provider
      * @return \Illuminate\Http\Response
      */
-    public function show(internet_service_provider $internet_service_provider)
+    public function show($id)
     {
-        //
+        $internet = internet_service_provider::find($id);
     }
 
     /**

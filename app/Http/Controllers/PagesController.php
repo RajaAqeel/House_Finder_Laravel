@@ -67,6 +67,11 @@ class PagesController extends Controller
      {
          return view('my-properties');
      }
+     
+     public function myServices()
+     {
+         return view('my-services');
+     }
 
      public function favouriteProperties()
      {

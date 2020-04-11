@@ -32,6 +32,7 @@ Route::get('/my-properties', 'PagesController@viewAllProperties');
 Route::get('/all-registered-users', 'PagesController@viewAllUsers');
 Route::get('/house-owner-profile', 'PagesController@houseOwnerProfile');
 Route::get('/my-properties','PagesController@myProperties');
+Route::get('/my-services', 'PagesController@myServices');
 Route::get('/favourite-properties','PagesController@favouriteProperties');
 Route::get('/add-house-01','PagesController@addProperty');
 Route::get('add-data-operator', 'PagesController@registerDataOperator');
@@ -68,11 +69,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/all-registered-users', 'UsersController@allUsers');
 Route::get('/add-house-01','DropDownController@cities');
 Route::get('/delete/{id}', 'UsersController@delete');
-Route::get('/delete/{id}', 'HousesController@delete');
+Route::get('/delete/{id}', 'HouseController@delete');
 Route::get('/add-sub-area', 'SubAreaController@index');
+Route::get('/my-services', 'InternetServiceProviderController@index');
 Route::get('/add-internetProvider-info', 'DropDownController@allCity');
-Route::get('/my-services', 'AllServicesController@allServices');
 Route::get('/my-properties', 'HouseController@index');
+Route::get('/properties-single2', 'HouseController@show({id})');
 use App\sub_area;
 Route::get('/ajax-sub-area', function(){
     $city_id = Request::get('city_id');
@@ -123,3 +125,7 @@ Route::post('/subAreaStore', [
 Route::post('/addInternetService', [
     'uses' => 'InternetServiceProviderController@store'
 ]);
+Route::post('/addHouse', [
+    'uses' => 'HouseController@store'
+]);
+

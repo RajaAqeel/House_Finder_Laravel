@@ -9,12 +9,12 @@
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="css/fancybox.css">
+	<link rel="stylesheet" href="/css/fancybox.css">
 	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 	<!-- pageWrapper -->
@@ -212,11 +212,11 @@
 						<!-- contentFiltersHeadingWrap -->
 						<header class="contentFiltersHeadingWrap row">
 							<div class="col-xs-12 col col-sm-8">
-								<h1 class="fontNeuron">Villa in Islamabad <a href="#" class="btn btnSmall btn-success fontBase">For Rent</a></h1>
+								<h1 class="fontNeuron">{{$house->title}} <a href="#" class="btn btnSmall btn-success fontBase">{{$house->status}}</a></h1>
 								<!-- captionAddress -->
 								<address class="captionAddress">
 									<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-									<p>F 10/2 Islamabad Pakistan</p>
+									<p>{{$house->address}} {{$sub_area_name->name}} {{$city_name->name}}</p>
 								</address>
 							</div>
 							<div class="col-xs-12 col-sm-4 justify-end">
@@ -232,8 +232,8 @@
 									<li><a href="#"><i class="far fa-heart"></i></a></li>
 									<li><a href="#"><i class="fi flaticon-printer"></i></a></li>
 								</ul>
-								<strong class="elemenBlock price fwSemi fontNeuron w100"> 290,000</strong>
-								<strong class="elemenBlock fwNormal fontNeuron subtitle w100">99770 / sq ft</strong>
+								<strong class="elemenBlock price fwSemi fontNeuron w100"> {{$house->price}}</strong>
+								<strong class="elemenBlock fwNormal fontNeuron subtitle w100">{{$house->area_value}} / {{$house->area_unit}}</strong>
 							</div>
 						</header> 
 					</section>
@@ -371,28 +371,13 @@
 											<h2 class="fontNeuron">Detail</h2>
 										</div>
 										<ul class="listpanel-head">
-											<li>Area<span>2100 m2</span></li>
-											<li>beds<span>3</span></li>
-											<li>baths<span>2</span></li>
-											<li>garages<span>1</span></li>
-											<li>year butilt<span>2017-06-10</span></li>
+											<li>beds<span>{{$house->bedrooms}}</span></li>
+											<li>baths<span>{{$house->bathrooms}}</span></li>
 										</ul>
 										<div class="listpanel-content">
 											<ul>
-												<li><span>Property ID</span><span class="righttext">: HS5698</span></li>
-												<li><span>Garage Size</span><span class="righttext">: 580 SqFt</span></li>
-												<li><span>Property Size</span><span class="righttext">: 32890 Sq Ft</span></li>
-												<li><span>Deposit</span><span class="righttext">: 20%</span></li>
-												<li><span>Pool Size</span><span class="righttext">: 896 Sqft</span></li>
-												<li><span>Furniture Status</span><span class="righttext">: Furnished (Furnished)</span></li>
-											</ul>
-											<ul>
-												<li><span>Last remodel year</span><span class="righttext">: 2017</span></li>
-												<li><span>Additional Rooms</span><span class="righttext">: Guest Bath</span></li>
-												<li><span>Amenities</span><span class="righttext">: Clubhouse</span></li>
-												<li><span>Equipment</span><span class="righttext">: Grill - Gas</span></li>
-												<li><span>Heating Type</span><span class="righttext">: Combi (Natural Gas)</span></li>
-												<li><span>Available for Loan</span><span class="righttext">: Yes</span></li>
+												<li><span>Property ID</span><span class="righttext">: {{$house->id}}</span></li>
+												<li><span>Property Size</span><span class="righttext">: {{$house->area_value}} {{$house->area_unit}}</span></li>
 											</ul>
 										</div>
 									</section>
@@ -400,7 +385,7 @@
 		                                <div class="head">
 		                                  <h4 class="fontNeuron">Description</h4>
 		                                </div>
-		                            	<p>Ut euismod ultricies sollicitudin. Curabitur sed dapibus nulla. Nulla eget iaculis lectus. Mauris ac maximusneque. Nam in mauris quis libero sodales eleifend. Morbi varius, nulla sit amet rutrum elementum, est elit finibus tellus, ut tristique elit risus at metus. Sed fermentum, lorem vitae efficitur imperdiet, neque velit tristique turpis, et iaculis mi tortor finibus turpis.</p>
+		                            	<p>{{$house->description}}</p>
 		                            </section>
 		                            <section id="address" class="accountData address">
 										<div class="head">
@@ -411,102 +396,14 @@
 										</div>
 										<div class="listpanel-content widthauto address paddingzero">
 											<ul>
-												<li><span>Address</span><span class="righttext">: The Village, Jersey City, NJ 07302, USA</span></li>
-												<li><span>Zip/Postal Code</span><span class="righttext">: 07305</span></li>
-												<li><span>City</span><span class="righttext">: Chicago</span></li>
-												<li><span>Neighborhood</span><span class="righttext">: Hermosa</span></li>
-												<li><span>State/county</span><span class="righttext">: New Jersey</span></li>
-												<li><span>Country</span><span class="righttext">: United States</span></li>
+												<li><span>Address</span><span class="righttext">: {{$house->address}}, {{$sub_area_name}}, {{$city_name}}</span></li>
+												<li><span>Country</span><span class="righttext">: Pakistan</span></li>
+												<li><span>City</span><span class="righttext">: {{$city_name->name}}</span></li>
+												<li><span>Sub Area</span><span class="righttext">: {{$sub_area_name}}</span></li>
 											</ul>
 										</div>
 									</section>
-									<section class="addProperty amenities margin-zero">
-										<div class="formContent">
-					                        <form>
-					                          <header class="contentHead">
-					                            <h2 class="fontNeuron">Amenities</h2>
-					                          </header>
-					                          <ul class="list-unstyled checkList text-primary">
-												<li>
-												  <label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Electricity</span>
-												  </label>
-												</li>
-												<li>
-												  <label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Sui Gas</span>
-												  </label>
-												</li>
-												<li>
-												  <label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Water</span>
-												  </label>
-												</li>
-												<li>
-												  <label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Furnished</span>
-												  </label>
-												</li>
-												<li>
-												  <label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Non Furnished</span>
-												  </label>
-												</li>
-												<li>
-												  <label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Balcony</span>
-												  </label>
-												</li>
-												<li>
-												  <label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Garden</span>
-												  </label>
-												</li>
-												<li>
-												  <label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Garage</span>
-												  </label>
-												</li>
-												<li>
-												  <label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
-													<span class="fakeCheckbox"></span>
-													<span class="fakeLabel">Roof</span>
-												  </label>
-												</li>
-											  </ul>
-					                        </form>
-				                    	</div>
-				                    </section>
-		                            <section class="accountData filesattachment">
-		                                <div class="head">
-		                                  	<h4 class="fontNeuron">Files Attachment</h4>
-		                                </div>
-		                                <ul class="filesattachment-list">
-		                                	<li><i><img src="images/pdf-img.jpg" alt="iamge description"></i>
-		                                	Lease Agreement</li>
-		                                	<li><i><img src="images/pdf-img.jpg" alt="iamge description"></i>
-		                                	Brochure</li>
-		                                	<li><i><img src="images/pdf-img.jpg" alt="iamge description"></i>
-		                                	Property Details</li>
-		                                </ul>
-		                            </section>
+
 		                            <section class="accountData ratingreviews">
 		                                <div class="head">
 		                                  	<h4 class="fontNeuron">Ratings & Reviews</h4>
@@ -712,8 +609,7 @@
 												</figure>
 												<div class="pull-left">
 													<div class="hb-headcontent">
-														<h3>Bostan Homes</h3>
-														<span>Ali Tufan</span>
+														<span>{{Auth::user()->name}}</span>
 														<a href="properties-full-width-list.html">View Listings</a>
 													</div>
 												</div>
@@ -745,43 +641,6 @@
 											</div>
 											<button type="submit" class="btn btnDark fontNeuron buttonXL">Submit</button>
 										</form>
-									</section>
-									<!-- widgetRecentPosts -->
-									<section class="widget widgetPadding widgetRecentPosts bgWhite">
-										<h3 class="fontNeuron fwBold text-capitalize">Surrounding Services</h3>
-										<!-- widgetRecentPostsList -->
-										<ul class="list-unstyled widgetRecentPostsList padlReset">
-											<li>
-												<div class="alignleft">
-													<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
-												</div>
-												<div class="descrWrap">
-													<h4 class="fontNeuron fwBold"><a href="properties-single2.html">Villa on Hollywood</a></h4>
-													<strong class="price elemenBlock fwSemi fontNeuron">  920,000</strong>
-													<p>778 Country St. Panama City, FL</p>
-												</div>
-											</li>
-											<li>
-												<div class="alignleft">
-													<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
-												</div>
-												<div class="descrWrap">
-													<h4 class="fontNeuron fwBold"><a href="properties-single2.html">4 Bedroom New House</a></h4>
-													<strong class="price elemenBlock fwSemi fontNeuron">  467,000</strong>
-													<p>London, United Kingdom</p>
-												</div>
-											</li>
-											<li>
-												<div class="alignleft">
-													<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
-												</div>
-												<div class="descrWrap">
-													<h4 class="fontNeuron fwBold"><a href="properties-single2.html">Eagle Apartments</a></h4>
-													<strong class="price elemenBlock fwSemi fontNeuron">  467,000</strong>
-													<p>9364 School St. Lynchburg, NY</p>
-												</div>
-											</li>
-										</ul>
 									</section>
 								</aside>
 							</div>

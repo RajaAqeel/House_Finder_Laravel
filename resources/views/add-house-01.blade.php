@@ -13,7 +13,7 @@
 	<!-- include the site stylesheet -->
 	<link rel="stylesheet" href="/css/fancybox.css">
 	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 	<!-- pageWrapper -->
@@ -43,7 +43,8 @@
                     <div class="addProperty">
                       <h1 class="fontNeuron">Add New Property</h1>
                       <div class="formContent">
-                        <form>
+						<form action={{action('HouseController@store')}} method="POST">
+							@csrf
                           <header class="contentHead">
                             <h2 class="fontNeuron">Basic Info</h2>
 
@@ -130,9 +131,11 @@
 									  <label for="city">City</label>
 									  <select id="city" name="city" data-placeholder="Choose..." class="form-control">
 										<option value="">Select Area</option>
+										@if(isset($cities))
 										@foreach ($cities as $city)
 										<option value="{{$city->id}}">{{$city->name}}</option>
 									@endforeach
+									@endif
 									  </select>
 									</div>
 								  </div>
