@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- set the page title -->
-	<title>Admin Profile</title>
+	<title>All Registered Users</title>
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
@@ -31,7 +31,7 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-xs-6 col-sm-4">
- -->									</div>
+									</div>
 									<div class="col-xs-6 col-sm-8 text-right">
 										<!-- topBarPanelList -->
 										<ul class="list-unstyled topBarPanelList">
@@ -44,7 +44,6 @@
 													<li><a href="#"><i class="fab fa-google"></i></a></li>
 												</ul>
 											</li>
-											
 											<li>
 												<!-- topBarPanelListDropdown -->
 												<div class="dropdown topBarPanelListDropdown">
@@ -83,7 +82,7 @@
 											<li class="hidden-xs">
 												<span class="icn icnJumping text-info noShrink"><i class="fi flaticon-pin-1"></i></span>
 												<div class="descr">
-													<strong class="fwNormal elemenBlock text">Riphah International University I-14<br>Golra Mor Islamabad, Pakistan</strong>
+													<strong class="fwNormal elemenBlock text">Riphah International University I-14 <br>Golra Mor Islamabad, Pakistan</strong>
 												</div>
 											</li>
 										</ul>
@@ -205,14 +204,13 @@
 				<main>
 					<!-- findFormBlock -->
 					<form action="#" class="findFormBlock findFormBlock2 bgLightDark hasShadowTop offsetHeaderTop">
-						
 					</form>
 					<!-- content -->
 					<section id="content" class="container pabIndent">
 						<!-- contentFiltersHeadingWrap -->
 						<header class="contentFiltersHeadingWrap row">
 							<div class="col-xs-12 col-sm-10">
-							
+
 								<h1 class="fontNeuron">Profile</h1>
 							</div>
 							<div class="col-xs-12 col-sm-2">
@@ -223,7 +221,7 @@
 								</ul>
 							</div>
 						</header>
-						<!-- userProfile -->
+				      <!-- userProfile -->
                       <div class="userProfile">
                         <div class="row">
                           <div class="col-xs-12 col-sm-4 col-lg-3">
@@ -234,8 +232,8 @@
                                   <img src="https://via.placeholder.com/74x74" alt="" width="74" height="74">
                                 </div>
                                 <div class="info">
-                                  <span class="text">{{Auth::user()->name}}</span>
-                                  <span class="text"><a href="change-password.html" class="link">Change Password</a></span>
+                                  <span class="text">Ali Tufan</span>
+                                  <span class="text"><a href="user-profile.html" class="link">Change Password</a></span>
                                 </div>
                               </header>
                               <ul class="navUser list-unstyled">
@@ -252,13 +250,19 @@
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="all-registered-houses">
+                                  <a href="all-registered-users">
+									<i class="far fa-user"></i>
+                                    <span>All Registered Users</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="my-properties">
                                     <i class="fi flaticon-house"></i>
                                     <span>All Registered Properties</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="all-registered-services">
+                                  <a href="properties-full-width-list">
                                     <i class="fi flaticon-house"></i>
                                     <span>All Registered Services</span>
                                   </a>
@@ -268,15 +272,16 @@
 									  <i class="fa fa-plus"></i>
 									  <span>Add City</span>
 									</a>
-								  </li>
-								  <li>
+								</li>
+
+								<li>
 									<a href="add-city">
 									  <i class="fa fa-plus"></i>
 									  <span>Register Data operator</span>
 									</a>
 								</li>
                                 <li>
-
+								
                                   <a href="{{ url('/logout') }}"
 								  onclick="event.preventDefault();
 										   document.getElementById('logout-form').submit();">
@@ -284,87 +289,50 @@
 									<form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
 										{{ csrf_field() }}
 									</form>
-                                    <i class="fa fa-sign-out-alt"></i>
                                     <span>Logout</span>
                                   </a>
                                 </li>
-                              </ul>
+                              </ul> 	
                             </aside>
                           </div>
                           <div class="col-xs-12 col-sm-8 col-lg-9">
                             <!-- accountData -->
                             <div class="accountData">
-							  <form method="POST" action="/store1">
-								@csrf
-                                <div class="head">
-                                  <h4 class="fontNeuron">Account Settings</h4>
+                              <div class="head">
+                                <h4 class="fontNeuron">All Users</h4>
+                                <div class="sortGroup">
                                 </div>
-                                <div class="accountHolder">
-                                  <div class="imgProfile">
-                                    <div class="imgThumbnail">
-                                      <img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
-                                      <div class="btnArea">
-                                        <a href="#" class="btn btn-info"><i class="fa fa-upload"></i> Upload Photo</a>
-                                      </div>
-                                    </div>
-                                    <span class="text text-center">*minimum 200px x 200px</span>
-                                  </div>
-                                  <div class="accountContent">
-                                    <div class="form-group">
-                                      <label for="itemN-3">Phone</label>
-                                      <input name="phone_number" type="tel" class="form-control" placeholder="0402 2020 202" id="itemN-3">
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="itemN-4">Biography</label>
-                                      <textarea name="bio" id="itemN-4" class="form-control" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.Phasellus mollis imperdiet placerat"></textarea>
-									</div>
-									<button type="submit" class="btn alighRight btnSecondary buttonL fontNeuron">Update Profile</button>
+                              </div>
+							  <!-- propertiesList -->
+							  @if (count($allUsers) > 0)
+								  @foreach ($allUsers as $users)
+								  <div class="propertiesList">
+									<article class="propertyRow">
+									  <div class="info">
+										<div class="imgThumbnail">
+										  <a href="properties-single2"><img src="https://via.placeholder.com/110x85" alt=""></a>
+										</div>
+										<div class="textBox">
+										<h4 class="fontNeuron"><a href="properties-single2">{{$users->name}}</a></h4>
+										  <address><i></i>{{$users->email}}</address>
+										</div>
+									  </div>
+									  <div class="btnArea">
+										<ul class="links list-unstyled">
+										  <li><a href="properties-single2.html"><i class="fa fa-eye"></i>View</a></li>
+										  <li><a href="edit-property-information.html"><i class="fa fa-edit"></i>Edit</a></li>
+										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+										</ul>
+									  </div>
+									</article>
 								  </div>
-                                </div>
-                              </form>
+								  @endforeach
+								  {{$allUsers->links()}}
+							  @else
+								  <p>No Users Found</p>
+							  @endif
                             </div>
-                            <div class="accountData">
-								<form>
-                                <div class="head">
-                                  <h4 class="fontNeuron">Social Profiles</h4>
-                                </div>
-                                <div class="accountHolder">
-                                  <div class="accountContent">
-                                    <div class="row">
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-8">Facebook URL</label>
-                                          <input type="text" class="form-control" placeholder="www.facebook.com/PolygonTheme" id="itemN-8">
-                                        </div>
-                                      </div>
-                                       <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-9">Twitter URL</label>
-                                          <input type="text" class="form-control" placeholder="PolygonTheme" id="itemN-9">
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-xs-12">
-                                        <div class="form-group">
-                                          <label for="itemN-11">Instagram URL</label>
-                                          <input type="text" class="form-control" placeholder="PolygonTheme" id="itemN-11">
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-xs-12">
-                                        <div class="form-group">
-                                          <label for="itemN-13">Skype</label>
-                                          <input type="text" class="form-control" placeholder="PolygonTheme" id="itemN-13">
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <button type="submit" class="btn alighRight btnSecondary buttonL fontNeuron">Save Changes</button>
-                                  </div>
-                                </div>
-                            </form>
-                            </div>
+                            <!-- pagination -->
                           </div>
                         </div>
                       </div>
@@ -372,7 +340,7 @@
 					<!-- signupFormAside -->
 					<form action="#" class="bgWhite signupFormAside">
 						<div class="container signupFormAsideHolder">
-							<span class="icnAbsolute elemenBlock fi flaticon-message"></span>
+							<span></span>
 							<div class="col-xs-12 col-md-offset-2 col-md-6">
 								<h3 class="fontNeuron textSecondary">Download our app</h3>
 								<p>Download our app from google play store</p>
@@ -536,9 +504,9 @@
 									</div>
 									<div class="form-group">
 										<select data-placeholder="Type" class="chosen-select">
-											<option value="1">House Owner</option>
-											<option value="2">Service Owner</option>
-											<option value="3">Data Operator</option>
+											<option value="House Owner">House Owner</option>
+											<option value="Service Owner">Service Owner</option>
+											<option value="Data Operator">Data Operator</option>
 										</select>
 									</div>
 									<div class="form-group">

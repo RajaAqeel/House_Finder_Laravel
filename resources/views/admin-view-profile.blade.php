@@ -251,19 +251,13 @@
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="all-registered-users">
-									<i class="far fa-user"></i>
-                                    <span>All Registered Users</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="my-properties">
+                                  <a href="all-registered-houses">
                                     <i class="fi flaticon-house"></i>
                                     <span>All Registered Properties</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="properties-full-width-list">
+                                  <a href="all-registered-services">
                                     <i class="fi flaticon-house"></i>
                                     <span>All Registered Services</span>
                                   </a>

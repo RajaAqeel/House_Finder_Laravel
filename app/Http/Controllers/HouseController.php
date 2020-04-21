@@ -135,4 +135,14 @@ class HouseController extends Controller
         DB::table('houses')->where('id', $id)->delete();
         return redirect('/my-properties'); 
     }
+    public function allHouses()
+    {
+        $houses = house::all();
+        return view('all-registered-houses')->with('houses', $houses);
+    }
+    public function deleteHouse($id)
+    {
+        DB::table('houses')->where('id', $id)->delete();
+        return redirect('/all-registered-houses'); 
+    }
 }
