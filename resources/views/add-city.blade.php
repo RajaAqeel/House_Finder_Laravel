@@ -13,7 +13,7 @@
 	<!-- include the site stylesheet -->
 	<link rel="stylesheet" href="/css/fancybox.css">
 	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 	<!-- pageWrapper -->

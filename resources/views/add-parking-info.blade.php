@@ -31,7 +31,7 @@
 							<!-- headerHolder -->
 							<div class="headerHolder">
                               <!-- logo -->
-                              <div class="logo logoCentered"><a href="home.html"><img src="images/logo.png" alt="LemanHouse"></a></div>
+                              <div class="logo logoCentered"><a href="home"><img src="images/logo.png" alt="LemanHouse"></a></div>
 							</div>
 						</div>
 					</div>

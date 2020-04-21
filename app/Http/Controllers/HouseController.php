@@ -25,7 +25,7 @@ class HouseController extends Controller
         $city_name = city::select('name')->where('id', $ho->city_id)->get();
         $sub_area_name = sub_area::select('name')->where('id', $ho->sub_area_id)->get();
         $allHouses = house::where('house_owner_id', $id)->paginate(10);
-        return view('/my-properties')->with('allHouses', $allHouses)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name);
+        return view('my-properties')->with('allHouses', $allHouses)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name);
     }
 
     /**
@@ -35,7 +35,7 @@ class HouseController extends Controller
      */
     public function create()
     {
-        return view('/add-house-01');
+        return view('add-house-01');
     }
 
     /**
@@ -64,7 +64,7 @@ class HouseController extends Controller
         $ho = house_owner::where('user_id',Auth::user()->id)->first();
         $houses->title = $request->input('title');
         $houses->type = $request->input('type');
-        $houses->price = $request->input('type');
+        $houses->price = $request->input('price');
         $houses->bedrooms = $request->input('bedroom');
         $houses->bathrooms = $request->input('bathroom');
         $houses->area_unit = $request->input('unit');
@@ -79,7 +79,7 @@ class HouseController extends Controller
         $houses->status = 'Available';
         $houses->negotiable = $request->input('negotiable');
         $houses->save();
-        return view('my-properties');
+        return redirect('/my-properties');
 
     }
 

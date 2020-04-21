@@ -67,7 +67,7 @@
 								<div class="row">
 									<div class="col-xs-6 col-sm-3">
 										<!-- logo -->
-										<div class="logo"><a href="home.html"><img src="images/logo.png" alt="LemanHouse"></a></div>
+										<div class="logo"><a href="home"><img src="images/logo.png" alt="LemanHouse"></a></div>
 									</div>
 									<div class="col-xs-6 col-sm-9 d-flex">
 										<!-- headerContactList -->
@@ -293,10 +293,10 @@
                                 <article class="propertyRow">
                                   <div class="info">
                                     <div class="imgThumbnail">
-									<a href="/house/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+									<a href="/internet/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
                                     </div>
                                     <div class="textBox">
-									<h4 class="fontNeuron"><a href="/house/{{$internet->id}}">{{$internet->title}}</a></h4>
+									<h4 class="fontNeuron"><a href="/internet/{{$internet->id}}">{{$internet->title}}</a></h4>
 									<address><i class="fi flaticon-pin-1"></i>{{$internet->address}}</address>
                                       <div class="priceArea">
                                       </div>
@@ -304,7 +304,7 @@
                                   </div>
                                   <div class="btnArea">
                                     <ul class="links list-unstyled">
-                                      <li><a href="/house/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
+                                      <li><a href="/internet/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
                                       <li><a href="edit-property-information"><i class="fa fa-edit"></i>Edit</a></li>
                                       <li><a href="/delete/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
                                     </ul>

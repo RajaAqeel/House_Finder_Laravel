@@ -68,7 +68,7 @@
 								<div class="row">
 									<div class="col-xs-6 col-sm-3">
 										<!-- logo -->
-										<div class="logo"><a href="home.html"><img src="images/logo.png" alt="LemanHouse"></a></div>
+										<div class="logo"><a href="home"><img src="images/logo.png" alt="LemanHouse"></a></div>
 									</div>
 									<div class="col-xs-6 col-sm-9 d-flex">
 										<!-- headerContactList -->
@@ -409,7 +409,7 @@
 									</div>
 								</form>
 							</div>
-							<a href="home.html" class="buttonL btn btnDark fontNeuron">Back to Home</a>
+							<a href="home" class="buttonL btn btnDark fontNeuron">Back to Home</a>
 						</section>
 					</div>
 					<!-- signupFormAside -->

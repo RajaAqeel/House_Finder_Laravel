@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\internet_service_provider;
 use App\service_owner;
+use App\city;
+use App\sub_area;
 use Illuminate\Http\Request;
 use Auth;
+use DB;
 
 class InternetServiceProviderController extends Controller
 {
@@ -64,7 +67,7 @@ class InternetServiceProviderController extends Controller
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $internet->service_provider_id =$so->id;
         $internet->save();
-        return redirect('/add-internetProvider-info');
+        return redirect('/my-services');
     }
 
     /**
@@ -76,6 +79,9 @@ class InternetServiceProviderController extends Controller
     public function show($id)
     {
         $internet = internet_service_provider::find($id);
+        $city_name = city::where('id', $internet->city_id)->first();
+        $sub_area_name = sub_area::where('id', $internet->sub_area_id)->first();
+        return view('services-single2')->with('internet', $internet)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name);
     }
 
     /**
@@ -110,5 +116,10 @@ class InternetServiceProviderController extends Controller
     public function destroy(internet_service_provider $internet_service_provider)
     {
         //
+    }
+    public function delete($id)
+    {
+        DB::table('internet_service_providers')->where('id', $id)->delete();
+        return redirect('/my-services'); 
     }
 }

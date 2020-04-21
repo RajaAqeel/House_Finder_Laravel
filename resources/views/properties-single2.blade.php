@@ -9,8 +9,8 @@
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
-	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
 	<!-- include the site stylesheet -->
 	<link rel="stylesheet" href="/css/fancybox.css">
 	<!-- include the site stylesheet -->
@@ -32,7 +32,6 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-xs-6 col-sm-4">
-										<!-- <time datetime="2011-01-12" class="TopBarTime">Mon - Sat: 08.00 AM - 18.00 PM</time> -->
 									</div>
 									<div class="col-xs-6 col-sm-8 text-right">
 										<!-- topBarPanelList -->
@@ -69,7 +68,7 @@
 								<div class="row">
 									<div class="col-xs-6 col-sm-3">
 										<!-- logo -->
-										<div class="logo"><a href="home.html"><img src="images/houseFinderLogo.png" alt="LemanHouse"></a></div>
+										<div class="logo"><a href="home"><img src="/images/houseFinderLogo.png" alt="LemanHouse"></a></div>
 									</div>
 									<div class="col-xs-6 col-sm-9 d-flex">
 										<!-- headerContactList -->
@@ -247,7 +246,7 @@
 									<div class="tabSetholder tabschanges bgWhite">
 							    		<div class="tab-content">
 									        <div id="tab1-0">
-										        <div class="slick-thumbnailslider slickSlider postColumnImageSlider">
+										        <div class="slick-carousel slickSlider postColumnImageSlider">
 													<div>
 														<div class="imgHolder">
 															<a href="#">
@@ -287,71 +286,6 @@
 														<div class="imgHolder">
 															<a href="#">
 																<img src="https://via.placeholder.com/780x495" alt="image description">
-															</a>
-														</div>
-													</div>
-												</div>
-												<div class="slick-carouselnav slickSlider postColumnImageSlider">
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/115x90" alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/115x90" alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/115x90" alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/115x90" alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/115x90" alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/115x90" alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/115x90" alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/115x90" alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/115x90" alt="image description">
 															</a>
 														</div>
 													</div>
@@ -396,10 +330,10 @@
 										</div>
 										<div class="listpanel-content widthauto address paddingzero">
 											<ul>
-												<li><span>Address</span><span class="righttext">: {{$house->address}}, {{$sub_area_name}}, {{$city_name}}</span></li>
+												<li><span>Address</span><span class="righttext">: {{$house->address}}, {{$sub_area_name->name}}, {{$city_name->name}}</span></li>
 												<li><span>Country</span><span class="righttext">: Pakistan</span></li>
 												<li><span>City</span><span class="righttext">: {{$city_name->name}}</span></li>
-												<li><span>Sub Area</span><span class="righttext">: {{$sub_area_name}}</span></li>
+												<li><span>Sub Area</span><span class="righttext">: {{$sub_area_name->name}}</span></li>
 											</ul>
 										</div>
 									</section>
