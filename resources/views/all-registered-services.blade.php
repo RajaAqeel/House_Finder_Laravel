@@ -256,13 +256,13 @@
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="my-properties">
+                                  <a href="all-registered-houses">
                                     <i class="fi flaticon-house"></i>
                                     <span>All Registered Properties</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="properties-full-width-list">
+                                  <a href="all-registered-services">
                                     <i class="fi flaticon-house"></i>
                                     <span>All Registered Services</span>
                                   </a>
@@ -275,7 +275,7 @@
 								</li>
 
 								<li>
-									<a href="add-city">
+									<a href="add-data-operator">
 									  <i class="fa fa-plus"></i>
 									  <span>Register Data operator</span>
 									</a>
@@ -299,7 +299,7 @@
                             <!-- accountData -->
                             <div class="accountData">
                               <div class="head">
-                                <h4 class="fontNeuron">All Users</h4>
+                                <h4 class="fontNeuron">All Services</h4>
                                 <div class="sortGroup">
                                 </div>
                               </div>
@@ -319,17 +319,144 @@
 									  </div>
 									  <div class="btnArea">
 										<ul class="links list-unstyled">
-										  <li><a href="properties-single2.html"><i class="fa fa-eye"></i>View</a></li>
-										  <li><a href="edit-property-information.html"><i class="fa fa-edit"></i>Edit</a></li>
 										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
 										</ul>
 									  </div>
 									</article>
 								  </div>
 								  @endforeach
-								  {{$allUsers->links()}}
-							  @else
-								  <p>No Users Found</p>
+							  @endif
+							  @if (count($allUsers) > 0)
+								  @foreach ($allUsers as $users)
+								  <div class="propertiesList">
+									<article class="propertyRow">
+									  <div class="info">
+										<div class="imgThumbnail">
+										  <a href="properties-single2"><img src="https://via.placeholder.com/110x85" alt=""></a>
+										</div>
+										<div class="textBox">
+										<h4 class="fontNeuron"><a href="properties-single2">{{$users->name}}</a></h4>
+										  <address><i></i>{{$users->email}}</address>
+										</div>
+									  </div>
+									  <div class="btnArea">
+										<ul class="links list-unstyled">
+										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+										</ul>
+									  </div>
+									</article>
+								  </div>
+								  @endforeach
+							  @endif
+							  @if (count($allUsers) > 0)
+								  @foreach ($allUsers as $users)
+								  <div class="propertiesList">
+									<article class="propertyRow">
+									  <div class="info">
+										<div class="imgThumbnail">
+										  <a href="properties-single2"><img src="https://via.placeholder.com/110x85" alt=""></a>
+										</div>
+										<div class="textBox">
+										<h4 class="fontNeuron"><a href="properties-single2">{{$users->name}}</a></h4>
+										  <address><i></i>{{$users->email}}</address>
+										</div>
+									  </div>
+									  <div class="btnArea">
+										<ul class="links list-unstyled">
+										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+										</ul>
+									  </div>
+									</article>
+								  </div>
+								  @endforeach
+							  @endif
+							  @if (count($allUsers) > 0)
+								  @foreach ($allUsers as $users)
+								  <div class="propertiesList">
+									<article class="propertyRow">
+									  <div class="info">
+										<div class="imgThumbnail">
+										  <a href="properties-single2"><img src="https://via.placeholder.com/110x85" alt=""></a>
+										</div>
+										<div class="textBox">
+										<h4 class="fontNeuron"><a href="properties-single2">{{$users->name}}</a></h4>
+										  <address><i></i>{{$users->email}}</address>
+										</div>
+									  </div>
+									  <div class="btnArea">
+										<ul class="links list-unstyled">
+										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+										</ul>
+									  </div>
+									</article>
+								  </div>
+								  @endforeach
+							  @endif
+							  @if (count($allUsers) > 0)
+								  @foreach ($allUsers as $users)
+								  <div class="propertiesList">
+									<article class="propertyRow">
+									  <div class="info">
+										<div class="imgThumbnail">
+										  <a href="properties-single2"><img src="https://via.placeholder.com/110x85" alt=""></a>
+										</div>
+										<div class="textBox">
+										<h4 class="fontNeuron"><a href="properties-single2">{{$users->name}}</a></h4>
+										  <address><i></i>{{$users->email}}</address>
+										</div>
+									  </div>
+									  <div class="btnArea">
+										<ul class="links list-unstyled">
+										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+										</ul>
+									  </div>
+									</article>
+								  </div>
+								  @endforeach
+							  @endif
+							  @if (count($allUsers) > 0)
+								  @foreach ($allUsers as $users)
+								  <div class="propertiesList">
+									<article class="propertyRow">
+									  <div class="info">
+										<div class="imgThumbnail">
+										  <a href="properties-single2"><img src="https://via.placeholder.com/110x85" alt=""></a>
+										</div>
+										<div class="textBox">
+										<h4 class="fontNeuron"><a href="properties-single2">{{$users->name}}</a></h4>
+										  <address><i></i>{{$users->email}}</address>
+										</div>
+									  </div>
+									  <div class="btnArea">
+										<ul class="links list-unstyled">
+										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+										</ul>
+									  </div>
+									</article>
+								  </div>
+								  @endforeach
+							  @endif
+							  @if (count($allUsers) > 0)
+								  @foreach ($allUsers as $users)
+								  <div class="propertiesList">
+									<article class="propertyRow">
+									  <div class="info">
+										<div class="imgThumbnail">
+										  <a href="properties-single2"><img src="https://via.placeholder.com/110x85" alt=""></a>
+										</div>
+										<div class="textBox">
+										<h4 class="fontNeuron"><a href="properties-single2">{{$users->name}}</a></h4>
+										  <address><i></i>{{$users->email}}</address>
+										</div>
+									  </div>
+									  <div class="btnArea">
+										<ul class="links list-unstyled">
+										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+										</ul>
+									  </div>
+									</article>
+								  </div>
+								  @endforeach
 							  @endif
                             </div>
                             <!-- pagination -->

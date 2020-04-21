@@ -256,13 +256,13 @@
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="my-properties">
+                                  <a href="all-registered-houses">
                                     <i class="fi flaticon-house"></i>
                                     <span>All Registered Properties</span>
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="properties-full-width-list">
+                                  <a href="all-registered-services">
                                     <i class="fi flaticon-house"></i>
                                     <span>All Registered Services</span>
                                   </a>
@@ -275,7 +275,7 @@
 								</li>
 
 								<li>
-									<a href="add-city">
+									<a href="add-dara-operator">
 									  <i class="fa fa-plus"></i>
 									  <span>Register Data operator</span>
 									</a>
