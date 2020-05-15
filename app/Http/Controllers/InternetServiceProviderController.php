@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use App\internet_service_provider;
 use App\service_owner;
+use App\watchman_service;
+use App\cable_provider_service;
+use App\housemaid_service;
+use App\parking_service;
+use App\schoolvan_service;
+use App\sweeper_service;
 use App\city;
 use App\sub_area;
 use Illuminate\Http\Request;
@@ -19,10 +25,7 @@ class InternetServiceProviderController extends Controller
      */
     public function index()
     {
-        $so = service_owner::where('user_id',Auth::user()->id)->first();
-        $id =$so->id;
-        $allInternetServices = internet_service_provider::where('service_provider_id', $id)->paginate(10);
-        return view('/my-services')->with('allInternetServices', $allInternetServices);
+        //
     }
 
     /**

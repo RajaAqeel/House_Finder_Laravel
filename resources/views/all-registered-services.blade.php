@@ -304,159 +304,187 @@
                                 </div>
                               </div>
 							  <!-- propertiesList -->
-							  @if (count($allUsers) > 0)
-								  @foreach ($allUsers as $users)
-								  <div class="propertiesList">
-									<article class="propertyRow">
-									  <div class="info">
-										<div class="imgThumbnail">
-										  <a href="properties-single2"><img src="https://via.placeholder.com/110x85" alt=""></a>
-										</div>
-										<div class="textBox">
-										<h4 class="fontNeuron"><a href="properties-single2">{{$users->name}}</a></h4>
-										  <address><i></i>{{$users->email}}</address>
-										</div>
-									  </div>
-									  <div class="btnArea">
-										<ul class="links list-unstyled">
-										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
-										</ul>
-									  </div>
-									</article>
-								  </div>
-								  @endforeach
+							  @if (count($internetServices) > 0)
+							  @foreach ($internetServices as $internet)
+							  <div class="propertiesList">
+                                <article class="propertyRow">
+                                  <div class="info">
+                                    <div class="imgThumbnail">
+									<a href="/internet/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+                                    </div>
+                                    <div class="textBox">
+									<h4 class="fontNeuron"><a href="/internet/{{$internet->id}}">{{$internet->title}}</a></h4>
+									<address><i class="fi flaticon-pin-1"></i>{{$internet->address}}</address>
+                                      <div class="priceArea">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="btnArea">
+                                    <ul class="links list-unstyled">
+                                      <li><a href="/internet/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
+                                      <li><a href="edit-property-information"><i class="fa fa-edit"></i>Edit</a></li>
+                                      <li><a href="/deleteServiceI/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+                                    </ul>
+                                  </div>
+                                </article>
+                              </div>
+							  @endforeach
 							  @endif
-							  @if (count($allUsers) > 0)
-								  @foreach ($allUsers as $users)
-								  <div class="propertiesList">
-									<article class="propertyRow">
-									  <div class="info">
-										<div class="imgThumbnail">
-										  <a href="properties-single2"><img src="https://via.placeholder.com/110x85" alt=""></a>
-										</div>
-										<div class="textBox">
-										<h4 class="fontNeuron"><a href="properties-single2">{{$users->name}}</a></h4>
-										  <address><i></i>{{$users->email}}</address>
-										</div>
-									  </div>
-									  <div class="btnArea">
-										<ul class="links list-unstyled">
-										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
-										</ul>
-									  </div>
-									</article>
-								  </div>
-								  @endforeach
+							  @if (count($cableServices) > 0)
+							  @foreach ($cableServices as $internet)
+							  <div class="propertiesList">
+                                <article class="propertyRow">
+                                  <div class="info">
+                                    <div class="imgThumbnail">
+									<a href="/internet/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+                                    </div>
+                                    <div class="textBox">
+									<h4 class="fontNeuron"><a href="/internet/{{$internet->id}}">{{$internet->title}}</a></h4>
+									<address><i class="fi flaticon-pin-1"></i>{{$internet->address}}</address>
+                                      <div class="priceArea">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="btnArea">
+                                    <ul class="links list-unstyled">
+                                      <li><a href="/internet/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
+                                      <li><a href="edit-property-information"><i class="fa fa-edit"></i>Edit</a></li>
+                                      <li><a href="/deleteServiceC/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+                                    </ul>
+                                  </div>
+                                </article>
+                              </div>
+							  @endforeach
 							  @endif
-							  @if (count($allUsers) > 0)
-								  @foreach ($allUsers as $users)
-								  <div class="propertiesList">
-									<article class="propertyRow">
-									  <div class="info">
-										<div class="imgThumbnail">
-										  <a href="properties-single2"><img src="https://via.placeholder.com/110x85" alt=""></a>
-										</div>
-										<div class="textBox">
-										<h4 class="fontNeuron"><a href="properties-single2">{{$users->name}}</a></h4>
-										  <address><i></i>{{$users->email}}</address>
-										</div>
-									  </div>
-									  <div class="btnArea">
-										<ul class="links list-unstyled">
-										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
-										</ul>
-									  </div>
-									</article>
-								  </div>
-								  @endforeach
+							  @if (count($housemaidServices) > 0)
+							  @foreach ($housemaidServices as $internet)
+							  <div class="propertiesList">
+                                <article class="propertyRow">
+                                  <div class="info">
+                                    <div class="imgThumbnail">
+									<a href="/internet/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+                                    </div>
+                                    <div class="textBox">
+									<h4 class="fontNeuron"><a href="/internet/{{$internet->id}}">{{$internet->title}}</a></h4>
+									<address><i class="fi flaticon-pin-1"></i>{{$internet->address}}</address>
+                                      <div class="priceArea">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="btnArea">
+                                    <ul class="links list-unstyled">
+                                      <li><a href="/internet/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
+                                      <li><a href="edit-property-information"><i class="fa fa-edit"></i>Edit</a></li>
+                                      <li><a href="/deleteServiceHo/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+                                    </ul>
+                                  </div>
+                                </article>
+                              </div>
+							  @endforeach
 							  @endif
-							  @if (count($allUsers) > 0)
-								  @foreach ($allUsers as $users)
-								  <div class="propertiesList">
-									<article class="propertyRow">
-									  <div class="info">
-										<div class="imgThumbnail">
-										  <a href="properties-single2"><img src="https://via.placeholder.com/110x85" alt=""></a>
-										</div>
-										<div class="textBox">
-										<h4 class="fontNeuron"><a href="properties-single2">{{$users->name}}</a></h4>
-										  <address><i></i>{{$users->email}}</address>
-										</div>
-									  </div>
-									  <div class="btnArea">
-										<ul class="links list-unstyled">
-										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
-										</ul>
-									  </div>
-									</article>
-								  </div>
-								  @endforeach
+							  @if (count($parkingServices) > 0)
+							  @foreach ($parkingServices as $internet)
+							  <div class="propertiesList">
+                                <article class="propertyRow">
+                                  <div class="info">
+                                    <div class="imgThumbnail">
+									<a href="/internet/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+                                    </div>
+                                    <div class="textBox">
+									<h4 class="fontNeuron"><a href="/internet/{{$internet->id}}">{{$internet->title}}</a></h4>
+									<address><i class="fi flaticon-pin-1"></i>{{$internet->address}}</address>
+                                      <div class="priceArea">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="btnArea">
+                                    <ul class="links list-unstyled">
+                                      <li><a href="/internet/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
+                                      <li><a href="edit-property-information"><i class="fa fa-edit"></i>Edit</a></li>
+                                      <li><a href="/deleteServiceP/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+                                    </ul>
+                                  </div>
+                                </article>
+                              </div>
+							  @endforeach
 							  @endif
-							  @if (count($allUsers) > 0)
-								  @foreach ($allUsers as $users)
-								  <div class="propertiesList">
-									<article class="propertyRow">
-									  <div class="info">
-										<div class="imgThumbnail">
-										  <a href="properties-single2"><img src="https://via.placeholder.com/110x85" alt=""></a>
-										</div>
-										<div class="textBox">
-										<h4 class="fontNeuron"><a href="properties-single2">{{$users->name}}</a></h4>
-										  <address><i></i>{{$users->email}}</address>
-										</div>
-									  </div>
-									  <div class="btnArea">
-										<ul class="links list-unstyled">
-										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
-										</ul>
-									  </div>
-									</article>
-								  </div>
-								  @endforeach
+							  @if (count($schoolVanServices) > 0)
+							  @foreach ($schoolVanServices as $internet)
+							  <div class="propertiesList">
+                                <article class="propertyRow">
+                                  <div class="info">
+                                    <div class="imgThumbnail">
+									<a href="/internet/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+                                    </div>
+                                    <div class="textBox">
+									<h4 class="fontNeuron"><a href="/internet/{{$internet->id}}">{{$internet->title}}</a></h4>
+									<address><i class="fi flaticon-pin-1"></i>{{$internet->address}}</address>
+                                      <div class="priceArea">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="btnArea">
+                                    <ul class="links list-unstyled">
+                                      <li><a href="/internet/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
+                                      <li><a href="edit-property-information"><i class="fa fa-edit"></i>Edit</a></li>
+                                      <li><a href="/deleteServiceSc/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+                                    </ul>
+                                  </div>
+                                </article>
+                              </div>
+							  @endforeach
 							  @endif
-							  @if (count($allUsers) > 0)
-								  @foreach ($allUsers as $users)
-								  <div class="propertiesList">
-									<article class="propertyRow">
-									  <div class="info">
-										<div class="imgThumbnail">
-										  <a href="properties-single2"><img src="https://via.placeholder.com/110x85" alt=""></a>
-										</div>
-										<div class="textBox">
-										<h4 class="fontNeuron"><a href="properties-single2">{{$users->name}}</a></h4>
-										  <address><i></i>{{$users->email}}</address>
-										</div>
-									  </div>
-									  <div class="btnArea">
-										<ul class="links list-unstyled">
-										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
-										</ul>
-									  </div>
-									</article>
-								  </div>
-								  @endforeach
+							  @if (count($sweeperServices) > 0)
+							  @foreach ($sweeperServices as $internet)
+							  <div class="propertiesList">
+                                <article class="propertyRow">
+                                  <div class="info">
+                                    <div class="imgThumbnail">
+									<a href="/internet/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+                                    </div>
+                                    <div class="textBox">
+									<h4 class="fontNeuron"><a href="/internet/{{$internet->id}}">{{$internet->title}}</a></h4>
+									<address><i class="fi flaticon-pin-1"></i>{{$internet->address}}</address>
+                                      <div class="priceArea">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="btnArea">
+                                    <ul class="links list-unstyled">
+                                      <li><a href="/internet/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
+                                      <li><a href="edit-property-information"><i class="fa fa-edit"></i>Edit</a></li>
+                                      <li><a href="/deleteServiceSw/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+                                    </ul>
+                                  </div>
+                                </article>
+                              </div>
+							  @endforeach
 							  @endif
-							  @if (count($allUsers) > 0)
-								  @foreach ($allUsers as $users)
-								  <div class="propertiesList">
-									<article class="propertyRow">
-									  <div class="info">
-										<div class="imgThumbnail">
-										  <a href="properties-single2"><img src="https://via.placeholder.com/110x85" alt=""></a>
-										</div>
-										<div class="textBox">
-										<h4 class="fontNeuron"><a href="properties-single2">{{$users->name}}</a></h4>
-										  <address><i></i>{{$users->email}}</address>
-										</div>
-									  </div>
-									  <div class="btnArea">
-										<ul class="links list-unstyled">
-										<li><a href="/delete/{{$users->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
-										</ul>
-									  </div>
-									</article>
-								  </div>
-								  @endforeach
+							  @if (count($watchmanServices) > 0)
+							  @foreach ($watchmanServices as $internet)
+							  <div class="propertiesList">
+                                <article class="propertyRow">
+                                  <div class="info">
+                                    <div class="imgThumbnail">
+									<a href="/internet/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+                                    </div>
+                                    <div class="textBox">
+									<h4 class="fontNeuron"><a href="/internet/{{$internet->id}}">{{$internet->title}}</a></h4>
+									<address><i class="fi flaticon-pin-1"></i>{{$internet->address}}</address>
+                                      <div class="priceArea">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="btnArea">
+                                    <ul class="links list-unstyled">
+                                      <li><a href="/internet/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
+                                      <li><a href="edit-property-information"><i class="fa fa-edit"></i>Edit</a></li>
+                                      <li><a href="/deleteServiceW/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+                                    </ul>
+                                  </div>
+                                </article>
+                              </div>
+							  @endforeach
 							  @endif
                             </div>
                             <!-- pagination -->

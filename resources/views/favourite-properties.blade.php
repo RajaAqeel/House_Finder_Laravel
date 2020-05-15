@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- set the page title -->
-	<title>Favourite Properties</title>
+	<title>My Favourite Properties</title>
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
@@ -31,7 +31,7 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-xs-6 col-sm-4">
- 									</div>
+									</div>
 									<div class="col-xs-6 col-sm-8 text-right">
 										<!-- topBarPanelList -->
 										<ul class="list-unstyled topBarPanelList">
@@ -75,14 +75,14 @@
 											<li>
 												<a href="tel:+12463450695" class="icn icnBubble noShrink text-info"><i class="fi flaticon-24-hours"></i></a>
 												<div class="descr hidden-xs">
-													<strong class="fwNormal elemenBlock text"><a href="#">+9203065085832</a></strong>
-													<strong class="fwNormal elemenBlock text"><a href="#">nfo@housefinder.com</a></strong>
+													<strong class="fwNormal elemenBlock text"><a href="#">+92 3065085832</a></strong>
+													<strong class="fwNormal elemenBlock text"><a href="#">info@housefinder.com</a></strong>
 												</div>
 											</li>
 											<li class="hidden-xs">
 												<span class="icn icnJumping text-info noShrink"><i class="fi flaticon-pin-1"></i></span>
 												<div class="descr">
-													<strong class="fwNormal elemenBlock text">Riphah International University I-14<br>Golra Mor Islamabad, Pakistan</strong>
+													<strong class="fwNormal elemenBlock text">Riphah International University I-14 <br>Golra Mor Islamabad, Pakistan</strong>
 												</div>
 											</li>
 										</ul>
@@ -210,6 +210,7 @@
 						<!-- contentFiltersHeadingWrap -->
 						<header class="contentFiltersHeadingWrap row">
 							<div class="col-xs-12 col-sm-10">
+
 								<h1 class="fontNeuron">Profile</h1>
 							</div>
 							<div class="col-xs-12 col-sm-2">
@@ -232,7 +233,7 @@
                                 </div>
                                 <div class="info">
                                   <span class="text">Ali Tufan</span>
-                                  <span class="text"><a href="change-password.html" class="link">Change Password</a></span>
+                                  <span class="text"><a href="change-password" class="link">Change Password</a></span>
                                 </div>
                               </header>
                               <ul class="navUser list-unstyled">
@@ -284,120 +285,39 @@
                             <!-- accountData -->
                             <div class="accountData">
                               <div class="head">
-                                <h4 class="fontNeuron">My Properties</h4>
-                                <div class="sortGroup">
-                                  <strong class="groupTitle fwNormal">Sort by:</strong>
-                                  <div class="dropdown">
-                                    <button aria-expanded="true" aria-haspopup="true" data-toggle="dropdown" id="sortGroup" type="button" class="dropdown-toggle buttonReset">Default Order <i class="icn fas fa-chevron-down"></i></button>
-                                    <ul aria-labelledby="sortGroup" class="dropdown-menu dropdown-menu-right">
-                                      <li><a href="#">Default Order</a></li>
-                                      <li><a href="#">Default Order</a></li>
-                                      <li><a href="#">Default Order</a></li>
-                                      <li><a href="#">Default Order</a></li>
-                                    </ul>
-                                  </div>
-                                </div>
+                                <h4 class="fontNeuron">My Favourite Properties</h4>
                               </div>
-                              <!-- propertiesList -->
-                              <div class="propertiesList">
+							  <!-- propertiesList -->
+							  @foreach ($allHouses as $houses)
+							  <div class="propertiesList">
                                 <article class="propertyRow">
                                   <div class="info">
                                     <div class="imgThumbnail">
-                                      <a href="properties-single2.html"><img src="https://via.placeholder.com/110x85" alt=""></a>
+									<a href="/houses/{{$houses->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
                                     </div>
                                     <div class="textBox">
-                                      <h4 class="fontNeuron"><a href="properties-single2.html">Elegant studio flat</a></h4>
-                                      <address><i class="fi flaticon-pin-1"></i>The Village, Jersey City, NJ 07302, USA </address>
+									<h4 class="fontNeuron"><a href="/houses/{{$houses->id}}">{{$houses->title}}</a></h4>
+									<address><i class="fi flaticon-pin-1"></i>{{$houses->address}} {{$sub_area_name}} {{$city_name}}</address>
                                       <div class="priceArea">
-                                        <span class="price fontNeuron">  490,000</span>
-                                        <time class="date" datetime="2017-02-27">2/27/2017</time>
+                                        <span class="price fontNeuron">{{$houses->price}}</span>
+                                        <time class="date" datetime="2017-02-27">{{$houses->created_at}}</time>
                                       </div>
                                     </div>
                                   </div>
                                   <div class="btnArea">
+									<span class="status fontNeuron">{{$houses->status}}</span>
+									<li><a href="/fav/{{$houses->id}}"><i class="far fa-heart"></i></a></li>
                                     <ul class="links list-unstyled">
-                                      <li><a href="properties-single2.html"><i class="fa fa-eye"></i>View</a></li>
-                                      <li><a href="#" class="delete"><i class="far fa-window-close"></i></a></li>
-                                    </ul>
-                                  </div>
-                                </article>
-                                <article class="propertyRow">
-                                  <div class="info">
-                                    <div class="imgThumbnail">
-                                      <a href="properties-single2.html"><img src="https://via.placeholder.com/110x85" alt=""></a>
-                                    </div>
-                                    <div class="textBox">
-                                      <h4 class="fontNeuron"><a href="properties-single2.html">Meridian Villas</a></h4>
-                                      <address><i class="fi flaticon-pin-1"></i>The Village, Jersey City, NJ 07302, USA </address>
-                                      <div class="priceArea">
-                                        <span class="price fontNeuron">  490,000</span>
-                                        <time class="date" datetime="2017-02-27">2/27/2017</time>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="btnArea">
-                                    <ul class="links list-unstyled">
-                                      <li><a href="properties-single2.html"><i class="fa fa-eye"></i>View</a></li>
-                                      <li><a href="#" class="delete"><i class="far fa-window-close"></i></a></li>
-                                    </ul>
-                                  </div>
-                                </article>
-                                <article class="propertyRow">
-                                  <div class="info">
-                                    <div class="imgThumbnail">
-                                      <a href="properties-single2.html"><img src="https://via.placeholder.com/110x85" alt=""></a>
-                                    </div>
-                                    <div class="textBox">
-                                      <h4 class="fontNeuron"><a href="properties-single2.html">4 Bedroom New House For Sale</a></h4>
-                                      <address><i class="fi flaticon-pin-1"></i>The Village, Jersey City, NJ 07302, USA </address>
-                                      <div class="priceArea">
-                                        <span class="price fontNeuron">  490,000</span>
-                                        <time class="date" datetime="2017-02-27">2/27/2017</time>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="btnArea">
-                                    <ul class="links list-unstyled">
-                                      <li><a href="properties-single2.html"><i class="fa fa-eye"></i>View</a></li>
-                                      <li><a href="#" class="delete"><i class="far fa-window-close"></i></a></li>
-                                    </ul>
-                                  </div>
-                                </article>
-                                <article class="propertyRow">
-                                  <div class="info">
-                                    <div class="imgThumbnail">
-                                      <a href="properties-single2.html"><img src="https://via.placeholder.com/110x85" alt=""></a>
-                                    </div>
-                                    <div class="textBox">
-                                      <h4 class="fontNeuron"><a href="properties-single2.html">Villa on Hollywood Boulevard</a></h4>
-                                      <address><i class="fi flaticon-pin-1"></i>The Village, Jersey City, NJ 07302, USA </address>
-                                      <div class="priceArea">
-                                        <span class="price fontNeuron">  490,000</span>
-                                        <time class="date" datetime="2017-02-27">2/27/2017</time>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="btnArea">
-                                    <ul class="links list-unstyled">
-                                      <li><a href="properties-single2.html"><i class="fa fa-eye"></i>View</a></li>
-                                      <li><a href="#" class="delete"><i class="far fa-window-close"></i></a></li>
+                                      <li><a href="/houses/{{$houses->id}}"><i class="fa fa-eye"></i>View</a></li>
+									  <li><a href="edit-property-information"><i class="fa fa-edit"></i>Edit</a></li>
+                                      <li><a href="/deleteH/{{$houses->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
                                     </ul>
                                   </div>
                                 </article>
                               </div>
+							  @endforeach
+							  {{$allHouses->links()}}
                             </div>
-                            <!-- pagination -->
-                            <nav role="navigation" class="navigation pagination pagination1 fontNeuron">
-                              <div class="nav-links">
-                                <a href="#" class="prev page-numbers">Previous</a>
-                                <a href="#" class="page-numbers">1</a>
-                                <span class="page-numbers current">2</span>
-                                <a href="#" class="page-numbers">3</a>
-                                <span class="page-numbers dots">…</span>
-                                <a href="#" class="page-numbers">22</a>
-                                <a href="#" class="next page-numbers">Next</a>
-                              </div>
-						    </nav>
                           </div>
                         </div>
                       </div>
@@ -405,14 +325,13 @@
 					<!-- signupFormAside -->
 					<form action="#" class="bgWhite signupFormAside">
 						<div class="container signupFormAsideHolder">
-							<span class="icnAbsolute elemenBlock fi flaticon-message"></span>
+							<span></span>
 							<div class="col-xs-12 col-md-offset-2 col-md-6">
 								<h3 class="fontNeuron textSecondary">Download our app</h3>
 								<p>Download our app from google play store</p>
 							</div>
 							<div class="col-xs-12 col-md-4">
 								<div class="form-group">
-									<!-- <input type="email" id="email" class="form-control elemenBlock" placeholder="Your email"> -->
 									<button type="button" class="buttonReset fi flaticon-navigation"></button>
 								</div>
 							</div>
@@ -434,7 +353,7 @@
 										<dt><i class="fi flaticon-navigation"></i></dt>
 										<dd>Golra Mor Islamabad, Pakistan</dd>
 										<dt><i class="fi flaticon-24-hours"></i></dt>
-										<dd><a href="#">+92 5085832</a></dd>
+										<dd><a href="#">+92 3065085832</a></dd>
 										<dt><i class="fi flaticon-mail"></i></dt>
 										<dd><a href="#">info@housefinder.com</a></dd>
 									</dl>
@@ -573,7 +492,6 @@
 											<option value="1">House Owner</option>
 											<option value="2">Service Owner</option>
 											<option value="3">Data Operator</option>
-
 										</select>
 									</div>
 									<div class="form-group">

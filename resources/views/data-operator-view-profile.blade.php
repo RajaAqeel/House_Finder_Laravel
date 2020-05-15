@@ -233,7 +233,7 @@
                                 </div>
                                 <div class="info">
                                   <span class="text">Ali Tufan</span>
-                                  <span class="text"><a href="house-owner-profile.html" class="link">Change Password</a></span>
+                                  <span class="text"><a href="/changePasswordDo" class="link">Change Password</a></span>
                                 </div>
                               </header>
                               <ul class="navUser list-unstyled">
@@ -247,18 +247,6 @@
                                   <a href="data-operator-profile">
                                     <i class="far fa-user"></i>
                                     <span>Account Settings</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="view-unverified-properties">
-                                    <i class="fi flaticon-house"></i>
-                                    <span>View Unverified Properties</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="view-unverified-services">
-                                    <i class="fi flaticon-house"></i>
-                                    <span>View Unverified Services</span>
                                   </a>
                                 </li>
                                 <li>

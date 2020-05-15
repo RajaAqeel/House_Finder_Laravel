@@ -205,7 +205,7 @@
 					<form action="#" class="findFormBlock findFormBlock2 bgLightDark hasShadowTop offsetHeaderTop">
 					</form>
                             <div class="accountData">
-                              <form>
+                              <form method="POST" action="/changePasswordSp">
                                 <div class="head">
                                   <h4 class="fontNeuron">Change Password</h4>
                                 </div>
@@ -215,13 +215,13 @@
                                       <div class="col-xs-12 col-md-6">
                                         <div class="form-group">
                                           <label for="itemN-5">Current Password</label>
-                                          <input type="password" class="form-control" placeholder="password" id="itemN-5">
+                                          <input name="CPassword" type="password" class="form-control" placeholder="password" id="itemN-5">
                                         </div>
                                       </div>
                                       <div class="col-xs-12 col-md-6">
                                         <div class="form-group">
                                           <label for="itemN-5">New Password</label>
-                                          <input type="password" class="form-control" placeholder="password" id="itemN-5">
+                                          <input name="NPassword" type="password" class="form-control" placeholder="password" id="itemN-5">
                                         </div>
                                       </div>
                                     </div>
@@ -229,13 +229,7 @@
                                       <div class="col-xs-12 col-md-6">
                                         <div class="form-group">
                                           <label for="itemN-6">Confirm Password</label>
-                                          <input type="password" class="form-control" placeholder="password" id="itemN-6"><br><br>
-                                        </div>
-                                      </div>
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-7">Hint</label>
-                                          <input type="text" class="form-control" placeholder="password" id="itemN-7">
+                                          <input name="ConPassword" type="password" class="form-control" placeholder="password" id="itemN-6"><br><br>
                                         </div>
                                       </div>
                                     </div>

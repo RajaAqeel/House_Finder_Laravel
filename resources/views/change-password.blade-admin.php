@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- set the page title -->
-	<title>Admin Profile</title>
+	<title>Change Password</title>
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
@@ -66,7 +66,7 @@
 								<div class="row">
 									<div class="col-xs-6 col-sm-3">
 										<!-- logo -->
-										<div class="logo"><a href="home"><img src="images/houseFinderLogo.png" alt="LemanHouse"></a></div>
+										<div class="logo"><a href="home"><img src="images/logo.png" alt="LemanHouse"></a></div>
 									</div>
 									<div class="col-xs-6 col-sm-9 d-flex">
 										<!-- headerContactList -->
@@ -203,167 +203,37 @@
 				<main>
 					<!-- findFormBlock -->
 					<form action="#" class="findFormBlock findFormBlock2 bgLightDark hasShadowTop offsetHeaderTop">
-						
 					</form>
-					<!-- content -->
-					<section id="content" class="container pabIndent">
-						<!-- contentFiltersHeadingWrap -->
-						<header class="contentFiltersHeadingWrap row">
-							<div class="col-xs-12 col-sm-10">
-								<!-- breadcrumb -->
-								
-								<h1 class="fontNeuron">Profile</h1>
-							</div>
-							<div class="col-xs-12 col-sm-2">
-								<!-- viewFilterLinks -->
-								<ul class="list-unstyled viewFilterLinks">
-									<li><a href="#"><i class="fi flaticon-share"></i></a></li>
-									<li><a href="#"><i class="fi flaticon-printer"></i></a></li>
-								</ul>
-							</div>
-						</header>
-						<!-- userProfile -->
-                      <div class="userProfile">
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4 col-lg-3">
-                            <!-- profileSidebar -->
-                            <aside class="profileSidebar">
-                              <header class="head">
-                                <div class="imgProfile">
-                                  <img src="https://via.placeholder.com/74x74" alt="" width="74" height="74">
-                                </div>
-                                <div class="info">
-                                  <span class="text">Ali Tufan</span>
-                                  <span class="text"><a href="/changePassword" class="link">Change Password</a></span>
-                                </div>
-                              </header>
-                              <ul class="navUser list-unstyled">
-								<li>
-									<a href="admin-view-profile">
-									  <i class="far fa-user"></i>
-									  <span>View Profile</span>
-									</a>
-								</li>
-                                <li>
-                                  <a href="admin-profile">
-                                    <i class="far fa-user"></i>
-                                    <span>Account Settings</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="all-registered-houses">
-                                    <i class="fi flaticon-house"></i>
-                                    <span>All Registered Properties</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="all-registered-services">
-                                    <i class="fi flaticon-house"></i>
-                                    <span>All Registered Services</span>
-                                  </a>
-								</li>
-								<li>
-									<a href="add-city">
-									  <i class="fa fa-plus"></i>
-									  <span>Add City</span>
-									</a>
-								</li>
-
-								<li>
-									<a href="add-data-operator">
-									  <i class="fa fa-plus"></i>
-									  <span>Register Data operator</span>
-									</a>
-								</li>
-                                <li>
-								
-                                  <a href="{{ url('/logout') }}"
-								  onclick="event.preventDefault();
-										   document.getElementById('logout-form').submit();">
-									<i class="fa fa-sign-out-alt"></i>
-									<form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-										{{ csrf_field() }}
-									</form>
-                                    <span>Logout</span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </aside>
-                          </div>
-                          <div class="col-xs-12 col-sm-8 col-lg-9">
-                            <!-- accountData -->
                             <div class="accountData">
-                              <form>
+                              <form method="POST" action="/changePasswordA">
                                 <div class="head">
-                                  <h4 class="fontNeuron">Account Settings</h4>
-                                </div>
-                                <div class="accountHolder">
-                                  <div class="imgProfile">
-                                    <div class="imgThumbnail">
-                                      <img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
-                                      
-                                    </div>
-                                  </div>
-                                  <div class="accountContent">
-                                    <div class="form-group">
-									  <label for="itemN-1">Full Name</label><br>
-									<span id="itemN-1" class="text text-center" class="form-control">{{$user->name}}</span>
-                                    </div>
-                                    <div class="form-group">
-									  <label for="itemN-2">Email</label><br>
-									<span id="itemN-2" class="text text-center" class="form-control">{{$user->email}}</span>
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="itemN-3">Phone</label><br>
-									<span id="itemN-3" class="text text-center" class="form-control">{{$admin->phone_number}}</span>
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="itemN-4">Biography</label><br>
-									<span id="itemN-4" class="text text-center" class="form-control">{{$admin->biography}}</span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
-                            <!-- accountData -->
-                            <!-- accountData -->
-                            <div class="accountData">
-                              <form>
-                                <div class="head">
-                                  <h4 class="fontNeuron">Social Profiles</h4>
+                                  <h4 class="fontNeuron">Change Password</h4>
                                 </div>
                                 <div class="accountHolder">
                                   <div class="accountContent">
                                     <div class="row">
                                       <div class="col-xs-12 col-md-6">
                                         <div class="form-group">
-                                          <label for="itemN-8">Facebook URL</label><br>
-                                          <span id="itemN-8" class="text text-center" class="form-control"></span>
+                                          <label for="itemN-5">Current Password</label>
+                                          <input name="CPassword" type="password" class="form-control" placeholder="password" id="itemN-5">
                                         </div>
                                       </div>
-                                       <div class="col-xs-12 col-md-6">
+                                      <div class="col-xs-12 col-md-6">
                                         <div class="form-group">
-                                          <label for="itemN-9">Twitter URL</label><br>
-                                          <span id="itemN-9" class="text text-center" class="form-control"></span>
+                                          <label for="itemN-5">New Password</label>
+                                          <input name="NPassword" type="password" class="form-control" placeholder="password" id="itemN-5">
                                         </div>
                                       </div>
                                     </div>
                                     <div class="row">
-                                      <div class="col-xs-12">
+                                      <div class="col-xs-12 col-md-6">
                                         <div class="form-group">
-                                          <label for="itemN-11">Instagram URL</label><br>
-                                          <span id="itemN-11" class="text text-center" class="form-control"></span>
+                                          <label for="itemN-6">Confirm Password</label>
+                                          <input name="ConPassword" type="password" class="form-control" placeholder="password" id="itemN-6"><br><br>
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="row">
-                                      <div class="col-xs-12">
-                                        <div class="form-group">
-                                          <label for="itemN-13">Skype</label><br>
-                                          <span id="itemN-13" class="text text-center" class="form-control">Ali Tufan</span>
-                                        </div>
-                                      </div>
-                                    </div>
+                                    <button type="submit" class="btn alighRight btnSecondary buttonL fontNeuron">Change Password</button>
                                   </div>
                                 </div>
                               </form>
@@ -371,10 +241,10 @@
                           </div>
                         </div>
                       </div>
-					</section>
 					<!-- signupFormAside -->
 					<form action="#" class="bgWhite signupFormAside">
 						<div class="container signupFormAsideHolder">
+							<span class="icnAbsolute elemenBlock fi flaticon-message"></span>
 							<div class="col-xs-12 col-md-offset-2 col-md-6">
 								<h3 class="fontNeuron textSecondary">Download our app</h3>
 								<p>Download our app from google play store</p>
@@ -413,14 +283,14 @@
 								<h2 class="fontNeuron fwSemi text-uppercase">Useful Links</h2>
 								<div class="ftNavListsHolder">
 									<ul class="list-unstyled">
-										<li><a href="about">About US</a></li>
-										<li><a href="contact">Contact Support</a></li>
-										<li><a href="properties-faqs">FAQs</a></li>
+										<li><a href="about.html">About US</a></li>
+										<li><a href="contact.html">Contact Support</a></li>
+										<li><a href="properties-faqs.html">FAQs</a></li>
 									</ul>
 									<ul class="list-unstyled">
-										<li><a href="properties-faqs">FAQ</a></li>
-										<li><a href="blog-full-width">Blog</a></li>
-										<li><a href="contact">Contact</a></li>
+										<li><a href="properties-faqs.html">FAQ</a></li>
+										<li><a href="blog-full-width.html">Blog</a></li>
+										<li><a href="contact.html">Contact</a></li>
 									</ul>
 								</div>
 							</nav>
@@ -537,7 +407,7 @@
 										<input type="email" class="form-control elemenBlock" placeholder="Email Address">
 									</div>
 									<div class="form-group">
-										<select name="user_type" data-placeholder="Type" class="chosen-select">
+										<select data-placeholder="Type" class="chosen-select">
 											<option value="1">House Owner</option>
 											<option value="2">Service Owner</option>
 											<option value="3">Data Operator</option>

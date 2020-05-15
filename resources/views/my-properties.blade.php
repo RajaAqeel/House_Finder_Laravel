@@ -305,11 +305,11 @@
                                     </div>
                                   </div>
                                   <div class="btnArea">
-                                    <span class="status fontNeuron">{{$houses->status}}</span>
+									<span class="status fontNeuron">{{$houses->status}}</span>
                                     <ul class="links list-unstyled">
                                       <li><a href="/houses/{{$houses->id}}"><i class="fa fa-eye"></i>View</a></li>
-                                      <li><a href="edit-property-information"><i class="fa fa-edit"></i>Edit</a></li>
-                                      <li><a href="/delete/{{$houses->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+									  <li><a href="/edit/{{$houses->id}}"><i class="fa fa-edit"></i>Edit</a></li>
+                                      <li><a href="/deleteH/{{$houses->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
                                     </ul>
                                   </div>
                                 </article>

@@ -12,22 +12,23 @@ use App\housemaid_service;
 use App\parking_service;
 use App\schoolvan_service;
 use App\sweeper_service;
+use DB;
 
 
 class AllServicesController extends Controller
 {
-    public function allServices()
+    public function index()
     {
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $id =$so->id;
-        $internetServices = internet_service_provider::where('service_provider_id', $id)->get();
-        $cableServices = cable_provider_service::where('service_provider_id', $id)->get();
-        $housemaidServices = housemaid_service::where('service_provider_id', $id)->get();
-        $parkingServices = parking_service::where('service_provider_id', $id)->get();
-        $schoolVanServices = schoolvan_service::where('service_provider_id', $id)->get();
-        $sweeperServices = sweeper_service::where('service_provider_id', $id)->get();
-        $watchmanServices = watchman_service::where('service_provider_id', $id)->get();
-        return view('my-services')->with('internet', $internetServices)->with('cable', $cableServices)->with('housemaid', $housemaidServices)->with('parking', $parkingServices)->with('schoolvan', $schoolVanServices)->with('sweeper', $sweeperServices)->with('watchman', $watchmanServices);
+        $allInternetServices = internet_service_provider::where('service_provider_id', $id)->get();
+        $allCableServices = cable_provider_service::where('service_provider_id', $id)->get();
+        $allHousemaidServices = housemaid_service::where('service_provider_id', $id)->get();
+        $allParkingServices = parking_service::where('service_provider_id', $id)->get();
+        $allSchoolVanServices = schoolvan_service::where('service_provider_id', $id)->get();
+        $allSweeperServices = sweeper_service::where('service_provider_id', $id)->get();
+        $allWatchmanServices = watchman_service::where('service_provider_id', $id)->get();
+        return view('/my-services')->with('allInternetServices', $allInternetServices)->with('allCableServices', $allCableServices)->with('allHousemaidServices', $allHousemaidServices)->with('allParkingServices', $allParkingServices)->with('allSchoolVanServices', $allSchoolVanServices)->with('allSweeperServices', $allSweeperServices)->with('allWatchmanServices', $allWatchmanServices);
     }
     public function allServicesAdmin()
     {
@@ -38,28 +39,76 @@ class AllServicesController extends Controller
         $schoolVanServices = schoolvan_service::all();
         $sweeperServices = sweeper_service::all();
         $watchmanServices = watchman_service::all();
-        return view('all-registered-services')->with('internet', $internetServices)->with('cable', $cableServices)->with('housemaid', $housemaidServices)->with('parking', $parkingServices)->with('schoolvan', $schoolVanServices)->with('sweeper', $sweeperServices)->with('watchman', $watchmanServices);
+        return view('all-registered-services')->with('internetServices', $internetServices)->with('cableServices', $cableServices)->with('housemaidServices', $housemaidServices)->with('parkingServices', $parkingServices)->with('schoolVanServices', $schoolVanServices)->with('sweeperServices', $sweeperServices)->with('watchmanServices', $watchmanServices);
     }
-    public function delete($id)
+    public function deleteI($id)
     {
         DB::table('internet_service_providers')->where('id', $id)->delete();
+        return redirect('/my-services');
+    }
+    public function deleteC($id)
+    {
         DB::table('cable_provider_services')->where('id', $id)->delete();
+        return redirect('/my-services');
+    }
+    public function deleteH($id)
+    {
         DB::table('housemaid_services')->where('id', $id)->delete();
+        return redirect('/my-services');
+    }
+    public function deleteP($id)
+    {
         DB::table('parking_services')->where('id', $id)->delete();
+        return redirect('/my-services');
+    }
+    public function deleteSc($id)
+    {
         DB::table('schoolvan_services')->where('id', $id)->delete();
+        return redirect('/my-services');
+    }
+    public function deleteSw($id)
+    {
         DB::table('sweeper_services')->where('id', $id)->delete();
+        return redirect('/my-services');
+    }
+    public function deleteW($id)
+    {
         DB::table('watchman_services')->where('id', $id)->delete();
         return redirect('/my-services');
     }
-    public function deleteService($id)
+    public function deleteServiceI($id)
     {
         DB::table('internet_service_providers')->where('id', $id)->delete();
-        DB::table('cable_provider_services')->where('id', $id)->delete();
-        DB::table('housemaid_services')->where('id', $id)->delete();
-        DB::table('parking_services')->where('id', $id)->delete();
-        DB::table('schoolvan_services')->where('id', $id)->delete();
-        DB::table('sweeper_services')->where('id', $id)->delete();
+        return redirect('/all-registered-services');
+    }
+    public function deleteServiceW($id)
+    {
         DB::table('watchman_services')->where('id', $id)->delete();
+        return redirect('/all-registered-services');
+    }
+    public function deleteServiceC($id)
+    {
+        DB::table('cable_provider_services')->where('id', $id)->delete();
+        return redirect('/all-registered-services');
+    }
+    public function deleteServiceH($id)
+    {
+        DB::table('housemaid_services')->where('id', $id)->delete();
+        return redirect('/all-registered-services');
+    }
+    public function deleteServiceP($id)
+    {
+        DB::table('parking_services')->where('id', $id)->delete();
+        return redirect('/all-registered-services');
+    }
+    public function deleteServiceSc($id)
+    {
+        DB::table('schoolvan_services')->where('id', $id)->delete();
+        return redirect('/all-registered-services');
+    }
+    public function deleteServiceSw($id)
+    {
+        DB::table('sweeper_services')->where('id', $id)->delete();
         return redirect('/all-registered-services');
     }
 }

@@ -55,6 +55,12 @@ Route::resource('/admins','AdminController');
 Route::resource('/dataoperators', 'DataOperatorController');
 Route::resource('/subareas', 'SubAreaController');
 Route::resource('/internet', 'InternetServiceProviderController');
+Route::resource('/cable', 'CableProviderServiceController');
+Route::resource('/housemaid', 'HousemaidServiceController');
+Route::resource('/parking', 'ParkingServiceController');
+Route::resource('/schoolvan', 'AchoolvanServiceController');
+Route::resource('/sweeper', 'SweeperServiceController');
+Route::resource('/watchman', 'WatchmanServiceController');
 Route::resource('/houses', 'HouseController');
 
 
@@ -69,22 +75,39 @@ Auth::routes();
 //data get routes
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/all-registered-users', 'UsersController@allUsers');
+Route::get('/favourite-properties', 'HouseController@favouriteProperties');
 Route::get('/add-house-01','DropDownController@cities');
-Route::get('/delete/{id}', 'AllServicesController@delete');
-Route::get('/deleteService/{id}', 'AllServicesController@deleteService');
+Route::get('/edit/{id}','HouseController@edit');
+Route::get('/deleteI/{id}', 'AllServicesController@deleteI');
+Route::get('/deleteC/{id}', 'AllServicesController@deleteC');
+Route::get('/deleteP/{id}', 'AllServicesController@deleteP');
+Route::get('/deleteHo/{id}', 'AllServicesController@deleteH');
+Route::get('/deleteSc/{id}', 'AllServicesController@deleteSc');
+Route::get('/deleteSw/{id}', 'AllServicesController@deleteSw');
+Route::get('/deleteW/{id}', 'AllServicesController@deleteW');
+Route::get('/deleteServiceI/{id}', 'AllServicesController@deleteServiceI');
+Route::get('/deleteServiceC/{id}', 'AllServicesController@deleteServiceC');
+Route::get('/deleteServiceP/{id}', 'AllServicesController@deleteServiceP');
+Route::get('/deleteServiceHo/{id}', 'AllServicesController@deleteServiceH');
+Route::get('/deleteServiceSc/{id}', 'AllServicesController@deleteServiceSc');
+Route::get('/deleteServiceSw/{id}', 'AllServicesController@deleteServiceSw');
+Route::get('/deleteServiceW/{id}', 'AllServicesController@deleteServiceW');
 Route::get('/delete/{id}', 'UsersController@delete');
-Route::get('/delete/{id}', 'HouseController@delete');
-Route::get('/delete/{id}', 'HouseController@delete');
+Route::get('/deleteH/{id}', 'HouseController@delete');
 Route::get('/deleteHouse/{id}', 'HouseController@deleteHouse');
 Route::get('/delete/{id}', 'InternetServiceProviderController@delete');
 Route::get('/add-sub-area', 'SubAreaController@index');
-Route::get('/my-services', 'InternetServiceProviderController@index');
+Route::get('/my-services', 'AllServicesController@index');
 Route::get('all-registered-services', 'AllServicesController@allServicesAdmin');
 Route::get('all-registered-houses', 'HouseController@allHouses');
 Route::get('/add-internetProvider-info', 'DropDownController@allCity');
 Route::get('/my-properties', 'HouseController@index');
 Route::get('/properties-single2', 'HouseController@show({id})');
 Route::get('/services-single2', 'InternetServiceProviderController@show({id})');
+Route::get('/changePassword', 'ChangePasswordController@ChangePasswordPageAdmin');
+Route::get('/changePasswordDo', 'ChangePasswordController@ChangePasswordPageDo');
+Route::get('/changePasswordHo', 'ChangePasswordController@ChangePasswordPageHo');
+Route::get('/changePasswordSp', 'ChangePasswordController@ChangePasswordPageSp');
 use App\sub_area;
 Route::get('/ajax-sub-area', function(){
     $city_id = Request::get('city_id');
@@ -138,4 +161,21 @@ Route::post('/addInternetService', [
 Route::post('/addHouse', [
     'uses' => 'HouseController@store'
 ]);
+Route::post('/changePasswordA', [
+    'uses' => 'ChangePasswordController@ChangePasswordAdmin'
+]);
+Route::post('/changePasswordHo', [
+    'uses' => 'ChangePasswordController@ChangePasswordHo'
+]);
+Route::post('/changePasswordDo', [
+    'uses' => 'ChangePasswordController@ChangePasswordDo'
+]);
+Route::post('/changePasswordSp', [
+    'uses' => 'ChangePasswordController@ChangePasswordSp'
+]);
+
+
+
+//data put routes
+Route::put('/editHouseInformation/{id}', 'HouseController@update');
 

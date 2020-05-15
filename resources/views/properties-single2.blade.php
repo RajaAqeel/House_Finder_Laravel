@@ -228,7 +228,6 @@
 										</a>
 										<!-- postColumnSocial -->
 									</li>
-									<li><a href="#"><i class="far fa-heart"></i></a></li>
 									<li><a href="#"><i class="fi flaticon-printer"></i></a></li>
 								</ul>
 								<strong class="elemenBlock price fwSemi fontNeuron w100"> {{$house->price}}</strong>

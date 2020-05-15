@@ -47,7 +47,7 @@ class UsersController extends Controller
 
     public function allUsers()
     {
-        $allUsers = users::orderBy('created_at', 'asc')->paginate(10);
+        $allUsers = users::where('user_type','admin')->where('user_type','House Owner')->where('user_type','Service Provider')->where('user_type','Data Operator');
         return view('all-registered-users')->with('allUsers', $allUsers);
     }
 

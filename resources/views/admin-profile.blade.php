@@ -235,7 +235,7 @@
                                 </div>
                                 <div class="info">
                                   <span class="text">{{Auth::user()->name}}</span>
-                                  <span class="text"><a href="change-password.html" class="link">Change Password</a></span>
+                                  <span class="text"><a href="/changePassword" class="link">Change Password</a></span>
                                 </div>
                               </header>
                               <ul class="navUser list-unstyled">
