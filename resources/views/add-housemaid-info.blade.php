@@ -43,99 +43,101 @@
                     <div class="addProperty">
                       <h1 class="fontNeuron">Add New Service</h1> 
                       <ol class="navSteps">
-                        <li >
+                        <li class="current">
                           <a href="add-internetProvider-info.html">
                             <span class="text">Internet Provider</span>
                           </a>
                         </li>
                         <li >
-                            <a href="add-parking-info.html">
+                            <a href="add-parking-info">
                               <span class="text">Parking</span>
                             </a>
                           </li>
 
-                          <li >
-                            <a href="add-cableOperator-info.html">
+                          <li>
+                            <a href="add-cableOperator-info">
                               <span class="text">Cable Operator</span>
                             </a>
                           </li>
 
                         <li>
-                          <a href="add-schoolvan-info.html">
+                          <a href="add-schoolvan-info">
                             <span class="text">School Van</span>
                           </a>
                         </li>
-                        <li >
-                          <a href="add-sweeper-info.html">
+                        <li>
+                          <a href="add-sweeper-info">
                             <span class="text">Sweeper</span>
                           </a>
                         </li>
-                        <li >
-                          <a href="add-watchman-info.html">
+                        <li>
+                          <a href="add-watchman-info">
                             <span class="text">Watchman</span>
                           </a>
                         </li>
-                        <li class="current">
-                          <a href="add-housemaid-info.html">
+                        <li>
+                          <a href="add-housemaid-info">
                             <span class="text">Housemaid</span>
                           </a>
                         </li>
                       </ol>
                       <div class="formContent">
-                        <form>
+						<form method="POST" action="/addHouseMaidService">
+							@csrf
                           <header class="contentHead">
                             <h2 class="fontNeuron">Basic Info</h2>
                           
                           </header>
                           <div class="row">
 							<div class="col-xs-12 col-sm-6">
-                                <div class="form-group">
-                                  <label for="itemN-29">City</label>
-                                  <select data-placeholder="Select Option" class="chosen-select" id="itemN-29">
-                                      <option value="1">Rawalpindi</option>
-                                      <option value="2">Islamabad</option>
-                                    </select>
-                                </div>
-                              </div>
-                              <div class="col-xs-12 col-sm-6">
-                                <div class="form-group">
-                                  <label for="itemN-30">City</label>
-                                  <select data-placeholder="Select Option" class="chosen-select" id="itemN-30">
-                                      <option value="1">Chur Chok</option>
-                                      <option value="2">Rehmanabad</option>
-                                    </select>
-                                </div>
-                              </div>
+								<div class="form-group">
+								  <label for="city">City</label>
+								  <select name="city" data-placeholder="Select Option"  class="form-control" id="city">
+									<option value="">Select Option</option>
+									  @foreach ($cities as $city)
+								  		<option value="{{$city->id}}">{{$city->name}}</option>
+									  @endforeach
 
-
+									</select>
+								</div>
+							  </div>
+							  <div class="col-xs-12 col-sm-6">
+								<div class="form-group">
+								  <label for="sub_area">Sub Area</label>
+								  <select name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
+									<option value="">Select Option</option>
+								  </select>
+								</div>
+							  </div>
                             <div class="col-xs-12">
                               <div class="form-group">
                                 <label for="itemN-15">Name*</label>
-                                <input type="text" class="form-control" placeholder="Maids Services pvt" id="itemN-15">
+                                <input name="name" type="text" class="form-control" placeholder="Maids Services pvt" id="itemN-15">
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-16">Phone Number</label>
-                                <input type="number" class="form-control" placeholder="03000000000" id="itemN-16">
+                                <input name="number" type="number" class="form-control" placeholder="03000000000" id="itemN-16">
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group">
                                   <label for="itemN-18">Address</label>
-                                  <input type="text" class="form-control" placeholder="Rawalpindi cantt" id="itemN-18">
+                                  <input name="address" type="text" class="form-control" placeholder="Rawalpindi cantt" id="itemN-18">
                                 </div>
                               </div>
 
                             <div class="col-xs-12">
                               <div class="form-group">
                               <label for="itemN-25">Description</label>
-                                <textarea class="form-control" id="itemN-25" placeholder="Service Description.."></textarea>
+                                <textarea name="description" class="form-control" id="itemN-25" placeholder="Service Description.."></textarea>
                               </div>
                             </div>
                           </div>
                           <div class="btnArea">
-                            <button type="submit" class="btn btnDark"><a href="service-provider-view-profile.html">Register</a><i></i></button>
+							<button class="btn btnDark"><a href="/sp_dashboard">Back</a></button>
+                            <button type="submit" class="btn btnDark">Save<i></i></button>
                           </div>
                         </form>
                       </div>
@@ -255,6 +257,23 @@
 	<!-- include jQuery library -->
 	<script src="js/jquery.js"></script>
 	<script src="js/plugins.js"></script>
+	<script>
+		$('#city').on('change', function(e){
+			console.log(e);
+			var city_id = e.target.value;
+
+			$.get('/ajax-sub-area?city_id=' + city_id, function(data){
+				console.log(data);
+				$('#sub_area_chosen').empty();
+				$.each(data, function(index, subAreaObj){
+					$('#sel1').append('<option value="'+subAreaObj.id+'">'+subAreaObj.name+'</option>');
+				
+					
+				});
+
+			});
+		});
+	</script>
 	<!-- include bootstrap JavaScript -->
 	<script src="js/bootstrap-slider.min.js"></script>
 	<!-- include custom JavaScript -->

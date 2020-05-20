@@ -28,7 +28,7 @@ class DataOperatorController extends Controller
      */
     public function create()
     {
-        //
+        return view('data-operator-profile');
     }
 
     /**
@@ -39,7 +39,16 @@ class DataOperatorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'phone_number' => 'required',
+            'bio' => 'required',
+        ]);
+
+        $dataOperator = data_operator::where('user_id', Auth::user()->id)->first();
+        $dataOperator->phone_number = $request->input('phone_number');
+        $dataOperator->biography = $request->input('bio');
+        $dataOperator->update();
+        return redirect('/do_dashboard');
     }
 
     /**
@@ -111,6 +120,9 @@ class DataOperatorController extends Controller
         $user->password = Hash::make($request->input('password'));
         $user->user_type = $request->input('user_type');
         $user->save();
+        $sp = new data_operator;
+        $sp->user_id = Auth::user()->id;
+        $sp->save();
         return redirect('/dashboard');
     }
 

@@ -323,48 +323,6 @@
                                 </div>
                               </form>
                             </div>
-                            <div class="accountData">
-								<form>
-                                <div class="head">
-                                  <h4 class="fontNeuron">Social Profiles</h4>
-                                </div>
-                                <div class="accountHolder">
-                                  <div class="accountContent">
-                                    <div class="row">
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-8">Facebook URL</label>
-                                          <input type="text" class="form-control" placeholder="www.facebook.com/PolygonTheme" id="itemN-8">
-                                        </div>
-                                      </div>
-                                       <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-9">Twitter URL</label>
-                                          <input type="text" class="form-control" placeholder="PolygonTheme" id="itemN-9">
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-xs-12">
-                                        <div class="form-group">
-                                          <label for="itemN-11">Instagram URL</label>
-                                          <input type="text" class="form-control" placeholder="PolygonTheme" id="itemN-11">
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-xs-12">
-                                        <div class="form-group">
-                                          <label for="itemN-13">Skype</label>
-                                          <input type="text" class="form-control" placeholder="PolygonTheme" id="itemN-13">
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <button type="submit" class="btn alighRight btnSecondary buttonL fontNeuron">Save Changes</button>
-                                  </div>
-                                </div>
-                            </form>
-                            </div>
                           </div>
                         </div>
                       </div>

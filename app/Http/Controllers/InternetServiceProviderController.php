@@ -84,7 +84,7 @@ class InternetServiceProviderController extends Controller
         $internet = internet_service_provider::find($id);
         $city_name = city::where('id', $internet->city_id)->first();
         $sub_area_name = sub_area::where('id', $internet->sub_area_id)->first();
-        return view('services-single2')->with('internet', $internet)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name);
+        return view('internet-service-page')->with('internet', $internet)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name);
     }
 
     /**
@@ -93,9 +93,13 @@ class InternetServiceProviderController extends Controller
      * @param  \App\internet_service_provider  $internet_service_provider
      * @return \Illuminate\Http\Response
      */
-    public function edit(internet_service_provider $internet_service_provider)
+    public function edit($id)
     {
-        //
+        $city = city::all();
+        $internet = internet_service_provider::find($id);
+        $city_name = city::where('id', $internet->city_id)->first();
+        $sub_area_name = sub_area::where('id', $internet->sub_area_id)->first();
+        return view('edit-internet-service-info')->with('city', $city)->with('internet', $internet)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name);
     }
 
     /**
@@ -105,9 +109,33 @@ class InternetServiceProviderController extends Controller
      * @param  \App\internet_service_provider  $internet_service_provider
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, internet_service_provider $internet_service_provider)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'city' => 'required',
+            'sub_area' => 'required',
+            'service_title' => 'required',
+            'price' => 'required',
+            'address' => 'required',
+            'number' => 'required',
+            'c_hl' => 'required',
+            'cc_hl' => 'required',
+        ]);
+        $internet = internet_service_provider::where('id', $id)->first();
+        $internet->title = $request->get('service_title');
+        $internet->price_mb = $request->get('price');
+        $internet->address = $request->get('address');
+        $internet->complaint_helpline = $request->get('c_hl');
+        $internet->customer_service_helpline = $request->get('cc_hl');
+        $internet->phone_number = $request->get('number');
+        $internet->city_id = $request->get('city');
+        $internet->sub_area_id = $request->get('sub_area');
+        $internet->favourite = 'no';
+        $internet->verified = 'no';
+        $so = service_owner::where('user_id',Auth::user()->id)->first();
+        $internet->service_provider_id =$so->id;
+        $internet->update();
+        return redirect('/my-services');
     }
 
     /**

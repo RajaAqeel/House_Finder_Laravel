@@ -113,7 +113,7 @@ class HouseController extends Controller
      * @param  \App\house  $house
      * @return \Illuminate\Http\Response
      */
-    public function edit(house $house)
+    public function edit($id)
     {
         $house = house::find($id);
         $city_name = city::where('id', $house->city_id)->first();
@@ -144,7 +144,7 @@ class HouseController extends Controller
             'address' => 'required',
             'sub_area' => 'required',
         ]);
-        $houses = house::find($id);
+        $houses = house::where('id', $id);
         $ho = house_owner::where('user_id',Auth::user()->id)->first();
         $houses->title = $request->input('title');
         $houses->type = $request->input('type');
@@ -162,7 +162,7 @@ class HouseController extends Controller
         $houses->verified = 'no';
         $houses->status = 'Available';
         $houses->negotiable = $request->input('negotiable');
-        $houses->save();
+        $houses->update();
         return redirect('/my-properties')->with('success', 'House Updated');
     }
 
@@ -193,7 +193,7 @@ class HouseController extends Controller
     }
     public function favourite($id)
     {
-        $house = house::where('id', $id);
+        $house = house::where('id', $id)->first();
         $house->favourite = 'yes';
         $house->update();
         return redirect('/my-properties');

@@ -205,7 +205,7 @@
 					<form action="#" class="findFormBlock findFormBlock2 bgLightDark hasShadowTop offsetHeaderTop">
 					</form>
                             <div class="accountData">
-                              <form method="POST" action="/changePasswordDo">
+							  <form method="POST" action="/changePasswordDo">
                                 <div class="head">
                                   <h4 class="fontNeuron">Change Password</h4>
                                 </div>

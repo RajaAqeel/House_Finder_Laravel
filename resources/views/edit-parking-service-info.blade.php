@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- set the page title -->
-	<title>Add Internet Service</title>
+	<title>Edit {{$parking->title}} Information</title>
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
@@ -42,58 +42,19 @@
                   <section id="content" class="container pEqual">
                     <div class="addProperty">
                       <h1 class="fontNeuron">Add New Service</h1> 
-                      <ol class="navSteps">
-                        <li class="current">
-                          <a href="add-internetProvider-info.html">
-                            <span class="text">Internet Provider</span>
-                          </a>
-                        </li>
-                        <li >
-                            <a href="add-parking-info">
-                              <span class="text">Parking</span>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a href="add-cableOperator-info">
-                              <span class="text">Cable Operator</span>
-                            </a>
-                          </li>
-
-                        <li>
-                          <a href="add-schoolvan-info">
-                            <span class="text">School Van</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="add-sweeper-info">
-                            <span class="text">Sweeper</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="add-watchman-info">
-                            <span class="text">Watchman</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="add-housemaid-info">
-                            <span class="text">Housemaid</span>
-                          </a>
-                        </li>
-                      </ol>
                       <div class="formContent">
-						<form method="POST" action="/addInternetService">
-							@csrf
+						<form method="POST" action="/editInternetInformation/{{$parking->id}}">
+                            {{ csrf_field() }}
+							{{ method_field('PUT') }}
                           <header class="contentHead">
                             <h2 class="fontNeuron">Basic Info</h2>
-                          
                           </header>
                           <div class="row">
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="city">City</label>
 								  <select name="city" data-placeholder="Select Option"  class="form-control" id="city">
-									<option value="">Select Option</option>
+                                  <option value="{{$city_name->id}}">{{$city_name->name}}</option>
 									  @foreach ($cities as $city)
 								  		<option value="{{$city->id}}">{{$city->name}}</option>
 									  @endforeach
@@ -105,7 +66,7 @@
 								<div class="form-group">
 								  <label for="sub_area">Sub Area</label>
 								  <select name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
-									<option value="">Select Option</option>
+                                  <option value="{{$sub_area->id}}">{{$sub_area->name}}</option>
 
 								  </select>
 								</div>

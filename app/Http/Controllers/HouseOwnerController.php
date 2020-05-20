@@ -24,7 +24,7 @@ class HouseOwnerController extends Controller
      */
     public function create()
     {
-        //
+        return view('data-operator-profile');
     }
 
     /**
@@ -35,7 +35,17 @@ class HouseOwnerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'phone_number' => 'required',
+            'bio' => 'required',
+        ]);
+
+        $houseOwner = house_owner::where('user_id', Auth::user()->id)->first();
+        $houseOwner->phone_number = $request->input('phone_number');
+        $house_owner->cnic = $request->input('cnic');
+        $houseOwner->biography = $request->input('bio');
+        $houseOwner->update();
+        return redirect('/ho_dashboard');
     }
 
     /**

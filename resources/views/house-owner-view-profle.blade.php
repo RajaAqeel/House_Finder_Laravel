@@ -243,7 +243,7 @@
 									</a>
 								  </li>
                                 <li>
-                                  <a href="house-owner-profile">
+                                  <a href="/houseOwnerProfile">
                                     <i class="far fa-user"></i>
                                     <span>Account Settings</span>
                                   </a>
@@ -314,59 +314,6 @@
                                     <div class="form-group">
                                       <label for="itemN-5">Biography</label><br>
                                       <span id="itemN-5" class="text text-center" class="form-control">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.Phasellus mollis imperdiet placerat</span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
-                            <div class="accountData">
-                              <form>
-                                <div class="head">
-                                  <h4 class="fontNeuron">Social Profiles</h4>
-                                </div>
-                                <div class="accountHolder">
-                                  <div class="accountContent">
-                                    <div class="row">
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-8">Facebook URL</label><br>
-                                          <span id="itemN-8" class="text text-center" class="form-control">www.facebook.com</span>
-                                        </div>
-                                      </div>
-                                       <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-9">Twitter URL</label><br>
-                                          <span id="itemN-9" class="text text-center" class="form-control">Ali Tufan</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-10">Linkedin URL</label><br>
-                                          <span id="itemN-10" class="text text-center" class="form-control">Ali Tufan</span>
-                                        </div>
-                                      </div>
-                                      <div class="col-xs-12 col-sm-6">
-                                        <div class="form-group">
-                                          <label for="itemN-11">Instagram URL</label><br>
-                                          <span id="itemN-11" class="text text-center" class="form-control">Ali Tufan</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-12">Google Plus URL</label><br>
-                                          <span id="itemN-12" class="text text-center" class="form-control">Ali Tufan</span>
-                                        </div>
-                                      </div>
-                                      <div class="col-xs-12 col-md-6">
-                                        <div class="form-group">
-                                          <label for="itemN-13">Skype</label><br>
-                                          <span id="itemN-13" class="text text-center" class="form-control">Ali Tufan</span>
-                                        </div>
-                                      </div>
                                     </div>
                                   </div>
                                 </div>

@@ -59,9 +59,6 @@ class RegisterController extends Controller
         }
         else if(Auth::user()->user_type == 'Data Operator')
         {
-            $sp = new data_operator;
-            $sp->user_id = Auth::user()->id;
-            $sp->save();
             return 'do_dashboard';
         }
         else
