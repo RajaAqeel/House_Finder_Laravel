@@ -37,14 +37,27 @@ class ServiceOwnerController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'phone_number' => 'required',
-            'bio' => 'required',
+            'phone_number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
+            'bio' => ['required'],
         ]);
 
-        $sp = service_owner::where('user_id', Auth::user()->id)->first();
-        $sp->phone_number = $request->input('phone_number');
-        $sp->biography = $request->input('bio');
-        $sp->update();
+        $serviceOwner = service_owner::where('user_id', Auth::user()->id)->first();
+        $serviceOwner->phone_number = $request->input('phone_number');
+        $serviceOwner->biography = $request->input('bio');
+        if($request->hasFile('image'))
+        {
+            $fileNameWithExt = $request->file('image')->getClientOriginalName();
+            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('image')->getClientOriginalExtension();
+            $image = $fileName.'_'.time().'.'.$extension;
+            $path = $request->file('image')->storeAs('public/uploads/Services Owner Profile', $image);
+            $serviceOwner->image = $image;
+        }
+        else
+        {
+            $image = 'no_file';
+        }
+        $serviceOwner->update();
         return redirect('/sp_dashboard');
     }
 

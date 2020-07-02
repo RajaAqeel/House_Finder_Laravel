@@ -40,15 +40,28 @@ class DataOperatorController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'phone_number' => 'required',
-            'bio' => 'required',
+            'phone_number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
+            'bio' => ['required'],
         ]);
 
         $dataOperator = data_operator::where('user_id', Auth::user()->id)->first();
         $dataOperator->phone_number = $request->input('phone_number');
         $dataOperator->biography = $request->input('bio');
+        if($request->hasFile('image'))
+        {
+            $fileNameWithExt = $request->file('image')->getClientOriginalName();
+            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('image')->getClientOriginalExtension();
+            $image = $fileName.'_'.time().'.'.$extension;
+            $path = $request->file('image')->storeAs('public/uploads/House Owner Profile', $image);
+            $dataOperator->image = $image;
+        }
+        else
+        {
+            $image = 'no_file';
+        }
         $dataOperator->update();
-        return redirect('/do_dashboard');
+        return redirect('/do_dashboard')->with('dataOperator', $dataOperator);
     }
 
     /**

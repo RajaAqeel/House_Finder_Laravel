@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\house_owner;
+use Auth;
+use Image;
 use Illuminate\Http\Request;
 
 class HouseOwnerController extends Controller
@@ -36,16 +38,32 @@ class HouseOwnerController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'phone_number' => 'required',
-            'bio' => 'required',
+            'phone_number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
+            'bio' => ['required'],
+            'cnic' => ['required', 'regex:/^[0-9]+$/', 'digits_between:13,13', 'numeric'],
         ]);
 
         $houseOwner = house_owner::where('user_id', Auth::user()->id)->first();
         $houseOwner->phone_number = $request->input('phone_number');
-        $house_owner->cnic = $request->input('cnic');
+        $houseOwner->cnic = $request->input('cnic');
         $houseOwner->biography = $request->input('bio');
+
+        if($request->hasFile('image'))
+        {
+            $fileNameWithExt = $request->file('image')->getClientOriginalName();
+            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('image')->getClientOriginalExtension();
+            $image = $fileName.'_'.time().'.'.$extension;
+            $path = $request->file('image')->storeAs('public/uploads/House Owner Profile', $image);
+            $houseOwner->image = $image;
+        }
+        else
+        {
+            $image = 'no_file';
+        }
+
         $houseOwner->update();
-        return redirect('/ho_dashboard');
+        return redirect('/ho_dashboard')->with('houseOwner', $houseOwner);
     }
 
     /**

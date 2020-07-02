@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- set the page title -->
-	<title>All Registered Users</title>
+	<title>All Registered Houses</title>
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
@@ -325,7 +325,6 @@
 									</article>
 								  </div>
 								  @endforeach
-								  {{$houses->links()}}
 							  @else
 								  <p>No Houses Found Found</p>
 							  @endif

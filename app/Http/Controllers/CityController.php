@@ -37,7 +37,7 @@ class CityController extends Controller
     {
         //
         $this->validate($request, [
-            'name' => 'required',
+            'name' => ['required'],
         ]);
 
         $city = new city;

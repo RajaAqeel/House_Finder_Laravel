@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- set the page title -->
-	<title>House Owner Profile</title>
+	<title>House Owner Profile Settings</title>
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
@@ -245,7 +245,7 @@
 									</a>
 								  </li>
                                 <li>
-                                  <a href="/houseOwnerProfile">
+                                  <a href="house-owner-profile">
                                     <i class="far fa-user"></i>
                                     <span>Account Settings</span>
                                   </a>
@@ -285,7 +285,7 @@
                           <div class="col-xs-12 col-sm-8 col-lg-9">
                             <!-- accountData -->
                             <div class="accountData">
-							  <form method="POST" action="/houseOwnerProfileChange">
+							  <form method="POST" enctype="multipart/form-data" action="/houseOwnerProfileChange">
 								@csrf
                                 <div class="head">
                                   <h4 class="fontNeuron">Account Settings</h4>
@@ -293,21 +293,19 @@
                                 <div class="accountHolder">
                                   <div class="imgProfile">
                                     <div class="imgThumbnail">
-                                      <img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
-                                      <div class="btnArea">
-                                        <a href="#" class="btn btn-info"><i class="fa fa-upload"></i> Upload Photo</a>
-                                      </div>
-                                    </div>
-                                    <span class="text text-center">*minimum 200px x 200px</span>
+										<img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
+									</div>
+									<input name="image" type="file" class="form-control" id="itemN-1">
+                                    
                                   </div>
                                   <div class="accountContent">
                                     <div class="form-group">
                                       <label for="itemN-1">Full Name</label>
-                                      <input type="text" class="form-control" placeholder="Ali Tufan" id="itemN-1">
+                                      <input name="name" type="text" class="form-control" placeholder="Ali Tufan" id="itemN-1">
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-2">Email</label>
-                                      <input type="email" class="form-control" placeholder="polygontheme@gmail.com" id="itemN-2">
+                                      <input name="email" type="email" class="form-control" placeholder="polygontheme@gmail.com" id="itemN-2">
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-3">Phone</label>

@@ -261,7 +261,6 @@
 											<i class="fi flaticon-share"></i>
 										</a>
 										<!-- postColumnSocial -->
-										
 									</li>
 									<li><a href="#"><i class="fi flaticon-printer"></i></a></li>
 								</ul>
@@ -392,7 +391,7 @@
 												</figure>
 												<div class="pull-left">
 													<div class="hb-headcontent">
-														<span>{{Auth::user()->name}}</span>
+														<span></span>
 													</div>
 												</div>
 											</div>

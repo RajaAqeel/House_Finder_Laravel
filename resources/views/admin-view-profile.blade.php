@@ -230,7 +230,7 @@
                             <aside class="profileSidebar">
                               <header class="head">
                                 <div class="imgProfile">
-                                  <img src="https://via.placeholder.com/74x74" alt="" width="74" height="74">
+                                  <img src="storage/uploads/Admin Profile/{{$admin->image}}" alt="" width="74" height="74">
                                 </div>
                                 <div class="info">
                                   <span class="text">Ali Tufan</span>
@@ -300,7 +300,7 @@
                                 <div class="accountHolder">
                                   <div class="imgProfile">
                                     <div class="imgThumbnail">
-                                      <img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
+                                      <img src="storage/uploads/Admin Profile/{{$admin->image}}" alt="" width="200" height="200">
                                       
                                     </div>
                                   </div>

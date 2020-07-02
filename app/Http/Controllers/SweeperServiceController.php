@@ -40,13 +40,11 @@ class SweeperServiceController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'city' => 'required',
-            'sub_area' => 'required',
-            'service_title' => 'required',
-            'unit' => 'required',
-            'value' => 'required',
-            'address' => 'required',
-            'number' => 'required',
+            'city' => ['required'],
+            'sub_area' => ['required'],
+            'name' => ['required', 'regex:/^[\pL\s\-]+$/u'],
+            'address' => ['required'],
+            'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
         ]);
         $sweeper = new sweeper_service;
         $sweeper->name = $request->get('name');
@@ -56,7 +54,7 @@ class SweeperServiceController extends Controller
         $sweeper->sub_area_id = $request->get('sub_area');
         $sweeper->favourite = 'no';
         $sweeper->verified = 'no';
-        $sweeper->descripton = $request->input('description');
+        $sweeper->description = $request->input('description');
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $sweeper->service_provider_id =$so->id;
         $sweeper->save();
@@ -72,9 +70,11 @@ class SweeperServiceController extends Controller
     public function show($id)
     {
         $sweeper = sweeper_service::find($id);
+        $id = $sweeper->service_provider_id;
+        $service_owner_id = service_owner::where('id', $id)->first();
         $city_name = city::where('id', $sweeper->city_id)->first();
         $sub_area_name = sub_area::where('id', $sweeper->sub_area_id)->first();
-        return view('sweeper-service-page')->with('sweeper', $sweeper)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name);
+        return view('sweeper-service-page')->with('sweeper', $sweeper)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name)->with('service_owner_id', $service_owner_id);
     }
 
     /**
@@ -102,13 +102,13 @@ class SweeperServiceController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'city' => 'required',
-            'sub_area' => 'required',
-            'service_title' => 'required',
-            'unit' => 'required',
-            'value' => 'required',
-            'address' => 'required',
-            'number' => 'required',
+            'city' => ['required'],
+            'sub_area' => ['required'],
+            'service_title' => ['required', 'regex:/^[a-zA-Z]+$/u'],
+            'unit' => ['required'],
+            'value' => ['required', 'numeric', 'regex:/^[0-9]+$/'],
+            'address' => ['required'],
+            'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
         ]);
         $sweeper = sweeper_service::where('id', $id)->first();
         $sweeper->name = $request->get('name');

@@ -427,7 +427,7 @@
 									<a href="/sweeper/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
                                     </div>
                                     <div class="textBox">
-									<h4 class="fontNeuron"><a href="/sweeper/{{$internet->id}}">{{$internet->title}}</a></h4>
+									<h4 class="fontNeuron"><a href="/sweeper/{{$internet->id}}">{{$internet->name}}</a></h4>
 									<address><i class="fi flaticon-pin-1"></i>{{$internet->address}}</address>
                                       <div class="priceArea">
                                       </div>

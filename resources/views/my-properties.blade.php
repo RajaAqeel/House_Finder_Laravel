@@ -297,10 +297,9 @@
                                     </div>
                                     <div class="textBox">
 									<h4 class="fontNeuron"><a href="/houses/{{$houses->id}}">{{$houses->title}}</a></h4>
-									<address><i class="fi flaticon-pin-1"></i>{{$houses->address}} {{$sub_area_name}} {{$city_name}}</address>
+									<address><i class="fi flaticon-pin-1"></i>{{$houses->address}} {{$sub_area}} {{$city}}</address>
                                       <div class="priceArea">
-                                        <span class="price fontNeuron">{{$houses->price}}</span>
-                                        <time class="date" datetime="2017-02-27">{{$houses->created_at}}</time>
+                                        <span class="price fontNeuron">{{$houses->price}} /monthly</span>
                                       </div>
                                     </div>
                                   </div>

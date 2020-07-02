@@ -23,13 +23,15 @@
 Route::get('/', 'PagesController@home');
 Route::get('/about', 'PagesController@about');
 Route::get('/testimonials', 'PagesController@testimonials');
-Route::get('/blog', 'PagesController@blog');
+Route::get('/blog-full-width', 'PagesController@blog');
+Route::get('/blog-detail', 'PagesController@blogDetail');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/add-city', 'PagesController@addCity');
 Route::get('/admin-view-profile', 'PagesController@adminViewProfile');
 Route::get('/admin-profile', 'PagesController@adminProfile');
 Route::get('/my-properties', 'PagesController@viewAllProperties');
 Route::get('/all-registered-users', 'PagesController@viewAllUsers');
+Route::get('/house-owner-view-profile', 'PagesController@houseOwnerViewProfile');
 Route::get('/house-owner-profile', 'PagesController@houseOwnerProfile');
 Route::get('/my-properties','PagesController@myProperties');
 Route::get('/my-services', 'PagesController@myServices');
@@ -45,6 +47,7 @@ Route::get('/favourited-services', 'PagesController@viewFavouriteServices');
 Route::get('/add-internetProvider-info', 'PagesController@addService');
 Route::get('/all-registered-houses', 'PagesController@allRegisteredHouses');
 Route::get('/all-registered-services', 'PagesController@allRegisteredServices');
+Route::get('/properties-full-width-list', 'PagesController@propertiesList');
 
 
 
@@ -62,6 +65,7 @@ Route::resource('/schoolvan', 'AchoolvanServiceController');
 Route::resource('/sweeper', 'SweeperServiceController');
 Route::resource('/watchman', 'WatchmanServiceController');
 Route::resource('/houses', 'HouseController');
+Route::resource('/houses/tenant', 'HouseController');
 
 
 
@@ -74,7 +78,9 @@ Auth::routes();
 
 //data get routes
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'DropDownController@homePageCities');
 Route::get('/all-registered-users', 'UsersController@allUsers');
+Route::get('/searchHouse', 'SearchController@searchHouse');
 Route::get('/favourite-properties', 'HouseController@favouriteProperties');
 Route::get('/add-house-01','DropDownController@cities');
 Route::get('/edit-property-information','DropDownController@citiesH');
@@ -117,13 +123,22 @@ Route::get('/add-sweeper-info', 'DropDownController@allCitySw');
 Route::get('/add-watchman-info', 'DropDownController@allCityW');
 Route::get('/my-properties', 'HouseController@index');
 Route::get('/properties-single2', 'HouseController@show({id})');
-Route::get('/services-single2', 'InternetServiceProviderController@show({id})');
+Route::get('/hello/{id}', 'InternetServiceProviderController@show()');
+
+Route::get('/housemaid-service-page', 'HousemaidServiceController@show({id})');
+Route::get('/parking-service-page', 'ParkingServiceController@show({id})');
+Route::get('/schoolvan-service-page', 'SchoolvanServiceController@show({id})');
+Route::get('/sweeper-service-page', 'SweeperServiceController@show({id})');
+Route::get('/watchman-service-page', 'WatchmanServiceController@show({id})');
+Route::get('/cable-service-page', 'CableProviderServiceController@show({id})');
+
 Route::get('/changePassword', 'ChangePasswordController@ChangePasswordPageAdmin');
 Route::get('/changePasswordDo', 'ChangePasswordController@ChangePasswordPageDo');
 Route::get('/changePasswordHo', 'ChangePasswordController@ChangePasswordPageHo');
 Route::get('/changePasswordSp', 'ChangePasswordController@ChangePasswordPageSp');
 Route::get('/dataOperatorProfile', 'DataOperatorController@create');
 Route::get('/houseOwnerProfile', 'HouseOwnerController@create');
+Route::get('/properties-full-width-list', 'SearchController@searchHouse');
 use App\sub_area;
 Route::get('/ajax-sub-area', function(){
     $city_id = Request::get('city_id');
@@ -201,10 +216,63 @@ Route::post('/addCableService', [
 Route::post('/addHouseMaidService', [
     'uses' => 'HousemaidServiceController@store'
 ]);
-Route::get('/addSchoolVanService', [
+Route::post('/addSchoolVanService', [
     'uses' => 'SchoolvanServiceController@store'
 ]);
-
+Route::post('/addSweeperService', [
+    'uses' => 'SweeperServiceController@store'
+]);
+Route::post('/sendMessage', [
+    'uses' => 'EmailController@store'
+]);
+Route::post('/verifyHouse', [
+    'uses' => 'EmailController@VerifyHouse'
+]);
+Route::post('/reportHouse', [
+    'uses' => 'EmailController@ReportHouse'
+]);
+Route::post('/verifyInternet', [
+    'uses' => 'EmailController@VerifyInternetService'
+]);
+Route::post('/verifyCable', [
+    'uses' => 'EmailController@VerifyCableService'
+]);
+Route::post('/verifyHousemaid', [
+    'uses' => 'EmailController@VerifyHousemaidService'
+]);
+Route::post('/verifySchoolvan', [
+    'uses' => 'EmailController@VerifySchoolvanService'
+]);
+Route::post('/verifySweeper', [
+    'uses' => 'EmailController@VerifySweeperService'
+]);
+Route::post('/verifyWatchman', [
+    'uses' => 'EmailController@VerifyWatchmanService'
+]);
+Route::post('/verifyParking', [
+    'uses' => 'EmailController@VerifyParkingService'
+]);
+Route::post('/reportInternet', [
+    'uses' => 'EmailController@ReportInternetService'
+]);
+Route::post('/reportCable', [
+    'uses' => 'EmailController@ReportCableService'
+]);
+Route::post('/reportSweeper', [
+    'uses' => 'EmailController@ReportSweeperService'
+]);
+Route::post('/reportHousemaid', [
+    'uses' => 'EmailController@ReportHousemaidService'
+]);
+Route::post('/reportSchoolvan', [
+    'uses' => 'EmailController@ReportSchoolvanService'
+]);
+Route::post('/reportWatchman', [
+    'uses' => 'EmailController@ReportWatchmanService'
+]);
+Route::post('/reportParking', [
+    'uses' => 'EmailController@ReportParkingService'
+]);
 
 
 //data put routes

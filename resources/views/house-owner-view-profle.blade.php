@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- set the page title -->
-	<title>House OwnerProfile</title>
+	<title>House Owner Profile</title>
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
@@ -228,7 +228,7 @@
                             <aside class="profileSidebar">
                               <header class="head">
                                 <div class="imgProfile">
-                                  <img src="https://via.placeholder.com/74x74" alt="" width="74" height="74">
+								<img src="storage/uploads/House Owner Profile/{{$houseOwner->image}}" alt="Image" width="74" height="74">
                                 </div>
                                 <div class="info">
                                   <span class="text">Ali Tufan</span>
@@ -243,7 +243,7 @@
 									</a>
 								  </li>
                                 <li>
-                                  <a href="/houseOwnerProfile">
+                                  <a href="house-owner-profile">
                                     <i class="far fa-user"></i>
                                     <span>Account Settings</span>
                                   </a>
@@ -290,8 +290,7 @@
                                 <div class="accountHolder">
                                   <div class="imgProfile">
                                     <div class="imgThumbnail">
-                                      <img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
-
+									  	<img src="storage/uploads/House Owner Profile/{{$houseOwner->image}}" alt="Image" width="200" height="200">
                                     </div>
                                   </div>
                                   <div class="accountContent">
@@ -305,15 +304,15 @@
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-3">Phone</label><br>
-                                      <span id="itemN-3" class="text text-center" class="form-control">0402 2020 202</span>
+                                      <span id="itemN-3" class="text text-center" class="form-control">{{$houseOwner->phone_number}}</span>
 									</div>
 									<div class="form-group">
 										<label for="itemN-4">CNIC</label><br>
-										<span id="itemN-4" class="text text-center" class="form-control">0000000000000</span>
+										<span id="itemN-4" class="text text-center" class="form-control">{{$houseOwner->cnic}}</span>
 									  </div>
                                     <div class="form-group">
                                       <label for="itemN-5">Biography</label><br>
-                                      <span id="itemN-5" class="text text-center" class="form-control">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.Phasellus mollis imperdiet placerat</span>
+                                      <span id="itemN-5" class="text text-center" class="form-control">{{$houseOwner->biography}}</span>
                                     </div>
                                   </div>
                                 </div>

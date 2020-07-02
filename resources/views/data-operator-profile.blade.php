@@ -279,7 +279,11 @@
                                 <div class="accountHolder">
                                   <div class="imgProfile">
                                     <div class="imgThumbnail">
-                                      <img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
+										@if ({{$dataOperator->image}} != null)
+										<img src="storage/uploads/{{$dataOperator->image}}" alt="" width="200" height="200">
+										  @else
+											  <img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
+										  @endif
                                       <div class="btnArea">
                                         <a href="#" class="btn btn-info"><i class="fa fa-upload"></i> Upload Photo</a>
                                       </div>

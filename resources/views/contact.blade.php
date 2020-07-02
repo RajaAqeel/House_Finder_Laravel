@@ -230,30 +230,27 @@
 									<!-- contactFormPage -->
 									<div class="contactFormPage">
 										<h4 class="fontNeuron">Send Us Message</h4>
-										<form>
+										<form method="POST" action="/sendMessage">
+											@csrf
 											<div class="row">
 												<div class="col-xs-12 col-md-6">
 													<div class="form-group">
-														<input type="text" id="txtname" placeholder="Your Name" class="form-control" required data-error="NEW ERROR MESSAGE">
+														<input name="name" type="text" id="txtname" placeholder="Your Name" class="form-control"  data-error="NEW ERROR MESSAGE">
+														<div>{{ $errors->first('name')}}</div>
 													</div>
 												</div>
 												<div class="col-xs-12 col-md-6">
 													<div class="form-group">
-														<input type="email" id="txtemail" placeholder="Email" class="form-control" required data-error="NEW ERROR MESSAGE">
-													</div>
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-xs-12 col-md-6">
-													<div class="form-group">
-														<input type="tel" id="txttel" placeholder="Phone Number" class="form-control" required data-error="NEW ERROR MESSAGE">
+														<input name="email" type="email" id="txtemail" placeholder="Email" class="form-control"  data-error="NEW ERROR MESSAGE">
+														<div>{{ $errors->first('email')}}</div>
 													</div>
 												</div>
 											</div>
 											<div class="form-group">
-												<textarea class="form-control" id="txtmessage" placeholder="Message" required data-error="NEW ERROR MESSAGE"></textarea>
+												<textarea name="message" class="form-control" id="txtmessage" placeholder="Message"  data-error="NEW ERROR MESSAGE"></textarea>
+												<div>{{ $errors->first('message')}}</div>
 											</div>
-											<button type="submit" class="btn btnDark fontNeuron buttonXL" id="form-submit">Submit</button>
+											<button type="submit" class="btn btnDark fontNeuron buttonXL" id="form-submit">Send Message</button>
 										</form>
 									</div>
 								</div>

@@ -52,4 +52,10 @@ class DropDownController extends Controller
         $cities = city::all();
         return view('edit-property-information')->with('cities', $cities);
     }
+
+    public function homePageCities()
+    {
+        $cities = city::all();
+        return view('/')->with('cities', $cities);
+    }
 }

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- set the encoding of your site -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- set the page title -->
-	<title>Service Provider Profile</title>
+	<title>Properties</title>
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
 	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- include the site stylesheet -->
 	<link rel="stylesheet" href="/css/fancybox.css">
 	<!-- include the site stylesheet -->
@@ -30,7 +32,8 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-xs-6 col-sm-4">
- -->									</div>
+										<!-- <time datetime="2011-01-12" class="TopBarTime">Mon - Sat: 08.00 AM - 18.00 PM</time> -->
+									</div>
 									<div class="col-xs-6 col-sm-8 text-right">
 										<!-- topBarPanelList -->
 										<ul class="list-unstyled topBarPanelList">
@@ -66,7 +69,7 @@
 								<div class="row">
 									<div class="col-xs-6 col-sm-3">
 										<!-- logo -->
-										<div class="logo"><a href="home"><img src="images/logo.png" alt="LemanHouse"></a></div>
+										<div class="logo"><a href="home"><img src="/images/houseFinderLogo.png" alt="LemanHouse"></a></div>
 									</div>
 									<div class="col-xs-6 col-sm-9 d-flex">
 										<!-- headerContactList -->
@@ -181,7 +184,7 @@
 												<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
 												</a>
 											</li>
-											<a href="/add-sub-area" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Sub Area</a>
+											<a href="/add-sub-area" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Service</a>
 										@elseif(Auth::user()->user_type=="Service Provider")
 										<li>
 											<a href="/sp_dashboard">
@@ -189,7 +192,7 @@
 											<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
 											</a>
 										</li>
-										<a href="/add-internetProvider-info" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Service</a>
+										<a href="/add-internetProvider-info" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Sub Area</a>
 										@endif
 										@endif
 									</ul>
@@ -204,134 +207,229 @@
 					<!-- findFormBlock -->
 					<form action="#" class="findFormBlock findFormBlock2 bgLightDark hasShadowTop offsetHeaderTop">
 					</form>
-					<!-- content -->
-					<section id="content" class="container pabIndent">
+					
+					<section class="container">
 						<!-- contentFiltersHeadingWrap -->
 						<header class="contentFiltersHeadingWrap row">
-							<div class="col-xs-12 col-sm-10">
-								<!-- breadcrumb -->
-								<h1 class="fontNeuron">Profile</h1>
+							<div class="col-xs-12 col col-sm-8">
+								<h1 class="fontNeuron"> <a href="#" class="btn btnSmall btn-success fontBase"></a></h1>
+								<!-- captionAddress -->
+								<address class="captionAddress">
+									<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+									<p></p>
+								</address>
 							</div>
-							<div class="col-xs-12 col-sm-2">
-								<!-- viewFilterLinks -->
-								<ul class="list-unstyled viewFilterLinks">
-									<li><a href="#"><i class="fi flaticon-share"></i></a></li>
-									<li><a href="#"><i class="fi flaticon-printer"></i></a></li>
-								</ul>
+							<div class="col-xs-12 col-sm-4 justify-end">
+								<!-- captionActionsList -->
+								<strong class="elemenBlock price fwSemi fontNeuron w100"> </strong>
+								<strong class="elemenBlock fwNormal fontNeuron subtitle w100"></strong>
 							</div>
-						</header>
-						<!-- userProfile -->
-                      <div class="userProfile">
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4 col-lg-3">
-                            <!-- profileSidebar -->
-                            <aside class="profileSidebar">
-                              <header class="head">
-                                <div class="imgProfile">
-									<img src="storage/uploads/Service Owner Profile/ {{$serviceOwner->image}}" alt="" width="74" height="74">
-                                </div>
-                                <div class="info">
-                                  <span class="text">{{Auth::user()->name}}</span>
-                                  <span class="text"><a href="/changePasswordSp" class="link">Change Password</a></span>
-                                </div>
-                              </header>
-                              <ul class="navUser list-unstyled">
-								<li>
-									<a href="/sp_dashboard">
-									  <i class="far fa-user"></i>
-									  <span>View Profile</span>
-									</a>
-								  </li>
-                                <li>
-                                  <a href="service-provider-profile">
-                                    <i class="far fa-user"></i>
-                                    <span>Account Settings</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="my-services">
-                                    <i class="fi flaticon-house"></i>
-                                    <span>My Services</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="favourited-services">
-                                    <i class="far fa-heart"></i>
-                                    <span>Favorited Services</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="add-internetProvider-info">
-                                    <i class="fa fa-plus"></i>
-                                    <span>Add Service</span>
-                                  </a>
-                                </li>
-                                <li>
-									<a href="{{ url('/logout') }}"
-									onclick="event.preventDefault();
-											 document.getElementById('logout-form').submit();">
-									  <i class="fa fa-sign-out-alt"></i>
-									  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-										  {{ csrf_field() }}
-									  </form>
-                                    <span>Logout</span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </aside>
-                          </div>
-                          <div class="col-xs-12 col-sm-8 col-lg-9">
-                            <!-- accountData -->
-                            <div class="accountData">
-                              <form>
-                                <div class="head">
-                                  <h4 class="fontNeuron">Account Settings</h4>
-                                </div>
-                                <div class="accountHolder">
-                                  <div class="imgProfile">
-                                    <div class="imgThumbnail">
-                                      <img src="storage/uploads/Service Owner Profile/ {{$serviceOwner->image}}" alt="" width="200" height="200">
-                                    </div>
-                                  </div>
-                                  <div class="accountContent">
-                                    <div class="form-group">
-                                      <label for="itemN-1">Full Name</label><br>
-                                      <span id="itemN-1" class="text text-center" class="form-control">{{Auth::user()->name}}</span>
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="itemN-2">Email</label><br>
-                                      <span id="itemN-2" class="text text-center" class="form-control">{{Auth::user()->email}}</span>
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="itemN-3">Phone</label><br>
-                                      <span id="itemN-3" class="text text-center" class="form-control">{{$serviceOwner->phone_number}}</span>
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="itemN-4">Biography</label><br>
-                                      <span id="itemN-4" class="text text-center" class="form-control">{{$serviceOwner->biography}}</span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+						</header> 
 					</section>
-					<!-- signupFormAside -->
-					<form action="#" class="bgWhite signupFormAside">
-						<div class="container signupFormAsideHolder">
-							<div class="col-xs-12 col-md-offset-2 col-md-6">
-								<h3 class="fontNeuron textSecondary">Download our app</h3>
-								<p>Download our app from google play store</p>
+					<!-- twoColumns -->
+					<div class="twoColumns container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-8">
+								<!-- content -->
+								<article id="content">
+									<!-- tabs -->
+									<!-- boxPanelBlock -->
+									<section id="Detail" class="accountData">
+										<div class="head">
+											<h2 class="fontNeuron">Detail</h2>
+										</div>
+										<ul class="listpanel-head">
+											<li>beds<span></span></li>
+											<li>baths<span></span></li>
+										</ul>
+										<div class="listpanel-content">
+											<ul>
+												<li><span>Property ID</span><span class="righttext">: </span></li>
+												<li><span>Property Size</span><span class="righttext">: </span></li>
+											</ul>
+										</div>
+									</section>
+									<section class="accountData">
+		                                <div class="head">
+		                                  <h4 class="fontNeuron">Description</h4>
+		                                </div>
+										<p>{{$sweeper->description}}</p>
+		                            </section>
+		                            <section id="address" class="accountData address">
+										<div class="head">
+											<h4 class="fontNeuron">Detail</h4>
+										</div>
+										<div class="listpanel-content widthauto address paddingzero">
+											<ul>
+												<li><span>Address</span><span class="righttext">: </span></li>
+												<li><span>Country</span><span class="righttext">: Pakistan</span></li>
+												<li><span>City</span><span class="righttext">: </span></li>
+												<li><span>Sub Area</span><span class="righttext">: </span></li>
+											</ul>
+										</div>
+									</section>
+								</article>
 							</div>
-							<div class="col-xs-12 col-md-4">
-								<div class="form-group">
-									<button type="button" class="buttonReset fi flaticon-navigation"></button>
-								</div>
+							<div class="col-xs-12 col-sm-12 col-md-4">
+								<aside id="sidebar">
+									<!-- contactFormPage -->
+									<section class="contactFormPage widget">
+										<div class="hb-headarea">
+											<div class="holder">
+												<figure class="hb-author-img pull-left">
+													<a href="#"><img src="https://via.placeholder.com/100x75" alt="image description"></a>
+												</figure>
+												<div class="pull-left">
+													<div class="hb-headcontent">
+														<span>{{Auth::user()->name}}</span>
+													</div>
+												</div>
+											</div>
+											<div class="hb-numberbox text-center">
+											<h3><i class="fi flaticon-24-hours"></i>{{$service_owner_id->phone_number}}</h3>
+											</div>
+										</div>
+										<form class="widgetCalcForm">
+											<div class="row">
+												<div class="col-xs-12">
+													<div class="form-group">
+														<input type="text" placeholder="Your Name" class="form-control">
+													</div>
+												</div>
+												<div class="col-xs-12">
+													<div class="form-group">
+														<input type="tel" placeholder="Phone" class="form-control">
+													</div>
+												</div>
+												<div class="col-xs-12">
+													<div class="form-group">
+														<input type="email" placeholder="Email" class="form-control">
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<textarea class="form-control" placeholder="Hi Jennie Wilson, I saw your profile on LemanHouse and wanted to see if you could help me"></textarea>
+											</div>
+											<button type="submit" class="btn btnDark fontNeuron buttonXL">Submit</button>
+										</form>
+									</section>
+								</aside>
+							</div>
+							<div class="col-xs-12">
+								<header class="rowHead">
+									<h1 class="fontNeuron blockH text-uppercase"><span class="bdrBottom">LATEST</span> <span class="textSecondary">SERVICES</span></h1>
+								</header>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col isoCol sale">
+								<!-- postColumn -->
+								<article class="postColumn hasOver bgWhite">
+									<div class="aligncenter">
+										<!-- linkToFavourite -->
+									</div>
+									<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Luxury Family Home</a></h2>
+									<address>
+										<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+										<p>The Village, Jersey City, NJ 07302, USA </p>
+									</address>
+									<span class="btn btnSmall btn-success text-capitalize">For Sale</span>
+									<h3 class="fontNeuron fwSemi"><span class="textSecondary">  490,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
+									<!-- postColumnFoot -->
+									<footer class="postColumnFoot">
+										<ul class="list-unstyled">
+											<li>
+												<strong class="fwNormal elemenBlock text-primary">Area</strong>
+												<strong class="fwNormal elemenBlock">2100 m2</strong>
+											</li>
+											<li>
+												<strong class="fwNormal elemenBlock text-primary">Beds</strong>
+												<strong class="fwNormal elemenBlock">3</strong>
+											</li>
+											<li>
+												<strong class="fwNormal elemenBlock text-primary">Baths</strong>
+												<strong class="fwNormal elemenBlock">2</strong>
+											</li>
+											<li>
+												<strong class="fwNormal elemenBlock text-primary">Garages</strong>
+												<strong class="fwNormal elemenBlock">1</strong>
+											</li>
+										</ul>
+									</footer>
+								</article>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col isoCol sale">
+								<!-- postColumn -->
+								<article class="postColumn hasOver bgWhite">
+									<div class="aligncenter">
+										<!-- linkToFavourite -->
+									</div>
+									<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Luxury Family Home</a></h2>
+									<address>
+										<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+										<p>The Village, Jersey City, NJ 07302, USA </p>
+									</address>
+									<span class="btn btnSmall btn-success text-capitalize">For Sale</span>
+									<h3 class="fontNeuron fwSemi"><span class="textSecondary">  490,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
+									<!-- postColumnFoot -->
+									<footer class="postColumnFoot">
+										<ul class="list-unstyled">
+											<li>
+												<strong class="fwNormal elemenBlock text-primary">Area</strong>
+												<strong class="fwNormal elemenBlock">2100 m2</strong>
+											</li>
+											<li>
+												<strong class="fwNormal elemenBlock text-primary">Beds</strong>
+												<strong class="fwNormal elemenBlock">3</strong>
+											</li>
+											<li>
+												<strong class="fwNormal elemenBlock text-primary">Baths</strong>
+												<strong class="fwNormal elemenBlock">2</strong>
+											</li>
+											<li>
+												<strong class="fwNormal elemenBlock text-primary">Garages</strong>
+												<strong class="fwNormal elemenBlock">1</strong>
+											</li>
+										</ul>
+									</footer>
+								</article>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col isoCol sale">
+								<!-- postColumn -->
+								<article class="postColumn hasOver bgWhite">
+									<div class="aligncenter">
+										<!-- linkToFavourite -->
+									</div>
+									<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Luxury Family Home</a></h2>
+									<address>
+										<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+										<p>The Village, Jersey City, NJ 07302, USA </p>
+									</address>
+									<span class="btn btnSmall btn-success text-capitalize">For Sale</span>
+									<h3 class="fontNeuron fwSemi"><span class="textSecondary">  490,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
+									<!-- postColumnFoot -->
+									<footer class="postColumnFoot">
+										<ul class="list-unstyled">
+											<li>
+												<strong class="fwNormal elemenBlock text-primary">Area</strong>
+												<strong class="fwNormal elemenBlock">2100 m2</strong>
+											</li>
+											<li>
+												<strong class="fwNormal elemenBlock text-primary">Beds</strong>
+												<strong class="fwNormal elemenBlock">3</strong>
+											</li>
+											<li>
+												<strong class="fwNormal elemenBlock text-primary">Baths</strong>
+												<strong class="fwNormal elemenBlock">2</strong>
+											</li>
+											<li>
+												<strong class="fwNormal elemenBlock text-primary">Garages</strong>
+												<strong class="fwNormal elemenBlock">1</strong>
+											</li>
+										</ul>
+									</footer>
+								</article>
 							</div>
 						</div>
-					</form>
+					</div>
 				</main>
 			</div>
 			<!-- pageFooterBlock -->
@@ -370,34 +468,6 @@
 									</ul>
 								</div>
 							</nav>
-							<div class="col-xs-12 col-sm-4 col">
-								<h2 class="fontNeuron fwSemi text-uppercase">LATEST PROPERTIES</h2>
-								<!-- postsWidgetList -->
-								<ul class="list-unstyled postsWidgetList">
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">Do what you love and tomorrow will pay</a></h3>
-											<h4 class="fwSemi">  1,27,000</h4>
-										</div>
-									</li>
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">We’re ready for the TRID rules!</a></h3>
-											<h4 class="fwSemi">  527,000</h4>
-										</div>
-									</li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</aside>
@@ -512,12 +582,20 @@
 		</div>
 	</div>
 	<!-- include jQuery library -->
-	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
+	<!-- include jQuery library -->
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery.main.js"></script>
+	<script src="../js/plugins.js"></script>
+
 	<!-- include bootstrap JavaScript -->
-	<script src="js/bootstrap-slider.min.js"></script>
-	<!-- include custom JavaScript -->
-	<script src="js/jquery.main.js"></script>
-	<script type="text/javascript" src="js/init.js"></script>
+	<script src="../js/bootstrap-slider.min.js"></script>
+
+	<script type="text/javascript">
+		$('.slick-carousel').slick({
+			dots:true,
+			arrows:false
+
+		});
+	</script>
 </body>
 </html>

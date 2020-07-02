@@ -40,13 +40,13 @@ class CableProviderServiceController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'city' => 'required',
-            'sub_area' => 'required',
-            'service_title' => 'required',
-            'price' => 'required',
-            'address' => 'required',
-            'number' => 'required',
-            'description' => 'required'
+            'city' => ['required',],
+            'sub_area' => ['required'],
+            'service_title' => ['required'],
+            'price' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
+            'address' => ['required'],
+            'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
+            'description' => ['required']
         ]);
         $cable = new cable_provider_service;
         $cable->title = $request->get('service_title');
@@ -103,13 +103,13 @@ class CableProviderServiceController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'city' => 'required',
-            'sub_area' => 'required',
-            'service_title' => 'required',
-            'price' => 'required',
-            'address' => 'required',
-            'number' => 'required',
-            'description' => 'required'
+            'city' => ['required',],
+            'sub_area' => ['required'],
+            'service_title' => ['required'],
+            'price' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
+            'address' => ['required'],
+            'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
+            'description' => ['required']
         ]);
         $cable = cable_provider_service::where('id', $id)->first();
         $cable->title = $request->get('service_title');

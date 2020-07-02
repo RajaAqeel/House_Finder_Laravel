@@ -302,10 +302,13 @@
                                 <div class="accountHolder">
                                   <div class="imgProfile">
                                     <div class="imgThumbnail">
-                                      <img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
-                                      <div class="btnArea">
-                                        <a href="#" class="btn btn-info"><i class="fa fa-upload"></i> Upload Photo</a>
-                                      </div>
+									  @if ({{$admin->image}} != null)
+									<img src="storage/uploads/{{$admin->image}}" alt="" width="200" height="200">
+									  @else
+									  	<img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
+									  @endif
+                                    </div>
+									  <input name="image" type="file" class="form-control" id="itemN-1">
                                     </div>
                                     <span class="text text-center">*minimum 200px x 200px</span>
                                   </div>

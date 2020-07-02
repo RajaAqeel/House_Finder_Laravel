@@ -47,14 +47,14 @@ class InternetServiceProviderController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'city' => 'required',
-            'sub_area' => 'required',
-            'service_title' => 'required',
-            'price' => 'required',
-            'address' => 'required',
-            'number' => 'required',
-            'c_hl' => 'required',
-            'cc_hl' => 'required',
+            'city' => ['required'],
+            'sub_area' => ['required'],
+            'service_title' => ['required'],
+            'price' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
+            'address' => ['required'],
+            'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
+            'c_hl' => ['required', 'regex:/^[0-9]+$/', 'digits_between:4,4', 'numeric'],
+            'cc_hl' => ['required', 'regex:/^[0-9]+$/', 'digits_between:4,4', 'numeric'],
         ]);
         $internet = new internet_service_provider;
         $internet->title = $request->get('service_title');
@@ -112,14 +112,14 @@ class InternetServiceProviderController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'city' => 'required',
-            'sub_area' => 'required',
-            'service_title' => 'required',
-            'price' => 'required',
-            'address' => 'required',
-            'number' => 'required',
-            'c_hl' => 'required',
-            'cc_hl' => 'required',
+            'city' => ['required'],
+            'sub_area' => ['required'],
+            'service_title' => ['required', 'regex:/^[a-zA-Z]+$/u'],
+            'price' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
+            'address' => ['required'],
+            'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
+            'c_hl' => ['required', 'regex:/^[0-9]+$/', 'digits_between:4,4', 'numeric'],
+            'cc_hl' => ['required', 'regex:/^[0-9]+$/', 'digits_between:4,4', 'numeric'],
         ]);
         $internet = internet_service_provider::where('id', $id)->first();
         $internet->title = $request->get('service_title');

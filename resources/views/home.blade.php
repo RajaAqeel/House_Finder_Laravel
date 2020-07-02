@@ -279,63 +279,25 @@
 						</div>
 					</section>
 					<!-- findFormBlock -->
-					<form action="#" class="bgWhite findFormBlock hasShadow">
+					<form method="GET" action="/searchHouse" class="bgWhite findFormBlock hasShadow">
 						<div class="container">
 							<h2 class="fontNeuron">FIND YOUR <span class="text-info">HOME</span></h2>
 							<hr class="sep elemenBlock">
 							<div class="row">
-								<div class="col-xs-12 col-sm-4">
+								<div class="col-xs-12 col-sm-6">
 									<div class="form-group">
-										<select data-placeholder="All Property Types" class="chosen-select">
-											<option value="1">Rawalpindi</option>
-											<option value="3">Islamabad</option>
-											<option value="4">Lahore</option>
+										<select name="city_id"data-placeholder="All Property Types" class="form-control" id="city">
+											<option value="">Select city</option>
+											@foreach ($cities as $city)
+												<option value="{{$city->id}}">{{$city->name}}</option>
+											@endforeach
 										</select>
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-4">
+								<div class="col-xs-12 col-sm-6">
 									<div class="form-group">
-										<select data-placeholder="All Property Types" class="chosen-select">
-											<option value="1">Chur Chok</option>
-											<option value="2">Rehmanabad</option>
-											<option value="3">6th Road</option>
-											<option value="4">Transformer Chok</option>
-										</select>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-4">
-									<div class="form-group">
-										<div class="price-wrapper">Price Range: From <b class="startValue">500</b> to <b class="endValue">500,000</b><!-- Filter by price interval: <b>€ 10</b><b>€ 1000</b> --></div>
-										<input id="price-range" type="text" class="span2" value="" data-slider-min="500" data-slider-max="500000" data-slider-step="10" data-slider-value="[100000,400000]"/>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-4">
-									<div class="row">
-										<div class="col-xs-12">
-											<div class="form-group">
-												<select data-placeholder="Beds" class="chosen-select">
-													<option value="1">1 Bed</option>
-													<option value="1">2 Beds</option>
-													<option value="1">3 Beds</option>
-													<option value="1">4 Beds</option>
-													<option value="1">5 Beds</option>
-												</select>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-4">
-									<div class="form-group">
-										<input type="text" class="form-control elemenBlock" placeholder="Area/marla">
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-4">
-									<div class="form-group">
-										<select data-placeholder="Parking" class="chosen-select">
-											<option value="1">Flat</option>
-											<option value="1">Home</option>
-											<option value="1">Room</option>
-											<option value="1">Office</option>
+										<select name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
+											<option value="">Select Sub area</option>
 										</select>
 									</div>
 								</div>
@@ -357,60 +319,110 @@
 										<ul class="list-unstyled checkList text-primary">
 											<li>
 												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
+													{{-- class="customFormInputReset" --}}
+													<input type="checkbox" name="ip" class="checkbox customFormInputReset" value="0">
 													<span class="fakeCheckbox"></span>
 													<span class="fakeLabel">Internet Provider</span>
 												</label>
 											</li>
 											<li>
 												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
+													<input type="checkbox" name="p" class="checkbox customFormInputReset" value="0">
 													<span class="fakeCheckbox"></span>
 													<span class="fakeLabel">Parking</span>
 												</label>
 											</li>
 											<li>
 												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
+													<input type="checkbox" name="co" class="checkbox customFormInputReset" value="0">
 													<span class="fakeCheckbox"></span>
 													<span class="fakeLabel">Cable Operator</span>
 												</label>
 											</li>
 											<li>
 												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
+													<input type="checkbox" name="sv" class="checkbox customFormInputReset" value="0">
 													<span class="fakeCheckbox"></span>
 													<span class="fakeLabel">School Van</span>
 												</label>
 											</li>
 											<li>
 												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
+													<input type="checkbox" name="sw" class="checkbox customFormInputReset" value="0">
 													<span class="fakeCheckbox"></span>
 													<span class="fakeLabel">Sweeper</span>
 												</label>
 											</li>
 											<li>
 												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
+													<input type="checkbox" name="w" class="checkbox customFormInputReset" value="0">
 													<span class="fakeCheckbox"></span>
 													<span class="fakeLabel">Watchman</span>
 												</label>
 											</li>
 											<li>
 												<label class="fwNormal customLabelCheck">
-													<input type="checkbox" class="customFormInputReset">
+													<input type="checkbox" name="hm" class="checkbox customFormInputReset" value="0">
 													<span class="fakeCheckbox"></span>
 													<span class="fakeLabel">Housemaid</span>
 												</label>
 											</li>
 										</ul>
+										<div class="col-xs-12 col-sm-4">
+											<div class="form-group">
+												<input name="price" type="number" class="form-control elemenBlock" placeholder="Price">
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-4">
+											<div class="row">
+												<div class="col-xs-12">
+													<div class="form-group">
+														<select name="bedrooms" data-placeholder="Beds" class="form-control">
+															<option value="">Number of bedrooms</option>
+															<option value="1">1 Bed</option>
+															<option value="2">2 Beds</option>
+															<option value="3">3 Beds</option>
+															<option value="4">4 Beds</option>
+															<option value="5">5 Beds</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-4">
+											<div class="form-group">
+												<select name="type" data-placeholder="Parking" class="form-control">
+													<option value="">Property type</option>
+													<option value="1">Flat</option>
+													<option value="1">Home</option>
+													<option value="1">Room</option>
+													<option value="1">Office</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-6">
+											<div class="form-group">
+												<select name="unit" data-placeholder="Parking" class="form-control">
+													<option value="">Area type</option>
+									  					<option value="Marla">Marla</option>
+									  					<option value="Kanal">Kanal</option>
+									  					<option value="Square Feet">Square Feet</option>
+									  					<option value="Square Yards">Square Yards</option>
+									  					<option value="Square Meters">Square Meters</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-6">
+											<div class="form-group">
+												<input name="value" type="number" class="form-control elemenBlock" placeholder="Area/marla">
+											</div>
+										</div>
 									</div>
-								</div>
-								<div class="col-xs-12 col-sm-offset-6 col-sm-3 order2">
-									<button type="button" class="btn btnSecondary text-uppercase fontNeuron pull-right"><a href="properties-full-width-list.html">SEARCH</a></button>
-								</div>
 							</div>
+						<div class="col-xs-12 col-sm-offset-6 col-sm-3 order2">
+							<button type="submit" class="btn btnSecondary text-uppercase fontNeuron pull-right">SEARCH</button>
+						</div>
+					</div>
 						</div>
 					</form>
 					<!-- latestPostsBlock -->
@@ -899,7 +911,6 @@
 										<span class="bgCover elemenBlock" style="background-image: url(https://via.placeholder.com/555x450);"></span>
 										<div class="captionWrap">
 											<h2 class="fontNeuron">Sector F7</h2>
-											<h3 class="fontNeuron fwNormal">24 Properties</h3>
 										</div>
 									</a>
 								</div>
@@ -909,7 +920,6 @@
 										<span class="bgCover elemenBlock" style="background-image: url(images/islamabad.jpg);"></span>
 										<div class="captionWrap">
 											<h2 class="fontNeuron">E11</h2>
-											<h3 class="fontNeuron fwNormal">9 Properties</h3>
 										</div>
 									</a>
 									<div class="row">
@@ -918,7 +928,6 @@
 												<span class="bgCover elemenBlock" style="background-image: url(images/islamabad.jpg);"></span>
 												<div class="captionWrap">
 													<h2 class="fontNeuron">Bahria Town</h2>
-													<h3 class="fontNeuron fwNormal">3 Properties</h3>
 												</div>
 											</a>
 										</div>
@@ -927,7 +936,6 @@
 												<span class="bgCover elemenBlock" style="background-image: url(images/islamabad.jpg);"></span>
 												<div class="captionWrap">
 													<h2 class="fontNeuron">Blue Area</h2>
-													<h3 class="fontNeuron fwNormal">4 Properties</h3>
 												</div>
 											</a>
 										</div>
@@ -1338,5 +1346,34 @@
 	<!-- include custom JavaScript -->
 	<script src="js/jquery.main.js"></script>
 	<script type="text/javascript" src="js/init.js"></script>
+	<script>
+		$('#city').on('change', function(e){
+			console.log(e);
+			var city_id = e.target.value;
+
+			$.get('/ajax-sub-area?city_id=' + city_id, function(data){
+				console.log(data);
+				$('#sel1').empty();
+				$.each(data, function(index, subAreaObj){
+					$('#sel1').append('<option value="'+subAreaObj.id+'">'+subAreaObj.name+'</option>');
+				
+					
+				});
+
+			});
+		});
+		$( document ).ready(function() {
+			$(".checkbox").change(function() {
+			if(this.checked) {
+				$(this).val("1");
+			}
+			else
+			{
+				$(this).val("1");
+			}
+		});
+		});
+		
+	</script>
 </body>
 </html>

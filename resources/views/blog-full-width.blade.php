@@ -227,11 +227,11 @@
 									<!-- newsPostColumn -->
 									<article class="newsPostColumn newsPostColumn2 bgWhite bdr-none mb-30">
 										<div class="aligncenter">
-											<a href="blog-detail.html">
+											<a href="blog-detail">
 												<img src="https://via.placeholder.com/360x260" alt="image description">
 											</a>
 										</div>
-										<h2 class="fontNeuron"><a href="blog-detail.html">Getting Started Designing Apps for the Apple Watch</a></h2>
+										<h2 class="fontNeuron"><a href="blog-detail">Getting Started Designing Apps for the Apple Watch</a></h2>
 										<p>
 											<a href="#" class="btn btnSmall btn-info">Ali Tufan</a>
 											<time datetime="2011-01-12">February 9, 2017</time>
@@ -247,11 +247,11 @@
 									<!-- newsPostColumn -->
 									<article class="newsPostColumn newsPostColumn2 bgWhite bdr-none mb-30">
 										<div class="aligncenter">
-											<a href="blog-detail.html">
+											<a href="blog-detail">
 												<img src="https://via.placeholder.com/360x260" alt="image description">
 											</a>
 										</div>
-										<h2 class="fontNeuron"><a href="blog-detail.html">Getting Started Designing Apps for the Apple Watch</a></h2>
+										<h2 class="fontNeuron"><a href="blog-detail">Getting Started Designing Apps for the Apple Watch</a></h2>
 										<p>
 											<a href="#" class="btn btnSmall btn-info">Ali Tufan</a>
 											<time datetime="2011-01-12">February 9, 2017</time>
@@ -267,11 +267,11 @@
 									<!-- newsPostColumn -->
 									<article class="newsPostColumn newsPostColumn2 bgWhite bdr-none mb-30">
 										<div class="aligncenter">
-											<a href="blog-detail.html">
+											<a href="blog-detail">
 												<img src="https://via.placeholder.com/360x260" alt="image description">
 											</a>
 										</div>
-										<h2 class="fontNeuron"><a href="blog-detail.html">Take Away You Can Get<br class="hidden-xs"> From</a></h2>
+										<h2 class="fontNeuron"><a href="blog-detail">Take Away You Can Get<br class="hidden-xs"> From</a></h2>
 										<p>
 											<a href="#" class="btn btnSmall btn-info">Ali Tufan</a>
 											<time datetime="2011-01-12">February 9, 2017</time>
@@ -287,11 +287,11 @@
 									<!-- newsPostColumn -->
 									<article class="newsPostColumn newsPostColumn2 bgWhite bdr-none mb-30">
 										<div class="aligncenter">
-											<a href="blog-detail.html">
+											<a href="blog-detail">
 												<img src="https://via.placeholder.com/360x260" alt="image description">
 											</a>
 										</div>
-										<h2 class="fontNeuron"><a href="blog-detail.html">One Thing That Is Really Make This Blog ...</a></h2>
+										<h2 class="fontNeuron"><a href="blog-detail">One Thing That Is Really Make This Blog ...</a></h2>
 										<p>
 											<a href="#" class="btn btnSmall btn-info">Ali Tufan</a>
 											<time datetime="2011-01-12">February 9, 2017</time>
@@ -307,11 +307,11 @@
 									<!-- newsPostColumn -->
 									<article class="newsPostColumn newsPostColumn2 bgWhite bdr-none mb-30">
 										<div class="aligncenter">
-											<a href="blog-detail.html">
+											<a href="blog-detail">
 												<img src="https://via.placeholder.com/360x260" alt="image description">
 											</a>
 										</div>
-										<h2 class="fontNeuron"><a href="blog-detail.html">This Week I Thought It Would Be Good ...</a></h2>
+										<h2 class="fontNeuron"><a href="blog-detail">This Week I Thought It Would Be Good ...</a></h2>
 										<p>
 											<a href="#" class="btn btnSmall btn-info">Ali Tufan</a>
 											<time datetime="2011-01-12">February 9, 2017</time>
@@ -327,11 +327,11 @@
 									<!-- newsPostColumn -->
 									<article class="newsPostColumn newsPostColumn2 bgWhite bdr-none mb-30">
 										<div class="aligncenter">
-											<a href="blog-detail.html">
+											<a href="blog-detail">
 												<img src="https://via.placeholder.com/360x260" alt="image description">
 											</a>
 										</div>
-										<h2 class="fontNeuron"><a href="blog-detail.html">The Leader In Real Estate Information Systems</a></h2>
+										<h2 class="fontNeuron"><a href="blog-detail">The Leader In Real Estate Information Systems</a></h2>
 										<p>
 											<a href="#" class="btn btnSmall btn-info">Ali Tufan</a>
 											<time datetime="2011-01-12">February 9, 2017</time>

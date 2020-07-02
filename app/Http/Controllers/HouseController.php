@@ -9,7 +9,7 @@ use App\house_owner;
 use Auth;
 use DB;
 use Illuminate\Http\Request;
-
+use App\h_picture;
 class HouseController extends Controller
 {
     /**
@@ -22,10 +22,10 @@ class HouseController extends Controller
         
         $ho = house_owner::where('user_id',Auth::user()->id)->first();
         $id =$ho->id;
-        $city_name = city::select('name')->where('id', $ho->city_id)->get();
-        $sub_area_name = sub_area::select('name')->where('id', $ho->sub_area_id)->get();
+        $city = city::where('id', $ho->city_id)->first();
+        $sub_area = sub_area::where('id', $ho->sub_area_id)->first();
         $allHouses = house::where('house_owner_id', $id)->paginate(10);
-        return view('my-properties')->with('allHouses', $allHouses)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name);
+        return view('my-properties')->with('allHouses', $allHouses)->with('city', $city)->with('sub_area', $sub_area);
     }
 
     public function favouriteProperties()
@@ -57,19 +57,21 @@ class HouseController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'type' => 'required',
-            'price' => 'required',
-            'negotiable' => 'required',
-            'bedroom' => 'required',
-            'bathroom' => 'required',
-            'unit' => 'required',
-            'area' => 'required',
-            'description' => 'required',
-            'city' => 'required',
-            'address' => 'required',
-            'sub_area' => 'required',
+            'title' => ['required'],
+            'type' => ['required'],
+            'price' => 'required | regex:/^[0-9]+$/ | numeric',
+            'negotiable' => ['required'],
+            'bedroom' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
+            'bathroom' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
+            'unit' => ['required'],
+            'area' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
+            'description' => ['required'],
+            'city' => ['required'],
+            'address' => ['required'],
+            'sub_area' => ['required'],
+            'img_url' => ['required'],
         ]);
+       
         $houses = new house;
         $ho = house_owner::where('user_id',Auth::user()->id)->first();
         $houses->title = $request->input('title');
@@ -88,7 +90,52 @@ class HouseController extends Controller
         $houses->verified = 'no';
         $houses->status = 'Available';
         $houses->negotiable = $request->input('negotiable');
+        
+
+        // if ($request->hasFile('img_url')) {
+        //     //Get Filename with Ext
+        //     $fileNameWithExt = $request->file('img_url')->getClientOriginalName();
+        //     //Get just Filename
+        //     $fileName = pathinfo($fileNameWithExt , PATHINFO_FILENAME );
+        //     //Get just extension
+        //     $extension = $request->file('img_url')->getClientOriginalExtension();
+        //     //File to store
+        //     $fileNameToStore = $fileName.'_'.time().'.'.$extension;
+        //     //Upload Image
+        //     $path = $request->file('img_url')->storeAs('public/uploads/houses',$fileNameToStore);
+       
+        // } else {
+        //     $fileNameToStore = 'no_image';
+        // }
+
+        // $houses->photo = $fileNameToStore;
         $houses->save();
+
+
+        //Check multiple file
+        if($request->hasfile('img_url'))
+        {
+           foreach($request->file('img_url') as $file)
+           {
+            $fileNameWithExt = $file->getClientOriginalName();
+            //Get just Filename
+            $fileName = pathinfo($fileNameWithExt , PATHINFO_FILENAME );
+            //Get just extension
+            $extension = $file->getClientOriginalExtension();
+            //File to store
+            $fileNameToStore = $fileName.'_'.time().'.'.$extension;
+            //Upload Image
+            $path = $file->storeAs('public/uploads/houses',$fileNameToStore);
+            
+            $name = time().'.'.$file->extension();
+            
+            $np = new h_picture;
+            $np->pictures = $fileNameToStore;
+            $np->house_id = $houses->id;
+            $np->save();
+           }
+        }
+        
         return redirect('/my-properties')->with('success', 'House Registered');
 
     }
@@ -102,6 +149,7 @@ class HouseController extends Controller
     public function show($id)
     {
         $house = house::find($id);
+        $houseOwner = house_owner::where('id', $house->house_onwer_id);
         $city_name = city::where('id', $house->city_id)->first();
         $sub_area_name = sub_area::where('id', $house->sub_area_id)->first();
         return view('properties-single2')->with('house', $house)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name);
@@ -116,9 +164,10 @@ class HouseController extends Controller
     public function edit($id)
     {
         $house = house::find($id);
+        $cities = city::all();
         $city_name = city::where('id', $house->city_id)->first();
         $sub_area_name = sub_area::where('id', $house->sub_area_id)->first();
-        return view('edit-property-information')->with('house', $house)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name);
+        return view('edit-property-information')->with('house', $house)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name)->with('cities', $cities);
     }
 
     /**
@@ -131,20 +180,20 @@ class HouseController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'type' => 'required',
-            'price' => 'required',
-            'negotiable' => 'required',
-            'bedroom' => 'required',
-            'bathroom' => 'required',
-            'unit' => 'required',
-            'area' => 'required',
-            'description' => 'required',
-            'city' => 'required',
-            'address' => 'required',
-            'sub_area' => 'required',
+            'title' => ['required'],
+            'type' => ['required'],
+            'price' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
+            'negotiable' => ['required'],
+            'bedroom' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
+            'bathroom' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
+            'unit' => ['required'],
+            'area' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
+            'description' => ['required'],
+            'city' => ['required'],
+            'address' => ['required'],
+            'sub_area' => ['required'],
         ]);
-        $houses = house::where('id', $id);
+        $houses = house::where('id', $id)->first();
         $ho = house_owner::where('user_id',Auth::user()->id)->first();
         $houses->title = $request->input('title');
         $houses->type = $request->input('type');
@@ -195,7 +244,15 @@ class HouseController extends Controller
     {
         $house = house::where('id', $id)->first();
         $house->favourite = 'yes';
-        $house->update();
+        $house->save();
         return redirect('/my-properties');
+    }
+    public function show1($id)
+    {
+        $house = house::find($id);
+        $houseOwner = house_owner::where('id', $house->house_onwer_id);
+        $city_name = city::where('id', $house->city_id)->first();
+        $sub_area_name = sub_area::where('id', $house->sub_area_id)->first();
+        return view('properties1-single2')->with('house', $house)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name);
     }
 }

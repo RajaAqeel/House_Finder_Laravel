@@ -43,8 +43,8 @@
                     <div class="addProperty">
                       <h1 class="fontNeuron">Add New Service</h1> 
                       <ol class="navSteps">
-                        <li class="current">
-                          <a href="add-internetProvider-info.html">
+                        <li>
+                          <a href="add-internetProvider-info">
                             <span class="text">Internet Provider</span>
                           </a>
                         </li>
@@ -75,18 +75,35 @@
                             <span class="text">Watchman</span>
                           </a>
                         </li>
-                        <li>
+                        <li class="completed">
                           <a href="add-housemaid-info">
                             <span class="text">Housemaid</span>
                           </a>
                         </li>
-                      </ol>
+					  </ol>
+					  @if (count($errors) > 0)
+						  @foreach ($errors->all() as $error)
+				  				<div class="alert alert-danger">
+								  	{{$error}}
+								</div>
+						  @endforeach
+					  @endif
+					  @if (session('success'))
+						  <div class="alert alert-success">
+							  {{session('success')}}
+						  </div>
+					  @endif
+					  @if (session('error'))
+						<div class="alert alert-danger">
+							{{seesion('error')}}
+						</div>
+					  @endif
                       <div class="formContent">
 						<form method="POST" action="/addHouseMaidService">
 							@csrf
                           <header class="contentHead">
                             <h2 class="fontNeuron">Basic Info</h2>
-                          
+							
                           </header>
                           <div class="row">
 							<div class="col-xs-12 col-sm-6">
@@ -264,7 +281,7 @@
 
 			$.get('/ajax-sub-area?city_id=' + city_id, function(data){
 				console.log(data);
-				$('#sub_area_chosen').empty();
+				$('#sel1').empty();
 				$.each(data, function(index, subAreaObj){
 					$('#sel1').append('<option value="'+subAreaObj.id+'">'+subAreaObj.name+'</option>');
 				

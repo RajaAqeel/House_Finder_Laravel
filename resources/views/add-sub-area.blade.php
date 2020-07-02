@@ -41,8 +41,24 @@
                   <!-- content -->
                   <section id="content" class="container pEqual">
                     <div class="addProperty">
+						@if (count($errors) > 0)
+						  @foreach ($errors->all() as $error)
+				  				<div class="alert alert-danger">
+								  	{{$error}}
+								</div>
+						  @endforeach
+					  @endif
+					  @if (session('success'))
+						  <div class="alert alert-success">
+							  {{session('success')}}
+						  </div>
+					  @endif
+					  @if (session('error'))
+						<div class="alert alert-danger">
+							{{seesion('error')}}
+						</div>
+					  @endif
                       <h1 class="fontNeuron">Add New Sub Area</h1>
-
                       <div class="formContent">
 						<form method="POST" action="/subAreaStore">
 							@csrf

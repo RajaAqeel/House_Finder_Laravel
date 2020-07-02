@@ -130,8 +130,8 @@
 								<div class="col-xs-12 col-sm-6">
 									<div class="form-group">
 									  <label for="city">City</label>
-									  <select id="city" name="city" data-placeholder="Choose..." class="form-control">
-										<option value="{{$house->city_id}}">{{$city_name_name}}</option>
+									  <select id="cityS" name="city" data-placeholder="Choose..." class="form-control">
+										<option value="{{$house->city_id}}">{{$city_name->name}}</option>
 										@if(isset($cities))
 										@foreach ($cities as $city)
 										<option value="{{$city->id}}">{{$city->name}}</option>
@@ -144,7 +144,7 @@
 									<div class="form-group">
 									  <label for="sub_area">Sub Area</label>
 									  <select name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
-										<option value="{{$house->sub_area_id}}">{{$sub_area_name_name}}</option>
+										<option value="{{$house->sub_area_id}}">{{$sub_area_name->name}}</option>
 	
 									  </select>
 									</div>
@@ -158,62 +158,11 @@
 									</div>
 								  </div>
 								  <h3 class="fontNeuron">Photos</h3><br>
-								  <div class="galleryUploads">
-									<div class="titleArea">
-									  <span class="title">Photo Gallery</span>
-									  <p>*At least one image is for valid submission, minimum width of 817px.</p>
-									  <p>*You can mark an image as featured by clicking the star icon, Otherwise first image will be considered featured image.</p>
-									</div>
-									<div class="imageGallery">
-									  <div class="image imageLoaded">
-										<img src="https://via.placeholder.com/200x150" alt="" width="200" height="150">
-										<div class="btnsArea">
-										  <a href="#" class="link close"><i class="fa fa-window-close"></i></a>
-										  <a href="#" class="link"><i class="fi flaticon-edit"></i></a>
-										</div>
-										<a href="#" class="text">
-										  <span>
-											<i class="fi flaticon-cloud-computing"></i>
-											<span>Upload Image</span>
-										  </span>
-										</a>
-									  </div>
-									  <div class="image imageLoaded">
-										<img src="https://via.placeholder.com/200x150" alt="" width="200" height="150">
-										<div class="btnsArea">
-										  <a href="#" class="link close"><i class="fa fa-window-close"></i></a>
-										  <a href="#" class="link"><i class="fi flaticon-edit"></i></a>
-										</div>
-										<a href="#" class="text">
-										  <span>
-											<i class="fi flaticon-cloud-computing"></i>
-											<span>Upload Image</span>
-										  </span>
-										</a>
-									  </div>
-									  <div class="image imageLoaded">
-										<img src="https://via.placeholder.com/200x150" alt="" width="200" height="150">
-										<div class="btnsArea">
-										  <a href="#" class="link close"><i class="fa fa-window-close"></i></a>
-										</div>
-										<a href="#" class="text">
-										  <span>
-											<i class="fi flaticon-cloud-computing"></i>
-											<span>Upload Image</span>
-										  </span>
-										</a>
-									  </div>
-									  <div class="image">
-										<div class="btnsArea">
-										  <a href="#" class="link close"><i class="fa fa-window-close"></i></a>
-										  <a href="#" class="link"><i class="fi flaticon-edit"></i></a>
-										</div>
-										<a href="#" class="text">
-										  <span>
-											<i class="fi flaticon-cloud-computing"></i>
-											<span>Upload Image</span>
-										  </span>
-										</a>
+								  <div class="col-xs-12">
+									<div class="form-group">
+									  <label for="item-map">Upload images</label>
+									  <div class="input-group">
+										<input name="photo" type="file" class="form-control ">
 									  </div>
 									</div>
 								  </div>
@@ -341,13 +290,13 @@
 	<script src="js/jquery.js"></script>
 	<script>
 		
-		$('#city').on('change', function(e){
+		$('#cityS').on('change', function(e){
 			console.log(e);
 			var city_id = e.target.value;
 
 			$.get('/ajax-sub-area?city_id=' + city_id, function(data){
 				console.log(data);
-				$('#sub_area_chosen').empty();
+				$('#sel1').empty();
 				$.each(data, function(index, subAreaObj){
 					$('#sel1').append('<option value="'+subAreaObj.id+'">'+subAreaObj.name+'</option>');
 				

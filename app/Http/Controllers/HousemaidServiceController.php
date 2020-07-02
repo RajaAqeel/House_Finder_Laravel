@@ -40,12 +40,12 @@ class HousemaidServiceController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'sub_area' => 'required',
-            'address' => 'required',
-            'number' => 'required',
-            'description' => 'required',
-            'city' =>'required',
+            'name' => ['required', 'regex:/^[a-zA-Z]+$/u'],
+            'sub_area' => ['required'],
+            'address' => ['required'],
+            'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
+            'description' => ['required'],
+            'city' => ['required'],
         ]);
         $housemaid = new housemaid_service;
         $housemaid->name = $request->get('service_title');
@@ -101,12 +101,12 @@ class HousemaidServiceController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'sub_area' => 'required',
-            'address' => 'required',
-            'number' => 'required',
-            'description' => 'required',
-            'city' =>'required',
+            'name' => ['required', 'regex:/^[a-zA-Z]+$/u'],
+            'sub_area' => ['required'],
+            'address' => ['required'],
+            'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
+            'description' => ['required'],
+            'city' => ['required'],
         ]);
         $housemaid = housemaid_service::where('id', $id)->first();
         $housemaid->name = $request->get('service_title');

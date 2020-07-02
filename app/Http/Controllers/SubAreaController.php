@@ -38,8 +38,8 @@ class SubAreaController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'city' => 'required',
-            'sub_area' => 'required',
+            'city' => ['required'],
+            'sub_area' => ['required', 'regex:/^[a-zA-Z]+$/u'],
         ]);
 
         $subArea = new sub_area;

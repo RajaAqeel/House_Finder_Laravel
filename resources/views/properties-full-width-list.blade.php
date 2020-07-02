@@ -212,34 +212,162 @@
 						<header class="contentFiltersHeadingWrap row">
 							<div class="col-xs-12 col-sm-10">
 								<!-- breadcrumb -->
-
- -->								<h1 class="fontNeuron">Listing Grid</h1>
-							</div>
-							<div class="col-xs-12 col-sm-2">
-
+								<h1 class="fontNeuron">Properties</h1>
 							</div>
 						</header>
-						<header class="row rowHead rowHead2">
-							<div class="col-xs-12 col-md-8">
-
-							</div>
-							<div class="col-xs-12 col-md-4">
-								<!-- sortGroup -->
-								<div class="sortGroup">
-									<strong class="groupTitle fwNormal">Sort by:</strong>
-									<div class="dropdown">
-										<button class="dropdown-toggle buttonReset" type="button" id="sortGroup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Default Order <i class="icn fas fa-chevron-down"></i></button>
-										<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="sortGroup">
-											<li><a href="#">Default Order</a></li>
-											<li><a href="#">Default Order</a></li>
-											<li><a href="#">Default Order</a></li>
-											<li><a href="#">Default Order</a></li>
-										</ul>
+						@if (isset($house))
+						@if (count($house) > 0)
+						@foreach ($house as $house)
+							<div class="isoContentHolder">
+								<div class="row">
+									<div class="col-xs-12 isoCol sale">
+										<!-- postColumn__ListView -->
+										<article class="postColumn__ListView hasOver bgWhite">
+											<div class="alignleft noShrink">
+												<!-- postColumnImageSlider -->
+												<div class="slick-carousel slickSlider postColumnImageSlider">
+													<div>
+														<div class="imgHolder">
+															<a href="/houses/tenant/{{$house->id}}">
+																<img src="https://via.placeholder.com/255x200" alt="image description">
+															</a>
+														</div>
+													</div>
+													<div>
+														<div class="imgHolder">
+															<a href="/houses/tenant/{{$house->id}}">
+																<img src="https://via.placeholder.com/255x200" alt="image description">
+															</a>
+														</div>
+													</div>
+													<div>
+														<div class="imgHolder">
+															<a href="/houses/tenant/{{$house->id}}">
+																<img src="https://via.placeholder.com/255x200" alt="image description">
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="descrWrap">
+												<h2 class="fontNeuron text-capitalize"><a href="/show/{{$house->id}}">{{$house->title}}</a></h2>
+												<address>
+													<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+														<p>{{$house->address}} </p>
+												</address>
+												<div class="stampWrap">
+													<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} for Rent </span>
+												</div>
+												<div class="priceWrap">
+													<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$house->price}}</span> <span class="textUnit fwNormal">/ monthly</span></h3>
+													<!-- linkDistributer -->
+													<a href="properties-full-width-list.html">View Surrounding Services	</a>
+												</div>
+												<!-- postColumnFoot -->
+												<footer class="postColumnFoot">
+													<ul class="list-unstyled">
+														<li>
+															<strong class="fwNormal elemenBlock text-primary">Area</strong>
+															<strong class="fwNormal elemenBlock">{{$house->area_value}} {{$house->area_unit}}</strong>
+														</li>
+														<li>
+															<strong class="fwNormal elemenBlock text-primary">Beds</strong>
+														<strong class="fwNormal elemenBlock">{{$house->bedrooms}}</strong>
+														</li>
+														<li>
+															<strong class="fwNormal elemenBlock text-primary">Baths</strong>
+															<strong class="fwNormal elemenBlock">{{$house->bathrooms}}</strong>
+														</li>
+													</ul>
+												</footer>
+											</div>
+										</article>
 									</div>
 								</div>
 							</div>
-						</header>
-						<!-- isoContentHolder -->
+							@endforeach
+							@else
+							<header class="contentFiltersHeadingWrap row">
+								<div class="col-xs-12 col-sm-10">
+									<!-- breadcrumb -->
+									<h1 class="fontNeuron">No Houses Found</h1>
+								</div>
+							</header>
+							@endif
+							@endif
+						@if (isset($internet_p))
+							@if (count($internet_p) > 0)
+								@foreach ($internet_p as $internet)
+								<div class="isoContentHolder">
+									<div class="row">
+										<div class="col-xs-12 isoCol sale">
+											<!-- postColumn__ListView -->
+											<article class="postColumn__ListView hasOver bgWhite">
+												<div class="alignleft noShrink">
+													<!-- postColumnImageSlider -->
+													<div class="slick-carousel slickSlider postColumnImageSlider">
+														<div>
+															<div class="imgHolder">
+																<a href="properties-single2.html">
+																	<img src="https://via.placeholder.com/255x200" alt="image description">
+																</a>
+															</div>
+														</div>
+														<div>
+															<div class="imgHolder">
+																<a href="properties-single2.html">
+																	<img src="https://via.placeholder.com/255x200" alt="image description">
+																</a>
+															</div>
+														</div>
+														<div>
+															<div class="imgHolder">
+																<a href="properties-single2.html">
+																	<img src="https://via.placeholder.com/255x200" alt="image description">
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="descrWrap">
+													<h2 class="fontNeuron text-capitalize"><a href="#">{{$internet->title}}</a></h2>
+													<address>
+														<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+														<p>{{$internet->address}} </p>
+													</address>
+													<div class="stampWrap">
+														<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} near your home </span>
+													</div>
+													<div class="priceWrap">
+														<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$internet->price_mb}}</span> <span class="textUnit fwNormal">/ mb</span></h3>
+														<!-- linkDistributer -->
+														<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> {{$name->name}}</a>
+													</div>
+													<!-- postColumnFoot -->
+													<footer class="postColumnFoot">
+														<ul class="list-unstyled">
+															<li>
+																<strong class="fwNormal elemenBlock text-primary">Complaint helpline</strong>
+																<strong class="fwNormal elemenBlock">{{$internet->complaint_helpline}}</strong>
+															</li>
+															<li>
+																<strong class="fwNormal elemenBlock text-primary">Customer care helpline</strong>
+															<strong class="fwNormal elemenBlock">{{$internet->customer_service_helpline}}</strong>
+															</li>
+														</ul>
+													</footer>
+												</div>
+											</article>
+										</div>
+									</div>
+								</div>
+							@endforeach
+						@endif	
+					@endif
+
+					@if (isset($parking))
+					@if (count($parking) > 0)
+						@foreach ($parking as $internet)
 						<div class="isoContentHolder">
 							<div class="row">
 								<div class="col-xs-12 isoCol sale">
@@ -270,392 +398,31 @@
 													</div>
 												</div>
 											</div>
-											<!-- postHoverLinskList -->
-											<ul class="list-unstyled postHoverLinskList">
-												<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
-												<li class="hasOver">
-													<a href="#"><i class="fi flaticon-share"></i></a>
-													<!-- postColumnSocial -->
-													<ul class="list-unstyled socialNetworks postColumnSocial">
-														<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-														<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-														<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-														<li><a href="#"><i class="fab fa-google"></i></a></li>
-													</ul>
-												</li>
-											</ul>
-											<!-- linkToFavourite -->
-											<a href="#" class="linkToFavourite roundedCircle bg-primary textWhite icnHeartBeatAnim"><i class="far fa-heart"></i></a>
 										</div>
 										<div class="descrWrap">
-											<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Elegant studio flat</a></h2>
+											<h2 class="fontNeuron text-capitalize"><a href="#">{{$internet->title}}</a></h2>
 											<address>
 												<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-												<p>The Village, Jersey City, NJ 07302, USA </p>
+												<p>{{$internet->address}} </p>
 											</address>
 											<div class="stampWrap">
-												<span class="btn btnSmall btn-success text-capitalize">For Sale</span>
-												<time datetime="2011-01-12" class="timing">1 day ago</time>
+												<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} near your home </span>
 											</div>
 											<div class="priceWrap">
-												<h3 class="fontNeuron fwSemi"><span class="textSecondary">  490,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
+												<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$internet->price_mb}}</span> <span class="textUnit fwNormal">/ mb</span></h3>
 												<!-- linkDistributer -->
-												<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> ali tufan</a>
+												<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> {{$name->name}}</a>
 											</div>
 											<!-- postColumnFoot -->
 											<footer class="postColumnFoot">
 												<ul class="list-unstyled">
 													<li>
-														<strong class="fwNormal elemenBlock text-primary">Area</strong>
-														<strong class="fwNormal elemenBlock">2100 m2</strong>
+														<strong class="fwNormal elemenBlock text-primary">Complaint helpline</strong>
+														<strong class="fwNormal elemenBlock">{{$internet->complaint_helpline}}</strong>
 													</li>
 													<li>
-														<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-														<strong class="fwNormal elemenBlock">3</strong>
-													</li>
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-														<strong class="fwNormal elemenBlock">2</strong>
-													</li>
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-														<strong class="fwNormal elemenBlock">1</strong>
-													</li>
-												</ul>
-											</footer>
-										</div>
-									</article>
-								</div>
-								<div class="col-xs-12 isoCol rent">
-									<!-- postColumn__ListView -->
-									<article class="postColumn__ListView hasOver bgWhite">
-										<div class="alignleft noShrink">
-											<!-- postColumnImageSlider -->
-											<div class="slick-carousel slickSlider postColumnImageSlider">
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="https://via.placeholder.com/255x200" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="https://via.placeholder.com/255x200" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="https://via.placeholder.com/255x200" alt="image description">
-														</a>
-													</div>
-												</div>
-											</div>
-											<!-- postHoverLinskList -->
-											<ul class="list-unstyled postHoverLinskList">
-												<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
-												<li class="hasOver">
-													<a href="#"><i class="fi flaticon-share"></i></a>
-													<!-- postColumnSocial -->
-													<ul class="list-unstyled socialNetworks postColumnSocial">
-														<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-														<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-														<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-														<li><a href="#"><i class="fab fa-google"></i></a></li>
-													</ul>
-												</li>
-											</ul>
-											<!-- linkToFavourite -->
-											<a href="#" class="linkToFavourite roundedCircle bg-primary textWhite icnHeartBeatAnim"><i class="far fa-heart"></i></a>
-										</div>
-										<div class="descrWrap">
-											<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Meridian Villas</a></h2>
-											<address>
-												<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-												<p>The Village, Jersey City, NJ 07302, USA </p>
-											</address>
-											<div class="stampWrap">
-												<span class="btn btnSmall btn-success text-capitalize">For Sale</span>
-												<time datetime="2011-01-12" class="timing">1 day ago</time>
-											</div>
-											<div class="priceWrap">
-												<h3 class="fontNeuron fwSemi"><span class="textSecondary">  490,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
-												<!-- linkDistributer -->
-												<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> ali tufan</a>
-											</div>
-											<!-- postColumnFoot -->
-											<footer class="postColumnFoot">
-												<ul class="list-unstyled">
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Area</strong>
-														<strong class="fwNormal elemenBlock">2100 m2</strong>
-													</li>
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-														<strong class="fwNormal elemenBlock">3</strong>
-													</li>
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-														<strong class="fwNormal elemenBlock">2</strong>
-													</li>
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-														<strong class="fwNormal elemenBlock">1</strong>
-													</li>
-												</ul>
-											</footer>
-										</div>
-									</article>
-								</div>
-								<div class="col-xs-12 isoCol rent">
-									<!-- postColumn__ListView -->
-									<article class="postColumn__ListView hasOver bgWhite">
-										<div class="alignleft noShrink">
-											<!-- postColumnImageSlider -->
-											<div class="slick-carousel slickSlider postColumnImageSlider">
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="https://via.placeholder.com/255x200" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="https://via.placeholder.com/255x200" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="https://via.placeholder.com/255x200" alt="image description">
-														</a>
-													</div>
-												</div>
-											</div>
-											<!-- postHoverLinskList -->
-											<ul class="list-unstyled postHoverLinskList">
-												<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
-												<li class="hasOver">
-													<a href="#"><i class="fi flaticon-share"></i></a>
-													<!-- postColumnSocial -->
-													<ul class="list-unstyled socialNetworks postColumnSocial">
-														<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-														<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-														<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-														<li><a href="#"><i class="fab fa-google"></i></a></li>
-													</ul>
-												</li>
-											</ul>
-											<!-- linkToFavourite -->
-											<a href="#" class="linkToFavourite roundedCircle bg-primary textWhite icnHeartBeatAnim"><i class="far fa-heart"></i></a>
-										</div>
-										<div class="descrWrap">
-											<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">4 Bedroom New House For Sale</a></h2>
-											<address>
-												<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-												<p>The Village, Jersey City, NJ 07302, USA </p>
-											</address>
-											<div class="stampWrap">
-												<span class="btn btnSmall btn-success text-capitalize">For Sale</span>
-												<time datetime="2011-01-12" class="timing">1 day ago</time>
-											</div>
-											<div class="priceWrap">
-												<h3 class="fontNeuron fwSemi"><span class="textSecondary">  490,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
-												<!-- linkDistributer -->
-												<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> ali tufan</a>
-											</div>
-											<!-- postColumnFoot -->
-											<footer class="postColumnFoot">
-												<ul class="list-unstyled">
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Area</strong>
-														<strong class="fwNormal elemenBlock">2100 m2</strong>
-													</li>
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-														<strong class="fwNormal elemenBlock">3</strong>
-													</li>
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-														<strong class="fwNormal elemenBlock">2</strong>
-													</li>
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-														<strong class="fwNormal elemenBlock">1</strong>
-													</li>
-												</ul>
-											</footer>
-										</div>
-									</article>
-								</div>
-								<div class="col-xs-12 isoCol sale">
-									<!-- postColumn__ListView -->
-									<article class="postColumn__ListView hasOver bgWhite">
-										<div class="alignleft noShrink">
-											<!-- postColumnImageSlider -->
-											<div class="slick-carousel slickSlider postColumnImageSlider">
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="https://via.placeholder.com/255x200" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="https://via.placeholder.com/255x200" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="https://via.placeholder.com/255x200" alt="image description">
-														</a>
-													</div>
-												</div>
-											</div>
-											<!-- postHoverLinskList -->
-											<ul class="list-unstyled postHoverLinskList">
-												<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
-												<li class="hasOver">
-													<a href="#"><i class="fi flaticon-share"></i></a>
-													<!-- postColumnSocial -->
-													<ul class="list-unstyled socialNetworks postColumnSocial">
-														<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-														<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-														<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-														<li><a href="#"><i class="fab fa-google"></i></a></li>
-													</ul>
-												</li>
-											</ul>
-											<!-- linkToFavourite -->
-											<a href="#" class="linkToFavourite roundedCircle bg-primary textWhite icnHeartBeatAnim"><i class="far fa-heart"></i></a>
-										</div>
-										<div class="descrWrap">
-											<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Villa on Hollywood Boulevard </a></h2>
-											<address>
-												<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-												<p>The Village, Jersey City, NJ 07302, USA </p>
-											</address>
-											<div class="stampWrap">
-												<span class="btn btnSmall btn-success text-capitalize">For Sale</span>
-												<time datetime="2011-01-12" class="timing">1 day ago</time>
-											</div>
-											<div class="priceWrap">
-												<h3 class="fontNeuron fwSemi"><span class="textSecondary">  490,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
-												<!-- linkDistributer -->
-												<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> ali tufan</a>
-											</div>
-											<!-- postColumnFoot -->
-											<footer class="postColumnFoot">
-												<ul class="list-unstyled">
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Area</strong>
-														<strong class="fwNormal elemenBlock">2100 m2</strong>
-													</li>
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-														<strong class="fwNormal elemenBlock">3</strong>
-													</li>
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-														<strong class="fwNormal elemenBlock">2</strong>
-													</li>
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-														<strong class="fwNormal elemenBlock">1</strong>
-													</li>
-												</ul>
-											</footer>
-										</div>
-									</article>
-								</div>
-								<div class="col-xs-12 isoCol sale">
-									<!-- postColumn__ListView -->
-									<article class="postColumn__ListView hasOver bgWhite">
-										<div class="alignleft noShrink">
-											<!-- postColumnImageSlider -->
-											<div class="slick-carousel slickSlider postColumnImageSlider">
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="https://via.placeholder.com/255x200" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="https://via.placeholder.com/255x200" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="https://via.placeholder.com/255x200" alt="image description">
-														</a>
-													</div>
-												</div>
-											</div>
-											<!-- postHoverLinskList -->
-											<ul class="list-unstyled postHoverLinskList">
-												<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
-												<li class="hasOver">
-													<a href="#"><i class="fi flaticon-share"></i></a>
-													<!-- postColumnSocial -->
-													<ul class="list-unstyled socialNetworks postColumnSocial">
-														<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-														<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-														<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-														<li><a href="#"><i class="fab fa-google"></i></a></li>
-													</ul>
-												</li>
-											</ul>
-											<!-- linkToFavourite -->
-											<a href="#" class="linkToFavourite roundedCircle bg-primary textWhite icnHeartBeatAnim"><i class="far fa-heart"></i></a>
-										</div>
-										<div class="descrWrap">
-											<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Elegant studio flat</a></h2>
-											<address>
-												<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-												<p>The Village, Jersey City, NJ 07302, USA </p>
-											</address>
-											<div class="stampWrap">
-												<span class="btn btnSmall btn-success text-capitalize">For Sale</span>
-												<time datetime="2011-01-12" class="timing">1 day ago</time>
-											</div>
-											<div class="priceWrap">
-												<h3 class="fontNeuron fwSemi"><span class="textSecondary">  490,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
-												<!-- linkDistributer -->
-												<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> ali tufan</a>
-											</div>
-											<!-- postColumnFoot -->
-											<footer class="postColumnFoot">
-												<ul class="list-unstyled">
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Area</strong>
-														<strong class="fwNormal elemenBlock">2100 m2</strong>
-													</li>
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-														<strong class="fwNormal elemenBlock">3</strong>
-													</li>
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-														<strong class="fwNormal elemenBlock">2</strong>
-													</li>
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-														<strong class="fwNormal elemenBlock">1</strong>
+														<strong class="fwNormal elemenBlock text-primary">Customer care helpline</strong>
+													<strong class="fwNormal elemenBlock">{{$internet->customer_service_helpline}}</strong>
 													</li>
 												</ul>
 											</footer>
@@ -664,18 +431,359 @@
 								</div>
 							</div>
 						</div>
-						<!-- navigation pagination -->
-						<nav class="navigation pagination pagination1 fontNeuron" role="navigation">
-							<div class="nav-links">
-								<a class="prev page-numbers" href="#">Previous</a>
-								<a class="page-numbers" href="#">1</a>
-								<span class="page-numbers current">2</span>
-								<a class="page-numbers" href="#">3</a>
-								<span class="page-numbers dots">&hellip;</span>
-								<a class="page-numbers" href="#">22</a>
-								<a class="next page-numbers" href="#">Next</a>
+					@endforeach
+				@endif	
+			@endif
+
+			@if (isset($cable_op))
+			@if (count($cable_op) > 0)
+				@foreach ($cable_op as $internet)
+				<div class="isoContentHolder">
+					<div class="row">
+						<div class="col-xs-12 isoCol sale">
+							<!-- postColumn__ListView -->
+							<article class="postColumn__ListView hasOver bgWhite">
+								<div class="alignleft noShrink">
+									<!-- postColumnImageSlider -->
+									<div class="slick-carousel slickSlider postColumnImageSlider">
+										<div>
+											<div class="imgHolder">
+												<a href="properties-single2.html">
+													<img src="https://via.placeholder.com/255x200" alt="image description">
+												</a>
+											</div>
+										</div>
+										<div>
+											<div class="imgHolder">
+												<a href="properties-single2.html">
+													<img src="https://via.placeholder.com/255x200" alt="image description">
+												</a>
+											</div>
+										</div>
+										<div>
+											<div class="imgHolder">
+												<a href="properties-single2.html">
+													<img src="https://via.placeholder.com/255x200" alt="image description">
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="descrWrap">
+									<h2 class="fontNeuron text-capitalize"><a href="#">{{$internet->title}}</a></h2>
+									<address>
+										<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+										<p>{{$internet->address}} </p>
+									</address>
+									<div class="stampWrap">
+										<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} near your home </span>
+									</div>
+									<div class="priceWrap">
+										<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$internet->price_mb}}</span> <span class="textUnit fwNormal">/ mb</span></h3>
+										<!-- linkDistributer -->
+										<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> {{$name->name}}</a>
+									</div>
+									<!-- postColumnFoot -->
+									<footer class="postColumnFoot">
+										<ul class="list-unstyled">
+											<li>
+												<strong class="fwNormal elemenBlock text-primary">Complaint helpline</strong>
+												<strong class="fwNormal elemenBlock">{{$internet->complaint_helpline}}</strong>
+											</li>
+											<li>
+												<strong class="fwNormal elemenBlock text-primary">Customer care helpline</strong>
+											<strong class="fwNormal elemenBlock">{{$internet->customer_service_helpline}}</strong>
+											</li>
+										</ul>
+									</footer>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			@endforeach
+		@endif	
+	@endif
+
+	@if (isset($school_van))
+	@if (count($school_van) > 0)
+		@foreach ($school_van as $internet)
+		<div class="isoContentHolder">
+			<div class="row">
+				<div class="col-xs-12 isoCol sale">
+					<!-- postColumn__ListView -->
+					<article class="postColumn__ListView hasOver bgWhite">
+						<div class="alignleft noShrink">
+							<!-- postColumnImageSlider -->
+							<div class="slick-carousel slickSlider postColumnImageSlider">
+								<div>
+									<div class="imgHolder">
+										<a href="properties-single2.html">
+											<img src="https://via.placeholder.com/255x200" alt="image description">
+										</a>
+									</div>
+								</div>
+								<div>
+									<div class="imgHolder">
+										<a href="properties-single2.html">
+											<img src="https://via.placeholder.com/255x200" alt="image description">
+										</a>
+									</div>
+								</div>
+								<div>
+									<div class="imgHolder">
+										<a href="properties-single2.html">
+											<img src="https://via.placeholder.com/255x200" alt="image description">
+										</a>
+									</div>
+								</div>
 							</div>
-						</nav>
+						</div>
+						<div class="descrWrap">
+							<h2 class="fontNeuron text-capitalize"><a href="#">{{$internet->title}}</a></h2>
+							<address>
+								<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+								<p>{{$internet->address}} </p>
+							</address>
+							<div class="stampWrap">
+								<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} near your home </span>
+							</div>
+							<div class="priceWrap">
+								<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$internet->price_mb}}</span> <span class="textUnit fwNormal">/ mb</span></h3>
+								<!-- linkDistributer -->
+								<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> {{$name->name}}</a>
+							</div>
+							<!-- postColumnFoot -->
+							<footer class="postColumnFoot">
+								<ul class="list-unstyled">
+									<li>
+										<strong class="fwNormal elemenBlock text-primary">Complaint helpline</strong>
+										<strong class="fwNormal elemenBlock">{{$internet->complaint_helpline}}</strong>
+									</li>
+									<li>
+										<strong class="fwNormal elemenBlock text-primary">Customer care helpline</strong>
+									<strong class="fwNormal elemenBlock">{{$internet->customer_service_helpline}}</strong>
+									</li>
+								</ul>
+							</footer>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	@endforeach
+@endif	
+@endif
+
+@if (isset($sweeper))
+@if (count($sweeper) > 0)
+	@foreach ($sweeper as $internet)
+	<div class="isoContentHolder">
+		<div class="row">
+			<div class="col-xs-12 isoCol sale">
+				<!-- postColumn__ListView -->
+				<article class="postColumn__ListView hasOver bgWhite">
+					<div class="alignleft noShrink">
+						<!-- postColumnImageSlider -->
+						<div class="slick-carousel slickSlider postColumnImageSlider">
+							<div>
+								<div class="imgHolder">
+									<a href="properties-single2.html">
+										<img src="https://via.placeholder.com/255x200" alt="image description">
+									</a>
+								</div>
+							</div>
+							<div>
+								<div class="imgHolder">
+									<a href="properties-single2.html">
+										<img src="https://via.placeholder.com/255x200" alt="image description">
+									</a>
+								</div>
+							</div>
+							<div>
+								<div class="imgHolder">
+									<a href="properties-single2.html">
+										<img src="https://via.placeholder.com/255x200" alt="image description">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="descrWrap">
+						<h2 class="fontNeuron text-capitalize"><a href="#">{{$internet->title}}</a></h2>
+						<address>
+							<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+							<p>{{$internet->address}} </p>
+						</address>
+						<div class="stampWrap">
+							<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} near your home </span>
+						</div>
+						<div class="priceWrap">
+							<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$internet->price_mb}}</span> <span class="textUnit fwNormal">/ mb</span></h3>
+							<!-- linkDistributer -->
+							<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> {{$name->name}}</a>
+						</div>
+						<!-- postColumnFoot -->
+						<footer class="postColumnFoot">
+							<ul class="list-unstyled">
+								<li>
+									<strong class="fwNormal elemenBlock text-primary">Complaint helpline</strong>
+									<strong class="fwNormal elemenBlock">{{$internet->complaint_helpline}}</strong>
+								</li>
+								<li>
+									<strong class="fwNormal elemenBlock text-primary">Customer care helpline</strong>
+								<strong class="fwNormal elemenBlock">{{$internet->customer_service_helpline}}</strong>
+								</li>
+							</ul>
+						</footer>
+					</div>
+				</article>
+			</div>
+		</div>
+	</div>
+@endforeach
+@endif	
+@endif
+
+@if (isset($watch_man))
+@if (count($watch_man) > 0)
+	@foreach ($watch_man as $internet)
+	<div class="isoContentHolder">
+		<div class="row">
+			<div class="col-xs-12 isoCol sale">
+				<!-- postColumn__ListView -->
+				<article class="postColumn__ListView hasOver bgWhite">
+					<div class="alignleft noShrink">
+						<!-- postColumnImageSlider -->
+						<div class="slick-carousel slickSlider postColumnImageSlider">
+							<div>
+								<div class="imgHolder">
+									<a href="properties-single2.html">
+										<img src="https://via.placeholder.com/255x200" alt="image description">
+									</a>
+								</div>
+							</div>
+							<div>
+								<div class="imgHolder">
+									<a href="properties-single2.html">
+										<img src="https://via.placeholder.com/255x200" alt="image description">
+									</a>
+								</div>
+							</div>
+							<div>
+								<div class="imgHolder">
+									<a href="properties-single2.html">
+										<img src="https://via.placeholder.com/255x200" alt="image description">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="descrWrap">
+						<h2 class="fontNeuron text-capitalize"><a href="#">{{$internet->title}}</a></h2>
+						<address>
+							<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+							<p>{{$internet->address}} </p>
+						</address>
+						<div class="stampWrap">
+							<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} near your home </span>
+						</div>
+						<div class="priceWrap">
+							<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$internet->price_mb}}</span> <span class="textUnit fwNormal">/ mb</span></h3>
+							<!-- linkDistributer -->
+							<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> {{$name->name}}</a>
+						</div>
+						<!-- postColumnFoot -->
+						<footer class="postColumnFoot">
+							<ul class="list-unstyled">
+								<li>
+									<strong class="fwNormal elemenBlock text-primary">Complaint helpline</strong>
+									<strong class="fwNormal elemenBlock">{{$internet->complaint_helpline}}</strong>
+								</li>
+								<li>
+									<strong class="fwNormal elemenBlock text-primary">Customer care helpline</strong>
+								<strong class="fwNormal elemenBlock">{{$internet->customer_service_helpline}}</strong>
+								</li>
+							</ul>
+						</footer>
+					</div>
+				</article>
+			</div>
+		</div>
+	</div>
+@endforeach
+@endif	
+@endif
+
+@if (isset($house_m))
+@if (count($house_m) > 0)
+	@foreach ($house_m as $internet)
+	<div class="isoContentHolder">
+		<div class="row">
+			<div class="col-xs-12 isoCol sale">
+				<!-- postColumn__ListView -->
+				<article class="postColumn__ListView hasOver bgWhite">
+					<div class="alignleft noShrink">
+						<!-- postColumnImageSlider -->
+						<div class="slick-carousel slickSlider postColumnImageSlider">
+							<div>
+								<div class="imgHolder">
+									<a href="properties-single2.html">
+										<img src="https://via.placeholder.com/255x200" alt="image description">
+									</a>
+								</div>
+							</div>
+							<div>
+								<div class="imgHolder">
+									<a href="properties-single2.html">
+										<img src="https://via.placeholder.com/255x200" alt="image description">
+									</a>
+								</div>
+							</div>
+							<div>
+								<div class="imgHolder">
+									<a href="properties-single2.html">
+										<img src="https://via.placeholder.com/255x200" alt="image description">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="descrWrap">
+						<h2 class="fontNeuron text-capitalize"><a href="#">{{$internet->title}}</a></h2>
+						<address>
+							<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+							<p>{{$internet->address}} </p>
+						</address>
+						<div class="stampWrap">
+							<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} near your home </span>
+						</div>
+						<div class="priceWrap">
+							<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$internet->price_mb}}</span> <span class="textUnit fwNormal">/ mb</span></h3>
+							<!-- linkDistributer -->
+							<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> {{$name->name}}</a>
+						</div>
+						<!-- postColumnFoot -->
+						<footer class="postColumnFoot">
+							<ul class="list-unstyled">
+								<li>
+									<strong class="fwNormal elemenBlock text-primary">Complaint helpline</strong>
+									<strong class="fwNormal elemenBlock">{{$internet->complaint_helpline}}</strong>
+								</li>
+								<li>
+									<strong class="fwNormal elemenBlock text-primary">Customer care helpline</strong>
+								<strong class="fwNormal elemenBlock">{{$internet->customer_service_helpline}}</strong>
+								</li>
+							</ul>
+						</footer>
+					</div>
+				</article>
+			</div>
+		</div>
+	</div>
+@endforeach
+@endif	
+@endif
 					</section>
 				</main>
 			</div>
@@ -715,34 +823,6 @@
 									</ul>
 								</div>
 							</nav>
-							<div class="col-xs-12 col-sm-4 col">
-								<h2 class="fontNeuron fwSemi text-uppercase">LATEST PROPERTIES</h2>
-								<!-- postsWidgetList -->
-								<ul class="list-unstyled postsWidgetList">
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">Do what you love and tomorrow will pay</a></h3>
-											<h4 class="fwSemi">  1,27,000</h4>
-										</div>
-									</li>
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">We’re ready for the TRID rules!</a></h3>
-											<h4 class="fwSemi">  527,000</h4>
-										</div>
-									</li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</aside>
@@ -769,7 +849,6 @@
 				</footer>
 				<!-- btnScrollToTop -->
 				<a href="#pageWrapper" class="btnScrollToTop smooth textWhite">Scroll Top <i class="fi flaticon-arrows btnScrollIcn"></i></a>
-				<span class="bgCover elemenBlock" style="background-image: url(https://via.placeholder.com/1920x520);"></span>
 			</div>
 		</div>
 		<!-- pagePopupWrap -->

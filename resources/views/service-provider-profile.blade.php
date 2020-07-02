@@ -183,7 +183,7 @@
 												<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
 												</a>
 											</li>
-											<a href="/add-sub-area" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Service</a>
+											<a href="/add-sub-area" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Sub Area</a>
 										@elseif(Auth::user()->user_type=="Service Provider")
 										<li>
 											<a href="/sp_dashboard">
@@ -191,7 +191,7 @@
 											<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
 											</a>
 										</li>
-										<a href="/add-internetProvider-info" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Sub Area</a>
+										<a href="/add-internetProvider-info" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Service</a>
 										@endif
 										@endif
 									</ul>
@@ -233,7 +233,7 @@
                                   <img src="https://via.placeholder.com/74x74" alt="" width="74" height="74">
                                 </div>
                                 <div class="info">
-                                  <span class="text">Ali Tufan</span>
+                                  <span class="text">{{Auth::user()->name}}</span>
                                   <span class="text"><a href="/changePasswordSp" class="link">Change Password</a></span>
                                 </div>
                               </header>
@@ -287,31 +287,41 @@
                             <div class="accountData">
                               <form method="POST" action="/store2">
 								  @csrf
-                                <div class="head">
-                                  <h4 class="fontNeuron">Account Settings</h4>
-                                </div>
-                                <div class="accountHolder">
-                                  <div class="imgProfile">
-                                    <div class="imgThumbnail">
-                                      <img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
-                                      <div class="btnArea">
-                                        <a href="#" class="btn btn-info"><i class="fa fa-upload"></i> Upload Photo</a>
-                                      </div>
-                                    </div>
-                                    <span class="text text-center">*minimum 200px x 200px</span>
-                                  </div>
-                                  <div class="accountContent">
-                                    <div class="form-group">
-                                      <label for="itemN-3">Phone</label>
-                                      <input name="phone_number" type="tel" class="form-control" placeholder="0402 2020 202" id="itemN-3">
-                                    </div>
-                                    <div class="form-group">
-                                      <label for="itemN-4">Biography</label>
-                                      <textarea name="bio" id="itemN-4" class="form-control" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.Phasellus mollis imperdiet placerat"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn alighRight btnSecondary buttonL fontNeuron">Update Profile</button>
-                                  </div>
-                                </div>
+								  <div class="head">
+									<h4 class="fontNeuron">Account Settings</h4>
+								  </div>
+								  <div class="accountHolder">
+									<div class="imgProfile">
+									  <div class="imgThumbnail">
+										  <img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
+									  </div>
+									  <input name="image" type="file" class="form-control" id="itemN-1">
+									  
+									</div>
+									<div class="accountContent">
+									  <div class="form-group">
+										<label for="itemN-1">Full Name</label>
+										<input name="name" type="text" class="form-control" placeholder="Ali Tufan" id="itemN-1">
+									  </div>
+									  <div class="form-group">
+										<label for="itemN-2">Email</label>
+										<input name="email" type="email" class="form-control" placeholder="polygontheme@gmail.com" id="itemN-2">
+									  </div>
+									  <div class="form-group">
+										<label for="itemN-3">Phone</label>
+										<input name="phone_number" type="tel" class="form-control" placeholder="0402 2020 202" id="itemN-3">
+									  </div>
+									  <div class="form-group">
+										  <label for="itemN-4">CNIC</label>
+										  <input name="cnic" type="tel" class="form-control" placeholder="0000000000000" id="itemN-4">
+										</div>
+									  <div class="form-group">
+										<label for="itemN-5">Biography</label>
+										<textarea name="bio" id="itemN-5" class="form-control" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.Phasellus mollis imperdiet placerat"></textarea>
+									  </div>
+									  <button type="submit" class="btn alighRight btnSecondary buttonL fontNeuron">Update Profile</button>
+									</div>
+								  </div>
                               </form>
                             </div>
                           </div>

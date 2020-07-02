@@ -4,10 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\city;
+use App\house;
 class PagesController extends Controller
 {
     public function home(){
-        return view('home');
+        $cities = city::all();
+        $houses = house::orderBy('created_at', 'ASC');
+        return view('home')->with('cities', $cities);
     }
     
     public function about(){
@@ -20,6 +24,16 @@ class PagesController extends Controller
 
     public function blog(){
         return view('blog-full-width');
+    }
+
+    public function blogDetail()
+    {
+        return view('blog-detail');
+    }
+
+    public function propertiesList()
+    {
+        return view('properties-full-width-list');
     }
 
     public function contact(){
@@ -61,6 +75,11 @@ class PagesController extends Controller
      public function houseOwnerProfile()
      {
          return view('house-owner-profile');
+     }
+
+     public function houseOwnerViewProfile()
+     {
+         return view('house-owner-view-profile');
      }
 
      public function myProperties()

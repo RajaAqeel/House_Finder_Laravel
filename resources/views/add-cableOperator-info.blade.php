@@ -40,10 +40,27 @@
 				<main>
                   <!-- content -->
                   <section id="content" class="container pEqual">
+					@if (count($errors) > 0)
+					@foreach ($errors->all() as $error)
+							<div class="alert alert-danger">
+								{{$error}}
+						  </div>
+					@endforeach
+				@endif
+				@if (session('success'))
+					<div class="alert alert-success">
+						{{session('success')}}
+					</div>
+				@endif
+				@if (session('error'))
+				  <div class="alert alert-danger">
+					  {{seesion('error')}}
+				  </div>
+				@endif
                     <div class="addProperty">
                       <h1 class="fontNeuron">Add New Service</h1> 
                       <ol class="navSteps">
-                        <li class="current">
+                        <li>
                           <a href="add-internetProvider-info.html">
                             <span class="text">Internet Provider</span>
                           </a>
@@ -54,7 +71,7 @@
                             </a>
                           </li>
 
-                          <li>
+                          <li class="completed">
                             <a href="add-cableOperator-info">
                               <span class="text">Cable Operator</span>
                             </a>
@@ -272,7 +289,7 @@
 
 			$.get('/ajax-sub-area?city_id=' + city_id, function(data){
 				console.log(data);
-				$('#sub_area_chosen').empty();
+				$('#sel1').empty();
 				$.each(data, function(index, subAreaObj){
 					$('#sel1').append('<option value="'+subAreaObj.id+'">'+subAreaObj.name+'</option>');
 				

@@ -40,13 +40,13 @@ class ParkingServiceController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'city' => 'required',
-            'sub_area' => 'required',
-            'service_title' => 'required',
-            'unit' => 'required',
-            'value' => 'required',
-            'address' => 'required',
-            'number' => 'required',
+            'city' => ['required'],
+            'sub_area' => ['required'],
+            'service_title' => ['required', 'regex:/^[a-zA-Z]+$/u'],
+            'unit' => ['required'],
+            'value' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
+            'address' => ['required'],
+            'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
         ]);
         $parking = new parking_service;
         $parking->title = $request->get('service_title');
@@ -103,13 +103,13 @@ class ParkingServiceController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'city' => 'required',
-            'sub_area' => 'required',
-            'service_title' => 'required',
-            'unit' => 'required',
-            'value' => 'required',
-            'address' => 'required',
-            'number' => 'required',
+            'city' => ['required'],
+            'sub_area' => ['required'],
+            'service_title' => ['required', 'regex:/^[a-zA-Z]+$/u'],
+            'unit' => ['required'],
+            'value' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
+            'address' => ['required'],
+            'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
         ]);
         $parking = parking_service::where('id', $id)->first();
         $parking->title = $request->get('service_title');

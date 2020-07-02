@@ -41,25 +41,41 @@
                   <!-- content -->
                   <section id="content" class="container pEqual">
                     <div class="addProperty">
-                      <h1 class="fontNeuron">Add New Property</h1>
+					  <h1 class="fontNeuron">Add New Property</h1>
+					  @if (count($errors) > 0)
+						  @foreach ($errors->all() as $error)
+				  				<div class="alert alert-danger" role="alert">
+								  	{{$error}}
+								</div>
+						  @endforeach
+					  @endif
+					  @if (session('success'))
+						  <div class="alert alert-success" role="alert">
+							  {{session('success')}}
+						  </div>
+					  @endif
+					  @if (session('error'))
+						<div class="alert alert-danger" role="alert">
+							{{seesion('error')}}
+						</div>
+					  @endif
                       <div class="formContent">
-						<form action={{action('HouseController@store')}} method="POST">
+						<form action={{action('HouseController@store')}} method="POST" enctype="multipart/form-data">
 							@csrf
                           <header class="contentHead">
                             <h2 class="fontNeuron">Basic Info</h2>
-
                           </header>
                           <div class="row">
 							<div class="col-xs-12">
 								<div class="form-group">
 								  <label for="itemN-90">Title</label>
-								  <input name="title" type="text" class="form-control" placeholder=" title" id="itemN-90">
+								  <input name="title" type="text" class="form-control " placeholder=" title" id="itemN-90" required>
 								</div>
 							  </div>
 							<div class="col-xs-12">
 								<div class="form-group">
 								  <label for="itemN-17">Property Type</label>
-								  <select name="type" data-placeholder="Select Option" class="form-control" id="itemN-17">
+								  <select name="type" data-placeholder="Select Option" class="form-control " id="itemN-17">
 									<option value="">Select Option</option>
 									  <option value="Flat">Flat</option>
 									  <option value="House">House</option>
@@ -75,13 +91,13 @@
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-16">Price</label>
-                                <input name="price" type="text" class="form-control" placeholder=" 158" id="itemN-16">
+                                <input name="price" type="number" class="form-control " placeholder=" 158" id="itemN-16" required>
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-17">Price</label>
-                                <select name="negotiable" data-placeholder="Select Option" class="form-control" id="itemN-17">
+                                <select name="negotiable" data-placeholder="Select Option" class="form-control " id="itemN-17">
 									<option value="">Select Option</option>
 									<option value="Yes">Negotiable</option>
 									<option value="No">Not Negotiable</option>
@@ -91,25 +107,25 @@
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-18">Bedrooms</label>
-                                <input name="bedroom" type="number" class="form-control" placeholder="5" min="0" max="9999" id="itemN-18">
+                                <input name="bedroom" type="number" class="form-control " placeholder="5" min="0" max="9999" id="itemN-18">
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-19">Bathrooms</label>
-                                <input name="bathroom" type="number" class="form-control" placeholder="3" min="0" max="9999" id="itemN-19">
+                                <input name="bathroom" type="number" class="form-control " placeholder="3" min="0" max="9999" id="itemN-19">
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-21">Land Area</label>
-                                <input name="area" type="number" class="form-control" placeholder="1500" id="itemN-21">
+                                <input name="area" type="number" class="form-control " placeholder="1500" id="itemN-21">
                               </div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="itemN-17">Area Unit</label>
-								  <select name="unit" data-placeholder="Select Option" class="form-control" id="itemN-17">
+								  <select name="unit" data-placeholder="Select Option" class="form-control " id="itemN-17">
 									  <option value="">Select Option</option>
 									  <option value="Marla">Marla</option>
 									  <option value="Kanal">Kanal</option>
@@ -122,14 +138,14 @@
                             <div class="col-xs-12">
                               <div class="form-group">
                               <label for="itemN-25">Description</label>
-                                <textarea name="description" class="form-control" id="itemN-25" placeholder=""></textarea>
+                                <textarea name="description" class="form-control " id="itemN-25" placeholder=""></textarea>
                               </div>
 							</div>
 								<h3 class="fontNeuron">Location</h3><br>
 								<div class="col-xs-12 col-sm-6">
 									<div class="form-group">
 									  <label for="city">City</label>
-									  <select id="city" name="city" data-placeholder="Choose..." class="form-control">
+									  <select id="city" name="city" data-placeholder="Choose..." class="form-control ">
 										<option value="">Select Area</option>
 										@if(isset($cities))
 										@foreach ($cities as $city)
@@ -142,7 +158,7 @@
 								  <div class="col-xs-12 col-sm-6">
 									<div class="form-group">
 									  <label for="sub_area">Sub Area</label>
-									  <select name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
+									  <select name="sub_area" data-placeholder="Select Option" class="form-control " id="sel1">
 										<option value="">Select Option</option>
 	
 									  </select>
@@ -152,71 +168,19 @@
 									<div class="form-group">
 									  <label for="item-map">Address / Location</label>
 									  <div class="input-group">
-										<input name="address" type="text" class="form-control" id="item-map" placeholder="Your address">
+										<input name="address" type="text" class="form-control " id="item-map" placeholder="Your address">
 									  </div>
 									</div>
 								  </div>
 								  <h3 class="fontNeuron">Photos</h3><br>
-								  <div class="galleryUploads">
-									<div class="titleArea">
-									  <span class="title">Photo Gallery</span>
-									  <p>*At least one image is for valid submission, minimum width of 817px.</p>
-									  <p>*You can mark an image as featured by clicking the star icon, Otherwise first image will be considered featured image.</p>
-									</div>
-									<div class="imageGallery">
-									  <div class="image imageLoaded">
-										<img src="https://via.placeholder.com/200x150" alt="" width="200" height="150">
-										<div class="btnsArea">
-										  <a href="#" class="link close"><i class="fa fa-window-close"></i></a>
-										  <a href="#" class="link"><i class="fi flaticon-edit"></i></a>
-										</div>
-										<a href="#" class="text">
-										  <span>
-											<i class="fi flaticon-cloud-computing"></i>
-											<span>Upload Image</span>
-										  </span>
-										</a>
-									  </div>
-									  <div class="image imageLoaded">
-										<img src="https://via.placeholder.com/200x150" alt="" width="200" height="150">
-										<div class="btnsArea">
-										  <a href="#" class="link close"><i class="fa fa-window-close"></i></a>
-										  <a href="#" class="link"><i class="fi flaticon-edit"></i></a>
-										</div>
-										<a href="#" class="text">
-										  <span>
-											<i class="fi flaticon-cloud-computing"></i>
-											<span>Upload Image</span>
-										  </span>
-										</a>
-									  </div>
-									  <div class="image imageLoaded">
-										<img src="https://via.placeholder.com/200x150" alt="" width="200" height="150">
-										<div class="btnsArea">
-										  <a href="#" class="link close"><i class="fa fa-window-close"></i></a>
-										</div>
-										<a href="#" class="text">
-										  <span>
-											<i class="fi flaticon-cloud-computing"></i>
-											<span>Upload Image</span>
-										  </span>
-										</a>
-									  </div>
-									  <div class="image">
-										<div class="btnsArea">
-										  <a href="#" class="link close"><i class="fa fa-window-close"></i></a>
-										  <a href="#" class="link"><i class="fi flaticon-edit"></i></a>
-										</div>
-										<a href="#" class="text">
-										  <span>
-											<i class="fi flaticon-cloud-computing"></i>
-											<span>Upload Image</span>
-										  </span>
-										</a>
+								  <div class="col-xs-12">
+									<div class="form-group">
+									  <label for="item-map">Upload images</label>
+									  <div class="input-group">
+										<input name="img_url[]" type="file" class="form-control" multiple>
 									  </div>
 									</div>
 								  </div>
-                          </div>
                           <div class="btnArea">
 							<br><button class="btn btnDark"><a href="/ho_dashboard">Back</a></button>
 							<button type="submit" class="btn btnDark">Save</button>
@@ -346,7 +310,7 @@
 
 			$.get('/ajax-sub-area?city_id=' + city_id, function(data){
 				console.log(data);
-				$('#sub_area_chosen').empty();
+				$('#sel1').empty();
 				$.each(data, function(index, subAreaObj){
 					$('#sel1').append('<option value="'+subAreaObj.id+'">'+subAreaObj.name+'</option>');
 				

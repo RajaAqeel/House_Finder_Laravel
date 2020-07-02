@@ -40,10 +40,10 @@ class WatchmanServiceController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'city' => 'required',
-            'sub_area' => 'required',
-            'service_title' => 'required',
-            'number' => 'required',
+            'city' => ['required'],
+            'sub_area' => ['required'],
+            'service_title' => ['required', 'regex:/^[a-zA-Z]+$/u'],
+            'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
         ]);
         $watchman = new watchman_service;
         $watchman->title = $request->get('service_title');
@@ -99,10 +99,10 @@ class WatchmanServiceController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'city' => 'required',
-            'sub_area' => 'required',
-            'service_title' => 'required',
-            'number' => 'required',
+            'city' => ['required'],
+            'sub_area' => ['required'],
+            'service_title' => ['required', 'regex:/^[a-zA-Z]+$/u'],
+            'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
         ]);
         $watchman = watchman_service::where('id', $id)->first();
         $watchman->title = $request->get('service_title');
