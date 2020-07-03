@@ -44,7 +44,7 @@
                       <h1 class="fontNeuron">Add New Service</h1> 
                       <ol class="navSteps">
                         <li>
-                          <a href="add-internetProvider-info.html">
+                          <a href="add-internetProvider-info">
                             <span class="text">Internet Provider</span>
                           </a>
                         </li>
@@ -99,7 +99,7 @@
 						</div>
 					  @endif
                       <div class="formContent">
-						<form method="POST" action="/addParkingService">
+						<form method="POST" action="/addParkingService"  enctype="multipart/form-data">
 							@csrf
                           <header class="contentHead">
                             <h2 class="fontNeuron">Basic Info</h2>
@@ -109,7 +109,7 @@
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="city">City</label>
-								  <select name="city" data-placeholder="Select Option"  class="form-control" id="city">
+								  <select required name="city" data-placeholder="Select Option"  class="form-control" id="city">
 									<option value="">Select Option</option>
 									  @foreach ($cities as $city)
 								  		<option value="{{$city->id}}">{{$city->name}}</option>
@@ -121,7 +121,7 @@
 							  <div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="sub_area">Sub Area</label>
-								  <select name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
+								  <select required name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
 									<option value="">Select Option</option>
 								  </select>
 								</div>
@@ -129,13 +129,13 @@
                             <div class="col-xs-12">
                               <div class="form-group">
                                 <label for="itemN-15">Service Title*</label>
-                                <input name="service_title" type="text" class="form-control" placeholder="Kiyani Parking" id="itemN-15">
+                                <input required name="service_title" type="text" class="form-control" placeholder="Kiyani Parking" id="itemN-15">
                               </div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="itemN-17">Area Unit</label>
-								  <select name="unit" data-placeholder="Select Option" class="form-control" id="itemN-17">
+								  <select required name="unit" data-placeholder="Select Option" class="form-control" id="itemN-17">
 									  <option value="">Select Option</option>
 									  <option value="Marla">Marla</option>
 									  <option value="Kanal">Kanal</option>
@@ -148,23 +148,32 @@
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-16">Land Area</label>
-                                <input name="value" type="number" class="form-control" placeholder="5" min="0" max="9999" id="itemN-16">
+                                <input required name="value" type="number" class="form-control" placeholder="5" min="0" max="9999" id="itemN-16">
                               </div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
                                 <div class="form-group">
                                   <label for="itemN-20">Phone Number</label>
-                                  <input name="number" type="number" class="form-control" placeholder="030000000000" id="itemN-20">
+                                  <input required name="number" type="number" class="form-control" placeholder="030000000000" id="itemN-20">
                                 </div>
                               </div>
                         
 							  <div class="col-xs-12">
                                 <div class="form-group">
                                   <label for="itemN-19">Address</label>
-                                  <input name="address" type="text" class="form-control" placeholder="Saddar near metro station" id="itemN-19">
+                                  <input required name="address" type="text" class="form-control" placeholder="Saddar near metro station" id="itemN-19">
                                 </div>
 							  </div>
-                          </div>
+							  <div class="col-xs-12">
+								<div class="form-group">
+								  <label for="item-map">Upload images</label>
+								  <div class="input-group">
+									<input required name="img_url[]" type="file" class="form-control" multiple>
+								  </div>
+								</div>
+							  </div>
+						  </div>
+						  
                           <div class="btnArea">
                             <button type="submit" class="btn btnDark"><a href="service-provider-view-profile.html">Save</a><i></i></button>
                           </div>
@@ -224,34 +233,6 @@
 									</ul>
 								</div>
 							</nav>
-							<div class="col-xs-12 col-sm-4 col">
-								<h2 class="fontNeuron fwSemi text-uppercase">LATEST PROPERTIES</h2>
-								<!-- postsWidgetList -->
-								<ul class="list-unstyled postsWidgetList">
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">Do what you love and tomorrow will pay</a></h3>
-											<h4 class="fwSemi">  1,27,000</h4>
-										</div>
-									</li>
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">We’re ready for the TRID rules!</a></h3>
-											<h4 class="fwSemi">  527,000</h4>
-										</div>
-									</li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</aside>

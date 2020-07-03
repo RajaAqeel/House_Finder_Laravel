@@ -50,61 +50,40 @@
                             <h2 class="fontNeuron">Basic Info</h2>
                           </header>
                           <div class="row">
-							<div class="col-xs-12 col-sm-6">
-								<div class="form-group">
-								  <label for="city">City</label>
-								  <select name="city" data-placeholder="Select Option"  class="form-control" id="city">
-                                  <option value="{{$city_name->id}}">{{$city_name->name}}</option>
-									  @foreach ($cities as $city)
-								  		<option value="{{$city->id}}">{{$city->name}}</option>
-									  @endforeach
-
-									</select>
-								</div>
-							  </div>
-							  <div class="col-xs-12 col-sm-6">
-								<div class="form-group">
-								  <label for="sub_area">Sub Area</label>
-								  <select name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
-                                  <option value="{{$sub_area->id}}">{{$sub_area->name}}</option>
-
-								  </select>
-								</div>
-							  </div>
                             <div class="col-xs-12">
                               <div class="form-group">
                                 <label for="itemN-15">Service Title*</label>
-                                <input name="service_title" type="text" class="form-control" placeholder="Rawalpindi DSL Providers" id="itemN-15">
+                                <input required name="service_title" type="text" class="form-control" placeholder="Rawalpindi DSL Providers" id="itemN-15">
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-16">Price/mb</label>
-                                <input name="price" type="text" class="form-control" placeholder="3000" id="itemN-16">
+                                <input required name="price" type="text" class="form-control" placeholder="3000" id="itemN-16">
                               </div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="itemN-17">Address</label>
-								  <input name="address" type="text" class="form-control" placeholder="Address" id="itemN-17">
+								  <input required name="address" type="text" class="form-control" placeholder="Address" id="itemN-17">
 								</div>
 							  </div>
 							  <div class="col-xs-12">
                                 <div class="form-group">
                                   <label for="itemN-36">Phone Number</label>
-                                  <input name="number" type="text" class="form-control" placeholder="03000000000" id="itemN-36">
+                                  <input required name="number" type="text" class="form-control" placeholder="03000000000" id="itemN-36">
                                 </div>
                               </div>
 							  <div class="col-xs-12 col-sm-6">
                                 <div class="form-group">
                                   <label for="itemN-32">Complaint Helpline</label>
-                                  <input name="c_hl" type="text" class="form-control" placeholder="1212" id="itemN-32">
+                                  <input required name="c_hl" type="text" class="form-control" placeholder="1212" id="itemN-32">
                                 </div>
 							  </div>
 							  <div class="col-xs-12 col-sm-6">
                                 <div class="form-group">
                                   <label for="itemN-34">Customer Care Helpline</label>
-                                  <input name="cc_hl" type="text" class="form-control" placeholder="1213" id="itemN-34">
+                                  <input required name="cc_hl" type="text" class="form-control" placeholder="1213" id="itemN-34">
                                 </div>
                               </div>
                         

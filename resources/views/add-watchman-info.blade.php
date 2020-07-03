@@ -120,7 +120,7 @@
 							  <div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="sub_area">Sub Area</label>
-								  <select name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
+								  <select required name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
 									<option value="">Select Option</option>
 								  </select>
 								</div>
@@ -130,26 +130,26 @@
                             <div class="col-xs-12">
                               <div class="form-group">
                                 <label for="itemN-15">Service Title*</label>
-                                <input name="service_title" type="text" class="form-control" placeholder="Askari guards" id="itemN-15">
+                                <input required name="service_title" type="text" class="form-control" placeholder="Askari guards" id="itemN-15">
                               </div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="itemN-32">Guard Name</label>
-								  <input name="name" type="text" class="form-control" placeholder="Asad" id="itemN-32">
+								  <input required name="name" type="text" class="form-control" placeholder="Asad" id="itemN-32">
 								</div>
 							  </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-16">Phone Number</label>
-                                <input name="number" type="number" class="form-control" placeholder="15000" min="0" max="30000" id="itemN-16">
+                                <input required name="number" type="number" class="form-control" placeholder="15000" min="0" max="30000" id="itemN-16">
                               </div>
                             </div>
 
                             <div class="col-xs-12">
                               <div class="form-group">
                               <label for="itemN-25">Description</label>
-                                <textarea name="description" class="form-control" id="itemN-25" placeholder=""></textarea>
+                                <textarea required name="description" class="form-control" id="itemN-25" placeholder=""></textarea>
                               </div>
                             </div>
                           </div>
@@ -214,34 +214,6 @@
 									</ul>
 								</div>
 							</nav>
-							<div class="col-xs-12 col-sm-4 col">
-								<h2 class="fontNeuron fwSemi text-uppercase">LATEST PROPERTIES</h2>
-								<!-- postsWidgetList -->
-								<ul class="list-unstyled postsWidgetList">
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">Do what you love and tomorrow will pay</a></h3>
-											<h4 class="fwSemi">  1,27,000</h4>
-										</div>
-									</li>
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">We’re ready for the TRID rules!</a></h3>
-											<h4 class="fwSemi">  527,000</h4>
-										</div>
-									</li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</aside>

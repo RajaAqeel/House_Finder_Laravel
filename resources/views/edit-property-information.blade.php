@@ -54,35 +54,19 @@
 							<div class="col-xs-12">
 								<div class="form-group">
 								  <label for="itemN-90">Title</label>
-								  <input name="title" type="text" class="form-control" placeholder="{{$house->title}}" id="itemN-90">
-								</div>
-							  </div>
-							<div class="col-xs-12">
-								<div class="form-group">
-								  <label for="itemN-17">Property Type</label>
-								  <select name="type" data-placeholder="Select Option" class="form-control" id="itemN-17">
-									<option value="{{$house->type}}">{{$house->type}}</option>
-									  <option value="Flat">Flat</option>
-									  <option value="House">House</option>
-									  <option value="Apartment">Apartment</option>
-									  <option value="Room">Room</option>
-									  <option value="Office">Office</option>
-									  <option value="Penthouse">Penthouse</option>
-									  <option value="Upper Portion">Upper Portion</option>
-									  <option value="Lower Portion">Lower Portion</option>
-									</select>
+								  <input required name="title" type="text" class="form-control" placeholder="{{$house->title}}" id="itemN-90">
 								</div>
 							  </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-16">Price</label>
-                                <input name="price" type="text" class="form-control" placeholder="{{$house->price}}" id="itemN-16">
+                                <input required name="price" type="text" class="form-control" placeholder="{{$house->price}}" id="itemN-16">
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-17">Price</label>
-                                <select name="negotiable" data-placeholder="Select Option" class="form-control" id="itemN-17">
+                                <select required name="negotiable" data-placeholder="Select Option" class="form-control" id="itemN-17">
 									<option value="{{$house->negotiable}}">{{$house->negotiable}}</option>
 									<option value="Yes">Negotiable</option>
 									<option value="No">Not Negotiable</option>
@@ -92,25 +76,19 @@
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-18">Bedrooms</label>
-                                <input name="bedroom" type="number" class="form-control" placeholder="{{$house->bedrooms}}" min="0" max="9999" id="itemN-18">
+                                <input required name="bedroom" type="number" class="form-control" placeholder="{{$house->bedrooms}}" min="0" max="9999" id="itemN-18">
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-19">Bathrooms</label>
-                                <input name="bathroom" type="number" class="form-control" placeholder="{{$house->bathrooms}}" min="0" max="9999" id="itemN-19">
-                              </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="form-group">
-                                <label for="itemN-21">Land Area</label>
-                                <input name="area" type="number" class="form-control" placeholder="{{$house->area_value}}" id="itemN-21">
+                                <input required name="bathroom" type="number" class="form-control" placeholder="{{$house->bathrooms}}" min="0" max="9999" id="itemN-19">
                               </div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="itemN-17">Area Unit</label>
-								  <select name="unit" data-placeholder="Select Option" class="form-control" id="itemN-17">
+								  <select required name="unit" data-placeholder="Select Option" class="form-control" id="itemN-17">
 									  <option value="{{$house->area_unit}}">{{$house->area_unit}}</option>
 									  <option value="Marla">Marla</option>
 									  <option value="Kanal">Kanal</option>
@@ -120,49 +98,24 @@
 									</select>
 								</div>
 							  </div>
+                            <div class="col-xs-12 col-sm-6">
+                              <div class="form-group">
+                                <label for="itemN-21">Land Area</label>
+                                <input required name="area" type="number" class="form-control" placeholder="{{$house->area_value}}" id="itemN-21">
+                              </div>
+							</div>
                             <div class="col-xs-12">
                               <div class="form-group">
                               <label for="itemN-25">Description</label>
-                                <textarea name="description" class="form-control" id="itemN-25" placeholder="{{$house->description}}"></textarea>
+                                <textarea required name="description" class="form-control" id="itemN-25" placeholder="{{$house->description}}"></textarea>
                               </div>
 							</div>
-								<h3 class="fontNeuron">Location</h3><br>
-								<div class="col-xs-12 col-sm-6">
-									<div class="form-group">
-									  <label for="city">City</label>
-									  <select id="cityS" name="city" data-placeholder="Choose..." class="form-control">
-										<option value="{{$house->city_id}}">{{$city_name->name}}</option>
-										@if(isset($cities))
-										@foreach ($cities as $city)
-										<option value="{{$city->id}}">{{$city->name}}</option>
-									@endforeach
-									@endif
-									  </select>
-									</div>
-								  </div>
-								  <div class="col-xs-12 col-sm-6">
-									<div class="form-group">
-									  <label for="sub_area">Sub Area</label>
-									  <select name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
-										<option value="{{$house->sub_area_id}}">{{$sub_area_name->name}}</option>
-	
-									  </select>
-									</div>
-								  </div>
-								  <div class="col-xs-12">
-									<div class="form-group">
-									  <label for="item-map">Address / Location</label>
-									  <div class="input-group">
-										<input name="address" type="text" class="form-control" id="item-map" placeholder="{{$house->address}}">
-									  </div>
-									</div>
-								  </div>
 								  <h3 class="fontNeuron">Photos</h3><br>
 								  <div class="col-xs-12">
 									<div class="form-group">
 									  <label for="item-map">Upload images</label>
 									  <div class="input-group">
-										<input name="photo" type="file" class="form-control ">
+										<input required name="photo" type="file" class="form-control ">
 									  </div>
 									</div>
 								  </div>
@@ -227,34 +180,6 @@
 									</ul>
 								</div>
 							</nav>
-							<div class="col-xs-12 col-sm-4 col">
-								<h2 class="fontNeuron fwSemi text-uppercase">LATEST PROPERTIES</h2>
-								<!-- postsWidgetList -->
-								<ul class="list-unstyled postsWidgetList">
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">Do what you love and tomorrow will pay</a></h3>
-											<h4 class="fwSemi">  1,27,000</h4>
-										</div>
-									</li>
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">We’re ready for the TRID rules!</a></h3>
-											<h4 class="fwSemi">  527,000</h4>
-										</div>
-									</li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</aside>

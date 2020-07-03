@@ -69,13 +69,13 @@
 							<div class="col-xs-12">
 								<div class="form-group">
 								  <label for="itemN-90">Title</label>
-								  <input name="title" type="text" class="form-control " placeholder=" title" id="itemN-90" required>
+								  <input required name="title" type="text" class="form-control " placeholder=" title" id="itemN-90" required>
 								</div>
 							  </div>
 							<div class="col-xs-12">
 								<div class="form-group">
 								  <label for="itemN-17">Property Type</label>
-								  <select name="type" data-placeholder="Select Option" class="form-control " id="itemN-17">
+								  <select required name="type" data-placeholder="Select Option" class="form-control " id="itemN-17">
 									<option value="">Select Option</option>
 									  <option value="Flat">Flat</option>
 									  <option value="House">House</option>
@@ -91,13 +91,13 @@
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-16">Price</label>
-                                <input name="price" type="number" class="form-control " placeholder=" 158" id="itemN-16" required>
+                                <input required name="price" type="number" class="form-control " placeholder=" 158" id="itemN-16" required>
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-17">Price</label>
-                                <select name="negotiable" data-placeholder="Select Option" class="form-control " id="itemN-17">
+                                <select required name="negotiable" data-placeholder="Select Option" class="form-control " id="itemN-17">
 									<option value="">Select Option</option>
 									<option value="Yes">Negotiable</option>
 									<option value="No">Not Negotiable</option>
@@ -107,25 +107,19 @@
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-18">Bedrooms</label>
-                                <input name="bedroom" type="number" class="form-control " placeholder="5" min="0" max="9999" id="itemN-18">
+                                <input required name="bedroom" type="number" class="form-control " placeholder="5" min="0" max="9999" id="itemN-18">
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-19">Bathrooms</label>
-                                <input name="bathroom" type="number" class="form-control " placeholder="3" min="0" max="9999" id="itemN-19">
-                              </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="form-group">
-                                <label for="itemN-21">Land Area</label>
-                                <input name="area" type="number" class="form-control " placeholder="1500" id="itemN-21">
+                                <input required name="bathroom" type="number" class="form-control " placeholder="3" min="0" max="9999" id="itemN-19">
                               </div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="itemN-17">Area Unit</label>
-								  <select name="unit" data-placeholder="Select Option" class="form-control " id="itemN-17">
+								  <select required name="unit" data-placeholder="Select Option" class="form-control " id="itemN-17">
 									  <option value="">Select Option</option>
 									  <option value="Marla">Marla</option>
 									  <option value="Kanal">Kanal</option>
@@ -135,17 +129,23 @@
 									</select>
 								</div>
 							  </div>
+                            <div class="col-xs-12 col-sm-6">
+                              <div class="form-group">
+                                <label for="itemN-21">Land Area</label>
+                                <input required name="area" type="number" class="form-control " placeholder="1500" id="itemN-21">
+                              </div>
+							</div>
                             <div class="col-xs-12">
                               <div class="form-group">
                               <label for="itemN-25">Description</label>
-                                <textarea name="description" class="form-control " id="itemN-25" placeholder=""></textarea>
+                                <textarea required name="description" class="form-control " id="itemN-25" placeholder=""></textarea>
                               </div>
 							</div>
 								<h3 class="fontNeuron">Location</h3><br>
 								<div class="col-xs-12 col-sm-6">
 									<div class="form-group">
 									  <label for="city">City</label>
-									  <select id="city" name="city" data-placeholder="Choose..." class="form-control ">
+									  <select required id="city" name="city" data-placeholder="Choose..." class="form-control ">
 										<option value="">Select Area</option>
 										@if(isset($cities))
 										@foreach ($cities as $city)
@@ -158,7 +158,7 @@
 								  <div class="col-xs-12 col-sm-6">
 									<div class="form-group">
 									  <label for="sub_area">Sub Area</label>
-									  <select name="sub_area" data-placeholder="Select Option" class="form-control " id="sel1">
+									  <select required name="sub_area" data-placeholder="Select Option" class="form-control " id="sel1">
 										<option value="">Select Option</option>
 	
 									  </select>
@@ -168,7 +168,7 @@
 									<div class="form-group">
 									  <label for="item-map">Address / Location</label>
 									  <div class="input-group">
-										<input name="address" type="text" class="form-control " id="item-map" placeholder="Your address">
+										<input required name="address" type="text" class="form-control " id="item-map" placeholder="Your address">
 									  </div>
 									</div>
 								  </div>
@@ -177,7 +177,7 @@
 									<div class="form-group">
 									  <label for="item-map">Upload images</label>
 									  <div class="input-group">
-										<input name="img_url[]" type="file" class="form-control" multiple>
+										<input required name="img_url[]" type="file" class="form-control" multiple>
 									  </div>
 									</div>
 								  </div>
@@ -241,34 +241,6 @@
 									</ul>
 								</div>
 							</nav>
-							<div class="col-xs-12 col-sm-4 col">
-								<h2 class="fontNeuron fwSemi text-uppercase">LATEST PROPERTIES</h2>
-								<!-- postsWidgetList -->
-								<ul class="list-unstyled postsWidgetList">
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">Do what you love and tomorrow will pay</a></h3>
-											<h4 class="fwSemi">  1,27,000</h4>
-										</div>
-									</li>
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">We’re ready for the TRID rules!</a></h3>
-											<h4 class="fwSemi">  527,000</h4>
-										</div>
-									</li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</aside>

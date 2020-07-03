@@ -109,7 +109,7 @@
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="city">City</label>
-								  <select name="city" data-placeholder="Select Option"  class="form-control" id="city">
+								  <select required name="city" data-placeholder="Select Option"  class="form-control" id="city">
 									<option value="">Select Option</option>
 									  @foreach ($cities as $city)
 								  		<option value="{{$city->id}}">{{$city->name}}</option>
@@ -121,7 +121,7 @@
 							  <div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="sub_area">Sub Area</label>
-								  <select name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
+								  <select required name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
 									<option value="">Select Option</option>
 								  </select>
 								</div>
@@ -129,26 +129,26 @@
                             <div class="col-xs-12">
                               <div class="form-group">
                                 <label for="itemN-15">Name*</label>
-                                <input name="name" type="text" class="form-control" placeholder="Maids Services pvt" id="itemN-15">
+                                <input required name="name" type="text" class="form-control" placeholder="Maids Services pvt" id="itemN-15">
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-16">Phone Number</label>
-                                <input name="number" type="number" class="form-control" placeholder="03000000000" id="itemN-16">
+                                <input required name="number" type="number" class="form-control" placeholder="03000000000" id="itemN-16">
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group">
                                   <label for="itemN-18">Address</label>
-                                  <input name="address" type="text" class="form-control" placeholder="Rawalpindi cantt" id="itemN-18">
+                                  <input required name="address" type="text" class="form-control" placeholder="Rawalpindi cantt" id="itemN-18">
                                 </div>
                               </div>
 
                             <div class="col-xs-12">
                               <div class="form-group">
                               <label for="itemN-25">Description</label>
-                                <textarea name="description" class="form-control" id="itemN-25" placeholder="Service Description.."></textarea>
+                                <textarea required name="description" class="form-control" id="itemN-25" placeholder="Service Description.."></textarea>
                               </div>
                             </div>
                           </div>
@@ -212,34 +212,6 @@
 									</ul>
 								</div>
 							</nav>
-							<div class="col-xs-12 col-sm-4 col">
-								<h2 class="fontNeuron fwSemi text-uppercase">LATEST PROPERTIES</h2>
-								<!-- postsWidgetList -->
-								<ul class="list-unstyled postsWidgetList">
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">Do what you love and tomorrow will pay</a></h3>
-											<h4 class="fwSemi">  1,27,000</h4>
-										</div>
-									</li>
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">We’re ready for the TRID rules!</a></h3>
-											<h4 class="fwSemi">  527,000</h4>
-										</div>
-									</li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</aside>

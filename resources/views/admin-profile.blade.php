@@ -302,24 +302,26 @@
                                 <div class="accountHolder">
                                   <div class="imgProfile">
                                     <div class="imgThumbnail">
-									  @if ({{$admin->image}} != null)
-									<img src="storage/uploads/{{$admin->image}}" alt="" width="200" height="200">
-									  @else
-									  	<img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
-									  @endif
+										@if (@isset($admin->image))
+										@if ({{$admin->image}} != null)
+										<img src="storage/uploads/{{$admin->image}}" alt="" width="200" height="200">
+										  @else
+											  <img src="https://via.placeholder.com/200x200" alt="" width="200" height="200">
+										  @endif
+										@endif
                                     </div>
-									  <input name="image" type="file" class="form-control" id="itemN-1">
+									  <input required name="image" type="file" class="form-control" id="itemN-1">
                                     </div>
                                     <span class="text text-center">*minimum 200px x 200px</span>
                                   </div>
                                   <div class="accountContent">
                                     <div class="form-group">
                                       <label for="itemN-3">Phone</label>
-                                      <input name="phone_number" type="tel" class="form-control" placeholder="0402 2020 202" id="itemN-3">
+                                      <input required name="phone_number" type="tel" class="form-control" placeholder="0402 2020 202" id="itemN-3">
                                     </div>
                                     <div class="form-group">
                                       <label for="itemN-4">Biography</label>
-                                      <textarea name="bio" id="itemN-4" class="form-control" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.Phasellus mollis imperdiet placerat"></textarea>
+                                      <textarea required name="bio" id="itemN-4" class="form-control" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.Phasellus mollis imperdiet placerat"></textarea>
 									</div>
 									<button type="submit" class="btn alighRight btnSecondary buttonL fontNeuron">Update Profile</button>
 								  </div>
@@ -383,34 +385,6 @@
 									</ul>
 								</div>
 							</nav>
-							<div class="col-xs-12 col-sm-4 col">
-								<h2 class="fontNeuron fwSemi text-uppercase">LATEST PROPERTIES</h2>
-								<!-- postsWidgetList -->
-								<ul class="list-unstyled postsWidgetList">
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">Do what you love and tomorrow will pay</a></h3>
-											<h4 class="fwSemi">  1,27,000</h4>
-										</div>
-									</li>
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">We’re ready for the TRID rules!</a></h3>
-											<h4 class="fwSemi">  527,000</h4>
-										</div>
-									</li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</aside>

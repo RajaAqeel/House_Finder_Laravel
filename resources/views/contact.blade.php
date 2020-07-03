@@ -235,19 +235,19 @@
 											<div class="row">
 												<div class="col-xs-12 col-md-6">
 													<div class="form-group">
-														<input name="name" type="text" id="txtname" placeholder="Your Name" class="form-control"  data-error="NEW ERROR MESSAGE">
+														<input required name="name" type="text" id="txtname" placeholder="Your Name" class="form-control"  data-error="NEW ERROR MESSAGE">
 														<div>{{ $errors->first('name')}}</div>
 													</div>
 												</div>
 												<div class="col-xs-12 col-md-6">
 													<div class="form-group">
-														<input name="email" type="email" id="txtemail" placeholder="Email" class="form-control"  data-error="NEW ERROR MESSAGE">
+														<input readonly name="email" type="email" id="txtemail" placeholder="Email" class="form-control"  data-error="NEW ERROR MESSAGE">
 														<div>{{ $errors->first('email')}}</div>
 													</div>
 												</div>
 											</div>
 											<div class="form-group">
-												<textarea name="message" class="form-control" id="txtmessage" placeholder="Message"  data-error="NEW ERROR MESSAGE"></textarea>
+												<textarea readonly name="message" class="form-control" id="txtmessage" placeholder="Message"  data-error="NEW ERROR MESSAGE"></textarea>
 												<div>{{ $errors->first('message')}}</div>
 											</div>
 											<button type="submit" class="btn btnDark fontNeuron buttonXL" id="form-submit">Send Message</button>
@@ -339,34 +339,6 @@
 									</ul>
 								</div>
 							</nav>
-							<div class="col-xs-12 col-sm-4 col">
-								<h2 class="fontNeuron fwSemi text-uppercase">LATEST PROPERTIES</h2>
-								<!-- postsWidgetList -->
-								<ul class="list-unstyled postsWidgetList">
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">Do what you love and tomorrow will pay</a></h3>
-											<h4 class="fwSemi">  1,27,000</h4>
-										</div>
-									</li>
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">We’re ready for the TRID rules!</a></h3>
-											<h4 class="fwSemi">  527,000</h4>
-										</div>
-									</li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</aside>

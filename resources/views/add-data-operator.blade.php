@@ -62,38 +62,44 @@
                       <div class="formContent">
                         <form method="POST" action="/dataOperatorStore">
                             @csrf
-                          <header class="contentHead">
-                            <h2 class="fontNeuron">Add City</h2>
-                          </header>
                           <div class="row">
                             <div class="col-xs-12">
                               <div class="form-group">
                                 <label for="itemN-15">Full Name</label>
-                                <input name="name" type="text" class="form-control" placeholder="Full name" id="itemN-15" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input required name="name" type="text" class="form-control" placeholder="Full name" id="itemN-15" value="{{ old('name') }}" required autocomplete="name" autofocus>
                               </div>
                             </div>
                             <div class="col-xs-12">
                                 <div class="form-group">
                                   <label for="itemN-16">Email</label>
-                                  <input name="email" type="email" class="form-control" placeholder="Email" id="itemN-16" value="{{ old('email') }}" required autocomplete="email">
+                                  <input required name="email" type="email" class="form-control" placeholder="Email" id="itemN-16" value="{{ old('email') }}" required autocomplete="email">
                                 </div>
                               </div>
                               <div class="col-xs-12">
                                 <div class="form-group">
                                   <label for="itemN-17">Password</label>
-                                  <input name="password" type="password" class="form-control" placeholder="Password" id="itemN-17" required autocomplete="new-password">
+                                  <input required name="password" type="password" class="form-control" placeholder="Password" id="itemN-17" required autocomplete="new-password">
                                 </div>
                               </div>
                               <div class="col-xs-12">
                                 <div class="form-group">
                                   <label for="itemN-18">Confirm Password</label>
-                                  <input name="password_confirmation" type="password" class="form-control" placeholder="Confirm Password" id="itemN-18" required autocomplete="new-password">
+                                  <input required name="password_confirmation" type="password" class="form-control" placeholder="Confirm Password" id="itemN-18" required autocomplete="new-password">
                                 </div>
-                              </div>
+							  </div>
+							  <div class="col-xs-12">
+                                <div class="form-group">
+									<label for="itemN-19">City</label>
+								<select required id="itemN-19" name="user_type" value="{{ old('user_type') }}" data-placeholder="Type" class="chosen-select" class="form-control elemenBlock">
+									<option>Select</option>
+                                    <option value=""></option>                                
+                                </select>
+                                </div>
+                            </div>
                               <div class="col-xs-12">
                                 <div class="form-group">
 									<label for="itemN-19">Type</label>
-								<select id="itemN-19" name="user_type" value="{{ old('user_type') }}" data-placeholder="Type" class="chosen-select" class="form-control elemenBlock">
+								<select required id="itemN-19" name="user_type" value="{{ old('user_type') }}" data-placeholder="Type" class="chosen-select" class="form-control elemenBlock">
 									<option>Select</option>
                                     <option value="Data Operator">Data Operator</option>                                
                                 </select>
@@ -160,34 +166,6 @@
 									</ul>
 								</div>
 							</nav>
-							<div class="col-xs-12 col-sm-4 col">
-								<h2 class="fontNeuron fwSemi text-uppercase">LATEST PROPERTIES</h2>
-								<!-- postsWidgetList -->
-								<ul class="list-unstyled postsWidgetList">
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">Do what you love and tomorrow will pay</a></h3>
-											<h4 class="fwSemi">  1,27,000</h4>
-										</div>
-									</li>
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">We’re ready for the TRID rules!</a></h3>
-											<h4 class="fwSemi">  527,000</h4>
-										</div>
-									</li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</aside>

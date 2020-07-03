@@ -215,13 +215,13 @@
                                       <div class="col-xs-12 col-md-6">
                                         <div class="form-group">
                                           <label for="itemN-5">Current Password</label>
-                                          <input name="CPassword" type="password" class="form-control" placeholder="password" id="itemN-5">
+                                          <input required name="CPassword" type="password" class="form-control" placeholder="password" id="itemN-5">
                                         </div>
                                       </div>
                                       <div class="col-xs-12 col-md-6">
                                         <div class="form-group">
                                           <label for="itemN-5">New Password</label>
-                                          <input name="NPassword" type="password" class="form-control" placeholder="password" id="itemN-5">
+                                          <input required name="NPassword" type="password" class="form-control" placeholder="password" id="itemN-5">
                                         </div>
                                       </div>
                                     </div>
@@ -229,7 +229,7 @@
                                       <div class="col-xs-12 col-md-6">
                                         <div class="form-group">
                                           <label for="itemN-6">Confirm Password</label>
-                                          <input name="ConPassword" type="password" class="form-control" placeholder="password" id="itemN-6"><br><br>
+                                          <input required name="ConPassword" type="password" class="form-control" placeholder="password" id="itemN-6"><br><br>
                                         </div>
                                       </div>
                                     </div>
@@ -294,34 +294,6 @@
 									</ul>
 								</div>
 							</nav>
-							<div class="col-xs-12 col-sm-4 col">
-								<h2 class="fontNeuron fwSemi text-uppercase">LATEST PROPERTIES</h2>
-								<!-- postsWidgetList -->
-								<ul class="list-unstyled postsWidgetList">
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">Do what you love and tomorrow will pay</a></h3>
-											<h4 class="fwSemi">  1,27,000</h4>
-										</div>
-									</li>
-									<li>
-										<div class="alignleft">
-											<a href="properties-single2.html">
-												<img src="https://via.placeholder.com/90x70" alt="image description">
-											</a>
-										</div>
-										<div class="descrWrap">
-											<h3 class="fwNormal"><a href="properties-single2.html">We’re ready for the TRID rules!</a></h3>
-											<h4 class="fwSemi">  527,000</h4>
-										</div>
-									</li>
-								</ul>
-							</div>
 						</div>
 					</div>
 				</aside>
