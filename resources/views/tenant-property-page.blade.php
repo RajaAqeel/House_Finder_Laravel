@@ -244,12 +244,12 @@
 						<!-- contentFiltersHeadingWrap -->
 						<header class="contentFiltersHeadingWrap row">
 							<div class="col-xs-12 col col-sm-8">
-								<h1 class="fontNeuron">{{$schoolvan->title}} <a href="#"
-										class="btn btnSmall btn-success fontBase">{{$schoolvan->status}}</a></h1>
+								<h1 class="fontNeuron">{{$house->title}} <a href="#"
+										class="btn btnSmall btn-success fontBase">{{$house->status}}</a></h1>
 								<!-- captionAddress -->
 								<address class="captionAddress">
-									<span class="icn"><i class="fi flaticon-pin-1"></i>Driver Name</span>
-									<p>{{$schoolvan->driver_name}}</p>
+									<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+									<p>{{$house->address}} {{$sub_area_name->name}} {{$city_name->name}}</p>
 								</address>
 							</div>
 							<div class="col-xs-12 col-sm-4 justify-end">
@@ -265,7 +265,9 @@
 									</li>
 									<li><a href="#"><i class="fi flaticon-printer"></i></a></li>
 								</ul>
-								<strong class="elemenBlock fwNormal fontNeuron subtitle w100">{{$schoolvan->phone_number}}</strong>
+								<strong class="elemenBlock price fwSemi fontNeuron w100"> {{$house->price}}</strong>
+								<strong class="elemenBlock fwNormal fontNeuron subtitle w100">{{$house->area_value}} /
+									{{$house->area_unit}}</strong>
 							</div>
 						</header>
 					</section>
@@ -276,11 +278,44 @@
 								<!-- content -->
 								<article id="content">
 									<!-- tabs -->
+									<div class="tabSetholder tabschanges bgWhite">
+										<div class="tab-content">
+											<div id="tab1-0">
+												<div class="slick-carousel slickSlider postColumnImageSlider">
+														<div>
+															<div class="imgHolder">
+																<a href="#">
+																	<img src="../../storage/houses/{{$house->photo}}" alt="image description">
+																</a>
+															</div>
+														</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- boxPanelBlock -->
+									<section id="Detail" class="accountData">
+										<div class="head">
+											<h2 class="fontNeuron">Detail</h2>
+										</div>
+										<ul class="listpanel-head">
+											<li>beds<span>{{$house->bedrooms}}</span></li>
+											<li>baths<span>{{$house->bathrooms}}</span></li>
+										</ul>
+										<div class="listpanel-content">
+											<ul>
+												<li><span>Property ID</span><span class="righttext">:
+														{{$house->id}}</span></li>
+												<li><span>Property Size</span><span class="righttext">:
+														{{$house->area_value}} {{$house->area_unit}}</span></li>
+											</ul>
+										</div>
+									</section>
 									<section class="accountData">
 										<div class="head">
 											<h4 class="fontNeuron">Description</h4>
 										</div>
-										<p>{{$schoolvan->description}}</p>
+										<p>{{$house->description}}</p>
 									</section>
 									<section id="address" class="accountData address">
 										<div class="head">
@@ -288,6 +323,8 @@
 										</div>
 										<div class="listpanel-content widthauto address paddingzero">
 											<ul>
+												<li><span>Address</span><span class="righttext">: {{$house->address}},
+														{{$sub_area_name->name}}, {{$city_name->name}}</span></li>
 												<li><span>Country</span><span class="righttext">: Pakistan</span></li>
 												<li><span>City</span><span class="righttext">:
 														{{$city_name->name}}</span></li>
@@ -304,9 +341,18 @@
 									<section class="contactFormPage widget">
 										<div class="hb-headarea">
 											<div class="holder">
+												<figure class="hb-author-img pull-left">
+													@if (isset($houseOwner->image))
+													<a href="#"><img src="../../storage/uploads/House Owner Profile/{{$houseOwner->image}}"
+														alt="image description"></a>
+													@else
+													<a href="#"><img src=""
+														alt="image description"></a>
+													@endif
+												</figure>
 												<div class="pull-left">
 													<div class="hb-headcontent">
-														<span>{{Auth::user()->name}}</span>
+														<span>Ali Tofan</span>
 													</div>
 												</div>
 											</div>
@@ -314,30 +360,30 @@
 												<h3><i class="fi flaticon-24-hours"></i>+92 3065085832</h3>
 											</div>
 										</div>
-										<form method="POST" accept="/verifyInternet" class="widgetCalcForm">
+										<form method="POST" accept="/verifyHouse" class="widgetCalcForm">
 											<div class="row">
 												<div class="col-xs-12">
 													<div class="form-group">
-														<input required name="name" type="text" placeholder="Your Name"
+														<input name="name" type="text" placeholder="Your Name"
 															class="form-control">
 													</div>
 												</div>
 												<div class="col-xs-12">
 													<div class="form-group">
-														<input required name="number" type="tel" placeholder="Phone"
+														<input name="number" type="tel" placeholder="Phone"
 															class="form-control">
 													</div>
 												</div>
 												<div class="col-xs-12">
 													<div class="form-group">
-														<input required name="email" type="email" placeholder="Email"
+														<input name="email" type="email" placeholder="Email"
 															class="form-control">
 													</div>
 												</div>
 											</div>
 											<div class="form-group">
-												<textarea required name="message" class="form-control"
-													placeholder="">Hello, I hope you will be in your good health. I am agreed with ur payment for verifying my property. So i would like to verify my school van service with service id {{$schoolvan->id}}. Thanks</textarea>
+												<textarea name="message" class="form-control"
+													placeholder="">Hello, I hope you will be in your good health. I am agreed with ur payment for verifying my property. So i would like to verify my property with property id {{$house->id}}. Thanks</textarea>
 											</div>
 											<button type="submit"
 												class="btn btnDark fontNeuron buttonXL">Submit</button>
@@ -345,6 +391,61 @@
 									</section>
 								</aside>
 							</div>
+							<div class="col-xs-12">
+								<header class="rowHead">
+									<h1 class="fontNeuron blockH text-uppercase"><span class="bdrBottom">LATEST</span>
+										<span class="textSecondary">PROPERTIES</span></h1>
+								</header>
+							</div>
+							@if (isset($allHouses))
+									@if (count($allHouses) > 0)
+										@foreach ($allHouses as $Houses)
+										<div class="col-xs-12 col-sm-6 col-md-4 col isoCol sale">
+											<!-- postColumn -->
+											<article class="postColumn hasOver bgWhite">
+												<div class="aligncenter">
+													<!-- postColumnImageSlider -->
+													<div class="slick-carousel slickSlider postColumnImageSlider">
+														<div>
+															<div class="imgHolder">
+																<a href="/houses/{{$Houses->id}}">
+																<img src="../../storage/houses/{{$Houses->photo}}"
+																		alt="image description">
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											<h2 class="fontNeuron text-capitalize"><a href="/houses/{{$Houses->id}}">{{$Houses->title}}</a></h2>
+												<address>
+													<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+													<p>{{$Houses->address}}, {{$sub_area_name->name}}, {{$city_name->name}} </p>
+												</address>
+												<span class="btn btnSmall btn-success text-capitalize">{{$Houses->status}} For Rent</span>
+												<h3 class="fontNeuron fwSemi"><span class="textSecondary"> {{$Houses->price}}</span> <span
+														class="textUnit fwNormal">/ monthly</span></h3>
+												<!-- postColumnFoot -->
+												<footer class="postColumnFoot">
+													<ul class="list-unstyled">
+														<li>
+															<strong class="fwNormal elemenBlock text-primary">Area</strong>
+															<strong class="fwNormal elemenBlock">{{$Houses->area_value}} {{$Houses->area_unit}}</strong>
+														</li>
+														<li>
+															<strong class="fwNormal elemenBlock text-primary">Beds</strong>
+															<strong class="fwNormal elemenBlock">{{$Houses->bedrooms}}</strong>
+														</li>
+														<li>
+															<strong class="fwNormal elemenBlock text-primary">Baths</strong>
+															<strong class="fwNormal elemenBlock">{{$Houses->bathrooms}}</strong>
+														</li>
+													</ul>
+												</footer>
+											</article>
+										</div>
+										@endforeach
+									@endif
+								@endif
 						</div>
 					</div>
 				</main>
@@ -413,7 +514,7 @@
 				<a href="#pageWrapper" class="btnScrollToTop smooth textWhite">Scroll Top <i
 						class="fi flaticon-arrows btnScrollIcn"></i></a>
 				<span class="bgCover elemenBlock"
-					style="background-image: url(https://via.placeholder.com/1920x520);"></span>
+					style=""></span>
 			</div>
 		</div>
 		<!-- pagePopupWrap -->
@@ -481,6 +582,7 @@
 										<select data-placeholder="Type" class="chosen-select">
 											<option value="1">House Owner</option>
 											<option value="2">Service Owner</option>
+											<option value="3">Data Operator</option>
 										</select>
 									</div>
 									<div class="form-group">

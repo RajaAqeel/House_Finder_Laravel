@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\sub_area;
 use App\city;
+use Auth;
+use App\data_operator;
 use Illuminate\Http\Request;
 
 class SubAreaController extends Controller
@@ -39,13 +41,14 @@ class SubAreaController extends Controller
     {
         $this->validate($request, [
             'city' => ['required'],
-            'sub_area' => ['required', 'regex:/^[a-zA-Z]+$/u'],
+            'sub_area' => ['required'],
         ]);
 
         $subArea = new sub_area;
         $subArea->name = $request->input('sub_area');
         $subArea->city_id = $request->input('city');
-        
+        $dp = data_operator::where('user_id', Auth::user()->id)->first();
+        $subArea->data_operator_id = $dp->id;
         $subArea->save();
         return redirect('/add-sub-area');
     }

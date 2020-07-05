@@ -5,15 +5,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- set the page title -->
-	<title>Add  School Van Service</title>
+	<title>Edit Property Information</title>
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
 	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="css/fancybox.css">
+	<link rel="stylesheet" href="/css/fancybox.css">
 	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 	<!-- pageWrapper -->
@@ -31,7 +31,7 @@
 							<!-- headerHolder -->
 							<div class="headerHolder">
                               <!-- logo -->
-                              <div class="logo logoCentered"><a href="home"><img src="images/logo.png" alt="LemanHouse"></a></div>
+                              <div class="logo logoCentered"><a href="home"><img src="/images/logo.png" alt="LemanHouse"></a></div>
 							</div>
 						</div>
 					</div>
@@ -41,123 +41,30 @@
                   <!-- content -->
                   <section id="content" class="container pEqual">
                     <div class="addProperty">
-                      <h1 class="fontNeuron">Add New Service</h1> 
-                      <ol class="navSteps">
-                        <li>
-                          <a href="add-internetProvider-info.html">
-                            <span class="text">Internet Provider</span>
-                          </a>
-                        </li>
-                        <li >
-                            <a href="add-parking-info">
-                              <span class="text">Parking</span>
-                            </a>
-                          </li>
-
-                          <li>
-                            <a href="add-cableOperator-info">
-                              <span class="text">Cable Operator</span>
-                            </a>
-                          </li>
-
-                        <li class="completed">
-                          <a href="add-schoolvan-info">
-                            <span class="text">School Van</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="add-sweeper-info">
-                            <span class="text">Sweeper</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="add-watchman-info">
-                            <span class="text">Watchman</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="add-housemaid-info">
-                            <span class="text">Housemaid</span>
-                          </a>
-                        </li>
-					  </ol>
-					  @if (count($errors) > 0)
-						  @foreach ($errors->all() as $error)
-				  				<div class="alert alert-danger">
-								  	{{$error}}
-								</div>
-						  @endforeach
-					  @endif
-					  @if (session('success'))
-						  <div class="alert alert-success">
-							  {{session('success')}}
-						  </div>
-					  @endif
-					  @if (session('error'))
-						<div class="alert alert-danger">
-							{{seesion('error')}}
-						</div>
-					  @endif
+                      <h1 class="fontNeuron">Edit Property Information</h1>
                       <div class="formContent">
-						<form method="POST" action="/addSchoolVanService">
-							@csrf
+					  <form action="/changePropertyStatus/{{$house->id}}" method="POST">
+							{{ csrf_field() }}
+							{{ method_field('PUT') }}
                           <header class="contentHead">
-                            <h2 class="fontNeuron">Basic Info</h2>
-                          
+                            <h2 class="fontNeuron">Status</h2>
+
                           </header>
                           <div class="row">
                             <div class="col-xs-12">
                               <div class="form-group">
-								<div class="col-xs-12 col-sm-6">
-									<div class="form-group">
-									  <label for="city">City</label>
-									  <select required name="city" data-placeholder="Select Option"  class="form-control" id="city">
-										<option value="">Select Option</option>
-										  @foreach ($cities as $city)
-											  <option value="{{$city->id}}">{{$city->name}}</option>
-										  @endforeach
-	
-										</select>
-									</div>
-								  </div>
-								  <div class="col-xs-12 col-sm-6">
-									<div class="form-group">
-									  <label for="sub_area">Sub Area</label>
-									  <select required name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
-										<option value="">Select Option</option>
-									  </select>
-									</div>
-								  </div>
-                                <label for="itemN-15">Service Title*</label>
-                                <input required type="text" name="service_title" class="form-control" placeholder="Capital Schoolvan" id="itemN-15">
-							  </div>
-							  
-							</div>
-							<div class="col-xs-12">
-								<div class="form-group">
-								  <label for="itemN-22">Driver Name*</label>
-								  <input required name="name" type="text" class="form-control" placeholder="Ali" id="itemN-22">
-								</div>
-								
-							  </div>
-                            <div class="col-xs-12">
-                              <div class="form-group">
-                                <label for="itemN-16">Phone Number</label>
-                                <input required name="number" type="number" class="form-control" placeholder="03000000000" id="itemN-16">
-                              </div>
-                            </div>
-
-                            <div class="col-xs-12">
-                              <div class="form-group">
-                              <label for="itemN-25">Description</label>
-                                <textarea required name="description" class="form-control" id="itemN-25" placeholder=""></textarea>
+                                <label for="itemN-17">Price</label>
+                                <select required name="status" data-placeholder="{{$house->status}}" class="form-control" id="itemN-17">
+									<option value="Available">Available</option>
+									<option value="Not Available">Not Available</option>
+								  </select>
                               </div>
                             </div>
                           </div>
                           <div class="btnArea">
-							<button class="btn btnDark"><a href="/sp_dashboard">Back</a></button>
-							<button type="submit" class="btn btnDark">Save<i></i></button>                          
-						</div>
+							<br><button class="btn btnDark"><a href="/ho_dashboard">Back</a></button>
+							<button type="submit" class="btn btnDark">Change Status</button>
+                          </div>
                         </form>
                       </div>
                     </div>
@@ -203,14 +110,14 @@
 								<h2 class="fontNeuron fwSemi text-uppercase">Useful Links</h2>
 								<div class="ftNavListsHolder">
 									<ul class="list-unstyled">
-										<li><a href="about">About US</a></li>
-										<li><a href="contact">Contact Support</a></li>
-										<li><a href="properties-faqs">FAQs</a></li>
+										<li><a href="about.html">About US</a></li>
+										<li><a href="contact.html">Contact Support</a></li>
+										<li><a href="properties-faqs.html">FAQs</a></li>
 									</ul>
 									<ul class="list-unstyled">
-										<li><a href="properties-faqs">FAQ</a></li>
-										<li><a href="blog-full-width">Blog</a></li>
-										<li><a href="contact">Contact</a></li>
+										<li><a href="properties-faqs.html">FAQ</a></li>
+										<li><a href="blog-full-width.html">Blog</a></li>
+										<li><a href="contact.html">Contact</a></li>
 									</ul>
 								</div>
 							</nav>
@@ -247,9 +154,9 @@
 	</div>
 	<!-- include jQuery library -->
 	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
 	<script>
-		$('#city').on('change', function(e){
+		
+		$('#cityS').on('change', function(e){
 			console.log(e);
 			var city_id = e.target.value;
 
@@ -265,6 +172,7 @@
 			});
 		});
 	</script>
+	<script src="js/plugins.js"></script>
 	<!-- include bootstrap JavaScript -->
 	<script src="js/bootstrap-slider.min.js"></script>
 	<!-- include custom JavaScript -->

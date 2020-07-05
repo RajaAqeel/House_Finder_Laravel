@@ -61,7 +61,7 @@ Route::resource('/internet', 'InternetServiceProviderController');
 Route::resource('/cable', 'CableProviderServiceController');
 Route::resource('/housemaid', 'HousemaidServiceController');
 Route::resource('/parking', 'ParkingServiceController');
-Route::resource('/schoolvan', 'AchoolvanServiceController');
+Route::resource('/schoolvan', 'SchoolvanServiceController');
 Route::resource('/sweeper', 'SweeperServiceController');
 Route::resource('/watchman', 'WatchmanServiceController');
 Route::resource('/houses', 'HouseController');
@@ -85,6 +85,7 @@ Route::get('/favourite-properties', 'HouseController@favouriteProperties');
 Route::get('/add-house-01','DropDownController@cities');
 Route::get('/edit-property-information','DropDownController@citiesH');
 Route::get('/edit/{id}','HouseController@edit');
+Route::get('/changeStatus/{id}','HouseController@statusForm');
 Route::get('/editInternetInfo/{id}','InternetServiceProviderController@edit');
 Route::get('/editCableInfo/{id}','CableProviderServiceController@edit');
 Route::get('/editHousemaidInfo/{id}','HousemaidServiceController@edit');
@@ -122,8 +123,9 @@ Route::get('/add-schoolvan-info', 'DropDownController@allCitySc');
 Route::get('/add-sweeper-info', 'DropDownController@allCitySw');
 Route::get('/add-watchman-info', 'DropDownController@allCityW');
 Route::get('/my-properties', 'HouseController@index');
-Route::get('/properties-single2', 'HouseController@show({id})');
-Route::get('/hello/{id}', 'InternetServiceProviderController@show()');
+Route::get('/house/{id}', 'HouseController@show');
+Route::get('/hello/{id}', 'InternetServiceProviderController@show');
+Route::get('/show/property/{id}', 'TenantPagesController@view');
 
 Route::get('/housemaid-service-page', 'HousemaidServiceController@show({id})');
 Route::get('/parking-service-page', 'ParkingServiceController@show({id})');
@@ -273,9 +275,13 @@ Route::post('/reportWatchman', [
 Route::post('/reportParking', [
     'uses' => 'EmailController@ReportParkingService'
 ]);
+Route::post('/addParkingService', [
+    'uses' => 'ParkingServiceController@store'
+]);
 
 
 //data put routes
 Route::put('/editHouseInformation/{id}', 'HouseController@update');
 Route::put('/editInternetInformation/{id}', 'InternetServiceProviderController@update');
-
+Route::put('/changePropertyStatus/{id}', 'HouseController@changeStatus');
+Route::put('/favPropertyStatus/{id}', 'HouseController@favourite');

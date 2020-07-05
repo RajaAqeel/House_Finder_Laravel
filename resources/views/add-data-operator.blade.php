@@ -87,15 +87,6 @@
                                   <input required name="password_confirmation" type="password" class="form-control" placeholder="Confirm Password" id="itemN-18" required autocomplete="new-password">
                                 </div>
 							  </div>
-							  <div class="col-xs-12">
-                                <div class="form-group">
-									<label for="itemN-19">City</label>
-								<select required id="itemN-19" name="user_type" value="{{ old('user_type') }}" data-placeholder="Type" class="chosen-select" class="form-control elemenBlock">
-									<option>Select</option>
-                                    <option value=""></option>                                
-                                </select>
-                                </div>
-                            </div>
                               <div class="col-xs-12">
                                 <div class="form-group">
 									<label for="itemN-19">Type</label>

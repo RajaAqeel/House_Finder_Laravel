@@ -239,7 +239,7 @@
                               </header>
                               <ul class="navUser list-unstyled">
 								<li>
-									<a href="admin-view-profile">
+									<a href="/dashboard">
 									  <i class="far fa-user"></i>
 									  <span>View Profile</span>
 									</a>

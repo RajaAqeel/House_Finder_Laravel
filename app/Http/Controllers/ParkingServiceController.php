@@ -42,7 +42,7 @@ class ParkingServiceController extends Controller
         $this->validate($request, [
             'city' => ['required'],
             'sub_area' => ['required'],
-            'service_title' => ['required', 'regex:/^[a-zA-Z]+$/u'],
+            'service_title' => ['required'],
             'unit' => ['required'],
             'value' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
             'address' => ['required'],

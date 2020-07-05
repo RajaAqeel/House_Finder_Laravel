@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\city;
 use Illuminate\Http\Request;
+use Auth;
+use App\admin;
 
 class CityController extends Controller
 {
@@ -37,14 +39,15 @@ class CityController extends Controller
     {
         //
         $this->validate($request, [
-            'name' => ['required'],
+            'name' => ['required', 'alpha'],
         ]);
 
         $city = new city;
         $city->name = $request->input('name');
-        
+        $admin = admin::where('user_id', Auth::user()->id)->first();
+        $city->admin_id = $admin->id;
         $city->save();
-        return view('add-city');
+        return redirect('/add-city');
         
     }
 

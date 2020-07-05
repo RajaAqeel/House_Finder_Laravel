@@ -172,7 +172,7 @@
 				</footer>
 				<!-- btnScrollToTop -->
 				<a href="#pageWrapper" class="btnScrollToTop smooth textWhite">Scroll Top <i class="fi flaticon-arrows btnScrollIcn"></i></a>
-				<span class="bgCover elemenBlock" style="background-image: url(https://via.placeholder.com/1920x520);"></span>
+				<span class="bgCover elemenBlock" style=""></span>
 			</div>
 		</div>
 	</div>

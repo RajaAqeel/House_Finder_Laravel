@@ -444,460 +444,86 @@
 						<!-- isoContentHolder -->
 						<div class="isoContentHolder">
 							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-4 col isoCol sale">
-									<!-- postColumn -->
-									<article class="postColumn hasOver bgWhite">
-										<div class="aligncenter">
-											<!-- postColumnImageSlider -->
-											<div class="slick-carousel slickSlider postColumnImageSlider">
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
+								@if (isset($houses))
+									@if (count($houses) > 0)
+										@foreach ($houses as $house)
+										<div class="col-xs-12 col-sm-6 col-md-4 col isoCol sale">
+											<!-- postColumn -->
+											<article class="postColumn hasOver bgWhite">
+												<div class="aligncenter">
+													<!-- postColumnImageSlider -->
+													<div class="slick-carousel slickSlider postColumnImageSlider">
+														<div>
+															<div class="imgHolder">
+																<a href="properties-single2.html">
+																	<img src="images/home.jpg" alt="image description">
+																</a>
+															</div>
+														</div>
+														<div>
+															<div class="imgHolder">
+																<a href="properties-single2.html">
+																	<img src="images/home.jpg" alt="image description">
+																</a>
+															</div>
+														</div>
+														<div>
+															<div class="imgHolder">
+																<a href="properties-single2.html">
+																	<img src="images/home.jpg" alt="image description">
+																</a>
+															</div>
+														</div>
 													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-											</div>
-											<!-- postHoverLinskList -->
-											<ul class="list-unstyled postHoverLinskList">
-												<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
-												<li class="hasOver">
-													<a href="#"><i class="fi flaticon-share"></i></a>
-													<!-- postColumnSocial -->
-													<ul class="list-unstyled socialNetworks postColumnSocial">
-														<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-														<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-														<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-														<li><a href="#"><i class="fab fa-google"></i></a></li>
+													<!-- postHoverLinskList -->
+													<ul class="list-unstyled postHoverLinskList">
+														<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
+														<li class="hasOver">
+															<a href="#"><i class="fi flaticon-share"></i></a>
+															<!-- postColumnSocial -->
+															<ul class="list-unstyled socialNetworks postColumnSocial">
+																<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+																<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+																<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+																<li><a href="#"><i class="fab fa-google"></i></a></li>
+															</ul>
+														</li>
 													</ul>
-												</li>
-											</ul>
-											<!-- linkToFavourite -->
-											<a href="#" class="linkToFavourite roundedCircle bg-primary textWhite icnHeartBeatAnim"><i class="far fa-heart"></i></a>
-										</div>
-										<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Luxury Family Home</a></h2>
-										<address>
-											<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-											<p>The GPO Islamabad </p>
-										</address>
-										<span class="btn btnSmall btn-success text-capitalize">For Sale</span>
-										<h3 class="fontNeuron fwSemi"><span class="textSecondary">40,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
-										<!-- postColumnFoot -->
-										<footer class="postColumnFoot">
-											<ul class="list-unstyled">
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Area</strong>
-													<strong class="fwNormal elemenBlock">2100 m2</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-													<strong class="fwNormal elemenBlock">3</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-													<strong class="fwNormal elemenBlock">2</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-													<strong class="fwNormal elemenBlock">1</strong>
-												</li>
-											</ul>
-										</footer>
-									</article>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-4 col isoCol rent">
-									<!-- postColumn -->
-									<article class="postColumn hasOver bgWhite">
-										<div class="aligncenter">
-											<!-- postColumnImageSlider -->
-											<div class="slick-carousel slickSlider postColumnImageSlider">
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
+													<!-- linkToFavourite -->
 												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-											</div>
-											<!-- postHoverLinskList -->
-											<ul class="list-unstyled postHoverLinskList">
-												<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
-												<li class="hasOver">
-													<a href="#"><i class="fi flaticon-share"></i></a>
-													<!-- postColumnSocial -->
-													<ul class="list-unstyled socialNetworks postColumnSocial">
-														<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-														<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-														<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-														<li><a href="#"><i class="fab fa-google"></i></a></li>
+												<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">{{$house->title}}</a></h2>
+												<address>
+													<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+													<p>{{$house->address}} </p>
+												</address>
+												<span class="btn btnSmall btn-success text-capitalize">For Rent</span>
+												<h3 class="fontNeuron fwSemi"><span class="textSecondary">{{$house->price}}</span> <span class="textUnit fwNormal">/ monthly</span></h3>
+												<!-- postColumnFoot -->
+												<footer class="postColumnFoot">
+													<ul class="list-unstyled">
+														<li>
+															<strong class="fwNormal elemenBlock text-primary">Area</strong>
+															<strong class="fwNormal elemenBlock">{{$house->area_value}} {{$house->area_unit}}</strong>
+														</li>
+														<li>
+															<strong class="fwNormal elemenBlock text-primary">Beds</strong>
+															<strong class="fwNormal elemenBlock">{{$house->bedrooms}}</strong>
+														</li>
+														<li>
+															<strong class="fwNormal elemenBlock text-primary">Baths</strong>
+															<strong class="fwNormal elemenBlock">{{$house->bathrooms}}</strong>
+														</li>
 													</ul>
-												</li>
-											</ul>
-											<!-- linkToFavourite -->
-											<a href="#" class="linkToFavourite roundedCircle bg-primary textWhite icnHeartBeatAnim"><i class="far fa-heart"></i></a>
+												</footer>
+											</article>
 										</div>
-										<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Meridian Villas</a></h2>
-										<address>
-											<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-											<p>London, United Kingdom</p>
-										</address>
-										<span class="btn btnSmall btn-info text-capitalize">For Rent</span>
-										<h3 class="fontNeuron fwSemi"><span class="textSecondary">100,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
-										<!-- postColumnFoot -->
-										<footer class="postColumnFoot">
-											<ul class="list-unstyled">
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Area</strong>
-													<strong class="fwNormal elemenBlock">2100 m2</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-													<strong class="fwNormal elemenBlock">3</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-													<strong class="fwNormal elemenBlock">2</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-													<strong class="fwNormal elemenBlock">1</strong>
-												</li>
-											</ul>
-										</footer>
-									</article>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-4 col isoCol sale">
-									<!-- postColumn -->
-									<article class="postColumn hasOver bgWhite">
-										<div class="aligncenter">
-											<!-- postColumnImageSlider -->
-											<div class="slick-carousel slickSlider postColumnImageSlider">
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-											</div>
-											<!-- postHoverLinskList -->
-											<ul class="list-unstyled postHoverLinskList">
-												<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
-												<li class="hasOver">
-													<a href="#"><i class="fi flaticon-share"></i></a>
-													<!-- postColumnSocial -->
-													<ul class="list-unstyled socialNetworks postColumnSocial">
-														<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-														<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-														<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-														<li><a href="#"><i class="fab fa-google"></i></a></li>
-													</ul>
-												</li>
-											</ul>
-											<!-- linkToFavourite -->
-											<a href="#" class="linkToFavourite roundedCircle bg-primary textWhite icnHeartBeatAnim"><i class="far fa-heart"></i></a>
-										</div>
-										<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">4 Bedroom New House For Sale</a></h2>
-										<address>
-											<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-											<p>Islamabad</p>
-										</address>
-										<span class="btn btnSmall btn-success text-capitalize">For Rent</span>
-										<h3 class="fontNeuron fwSemi"><span class="textSecondary">250,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
-										<!-- postColumnFoot -->
-										<footer class="postColumnFoot">
-											<ul class="list-unstyled">
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Area</strong>
-													<strong class="fwNormal elemenBlock">2100 m2</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-													<strong class="fwNormal elemenBlock">3</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-													<strong class="fwNormal elemenBlock">2</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-													<strong class="fwNormal elemenBlock">1</strong>
-												</li>
-											</ul>
-										</footer>
-									</article>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-4 col isoCol rent">
-									<!-- postColumn -->
-									<article class="postColumn hasOver bgWhite">
-										<div class="aligncenter">
-											<!-- postColumnImageSlider -->
-											<div class="slick-carousel slickSlider postColumnImageSlider">
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-											</div>
-											<!-- postHoverLinskList -->
-											<ul class="list-unstyled postHoverLinskList">
-												<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
-												<li class="hasOver">
-													<a href="#"><i class="fi flaticon-share"></i></a>
-													<!-- postColumnSocial -->
-													<ul class="list-unstyled socialNetworks postColumnSocial">
-														<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-														<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-														<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-														<li><a href="#"><i class="fab fa-google"></i></a></li>
-													</ul>
-												</li>
-											</ul>
-											<!-- linkToFavourite -->
-											<a href="#" class="linkToFavourite roundedCircle bg-primary textWhite icnHeartBeatAnim"><i class="far fa-heart"></i></a>
-										</div>
-										<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Elegant studio flat</a></h2>
-										<address>
-											<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-											<p>F7 Islamabad </p>
-										</address>
-										<span class="btn btnSmall btn-success text-capitalize">For Rent</span>
-										<h3 class="fontNeuron fwSemi"><span class="textSecondary">400,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
-										<!-- postColumnFoot -->
-										<footer class="postColumnFoot">
-											<ul class="list-unstyled">
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Area</strong>
-													<strong class="fwNormal elemenBlock">2100 m2</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-													<strong class="fwNormal elemenBlock">3</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-													<strong class="fwNormal elemenBlock">2</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-													<strong class="fwNormal elemenBlock">1</strong>
-												</li>
-											</ul>
-										</footer>
-									</article>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-4 col isoCol sale">
-									<!-- postColumn -->
-									<article class="postColumn hasOver bgWhite" data-label="featured">
-										<div class="aligncenter">
-											<!-- postColumnImageSlider -->
-											<div class="slick-carousel slickSlider postColumnImageSlider">
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-											</div>
-											<!-- postHoverLinskList -->
-											<ul class="list-unstyled postHoverLinskList">
-												<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
-												<li class="hasOver">
-													<a href="#"><i class="fi flaticon-share"></i></a>
-													<!-- postColumnSocial -->
-													<ul class="list-unstyled socialNetworks postColumnSocial">
-														<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-														<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-														<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-														<li><a href="#"><i class="fab fa-google"></i></a></li>
-													</ul>
-												</li>
-											</ul>
-											<!-- linkToFavourite -->
-											<a href="#" class="linkToFavourite roundedCircle bg-primary textWhite icnHeartBeatAnim"><i class="far fa-heart"></i></a>
-										</div>
-										<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Full Floor Office Condo</a></h2>
-										<address>
-											<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-											<p>G9 Islamabad </p>
-										</address>
-										<span class="btn btnSmall btn-info text-capitalize">For Rent</span>
-										<h3 class="fontNeuron fwSemi"><span class="textSecondary"> 200,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
-										<!-- postColumnFoot -->
-										<footer class="postColumnFoot">
-											<ul class="list-unstyled">
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Area</strong>
-													<strong class="fwNormal elemenBlock">2100 m2</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-													<strong class="fwNormal elemenBlock">3</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-													<strong class="fwNormal elemenBlock">2</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-													<strong class="fwNormal elemenBlock">1</strong>
-												</li>
-											</ul>
-										</footer>
-									</article>
-								</div>
-								<div class="col-xs-12 col-sm-6 col-md-4 col isoCol rent">
-									<!-- postColumn -->
-									<article class="postColumn hasOver bgWhite">
-										<div class="aligncenter">
-											<!-- postColumnImageSlider -->
-											<div class="slick-carousel slickSlider postColumnImageSlider">
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="images/home.jpg" alt="image description">
-														</a>
-													</div>
-												</div>
-											</div>
-											<!-- postHoverLinskList -->
-											<ul class="list-unstyled postHoverLinskList">
-												<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
-												<li class="hasOver">
-													<a href="#"><i class="fi flaticon-share"></i></a>
-													<!-- postColumnSocial -->
-													<ul class="list-unstyled socialNetworks postColumnSocial">
-														<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-														<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-														<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-														<li><a href="#"><i class="fab fa-google"></i></a></li>
-													</ul>
-												</li>
-											</ul>
-											<!-- linkToFavourite -->
-											<a href="#" class="linkToFavourite roundedCircle bg-primary textWhite icnHeartBeatAnim"><i class="far fa-heart"></i></a>
-										</div>
-										<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Villa on Hollywood Boulevard</a></h2>
-										<address>
-											<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-											<p>i14 Islamabad</p>
-										</address>
-										<span class="btn btnSmall btn-info text-capitalize">For Rent</span>
-										<h3 class="fontNeuron fwSemi"><span class="textSecondary">320,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
-										<!-- postColumnFoot -->
-										<footer class="postColumnFoot">
-											<ul class="list-unstyled">
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Area</strong>
-													<strong class="fwNormal elemenBlock">2100 m2</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-													<strong class="fwNormal elemenBlock">3</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-													<strong class="fwNormal elemenBlock">2</strong>
-												</li>
-												<li>
-													<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-													<strong class="fwNormal elemenBlock">1</strong>
-												</li>
-											</ul>
-										</footer>
-									</article>
-								</div>
+										@endforeach
+									@endif
+								@endif
 							</div>
 						</div>
 						<div class="row text-center btnHolder">
-							<a href="properties-single2.html" class="btn btn-primary btnPrimaryOutline text-capitalize fontNeuron">Show More Property</a>
+							<a href="#" class="btn btn-primary btnPrimaryOutline text-capitalize fontNeuron">Show More Property</a>
 						</div>
 					</section>
 					<!-- mostPostsBlock -->

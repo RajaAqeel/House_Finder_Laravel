@@ -206,6 +206,8 @@
 					</form>
                             <div class="accountData">
 							  <form method="POST" action="/changePasswordDo">
+								{{ csrf_field() }}
+								{{ method_field('PUT') }}
                                 <div class="head">
                                   <h4 class="fontNeuron">Change Password</h4>
                                 </div>
@@ -320,7 +322,7 @@
 				</footer>
 				<!-- btnScrollToTop -->
 				<a href="#pageWrapper" class="btnScrollToTop smooth textWhite">Scroll Top <i class="fi flaticon-arrows btnScrollIcn"></i></a>
-				<span class="bgCover elemenBlock" style="background-image: url(https://via.placeholder.com/1920x520);"></span>
+				<span class="bgCover elemenBlock" style=""></span>
 			</div>
 		</div>
 		<!-- pagePopupWrap -->

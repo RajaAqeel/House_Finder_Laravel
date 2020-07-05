@@ -229,7 +229,7 @@
                             <aside class="profileSidebar">
                               <header class="head">
                                 <div class="imgProfile">
-                                  <img src="https://via.placeholder.com/74x74" alt="" width="74" height="74">
+								<img src="storage/uploads/House Owner Profile/{{$ho->image}}" alt="" width="74" height="74">
                                 </div>
                                 <div class="info">
                                   <span class="text">Ali Tufan</span>
@@ -288,33 +288,44 @@
                                 <h4 class="fontNeuron">My Properties</h4>
                               </div>
 							  <!-- propertiesList -->
-							  @foreach ($allHouses as $houses)
-							  <div class="propertiesList">
-                                <article class="propertyRow">
-                                  <div class="info">
-                                    <div class="imgThumbnail">
-									<a href="/houses/{{$houses->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
-                                    </div>
-                                    <div class="textBox">
-									<h4 class="fontNeuron"><a href="/houses/{{$houses->id}}">{{$houses->title}}</a></h4>
-									<address><i class="fi flaticon-pin-1"></i>{{$houses->address}} {{$sub_area}} {{$city}}</address>
-                                      <div class="priceArea">
-                                        <span class="price fontNeuron">{{$houses->price}} /monthly</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="btnArea">
-									<span class="status fontNeuron">{{$houses->status}}</span>
-                                    <ul class="links list-unstyled">
-                                      <li><a href="/houses/{{$houses->id}}"><i class="fa fa-eye"></i>View</a></li>
-									  <li><a href="/edit/{{$houses->id}}"><i class="fa fa-edit"></i>Edit</a></li>
-                                      <li><a href="/deleteH/{{$houses->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
-                                    </ul>
-                                  </div>
-                                </article>
-                              </div>
-							  @endforeach
-							  {{$allHouses->links()}}
+							  @if (isset($allHouses))
+								  @if (count($allHouses) > 0)
+								  @foreach ($allHouses as $houses)
+								  <div class="propertiesList">
+									<article class="propertyRow">
+									  <div class="info">
+										<div class="imgThumbnail">
+												<a href="/houses/{{$houses->id}}"><img src="storage/houses/{{$houses->photo}}" alt=""></a>
+											</div>
+										<div class="textBox">
+										<h4 class="fontNeuron"><a href="/houses/{{$houses->id}}">{{$houses->title}}</a></h4>
+										<address><i class="fi flaticon-pin-1"></i>{{$houses->address}} {{$sub_area}} {{$city}}</address>
+										  <div class="priceArea">
+											<span class="price fontNeuron">{{$houses->price}}/monthly</span>
+										  </div>
+										</div>
+									  </div>
+										<span>{{$houses->status}}</span>
+										<ul class="links list-unstyled">
+											<form action="/favPropertyStatus/{{$houses->id}}" method="POST">
+												{{ csrf_field() }}
+												{{ method_field('PUT') }}
+												<li><button type="submit"><a><i class="fa fa-heart"></i></a></button></li>
+											</form>
+											<li><a href="/edit/{{$houses->id}}"><i class="fa fa-edit"></i>Edit</a></li>
+											<li><a href="/changeStatus/{{$houses->id}}"><i class="fa fa-edit"></i>Status</a></li>
+											<li><a href="/deleteH/{{$houses->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+										</ul>
+	
+									</article>
+								  </div>
+								  @endforeach
+								  @else
+								  <div>
+									<h4 class="fontNeuron">You don't have any properties</h4>
+								  </div>
+								  @endif
+							  @endif
                             </div>
                           </div>
                         </div>
@@ -399,7 +410,7 @@
 				</footer>
 				<!-- btnScrollToTop -->
 				<a href="#pageWrapper" class="btnScrollToTop smooth textWhite">Scroll Top <i class="fi flaticon-arrows btnScrollIcn"></i></a>
-				<span class="bgCover elemenBlock" style="background-image: url(https://via.placeholder.com/1920x520);"></span>
+				<span class="bgCover elemenBlock" style=""></span>
 			</div>
 		</div>
 		<!-- pagePopupWrap -->

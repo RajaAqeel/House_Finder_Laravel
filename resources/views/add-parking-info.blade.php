@@ -175,7 +175,7 @@
 						  </div>
 						  
                           <div class="btnArea">
-                            <button type="submit" class="btn btnDark"><a href="service-provider-view-profile.html">Save</a><i></i></button>
+                            <button type="submit" class="btn btnDark">Save<i></i></button>
                           </div>
                         </form>
                       </div>
@@ -260,7 +260,7 @@
 				</footer>
 				<!-- btnScrollToTop -->
 				<a href="#pageWrapper" class="btnScrollToTop smooth textWhite">Scroll Top <i class="fi flaticon-arrows btnScrollIcn"></i></a>
-				<span class="bgCover elemenBlock" style="background-image: url(https://via.placeholder.com/1920x520);"></span>
+				<span class="bgCover elemenBlock" style=""></span>
 			</div>
 		</div>
 	</div>

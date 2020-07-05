@@ -31,7 +31,7 @@
 							<!-- headerHolder -->
 							<div class="headerHolder">
                               <!-- logo -->
-                              <div class="logo logoCentered"><a href="home"><img src="images/logo.png" alt="LemanHouse"></a></div>
+                              <div class="logo logoCentered"><a href="home"><img src="/images/logo.png" alt="LemanHouse"></a></div>
 							</div>
 						</div>
 					</div>
@@ -41,9 +41,26 @@
                   <!-- content -->
                   <section id="content" class="container pEqual">
                     <div class="addProperty">
-                      <h1 class="fontNeuron">Add New Property</h1>
+                      <h1 class="fontNeuron">Edit Property Information</h1>
                       <div class="formContent">
-					  <form action="/editHouseInformation/{{$house->id}}" method="POST">
+						@if (count($errors) > 0)
+						@foreach ($errors->all() as $error)
+								<div class="alert alert-danger" role="alert">
+									{{$error}}
+							  </div>
+						@endforeach
+					@endif
+					@if (session('success'))
+						<div class="alert alert-success" role="alert">
+							{{session('success')}}
+						</div>
+					@endif
+					@if (session('error'))
+					  <div class="alert alert-danger" role="alert">
+						  {{seesion('error')}}
+					  </div>
+					@endif
+					  <form action="/editHouseInformation/{{$house->id}}" method="POST" enctype="multipart/form-data">
 							{{ csrf_field() }}
 							{{ method_field('PUT') }}
                           <header class="contentHead">
@@ -66,8 +83,7 @@
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-17">Price</label>
-                                <select required name="negotiable" data-placeholder="Select Option" class="form-control" id="itemN-17">
-									<option value="{{$house->negotiable}}">{{$house->negotiable}}</option>
+                                <select required name="negotiable" data-placeholder="{{$house->negotiable}}" class="form-control" id="itemN-17">
 									<option value="Yes">Negotiable</option>
 									<option value="No">Not Negotiable</option>
 								  </select>
@@ -88,8 +104,7 @@
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 								  <label for="itemN-17">Area Unit</label>
-								  <select required name="unit" data-placeholder="Select Option" class="form-control" id="itemN-17">
-									  <option value="{{$house->area_unit}}">{{$house->area_unit}}</option>
+								  <select required name="unit" data-placeholder="{{$house->area_unit}}" class="form-control" id="itemN-17">
 									  <option value="Marla">Marla</option>
 									  <option value="Kanal">Kanal</option>
 									  <option value="Square Feet">Square Feet</option>
@@ -115,7 +130,7 @@
 									<div class="form-group">
 									  <label for="item-map">Upload images</label>
 									  <div class="input-group">
-										<input required name="photo" type="file" class="form-control ">
+										<input required name="img_url" type="file" class="form-control ">
 									  </div>
 									</div>
 								  </div>

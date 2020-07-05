@@ -282,54 +282,13 @@
 										<div class="tab-content">
 											<div id="tab1-0">
 												<div class="slick-carousel slickSlider postColumnImageSlider">
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/780x495"
-																	alt="image description">
-															</a>
+														<div>
+															<div class="imgHolder">
+																<a href="#">
+																	<img src="../storage/houses/{{$house->photo}}" alt="image description">
+																</a>
+															</div>
 														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/780x495"
-																	alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/780x495"
-																	alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/780x495"
-																	alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/780x495"
-																	alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/780x495"
-																	alt="image description">
-															</a>
-														</div>
-													</div>
 												</div>
 											</div>
 										</div>
@@ -361,10 +320,6 @@
 									<section id="address" class="accountData address">
 										<div class="head">
 											<h4 class="fontNeuron">Detail</h4>
-											<div class="btnArea">
-												<a href="#" class="btn btn-info"><i class="fi flaticon-pin-1"></i>Open
-													on Google Maps</a>
-											</div>
 										</div>
 										<div class="listpanel-content widthauto address paddingzero">
 											<ul>
@@ -387,12 +342,12 @@
 										<div class="hb-headarea">
 											<div class="holder">
 												<figure class="hb-author-img pull-left">
-													<a href="#"><img src="https://via.placeholder.com/100x75"
+													<a href="#"><img src=""
 															alt="image description"></a>
 												</figure>
 												<div class="pull-left">
 													<div class="hb-headcontent">
-														<span>{{Auth::user()->name}}</span>
+													<span>{{Auth::user()->id}}</span>
 													</div>
 												</div>
 											</div>
@@ -429,42 +384,6 @@
 												class="btn btnDark fontNeuron buttonXL">Submit</button>
 										</form>
 									</section>
-									<section class="widget widgetPadding widgetRecentPosts bgWhite">
-										<h3 class="fontNeuron fwBold text-capitalize">Surrounding Services</h3>
-										<!-- widgetRecentPostsList -->
-										<ul class="list-unstyled widgetRecentPostsList padlReset">
-											<li>
-												<div class="alignleft">
-													<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
-												</div>
-												<div class="descrWrap">
-													<h4 class="fontNeuron fwBold"><a href="properties-single2.html">Villa on Hollywood</a></h4>
-													<strong class="price elemenBlock fwSemi fontNeuron">  920,000</strong>
-													<p>778 Country St. Panama City, FL</p>
-												</div>
-											</li>
-											<li>
-												<div class="alignleft">
-													<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
-												</div>
-												<div class="descrWrap">
-													<h4 class="fontNeuron fwBold"><a href="properties-single2.html">4 Bedroom New House</a></h4>
-													<strong class="price elemenBlock fwSemi fontNeuron">  467,000</strong>
-													<p>London, United Kingdom</p>
-												</div>
-											</li>
-											<li>
-												<div class="alignleft">
-													<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
-												</div>
-												<div class="descrWrap">
-													<h4 class="fontNeuron fwBold"><a href="properties-single2.html">Eagle Apartments</a></h4>
-													<strong class="price elemenBlock fwSemi fontNeuron">  467,000</strong>
-													<p>9364 School St. Lynchburg, NY</p>
-												</div>
-											</li>
-										</ul>
-									</section>
 								</aside>
 							</div>
 							<div class="col-xs-12">
@@ -473,252 +392,55 @@
 										<span class="textSecondary">PROPERTIES</span></h1>
 								</header>
 							</div>
-							<div class="col-xs-12 col-sm-6 col-md-4 col isoCol sale">
-								<!-- postColumn -->
-								<article class="postColumn hasOver bgWhite">
-									<div class="aligncenter">
-										<!-- postColumnImageSlider -->
-										<div class="slick-carousel slickSlider postColumnImageSlider">
-											<div>
-												<div class="imgHolder">
-													<a href="properties-single2.html">
-														<img src="https://via.placeholder.com/360x260"
-															alt="image description">
-													</a>
+							@if (isset($allHouses))
+									@if (count($allHouses) > 0)
+										@foreach ($allHouses as $Houses)
+										<div class="col-xs-12 col-sm-6 col-md-4 col isoCol sale">
+											<!-- postColumn -->
+											<article class="postColumn hasOver bgWhite">
+												<div class="aligncenter">
+													<!-- postColumnImageSlider -->
+													<div class="slick-carousel slickSlider postColumnImageSlider">
+														<div>
+															<div class="imgHolder">
+																<a href="/houses/{{$Houses->id}}">
+																<img src="../storage/houses/{{$Houses->photo}}"
+																		alt="image description">
+																</a>
+															</div>
+														</div>
+													</div>
 												</div>
-											</div>
-											<div>
-												<div class="imgHolder">
-													<a href="properties-single2.html">
-														<img src="https://via.placeholder.com/360x260"
-															alt="image description">
-													</a>
-												</div>
-											</div>
-											<div>
-												<div class="imgHolder">
-													<a href="properties-single2.html">
-														<img src="https://via.placeholder.com/360x260"
-															alt="image description">
-													</a>
-												</div>
-											</div>
+											<h2 class="fontNeuron text-capitalize"><a href="/houses/{{$Houses->id}}">{{$Houses->title}}</a></h2>
+												<address>
+													<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+													<p>{{$Houses->address}}, {{$sub_area_name->name}}, {{$city_name->name}} </p>
+												</address>
+												<span class="btn btnSmall btn-success text-capitalize">{{$Houses->status}} For Rent</span>
+												<h3 class="fontNeuron fwSemi"><span class="textSecondary"> {{$Houses->price}}</span> <span
+														class="textUnit fwNormal">/ monthly</span></h3>
+												<!-- postColumnFoot -->
+												<footer class="postColumnFoot">
+													<ul class="list-unstyled">
+														<li>
+															<strong class="fwNormal elemenBlock text-primary">Area</strong>
+															<strong class="fwNormal elemenBlock">{{$Houses->area_value}} {{$Houses->area_unit}}</strong>
+														</li>
+														<li>
+															<strong class="fwNormal elemenBlock text-primary">Beds</strong>
+															<strong class="fwNormal elemenBlock">{{$Houses->bedrooms}}</strong>
+														</li>
+														<li>
+															<strong class="fwNormal elemenBlock text-primary">Baths</strong>
+															<strong class="fwNormal elemenBlock">{{$Houses->bathrooms}}</strong>
+														</li>
+													</ul>
+												</footer>
+											</article>
 										</div>
-										<!-- postHoverLinskList -->
-										<ul class="list-unstyled postHoverLinskList">
-											<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
-											<li class="hasOver">
-												<a href="#"><i class="fi flaticon-share"></i></a>
-												<!-- postColumnSocial -->
-												<ul class="list-unstyled socialNetworks postColumnSocial">
-													<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-													<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-													<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-													<li><a href="#"><i class="fab fa-google"></i></a></li>
-												</ul>
-											</li>
-										</ul>
-										<!-- linkToFavourite -->
-										<a href="#"
-											class="linkToFavourite roundedCircle bg-primary textWhite icnHeartBeatAnim"><i
-												class="far fa-heart"></i></a>
-									</div>
-									<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Luxury
-											Family Home</a></h2>
-									<address>
-										<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-										<p>The Village, Jersey City, NJ 07302, USA </p>
-									</address>
-									<span class="btn btnSmall btn-success text-capitalize">For Sale</span>
-									<h3 class="fontNeuron fwSemi"><span class="textSecondary"> 490,000</span> <span
-											class="textUnit fwNormal">/ monthly</span></h3>
-									<!-- postColumnFoot -->
-									<footer class="postColumnFoot">
-										<ul class="list-unstyled">
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Area</strong>
-												<strong class="fwNormal elemenBlock">2100 m2</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-												<strong class="fwNormal elemenBlock">3</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-												<strong class="fwNormal elemenBlock">2</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-												<strong class="fwNormal elemenBlock">1</strong>
-											</li>
-										</ul>
-									</footer>
-								</article>
-							</div>
-							<div class="col-xs-12 col-sm-6 col-md-4 col isoCol rent">
-								<!-- postColumn -->
-								<article class="postColumn hasOver bgWhite">
-									<div class="aligncenter">
-										<!-- postColumnImageSlider -->
-										<div class="slick-carousel slickSlider postColumnImageSlider">
-											<div>
-												<div class="imgHolder">
-													<a href="properties-single2.html">
-														<img src="https://via.placeholder.com/360x260"
-															alt="image description">
-													</a>
-												</div>
-											</div>
-											<div>
-												<div class="imgHolder">
-													<a href="properties-single2.html">
-														<img src="https://via.placeholder.com/360x260"
-															alt="image description">
-													</a>
-												</div>
-											</div>
-											<div>
-												<div class="imgHolder">
-													<a href="properties-single2.html">
-														<img src="https://via.placeholder.com/360x260"
-															alt="image description">
-													</a>
-												</div>
-											</div>
-										</div>
-										<!-- postHoverLinskList -->
-										<ul class="list-unstyled postHoverLinskList">
-											<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
-											<li class="hasOver">
-												<a href="#"><i class="fi flaticon-share"></i></a>
-												<!-- postColumnSocial -->
-												<ul class="list-unstyled socialNetworks postColumnSocial">
-													<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-													<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-													<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-													<li><a href="#"><i class="fab fa-google"></i></a></li>
-												</ul>
-											</li>
-										</ul>
-										<!-- linkToFavourite -->
-										<a href="#"
-											class="linkToFavourite roundedCircle bg-primary textWhite icnHeartBeatAnim"><i
-												class="far fa-heart"></i></a>
-									</div>
-									<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Meridian
-											Villas</a></h2>
-									<address>
-										<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-										<p>London, United Kingdom</p>
-									</address>
-									<span class="btn btnSmall btn-info text-capitalize">For Rent</span>
-									<h3 class="fontNeuron fwSemi"><span class="textSecondary"> 920,000</span> <span
-											class="textUnit fwNormal">/ monthly</span></h3>
-									<!-- postColumnFoot -->
-									<footer class="postColumnFoot">
-										<ul class="list-unstyled">
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Area</strong>
-												<strong class="fwNormal elemenBlock">2100 m2</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-												<strong class="fwNormal elemenBlock">3</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-												<strong class="fwNormal elemenBlock">2</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-												<strong class="fwNormal elemenBlock">1</strong>
-											</li>
-										</ul>
-									</footer>
-								</article>
-							</div>
-							<div class="col-xs-12 col-sm-6 col-md-4 col isoCol rent">
-								<!-- postColumn -->
-								<article class="postColumn hasOver bgWhite">
-									<div class="aligncenter">
-										<!-- postColumnImageSlider -->
-										<div class="slick-carousel slickSlider postColumnImageSlider">
-											<div>
-												<div class="imgHolder">
-													<a href="properties-single2.html">
-														<img src="https://via.placeholder.com/360x260"
-															alt="image description">
-													</a>
-												</div>
-											</div>
-											<div>
-												<div class="imgHolder">
-													<a href="properties-single2.html">
-														<img src="https://via.placeholder.com/360x260"
-															alt="image description">
-													</a>
-												</div>
-											</div>
-											<div>
-												<div class="imgHolder">
-													<a href="properties-single2.html">
-														<img src="https://via.placeholder.com/360x260"
-															alt="image description">
-													</a>
-												</div>
-											</div>
-										</div>
-										<!-- postHoverLinskList -->
-										<ul class="list-unstyled postHoverLinskList">
-											<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
-											<li class="hasOver">
-												<a href="#"><i class="fi flaticon-share"></i></a>
-												<!-- postColumnSocial -->
-												<ul class="list-unstyled socialNetworks postColumnSocial">
-													<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-													<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-													<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-													<li><a href="#"><i class="fab fa-google"></i></a></li>
-												</ul>
-											</li>
-										</ul>
-										<!-- linkToFavourite -->
-										<a href="#"
-											class="linkToFavourite roundedCircle bg-primary textWhite icnHeartBeatAnim"><i
-												class="far fa-heart"></i></a>
-									</div>
-									<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Elegant
-											studio flat</a></h2>
-									<address>
-										<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-										<p>The Village, Jersey City, NJ 07302, USA</p>
-									</address>
-									<span class="btn btnSmall btn-info text-capitalize">For Rent</span>
-									<h3 class="fontNeuron fwSemi"><span class="textSecondary"> 490,000</span> <span
-											class="textUnit fwNormal">/ monthly</span></h3>
-									<!-- postColumnFoot -->
-									<footer class="postColumnFoot">
-										<ul class="list-unstyled">
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Area</strong>
-												<strong class="fwNormal elemenBlock">2100 m2</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-												<strong class="fwNormal elemenBlock">3</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-												<strong class="fwNormal elemenBlock">2</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-												<strong class="fwNormal elemenBlock">1</strong>
-											</li>
-										</ul>
-									</footer>
-								</article>
-							</div>
+										@endforeach
+									@endif
+								@endif
 						</div>
 					</div>
 				</main>
@@ -787,7 +509,7 @@
 				<a href="#pageWrapper" class="btnScrollToTop smooth textWhite">Scroll Top <i
 						class="fi flaticon-arrows btnScrollIcn"></i></a>
 				<span class="bgCover elemenBlock"
-					style="background-image: url(https://via.placeholder.com/1920x520);"></span>
+					style=""></span>
 			</div>
 		</div>
 		<!-- pagePopupWrap -->

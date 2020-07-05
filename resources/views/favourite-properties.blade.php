@@ -229,7 +229,7 @@
                             <aside class="profileSidebar">
                               <header class="head">
                                 <div class="imgProfile">
-                                  <img src="https://via.placeholder.com/74x74" alt="" width="74" height="74">
+                                  <img src="storage/uploads/House Owner Profile/{{$ho->image}}" alt="" width="74" height="74">
                                 </div>
                                 <div class="info">
                                   <span class="text">Ali Tufan</span>
@@ -288,34 +288,42 @@
                                 <h4 class="fontNeuron">My Favourite Properties</h4>
                               </div>
 							  <!-- propertiesList -->
-							  @foreach ($allHouses as $houses)
-							  <div class="propertiesList">
-                                <article class="propertyRow">
-                                  <div class="info">
-                                    <div class="imgThumbnail">
-									<a href="/houses/{{$houses->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
-                                    </div>
-                                    <div class="textBox">
-									<h4 class="fontNeuron"><a href="/houses/{{$houses->id}}">{{$houses->title}}</a></h4>
-									<address><i class="fi flaticon-pin-1"></i>{{$houses->address}} {{$sub_area_name}} {{$city_name}}</address>
-                                      <div class="priceArea">
-                                        <span class="price fontNeuron">{{$houses->price}}</span>
-                                        <time class="date" datetime="2017-02-27">{{$houses->created_at}}</time>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="btnArea">
-									<span class="status fontNeuron">{{$houses->status}}</span>
-									<li><a href="/fav/{{$houses->id}}"><i class="far fa-heart"></i></a></li>
-                                    <ul class="links list-unstyled">
-                                      <li><a href="/houses/{{$houses->id}}"><i class="fa fa-eye"></i>View</a></li>
-									  <li><a href="edit-property-information"><i class="fa fa-edit"></i>Edit</a></li>
-                                      <li><a href="/deleteH/{{$houses->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
-                                    </ul>
-                                  </div>
-                                </article>
-                              </div>
-							  @endforeach
+							  @if (isset($allHouses))
+								  @if (count($allHouses) > 0)
+								  @foreach ($allHouses as $houses)
+								  <div class="propertiesList">
+									<article class="propertyRow">
+									  <div class="info">
+										<div class="imgThumbnail">
+										<a href="/houses/{{$houses->id}}"><img src="storage/houses/{{$houses->photo}}" alt=""></a>
+										</div>
+										<div class="textBox">
+										<h4 class="fontNeuron"><a href="/houses/{{$houses->id}}">{{$houses->title}}</a></h4>
+										<address><i class="fi flaticon-pin-1"></i>{{$houses->address}} {{$sub_area_name}} {{$city_name}}</address>
+										  <div class="priceArea">
+											<span class="price fontNeuron">{{$houses->price}}</span>
+											<time class="date" datetime="2017-02-27">{{$houses->created_at}}</time>
+										  </div>
+										</div>
+									  </div>
+									  <div class="btnArea">
+										<span class="status fontNeuron">{{$houses->status}}</span>
+										<li><a href="/fav/{{$houses->id}}"><i class="far fa-heart"></i></a></li>
+										<ul class="links list-unstyled">
+										  <li><a href="/houses/{{$houses->id}}"><i class="fa fa-eye"></i>View</a></li>
+										  <li><a href="edit-property-information"><i class="fa fa-edit"></i>Edit</a></li>
+										  <li><a href="/deleteH/{{$houses->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
+										</ul>
+									  </div>
+									</article>
+								  </div>
+								  @endforeach
+								  @else
+								  <div>
+									<h4 class="fontNeuron">You don't have any  favourite properties</h4>
+								  </div>
+								  @endif
+							  @endif
 							  {{$allHouses->links()}}
                             </div>
                           </div>
@@ -401,7 +409,7 @@
 				</footer>
 				<!-- btnScrollToTop -->
 				<a href="#pageWrapper" class="btnScrollToTop smooth textWhite">Scroll Top <i class="fi flaticon-arrows btnScrollIcn"></i></a>
-				<span class="bgCover elemenBlock" style="background-image: url(https://via.placeholder.com/1920x520);"></span>
+				<span class="bgCover elemenBlock" style=""></span>
 			</div>
 		</div>
 		<!-- pagePopupWrap -->

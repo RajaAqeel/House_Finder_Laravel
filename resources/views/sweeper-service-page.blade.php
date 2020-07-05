@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<!-- set the encoding of your site -->
 	<meta charset="utf-8">
@@ -10,12 +11,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
 	<link rel="stylesheet" href="/css/bootstrap.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- include the site stylesheet -->
 	<link rel="stylesheet" href="/css/fancybox.css">
 	<!-- include the site stylesheet -->
 	<link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
 	<!-- pageWrapper -->
 	<div id="pageWrapper">
@@ -32,7 +33,6 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-xs-6 col-sm-4">
-										<!-- <time datetime="2011-01-12" class="TopBarTime">Mon - Sat: 08.00 AM - 18.00 PM</time> -->
 									</div>
 									<div class="col-xs-6 col-sm-8 text-right">
 										<!-- topBarPanelList -->
@@ -49,7 +49,10 @@
 											<li>
 												<!-- topBarPanelListDropdown -->
 												<div class="dropdown topBarPanelListDropdown">
-													<button class="dropdown-toggle buttonReset" type="button" id="dropdownLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></button>
+													<button class="dropdown-toggle buttonReset" type="button"
+														id="dropdownLang" data-toggle="dropdown" aria-haspopup="true"
+														aria-expanded="false">English<span
+															class="caret"></span></button>
 													<!-- dropdownLang -->
 													<ul class="dropdown-menu" aria-labelledby="dropdownLang">
 														<li><a href="#">English</a></li>
@@ -69,33 +72,46 @@
 								<div class="row">
 									<div class="col-xs-6 col-sm-3">
 										<!-- logo -->
-										<div class="logo"><a href="home"><img src="/images/houseFinderLogo.png" alt="LemanHouse"></a></div>
+										<div class="logo"><a href="home"><img src="/images/houseFinderLogo.png"
+													alt="LemanHouse"></a></div>
 									</div>
 									<div class="col-xs-6 col-sm-9 d-flex">
 										<!-- headerContactList -->
 										<ul class="list-unstyled headerContactList">
 											<li>
-												<a href="tel:+12463450695" class="icn icnBubble noShrink text-info"><i class="fi flaticon-24-hours"></i></a>
+												<a href="tel:+12463450695" class="icn icnBubble noShrink text-info"><i
+														class="fi flaticon-24-hours"></i></a>
 												<div class="descr hidden-xs">
-													<strong class="fwNormal elemenBlock text"><a href="#">+92 3065085832</a></strong>
-													<strong class="fwNormal elemenBlock text"><a href="#">info@housefinder.com</a></strong>
+													<strong class="fwNormal elemenBlock text"><a href="#">+92
+															3065085832</a></strong>
+													<strong class="fwNormal elemenBlock text"><a
+															href="#">info@housefinder.com</a></strong>
 												</div>
 											</li>
 											<li class="hidden-xs">
-												<span class="icn icnJumping text-info noShrink"><i class="fi flaticon-pin-1"></i></span>
+												<span class="icn icnJumping text-info noShrink"><i
+														class="fi flaticon-pin-1"></i></span>
 												<div class="descr">
-													<strong class="fwNormal elemenBlock text">Riphah International University I-14<br>Golra Mor Islamabad, Pakistan</strong>
+													<strong class="fwNormal elemenBlock text">Riphah International
+														University I-14<br>Golra Mor Islamabad, Pakistan</strong>
 												</div>
 											</li>
 										</ul>
 										<!-- headerSearchForm -->
 										<form action="#" class="headerSearchForm">
-											<a class="headerSearchOpener roundedCircle bgWhite" role="button" data-toggle="collapse" href="#headerSearchFormcollapse" aria-expanded="false" aria-controls="headerSearchFormcollapse"><i class="fi flaticon-search btnOpen"></i><i class="fas fa-times btnClose"></i></a>
+											<a class="headerSearchOpener roundedCircle bgWhite" role="button"
+												data-toggle="collapse" href="#headerSearchFormcollapse"
+												aria-expanded="false" aria-controls="headerSearchFormcollapse"><i
+													class="fi flaticon-search btnOpen"></i><i
+													class="fas fa-times btnClose"></i></a>
 											<!-- headerSearchFormcollapse -->
-											<div class="collapse searchFormcollapse bgWhite" id="headerSearchFormcollapse" aria-expanded="false" role="form">
+											<div class="collapse searchFormcollapse bgWhite"
+												id="headerSearchFormcollapse" aria-expanded="false" role="form">
 												<div class="form-group form-group-lg">
-													<label for="s" class="labelIcn"><i class="fi flaticon-search"></i></label>
-													<input type="search" id="s" class="form-control elemenBlock" placeholder="Search&hellip;">
+													<label for="s" class="labelIcn"><i
+															class="fi flaticon-search"></i></label>
+													<input type="search" id="s" class="form-control elemenBlock"
+														placeholder="Search&hellip;">
 												</div>
 											</div>
 										</form>
@@ -106,7 +122,8 @@
 							<nav id="pageNav" class="navbar navbar-default pageNav1">
 								<!-- Brand and toggle get grouped for better mobile display -->
 								<div class="navbar-header hidden-sm hidden-md hidden-lg">
-									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+										data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 										<span class="sr-only">Toggle navigation</span>
 										<span class="icon-bar"></span>
 										<span class="icon-bar"></span>
@@ -116,24 +133,26 @@
 								<!-- navbar collapse -->
 								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 									<div class="navigation-wrapper">
-										<strong class="h elemenBlock h4 textWhite text-center hidden-sm hidden-md hidden-lg menuTitle fontNeuron" id="menu-title">Menu</strong>
+										<strong
+											class="h elemenBlock h4 textWhite text-center hidden-sm hidden-md hidden-lg menuTitle fontNeuron"
+											id="menu-title">Menu</strong>
 										<!-- pageMainNav -->
 										<ul class="nav navbar-nav pageMainNav pageMainNav1">
 											<li>
-												<a href="/" >Home<span></span></a>
-												
-											</li>
-											<li >
-												<a href="/about" >About <span ></span></a>
+												<a href="/">Home<span></span></a>
 
 											</li>
-											<li >
-												<a href="/testimonials" >Testimonials<span ></span></a>
-												
+											<li>
+												<a href="/about">About <span></span></a>
+
 											</li>
-											<li >
-												<a href="/blog-full-width" >Blog<span ></span></a>
-												
+											<li>
+												<a href="/testimonials">Testimonials<span></span></a>
+
+											</li>
+											<li>
+												<a href="/blog-full-width">Blog<span></span></a>
+
 											</li>
 											<li>
 												<a href="/contact">Contact</a>
@@ -158,41 +177,54 @@
 												<strong class="text fwNormal hidden-xs hidden-sm">Register</strong>
 											</a>
 										</li>
-										<a href="/" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i>Welcome</a>
+										<a href="/" class="headerModalOpener text-uppercase fontNeuron fwBold"><i
+												class="openerIcon"></i>Welcome</a>
 										@endguest
 										@if(isset(Auth::user()->id))
 										@if(Auth::user()->user_type=="admin")
 										<li>
 											<a href="/dashboard">
 												<i class="fi flaticon-social icn"></i>
-											<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
+												<strong
+													class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
 											</a>
 										</li>
-										<a href="/add-city" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add City</a>
+										<a href="/add-city"
+											class="headerModalOpener text-uppercase fontNeuron fwBold"><i
+												class="openerIcon"></i> Add City</a>
 										@elseif(Auth::user()->user_type=="House Owner")
 										<li>
 											<a href="/ho_dashboard">
 												<i class="fi flaticon-social icn"></i>
-											<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
+												<strong
+													class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
 											</a>
 										</li>
-										<a href="/add-house-01" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Property</a>
+										<a href="/add-house-01"
+											class="headerModalOpener text-uppercase fontNeuron fwBold"><i
+												class="openerIcon"></i> Add Property</a>
 										@elseif(Auth::user()->user_type=="Data Operator")
-											<li>
-												<a href="/do_dashboard">
-													<i class="fi flaticon-social icn"></i>
-												<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
-												</a>
-											</li>
-											<a href="/add-sub-area" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Service</a>
+										<li>
+											<a href="/do_dashboard">
+												<i class="fi flaticon-social icn"></i>
+												<strong
+													class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
+											</a>
+										</li>
+										<a href="/add-sub-area"
+											class="headerModalOpener text-uppercase fontNeuron fwBold"><i
+												class="openerIcon"></i> Add Service</a>
 										@elseif(Auth::user()->user_type=="Service Provider")
 										<li>
 											<a href="/sp_dashboard">
 												<i class="fi flaticon-social icn"></i>
-											<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
+												<strong
+													class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
 											</a>
 										</li>
-										<a href="/add-internetProvider-info" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Sub Area</a>
+										<a href="/add-internetProvider-info"
+											class="headerModalOpener text-uppercase fontNeuron fwBold"><i
+												class="openerIcon"></i> Add Sub Area</a>
 										@endif
 										@endif
 									</ul>
@@ -207,24 +239,31 @@
 					<!-- findFormBlock -->
 					<form action="#" class="findFormBlock findFormBlock2 bgLightDark hasShadowTop offsetHeaderTop">
 					</form>
-					
+
 					<section class="container">
 						<!-- contentFiltersHeadingWrap -->
 						<header class="contentFiltersHeadingWrap row">
 							<div class="col-xs-12 col col-sm-8">
-								<h1 class="fontNeuron"> <a href="#" class="btn btnSmall btn-success fontBase"></a></h1>
+								<h1 class="fontNeuron">{{$sweeper->name}} <a href="#"
+										class="btn btnSmall btn-success fontBase">{{$internet->status}}</a></h1>
 								<!-- captionAddress -->
-								<address class="captionAddress">
-									<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-									<p></p>
-								</address>
 							</div>
 							<div class="col-xs-12 col-sm-4 justify-end">
 								<!-- captionActionsList -->
-								<strong class="elemenBlock price fwSemi fontNeuron w100"> </strong>
-								<strong class="elemenBlock fwNormal fontNeuron subtitle w100"></strong>
+								<ul class="list-unstyled viewFilterLinks">
+									<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
+									<li>
+										<a href="#">
+											<i class="fi flaticon-share"></i>
+										</a>
+										<!-- postColumnSocial -->
+										
+									</li>
+									<li><a href="#"><i class="fi flaticon-printer"></i></a></li>
+								</ul>
+								<strong class="elemenBlock fwNormal fontNeuron subtitle w100">{{$sweeper->phone_number}}</strong>
 							</div>
-						</header> 
+						</header>
 					</section>
 					<!-- twoColumns -->
 					<div class="twoColumns container">
@@ -233,38 +272,25 @@
 								<!-- content -->
 								<article id="content">
 									<!-- tabs -->
-									<!-- boxPanelBlock -->
-									<section id="Detail" class="accountData">
-										<div class="head">
-											<h2 class="fontNeuron">Detail</h2>
-										</div>
-										<ul class="listpanel-head">
-											<li>beds<span></span></li>
-											<li>baths<span></span></li>
-										</ul>
-										<div class="listpanel-content">
-											<ul>
-												<li><span>Property ID</span><span class="righttext">: </span></li>
-												<li><span>Property Size</span><span class="righttext">: </span></li>
-											</ul>
-										</div>
-									</section>
 									<section class="accountData">
-		                                <div class="head">
-		                                  <h4 class="fontNeuron">Description</h4>
-		                                </div>
+										<div class="head">
+											<h4 class="fontNeuron">Description</h4>
+										</div>
 										<p>{{$sweeper->description}}</p>
-		                            </section>
-		                            <section id="address" class="accountData address">
+									</section>
+									<section id="address" class="accountData address">
 										<div class="head">
 											<h4 class="fontNeuron">Detail</h4>
 										</div>
 										<div class="listpanel-content widthauto address paddingzero">
 											<ul>
-												<li><span>Address</span><span class="righttext">: </span></li>
+												<li><span>Address</span><span class="righttext">: {{$sweeper->address}},
+													{{$sub_area_name->name}}, {{$city_name->name}}</span></li>
 												<li><span>Country</span><span class="righttext">: Pakistan</span></li>
-												<li><span>City</span><span class="righttext">: </span></li>
-												<li><span>Sub Area</span><span class="righttext">: </span></li>
+												<li><span>City</span><span class="righttext">:
+														{{$city_name->name}}</span></li>
+												<li><span>Sub Area</span><span class="righttext">:
+														{{$sub_area_name->name}}</span></li>
 											</ul>
 										</div>
 									</section>
@@ -276,9 +302,6 @@
 									<section class="contactFormPage widget">
 										<div class="hb-headarea">
 											<div class="holder">
-												<figure class="hb-author-img pull-left">
-													<a href="#"><img src="https://via.placeholder.com/100x75" alt="image description"></a>
-												</figure>
 												<div class="pull-left">
 													<div class="hb-headcontent">
 														<span>{{Auth::user()->name}}</span>
@@ -286,147 +309,39 @@
 												</div>
 											</div>
 											<div class="hb-numberbox text-center">
-											<h3><i class="fi flaticon-24-hours"></i>{{$service_owner_id->phone_number}}</h3>
+												<h3><i class="fi flaticon-24-hours"></i>+92 3065085832</h3>
 											</div>
 										</div>
-										<form class="widgetCalcForm">
+										<form method="POST" accept="/verifyInternet" class="widgetCalcForm">
 											<div class="row">
 												<div class="col-xs-12">
 													<div class="form-group">
-														<input type="text" placeholder="Your Name" class="form-control">
+														<input required name="name" type="text" placeholder="Your Name"
+															class="form-control">
 													</div>
 												</div>
 												<div class="col-xs-12">
 													<div class="form-group">
-														<input type="tel" placeholder="Phone" class="form-control">
+														<input required name="number" type="tel" placeholder="Phone"
+															class="form-control">
 													</div>
 												</div>
 												<div class="col-xs-12">
 													<div class="form-group">
-														<input type="email" placeholder="Email" class="form-control">
+														<input required name="email" type="email" placeholder="Email"
+															class="form-control">
 													</div>
 												</div>
 											</div>
 											<div class="form-group">
-												<textarea class="form-control" placeholder="Hi Jennie Wilson, I saw your profile on LemanHouse and wanted to see if you could help me"></textarea>
+												<textarea required name="message" class="form-control"
+													placeholder="">Hello, I hope you will be in your good health. I am agreed with ur payment for verifying my property. So i would like to verify my sweeper service with service id {{$sweeper->id}}. Thanks</textarea>
 											</div>
-											<button type="submit" class="btn btnDark fontNeuron buttonXL">Submit</button>
+											<button type="submit"
+												class="btn btnDark fontNeuron buttonXL">Submit</button>
 										</form>
 									</section>
 								</aside>
-							</div>
-							<div class="col-xs-12">
-								<header class="rowHead">
-									<h1 class="fontNeuron blockH text-uppercase"><span class="bdrBottom">LATEST</span> <span class="textSecondary">SERVICES</span></h1>
-								</header>
-							</div>
-							<div class="col-xs-12 col-sm-6 col-md-4 col isoCol sale">
-								<!-- postColumn -->
-								<article class="postColumn hasOver bgWhite">
-									<div class="aligncenter">
-										<!-- linkToFavourite -->
-									</div>
-									<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Luxury Family Home</a></h2>
-									<address>
-										<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-										<p>The Village, Jersey City, NJ 07302, USA </p>
-									</address>
-									<span class="btn btnSmall btn-success text-capitalize">For Sale</span>
-									<h3 class="fontNeuron fwSemi"><span class="textSecondary">  490,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
-									<!-- postColumnFoot -->
-									<footer class="postColumnFoot">
-										<ul class="list-unstyled">
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Area</strong>
-												<strong class="fwNormal elemenBlock">2100 m2</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-												<strong class="fwNormal elemenBlock">3</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-												<strong class="fwNormal elemenBlock">2</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-												<strong class="fwNormal elemenBlock">1</strong>
-											</li>
-										</ul>
-									</footer>
-								</article>
-							</div>
-							<div class="col-xs-12 col-sm-6 col-md-4 col isoCol sale">
-								<!-- postColumn -->
-								<article class="postColumn hasOver bgWhite">
-									<div class="aligncenter">
-										<!-- linkToFavourite -->
-									</div>
-									<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Luxury Family Home</a></h2>
-									<address>
-										<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-										<p>The Village, Jersey City, NJ 07302, USA </p>
-									</address>
-									<span class="btn btnSmall btn-success text-capitalize">For Sale</span>
-									<h3 class="fontNeuron fwSemi"><span class="textSecondary">  490,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
-									<!-- postColumnFoot -->
-									<footer class="postColumnFoot">
-										<ul class="list-unstyled">
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Area</strong>
-												<strong class="fwNormal elemenBlock">2100 m2</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-												<strong class="fwNormal elemenBlock">3</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-												<strong class="fwNormal elemenBlock">2</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-												<strong class="fwNormal elemenBlock">1</strong>
-											</li>
-										</ul>
-									</footer>
-								</article>
-							</div>
-							<div class="col-xs-12 col-sm-6 col-md-4 col isoCol sale">
-								<!-- postColumn -->
-								<article class="postColumn hasOver bgWhite">
-									<div class="aligncenter">
-										<!-- linkToFavourite -->
-									</div>
-									<h2 class="fontNeuron text-capitalize"><a href="properties-single2.html">Luxury Family Home</a></h2>
-									<address>
-										<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-										<p>The Village, Jersey City, NJ 07302, USA </p>
-									</address>
-									<span class="btn btnSmall btn-success text-capitalize">For Sale</span>
-									<h3 class="fontNeuron fwSemi"><span class="textSecondary">  490,000</span> <span class="textUnit fwNormal">/ monthly</span></h3>
-									<!-- postColumnFoot -->
-									<footer class="postColumnFoot">
-										<ul class="list-unstyled">
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Area</strong>
-												<strong class="fwNormal elemenBlock">2100 m2</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-												<strong class="fwNormal elemenBlock">3</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-												<strong class="fwNormal elemenBlock">2</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Garages</strong>
-												<strong class="fwNormal elemenBlock">1</strong>
-											</li>
-										</ul>
-									</footer>
-								</article>
 							</div>
 						</div>
 					</div>
@@ -493,8 +408,10 @@
 					</div>
 				</footer>
 				<!-- btnScrollToTop -->
-				<a href="#pageWrapper" class="btnScrollToTop smooth textWhite">Scroll Top <i class="fi flaticon-arrows btnScrollIcn"></i></a>
-				<span class="bgCover elemenBlock" style="background-image: url(https://via.placeholder.com/1920x520);"></span>
+				<a href="#pageWrapper" class="btnScrollToTop smooth textWhite">Scroll Top <i
+						class="fi flaticon-arrows btnScrollIcn"></i></a>
+				<span class="bgCover elemenBlock"
+					style=""></span>
 			</div>
 		</div>
 		<!-- pagePopupWrap -->
@@ -523,14 +440,18 @@
 											<span class="fakeLabel">Remember me</span>
 										</label>
 									</div>
-									<button type="submit" class="btn btnSecondary elemenBlock fontNeuron fwNormal text-uppercase btnSubmit">LOGIN</button>
+									<button type="submit"
+										class="btn btnSecondary elemenBlock fontNeuron fwNormal text-uppercase btnSubmit">LOGIN</button>
 									<a href="#" class="linkForget">Forgot Password?</a>
 								</div>
 								<div class="col">
 									<p>You Can Login using your facebook Profile or Google account</p>
-									<button type="button" class="btnSocial btnFb elemenBlock"><i class="fab fa-facebook-f btnIco"></i> Facebook Connect</button>
-									<button type="button" class="btnSocial btnTw elemenBlock"><i class="fab fa-twitter btnIco"></i> Twitter Connect</button>
-									<button type="button" class="btnSocial btnG elemenBlock"><i class="fab fa-google btnIco"></i> Google Connect</button>
+									<button type="button" class="btnSocial btnFb elemenBlock"><i
+											class="fab fa-facebook-f btnIco"></i> Facebook Connect</button>
+									<button type="button" class="btnSocial btnTw elemenBlock"><i
+											class="fab fa-twitter btnIco"></i> Twitter Connect</button>
+									<button type="button" class="btnSocial btnG elemenBlock"><i
+											class="fab fa-google btnIco"></i> Google Connect</button>
 								</div>
 							</div>
 						</div>
@@ -547,16 +468,17 @@
 										<input type="password" class="form-control elemenBlock" placeholder="Password">
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control elemenBlock" placeholder="Confirm Password">
+										<input type="password" class="form-control elemenBlock"
+											placeholder="Confirm Password">
 									</div>
 									<div class="form-group">
-										<input type="email" class="form-control elemenBlock" placeholder="Email Address">
+										<input type="email" class="form-control elemenBlock"
+											placeholder="Email Address">
 									</div>
 									<div class="form-group">
 										<select data-placeholder="Type" class="chosen-select">
 											<option value="1">House Owner</option>
 											<option value="2">Service Owner</option>
-											<option value="3">Data Operator</option>
 										</select>
 									</div>
 									<div class="form-group">
@@ -566,13 +488,17 @@
 											<span class="fakeLabel">I have read and agree to the Term of Service.</span>
 										</label>
 									</div>
-									<button type="submit" class="btn btn-primary elemenBlock fontNeuron fwNormal text-uppercase btnSubmit">REGISTER</button>
+									<button type="submit"
+										class="btn btn-primary elemenBlock fontNeuron fwNormal text-uppercase btnSubmit">REGISTER</button>
 								</div>
 								<div class="col">
 									<p>You Can Login using your facebook Profile or Google account</p>
-									<button type="button" class="btnSocial btnFb elemenBlock"><i class="fab fa-facebook-f btnIco"></i> Facebook Connect</button>
-									<button type="button" class="btnSocial btnTw elemenBlock"><i class="fab fa-twitter btnIco"></i> Twitter Connect</button>
-									<button type="button" class="btnSocial btnG elemenBlock"><i class="fab fa-google btnIco"></i> Google Connect</button>
+									<button type="button" class="btnSocial btnFb elemenBlock"><i
+											class="fab fa-facebook-f btnIco"></i> Facebook Connect</button>
+									<button type="button" class="btnSocial btnTw elemenBlock"><i
+											class="fab fa-twitter btnIco"></i> Twitter Connect</button>
+									<button type="button" class="btnSocial btnG elemenBlock"><i
+											class="fab fa-google btnIco"></i> Google Connect</button>
 								</div>
 							</div>
 						</div>
@@ -581,7 +507,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- include jQuery library -->
 	<!-- include jQuery library -->
 	<script src="../js/jquery.js"></script>
 	<script src="../js/jquery.main.js"></script>
@@ -597,5 +522,9 @@
 
 		});
 	</script>
+
+	<!-- include custom JavaScript -->
+	{{-- <script type="text/javascript" src="../js/init.js"></script> --}}
 </body>
+
 </html>

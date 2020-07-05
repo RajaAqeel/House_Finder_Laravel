@@ -215,575 +215,204 @@
 								<h1 class="fontNeuron">Properties</h1>
 							</div>
 						</header>
-						@if (isset($house))
-						@if (count($house) > 0)
-						@foreach ($house as $house)
-							<div class="isoContentHolder">
-								<div class="row">
-									<div class="col-xs-12 isoCol sale">
-										<!-- postColumn__ListView -->
-										<article class="postColumn__ListView hasOver bgWhite">
-											<div class="alignleft noShrink">
-												<!-- postColumnImageSlider -->
-												<div class="slick-carousel slickSlider postColumnImageSlider">
-													<div>
-														<div class="imgHolder">
-															<a href="/houses/tenant/{{$house->id}}">
-																<img src="https://via.placeholder.com/255x200" alt="image description">
-															</a>
+						@if (isset($houses))
+							@if (count($houses) > 0)
+								@foreach ($houses as $house)
+									<div class="isoContentHolder">
+										<div class="row">
+											<div class="col-xs-12 isoCol sale">
+												<!-- postColumn__ListView -->
+												<article class="postColumn__ListView hasOver bgWhite">
+													<div class="alignleft noShrink">
+														<!-- postColumnImageSlider -->
+														<div class="slick-carousel slickSlider postColumnImageSlider">
+															<div>
+																<div class="imgHolder">
+																	<a href="#">
+																	<img src="storage/houses/{{$house->photo}}" alt="image description">
+																	</a>
+																</div>
+															</div>
 														</div>
 													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="/houses/tenant/{{$house->id}}">
-																<img src="https://via.placeholder.com/255x200" alt="image description">
-															</a>
+													<div class="descrWrap">
+													<h2 class="fontNeuron text-capitalize"><a href="/show/property/{{$house->id}}">{{$house->title}}</a></h2>
+														<address>
+															<span class="icn"><i class="fi flaticon-pin-1"></i></span>
+																<p>{{$house->address}} </p>
+														</address>
+														<div class="stampWrap">
+															<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} for Rent </span>
 														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="/houses/tenant/{{$house->id}}">
-																<img src="https://via.placeholder.com/255x200" alt="image description">
-															</a>
+														<div class="priceWrap">
+															<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$house->price}}</span> <span class="textUnit fwNormal">/ monthly</span></h3>
+															<!-- linkDistributer -->
+															<a href="#popup3" class="lightbox">View Surrounding Services	</a>
 														</div>
+														<!-- postColumnFoot -->
+														<footer class="postColumnFoot">
+															<ul class="list-unstyled">
+																<li>
+																	<strong class="fwNormal elemenBlock text-primary">Area</strong>
+																	<strong class="fwNormal elemenBlock">{{$house->area_value}} {{$house->area_unit}}</strong>
+																</li>
+																<li>
+																	<strong class="fwNormal elemenBlock text-primary">Beds</strong>
+																<strong class="fwNormal elemenBlock">{{$house->bedrooms}}</strong>
+																</li>
+																<li>
+																	<strong class="fwNormal elemenBlock text-primary">Baths</strong>
+																	<strong class="fwNormal elemenBlock">{{$house->bathrooms}}</strong>
+																</li>
+															</ul>
+														</footer>
 													</div>
-												</div>
+												</article>
 											</div>
-											<div class="descrWrap">
-												<h2 class="fontNeuron text-capitalize"><a href="/show/{{$house->id}}">{{$house->title}}</a></h2>
-												<address>
-													<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-														<p>{{$house->address}} </p>
-												</address>
-												<div class="stampWrap">
-													<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} for Rent </span>
-												</div>
-												<div class="priceWrap">
-													<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$house->price}}</span> <span class="textUnit fwNormal">/ monthly</span></h3>
-													<!-- linkDistributer -->
-													<a href="properties-full-width-list.html">View Surrounding Services	</a>
-												</div>
-												<!-- postColumnFoot -->
-												<footer class="postColumnFoot">
-													<ul class="list-unstyled">
-														<li>
-															<strong class="fwNormal elemenBlock text-primary">Area</strong>
-															<strong class="fwNormal elemenBlock">{{$house->area_value}} {{$house->area_unit}}</strong>
-														</li>
-														<li>
-															<strong class="fwNormal elemenBlock text-primary">Beds</strong>
-														<strong class="fwNormal elemenBlock">{{$house->bedrooms}}</strong>
-														</li>
-														<li>
-															<strong class="fwNormal elemenBlock text-primary">Baths</strong>
-															<strong class="fwNormal elemenBlock">{{$house->bathrooms}}</strong>
-														</li>
-													</ul>
-												</footer>
-											</div>
-										</article>
+										</div>
 									</div>
-								</div>
-							</div>
 							@endforeach
 							@else
 							<header class="contentFiltersHeadingWrap row">
 								<div class="col-xs-12 col-sm-10">
-									<!-- breadcrumb -->
 									<h1 class="fontNeuron">No Houses Found</h1>
 								</div>
 							</header>
 							@endif
 							@endif
-						@if (isset($internet_p))
-							@if (count($internet_p) > 0)
-								@foreach ($internet_p as $internet)
-								<div class="isoContentHolder">
-									<div class="row">
-										<div class="col-xs-12 isoCol sale">
-											<!-- postColumn__ListView -->
-											<article class="postColumn__ListView hasOver bgWhite">
-												<div class="alignleft noShrink">
-													<!-- postColumnImageSlider -->
-													<div class="slick-carousel slickSlider postColumnImageSlider">
-														<div>
-															<div class="imgHolder">
-																<a href="properties-single2.html">
-																	<img src="https://via.placeholder.com/255x200" alt="image description">
-																</a>
-															</div>
-														</div>
-														<div>
-															<div class="imgHolder">
-																<a href="properties-single2.html">
-																	<img src="https://via.placeholder.com/255x200" alt="image description">
-																</a>
-															</div>
-														</div>
-														<div>
-															<div class="imgHolder">
-																<a href="properties-single2.html">
-																	<img src="https://via.placeholder.com/255x200" alt="image description">
-																</a>
-															</div>
-														</div>
+							<div class="popup-holder">
+								<div id="popup3" class="lightbox-demo">
+									<!-- popupLoginFrom -->
+										<div class="tab-content">
+											<div id="tab02">
+												<div class="popupColsHolder">
+													<div class="col bgWhite">
+														<section class="widget widgetPadding widgetRecentPosts bgWhite">
+															<h3 class="fontNeuron fwBold text-capitalize">Surrounding Services</h3>
+															<!-- widgetRecentPostsList -->
+															<ul class="list-unstyled widgetRecentPostsList padlReset">
+																	@if (isset($internets))
+																		@if (count($internets) > 0)
+																			@foreach ($internets as $internet)
+																			<li>
+																				<div class="alignleft">
+																					<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																				</div>
+																				<div class="descrWrap">
+																					<h4 class="fontNeuron fwBold"><a href="properties-single2.html">{{$internet->title}}</a></h4>
+																					<strong class="price elemenBlock fwSemi fontNeuron">  {{$internet->price_month}}</strong>
+																					<p>{{$internet->address}}</p>
+																				</div>
+																			</li>
+																			@endforeach
+																		@endif	
+																	@endif
+																@if (isset($cable_op))
+																		@if (count($cable_op) > 0)
+																			@foreach ($cable_op as $internet)
+																				<li>
+																					<div class="alignleft">
+																						<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																					</div>
+																					<div class="descrWrap">
+																						<h4 class="fontNeuron fwBold"><a href="properties-single2.html">{{$internet->title}}</a></h4>
+																						<strong class="price elemenBlock fwSemi fontNeuron">  {{$internet->price_month}}</strong>
+																						<p>{{$internet->address}}</p>
+																					</div>
+																				</li>
+																		@endforeach
+																	@endif	
+																@endif
+																	@if (isset($parking))
+																		@if (count($parking) > 0)
+																			@foreach ($parking as $internet)
+																			<li>
+																				<div class="alignleft">
+																					<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																				</div>
+																				<div class="descrWrap">
+																					<h4 class="fontNeuron fwBold"><a href="properties-single2.html">{{$internet->title}}</a></h4>
+																					<strong class="price elemenBlock fwSemi fontNeuron">phone number  {{$internet->phone_number}}</strong>
+																					<p>{{$internet->address}}</p>
+																				</div>
+																			</li>
+																			@endforeach
+																		@endif	
+																	@endif																													
+																	@if (isset($school_van))
+																		@if (count($school_van) > 0)
+																			@foreach ($school_van as $internet)
+																			<li>
+																				<div class="alignleft">
+																					<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																				</div>
+																				<div class="descrWrap">
+																					<h4 class="fontNeuron fwBold"><a href="properties-single2.html">Eagle Apartments</a></h4>
+																					<strong class="price elemenBlock fwSemi fontNeuron">  467,000</strong>
+																					<p>9364 School St. Lynchburg, NY</p>
+																				</div>
+																			</li>
+																			@endforeach
+																		@endif	
+																	@endif																																
+																	@if (isset($sweeper))
+																		@if (count($sweeper) > 0)
+																			@foreach ($sweeper as $internet)
+																			<li>
+																				<div class="alignleft">
+																					<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																				</div>
+																				<div class="descrWrap">
+																					<h4 class="fontNeuron fwBold"><a href="properties-single2.html">Eagle Apartments</a></h4>
+																					<strong class="price elemenBlock fwSemi fontNeuron">  467,000</strong>
+																					<p>9364 School St. Lynchburg, NY</p>
+																				</div>
+																			</li>
+																			@endforeach
+																		@endif	
+																	@endif																																																	@if (isset($watch_man))
+																		@if (count($watch_man) > 0)
+																			@foreach ($watch_man as $internet)
+																			<li>
+																				<div class="alignleft">
+																					<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																				</div>
+																				<div class="descrWrap">
+																					<h4 class="fontNeuron fwBold"><a href="properties-single2.html">Eagle Apartments</a></h4>
+																					<strong class="price elemenBlock fwSemi fontNeuron">  467,000</strong>
+																					<p>9364 School St. Lynchburg, NY</p>
+																				</div>
+																			</li>
+																			@endforeach
+																		@endif	
+																	@endif																														
+																	@if (isset($house_m))
+																		@if (count($house_m) > 0)
+																			@foreach ($house_m as $internet)
+																			<li>
+																				<div class="alignleft">
+																					<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																				</div>
+																				<div class="descrWrap">
+																					<h4 class="fontNeuron fwBold"><a href="properties-single2.html">Eagle Apartments</a></h4>
+																					<strong class="price elemenBlock fwSemi fontNeuron">  467,000</strong>
+																					<p>9364 School St. Lynchburg, NY</p>
+																				</div>
+																			</li>
+																			@endforeach
+																		@endif	
+																	@endif
+															</ul>
+														</section>
+													<div class="col">
+														<p>You Can Search more houses with respect to services using our system</p>
 													</div>
 												</div>
-												<div class="descrWrap">
-													<h2 class="fontNeuron text-capitalize"><a href="#">{{$internet->title}}</a></h2>
-													<address>
-														<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-														<p>{{$internet->address}} </p>
-													</address>
-													<div class="stampWrap">
-														<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} near your home </span>
-													</div>
-													<div class="priceWrap">
-														<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$internet->price_mb}}</span> <span class="textUnit fwNormal">/ mb</span></h3>
-														<!-- linkDistributer -->
-														<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> {{$name->name}}</a>
-													</div>
-													<!-- postColumnFoot -->
-													<footer class="postColumnFoot">
-														<ul class="list-unstyled">
-															<li>
-																<strong class="fwNormal elemenBlock text-primary">Complaint helpline</strong>
-																<strong class="fwNormal elemenBlock">{{$internet->complaint_helpline}}</strong>
-															</li>
-															<li>
-																<strong class="fwNormal elemenBlock text-primary">Customer care helpline</strong>
-															<strong class="fwNormal elemenBlock">{{$internet->customer_service_helpline}}</strong>
-															</li>
-														</ul>
-													</footer>
-												</div>
-											</article>
-										</div>
-									</div>
-								</div>
-							@endforeach
-						@endif	
-					@endif
-
-					@if (isset($parking))
-					@if (count($parking) > 0)
-						@foreach ($parking as $internet)
-						<div class="isoContentHolder">
-							<div class="row">
-								<div class="col-xs-12 isoCol sale">
-									<!-- postColumn__ListView -->
-									<article class="postColumn__ListView hasOver bgWhite">
-										<div class="alignleft noShrink">
-											<!-- postColumnImageSlider -->
-											<div class="slick-carousel slickSlider postColumnImageSlider">
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="https://via.placeholder.com/255x200" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="https://via.placeholder.com/255x200" alt="image description">
-														</a>
-													</div>
-												</div>
-												<div>
-													<div class="imgHolder">
-														<a href="properties-single2.html">
-															<img src="https://via.placeholder.com/255x200" alt="image description">
-														</a>
-													</div>
-												</div>
 											</div>
 										</div>
-										<div class="descrWrap">
-											<h2 class="fontNeuron text-capitalize"><a href="#">{{$internet->title}}</a></h2>
-											<address>
-												<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-												<p>{{$internet->address}} </p>
-											</address>
-											<div class="stampWrap">
-												<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} near your home </span>
-											</div>
-											<div class="priceWrap">
-												<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$internet->price_mb}}</span> <span class="textUnit fwNormal">/ mb</span></h3>
-												<!-- linkDistributer -->
-												<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> {{$name->name}}</a>
-											</div>
-											<!-- postColumnFoot -->
-											<footer class="postColumnFoot">
-												<ul class="list-unstyled">
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Complaint helpline</strong>
-														<strong class="fwNormal elemenBlock">{{$internet->complaint_helpline}}</strong>
-													</li>
-													<li>
-														<strong class="fwNormal elemenBlock text-primary">Customer care helpline</strong>
-													<strong class="fwNormal elemenBlock">{{$internet->customer_service_helpline}}</strong>
-													</li>
-												</ul>
-											</footer>
-										</div>
-									</article>
 								</div>
 							</div>
-						</div>
-					@endforeach
-				@endif	
-			@endif
-
-			@if (isset($cable_op))
-			@if (count($cable_op) > 0)
-				@foreach ($cable_op as $internet)
-				<div class="isoContentHolder">
-					<div class="row">
-						<div class="col-xs-12 isoCol sale">
-							<!-- postColumn__ListView -->
-							<article class="postColumn__ListView hasOver bgWhite">
-								<div class="alignleft noShrink">
-									<!-- postColumnImageSlider -->
-									<div class="slick-carousel slickSlider postColumnImageSlider">
-										<div>
-											<div class="imgHolder">
-												<a href="properties-single2.html">
-													<img src="https://via.placeholder.com/255x200" alt="image description">
-												</a>
-											</div>
-										</div>
-										<div>
-											<div class="imgHolder">
-												<a href="properties-single2.html">
-													<img src="https://via.placeholder.com/255x200" alt="image description">
-												</a>
-											</div>
-										</div>
-										<div>
-											<div class="imgHolder">
-												<a href="properties-single2.html">
-													<img src="https://via.placeholder.com/255x200" alt="image description">
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="descrWrap">
-									<h2 class="fontNeuron text-capitalize"><a href="#">{{$internet->title}}</a></h2>
-									<address>
-										<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-										<p>{{$internet->address}} </p>
-									</address>
-									<div class="stampWrap">
-										<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} near your home </span>
-									</div>
-									<div class="priceWrap">
-										<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$internet->price_mb}}</span> <span class="textUnit fwNormal">/ mb</span></h3>
-										<!-- linkDistributer -->
-										<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> {{$name->name}}</a>
-									</div>
-									<!-- postColumnFoot -->
-									<footer class="postColumnFoot">
-										<ul class="list-unstyled">
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Complaint helpline</strong>
-												<strong class="fwNormal elemenBlock">{{$internet->complaint_helpline}}</strong>
-											</li>
-											<li>
-												<strong class="fwNormal elemenBlock text-primary">Customer care helpline</strong>
-											<strong class="fwNormal elemenBlock">{{$internet->customer_service_helpline}}</strong>
-											</li>
-										</ul>
-									</footer>
-								</div>
-							</article>
-						</div>
-					</div>
-				</div>
-			@endforeach
-		@endif	
-	@endif
-
-	@if (isset($school_van))
-	@if (count($school_van) > 0)
-		@foreach ($school_van as $internet)
-		<div class="isoContentHolder">
-			<div class="row">
-				<div class="col-xs-12 isoCol sale">
-					<!-- postColumn__ListView -->
-					<article class="postColumn__ListView hasOver bgWhite">
-						<div class="alignleft noShrink">
-							<!-- postColumnImageSlider -->
-							<div class="slick-carousel slickSlider postColumnImageSlider">
-								<div>
-									<div class="imgHolder">
-										<a href="properties-single2.html">
-											<img src="https://via.placeholder.com/255x200" alt="image description">
-										</a>
-									</div>
-								</div>
-								<div>
-									<div class="imgHolder">
-										<a href="properties-single2.html">
-											<img src="https://via.placeholder.com/255x200" alt="image description">
-										</a>
-									</div>
-								</div>
-								<div>
-									<div class="imgHolder">
-										<a href="properties-single2.html">
-											<img src="https://via.placeholder.com/255x200" alt="image description">
-										</a>
-									</div>
-								</div>
 							</div>
-						</div>
-						<div class="descrWrap">
-							<h2 class="fontNeuron text-capitalize"><a href="#">{{$internet->title}}</a></h2>
-							<address>
-								<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-								<p>{{$internet->address}} </p>
-							</address>
-							<div class="stampWrap">
-								<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} near your home </span>
-							</div>
-							<div class="priceWrap">
-								<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$internet->price_mb}}</span> <span class="textUnit fwNormal">/ mb</span></h3>
-								<!-- linkDistributer -->
-								<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> {{$name->name}}</a>
-							</div>
-							<!-- postColumnFoot -->
-							<footer class="postColumnFoot">
-								<ul class="list-unstyled">
-									<li>
-										<strong class="fwNormal elemenBlock text-primary">Complaint helpline</strong>
-										<strong class="fwNormal elemenBlock">{{$internet->complaint_helpline}}</strong>
-									</li>
-									<li>
-										<strong class="fwNormal elemenBlock text-primary">Customer care helpline</strong>
-									<strong class="fwNormal elemenBlock">{{$internet->customer_service_helpline}}</strong>
-									</li>
-								</ul>
-							</footer>
-						</div>
-					</article>
-				</div>
-			</div>
-		</div>
-	@endforeach
-@endif	
-@endif
-
-@if (isset($sweeper))
-@if (count($sweeper) > 0)
-	@foreach ($sweeper as $internet)
-	<div class="isoContentHolder">
-		<div class="row">
-			<div class="col-xs-12 isoCol sale">
-				<!-- postColumn__ListView -->
-				<article class="postColumn__ListView hasOver bgWhite">
-					<div class="alignleft noShrink">
-						<!-- postColumnImageSlider -->
-						<div class="slick-carousel slickSlider postColumnImageSlider">
-							<div>
-								<div class="imgHolder">
-									<a href="properties-single2.html">
-										<img src="https://via.placeholder.com/255x200" alt="image description">
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="imgHolder">
-									<a href="properties-single2.html">
-										<img src="https://via.placeholder.com/255x200" alt="image description">
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="imgHolder">
-									<a href="properties-single2.html">
-										<img src="https://via.placeholder.com/255x200" alt="image description">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="descrWrap">
-						<h2 class="fontNeuron text-capitalize"><a href="#">{{$internet->title}}</a></h2>
-						<address>
-							<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-							<p>{{$internet->address}} </p>
-						</address>
-						<div class="stampWrap">
-							<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} near your home </span>
-						</div>
-						<div class="priceWrap">
-							<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$internet->price_mb}}</span> <span class="textUnit fwNormal">/ mb</span></h3>
-							<!-- linkDistributer -->
-							<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> {{$name->name}}</a>
-						</div>
-						<!-- postColumnFoot -->
-						<footer class="postColumnFoot">
-							<ul class="list-unstyled">
-								<li>
-									<strong class="fwNormal elemenBlock text-primary">Complaint helpline</strong>
-									<strong class="fwNormal elemenBlock">{{$internet->complaint_helpline}}</strong>
-								</li>
-								<li>
-									<strong class="fwNormal elemenBlock text-primary">Customer care helpline</strong>
-								<strong class="fwNormal elemenBlock">{{$internet->customer_service_helpline}}</strong>
-								</li>
-							</ul>
-						</footer>
-					</div>
-				</article>
-			</div>
-		</div>
-	</div>
-@endforeach
-@endif	
-@endif
-
-@if (isset($watch_man))
-@if (count($watch_man) > 0)
-	@foreach ($watch_man as $internet)
-	<div class="isoContentHolder">
-		<div class="row">
-			<div class="col-xs-12 isoCol sale">
-				<!-- postColumn__ListView -->
-				<article class="postColumn__ListView hasOver bgWhite">
-					<div class="alignleft noShrink">
-						<!-- postColumnImageSlider -->
-						<div class="slick-carousel slickSlider postColumnImageSlider">
-							<div>
-								<div class="imgHolder">
-									<a href="properties-single2.html">
-										<img src="https://via.placeholder.com/255x200" alt="image description">
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="imgHolder">
-									<a href="properties-single2.html">
-										<img src="https://via.placeholder.com/255x200" alt="image description">
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="imgHolder">
-									<a href="properties-single2.html">
-										<img src="https://via.placeholder.com/255x200" alt="image description">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="descrWrap">
-						<h2 class="fontNeuron text-capitalize"><a href="#">{{$internet->title}}</a></h2>
-						<address>
-							<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-							<p>{{$internet->address}} </p>
-						</address>
-						<div class="stampWrap">
-							<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} near your home </span>
-						</div>
-						<div class="priceWrap">
-							<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$internet->price_mb}}</span> <span class="textUnit fwNormal">/ mb</span></h3>
-							<!-- linkDistributer -->
-							<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> {{$name->name}}</a>
-						</div>
-						<!-- postColumnFoot -->
-						<footer class="postColumnFoot">
-							<ul class="list-unstyled">
-								<li>
-									<strong class="fwNormal elemenBlock text-primary">Complaint helpline</strong>
-									<strong class="fwNormal elemenBlock">{{$internet->complaint_helpline}}</strong>
-								</li>
-								<li>
-									<strong class="fwNormal elemenBlock text-primary">Customer care helpline</strong>
-								<strong class="fwNormal elemenBlock">{{$internet->customer_service_helpline}}</strong>
-								</li>
-							</ul>
-						</footer>
-					</div>
-				</article>
-			</div>
-		</div>
-	</div>
-@endforeach
-@endif	
-@endif
-
-@if (isset($house_m))
-@if (count($house_m) > 0)
-	@foreach ($house_m as $internet)
-	<div class="isoContentHolder">
-		<div class="row">
-			<div class="col-xs-12 isoCol sale">
-				<!-- postColumn__ListView -->
-				<article class="postColumn__ListView hasOver bgWhite">
-					<div class="alignleft noShrink">
-						<!-- postColumnImageSlider -->
-						<div class="slick-carousel slickSlider postColumnImageSlider">
-							<div>
-								<div class="imgHolder">
-									<a href="properties-single2.html">
-										<img src="https://via.placeholder.com/255x200" alt="image description">
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="imgHolder">
-									<a href="properties-single2.html">
-										<img src="https://via.placeholder.com/255x200" alt="image description">
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="imgHolder">
-									<a href="properties-single2.html">
-										<img src="https://via.placeholder.com/255x200" alt="image description">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="descrWrap">
-						<h2 class="fontNeuron text-capitalize"><a href="#">{{$internet->title}}</a></h2>
-						<address>
-							<span class="icn"><i class="fi flaticon-pin-1"></i></span>
-							<p>{{$internet->address}} </p>
-						</address>
-						<div class="stampWrap">
-							<span class="btn btnSmall btn-success text-capitalize">{{$house->status}} near your home </span>
-						</div>
-						<div class="priceWrap">
-							<h3 class="fontNeuron fwSemi"><span class="textSecondary">  {{$internet->price_mb}}</span> <span class="textUnit fwNormal">/ mb</span></h3>
-							<!-- linkDistributer -->
-							<a href="#" class="linkDistributer text-capitalize hidden-xs-ph"><i class="distributerIcn fi flaticon-social"></i> {{$name->name}}</a>
-						</div>
-						<!-- postColumnFoot -->
-						<footer class="postColumnFoot">
-							<ul class="list-unstyled">
-								<li>
-									<strong class="fwNormal elemenBlock text-primary">Complaint helpline</strong>
-									<strong class="fwNormal elemenBlock">{{$internet->complaint_helpline}}</strong>
-								</li>
-								<li>
-									<strong class="fwNormal elemenBlock text-primary">Customer care helpline</strong>
-								<strong class="fwNormal elemenBlock">{{$internet->customer_service_helpline}}</strong>
-								</li>
-							</ul>
-						</footer>
-					</div>
-				</article>
-			</div>
-		</div>
-	</div>
-@endforeach
-@endif	
-@endif
 					</section>
 				</main>
 			</div>
@@ -852,23 +481,19 @@
 			</div>
 		</div>
 		<!-- pagePopupWrap -->
-		<div class="popup-holder">
 			<div id="popup1" class="lightbox-demo">
 				<!-- popupLoginFrom -->
-				<form action="#" class="popupHolderWrap bgLightDark center-block popupLarge popupLoginFrom">
-					<ul class="list-unstyled popupTabsetList text-center fwBold text-uppercase fontNeuron">
-						<li class="active"><a href="#tab01">LOGIN</a></li>
-						<li><a href="#tab02">REGISTER</a></li>
-					</ul>
+				<form method="POST" action="{{ route('login') }}" class="popupHolderWrap bgLightDark center-block popupLarge popupLoginFrom">
+					@csrf
 					<div class="tab-content">
 						<div id="tab01" class="tab-active">
 							<div class="popupColsHolder">
 								<div class="col bgWhite">
 									<div class="form-group">
-										<input type="text" class="form-control elemenBlock" placeholder="User Namer">
+										<input type="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus class="form-control elemenBlock" placeholder="User Namer">
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control elemenBlock" placeholder="Password">
+										<input type="password" class="form-control elemenBlock" placeholder="Password" name="password" required autocomplete="current-password">
 									</div>
 									<div class="form-group">
 										<label class="fwNormal customLabelCheck">
@@ -888,39 +513,38 @@
 								</div>
 							</div>
 						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<div class="popup-holder">
+			<div id="popup2" class="lightbox-demo">
+				<!-- popupLoginFrom -->
+				<form method="POST" action="{{ route('register') }}" class="popupHolderWrap bgLightDark center-block popupLarge popupLoginFrom">
+					@csrf
+					<div class="tab-content">
 						<div id="tab02">
 							<div class="popupColsHolder">
 								<div class="col bgWhite">
 									<div class="form-group">
-										<input type="text" class="form-control elemenBlock" placeholder="Full Name">
+										<input type="text" class="form-control elemenBlock" placeholder="Full Name" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control elemenBlock" placeholder="User Name">
+										<input type="email" class="form-control elemenBlock" placeholder="Email Address" name="email" value="{{ old('email') }}" required autocomplete="email">
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control elemenBlock" placeholder="Password">
+								<input type="password" class="form-control elemenBlock" placeholder="Password" name="password" required autocomplete="new-password">
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control elemenBlock" placeholder="Confirm Password">
+										<input type="password" class="form-control elemenBlock" placeholder="Confirm Password" name="password_confirmation" required autocomplete="new-password">
 									</div>
 									<div class="form-group">
-										<input type="email" class="form-control elemenBlock" placeholder="Email Address">
-									</div>
-									<div class="form-group">
-										<select data-placeholder="Type" class="chosen-select">
-											<option value="1">For Rent</option>
-											<option value="2">For Sale</option>
-											<option value="3">House</option>
-											<option value="4">Property</option>
-											<option value="5">Real Estate</option>
+										<select name="user_type" value="{{ old('user_type') }}" data-placeholder="Type" class="chosen-select" class="form-control elemenBlock">
+											<option value="House Owner">House Owner</option>
+											<option value="Service Provider">Service Provider</option>
 										</select>
-									</div>
-									<div class="form-group">
-										<label class="fwNormal customLabelCheck">
-											<input type="checkbox" class="customFormInputReset" checked>
-											<span class="fakeCheckbox"></span>
-											<span class="fakeLabel">I have read and agree to the Term of Service.</span>
-										</label>
 									</div>
 									<button type="submit" class="btn btn-primary elemenBlock fontNeuron fwNormal text-uppercase btnSubmit">REGISTER</button>
 								</div>

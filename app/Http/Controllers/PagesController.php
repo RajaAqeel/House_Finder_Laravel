@@ -10,8 +10,8 @@ class PagesController extends Controller
 {
     public function home(){
         $cities = city::all();
-        $houses = house::orderBy('created_at', 'ASC');
-        return view('home')->with('cities', $cities);
+        $houses = house::orderBy('created_at', 'ASC')->get();
+        return view('home')->with('houses', $houses)->with('cities', $cities);
     }
     
     public function about(){
@@ -45,7 +45,7 @@ class PagesController extends Controller
      }
      public function adminViewProfile()
      {
-     
+        
          return view('admin-view-profile');
      }
 
@@ -57,7 +57,7 @@ class PagesController extends Controller
 
      public function viewAllProperties()
      {
-     
+        
          return view('my-properties');
      }
 

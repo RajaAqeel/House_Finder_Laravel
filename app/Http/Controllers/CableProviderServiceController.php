@@ -57,6 +57,7 @@ class CableProviderServiceController extends Controller
         $cable->sub_area_id = $request->get('sub_area');
         $cable->favourite = 'no';
         $cable->verified = 'no';
+        $cable->status = 'Avl';
         $cable->description = $request->input('description');
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $cable->service_provider_id =$so->id;

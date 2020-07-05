@@ -177,7 +177,7 @@
 									<div class="form-group">
 									  <label for="item-map">Upload images</label>
 									  <div class="input-group">
-										<input required name="img_url[]" type="file" class="form-control" multiple>
+										<input required name="img_url" type="file" class="form-control">
 									  </div>
 									</div>
 								  </div>

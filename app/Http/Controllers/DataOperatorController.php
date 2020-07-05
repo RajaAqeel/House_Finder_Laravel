@@ -28,7 +28,8 @@ class DataOperatorController extends Controller
      */
     public function create()
     {
-        return view('data-operator-profile');
+        $city = city::all();
+        return view('data-operator-profile')->with('city', $city);
     }
 
     /**
