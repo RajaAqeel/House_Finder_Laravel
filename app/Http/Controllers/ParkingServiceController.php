@@ -47,6 +47,7 @@ class ParkingServiceController extends Controller
             'value' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
             'address' => ['required'],
             'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
+            'img_url' => ['required']
         ]);
         $parking = new parking_service;
         $parking->title = $request->get('service_title');
@@ -60,6 +61,23 @@ class ParkingServiceController extends Controller
         $parking->verified = 'no';
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $parking->service_provider_id =$so->id;
+
+        if ($request->hasFile('img_url')) {
+            //Get Filename with Ext
+            $fileNameWithExt = $request->file('img_url')->getClientOriginalName();
+            //Get just Filename
+            $fileName = pathinfo($fileNameWithExt , PATHINFO_FILENAME );
+            //Get just extension
+            $extension = $request->file('img_url')->getClientOriginalExtension();
+            //File to store
+            $fileNameToStore = $fileName.'_'.time().'.'.$extension;
+            //Upload Image
+            $path = $request->file('img_url')->storeAs('public/parking',$fileNameToStore);
+            $parking->image = $fileNameToStore;
+       
+        } else {
+            $fileNameToStore = 'no_image';
+        }
         $parking->save();
         return redirect('/my-services');
     }
@@ -110,6 +128,7 @@ class ParkingServiceController extends Controller
             'value' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
             'address' => ['required'],
             'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
+            'img_url' => ['required']
         ]);
         $parking = parking_service::where('id', $id)->first();
         $parking->title = $request->get('service_title');
@@ -123,6 +142,22 @@ class ParkingServiceController extends Controller
         $parking->verified = 'no';
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $parking->service_provider_id =$so->id;
+        if ($request->hasFile('img_url')) {
+            //Get Filename with Ext
+            $fileNameWithExt = $request->file('img_url')->getClientOriginalName();
+            //Get just Filename
+            $fileName = pathinfo($fileNameWithExt , PATHINFO_FILENAME );
+            //Get just extension
+            $extension = $request->file('img_url')->getClientOriginalExtension();
+            //File to store
+            $fileNameToStore = $fileName.'_'.time().'.'.$extension;
+            //Upload Image
+            $path = $request->file('img_url')->storeAs('public/parking',$fileNameToStore);
+            $parking->image = $fileNameToStore;
+       
+        } else {
+            $fileNameToStore = 'no_image';
+        }
         $parking->update();
         return redirect('/my-services');
     }

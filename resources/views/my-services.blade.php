@@ -305,7 +305,11 @@
                                   </div>
                                   <div class="btnArea">
                                     <ul class="links list-unstyled">
-                                      <li><a href="/internet/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
+										<form action="/favPropertyStatus/{{$houses->id}}" method="POST">
+											{{ csrf_field() }}
+											{{ method_field('PUT') }}
+											<li><button type="submit"><a><i class="fa fa-heart"></i></a></button></li>
+										</form>
 									<li><a href="/editInternetInfo/{{$internet->id}}"><i class="fa fa-edit"></i>Edit</a></li>
                                       <li><a href="/deleteI/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
                                     </ul>
@@ -331,7 +335,11 @@
                                   </div>
                                   <div class="btnArea">
                                     <ul class="links list-unstyled">
-                                      <li><a href="/cable/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
+										<form action="/favPropertyStatus/{{$houses->id}}" method="POST">
+											{{ csrf_field() }}
+											{{ method_field('PUT') }}
+											<li><button type="submit"><a><i class="fa fa-heart"></i></a></button></li>
+										</form>
                                       <li><a href="/editCableInfo/{{$internet->id}}"><i class="fa fa-edit"></i>Edit</a></li>
                                       <li><a href="/deleteC/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
                                     </ul>
@@ -357,7 +365,11 @@
                                   </div>
                                   <div class="btnArea">
                                     <ul class="links list-unstyled">
-                                      <li><a href="/housemaid/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
+										<form action="/favPropertyStatus/{{$houses->id}}" method="POST">
+											{{ csrf_field() }}
+											{{ method_field('PUT') }}
+											<li><button type="submit"><a><i class="fa fa-heart"></i></a></button></li>
+										</form>
                                       <li><a href="/editHousemaidInfo/{{$internet->id}}"><i class="fa fa-edit"></i>Edit</a></li>
                                       <li><a href="/deleteHo/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
                                     </ul>
@@ -383,7 +395,11 @@
                                   </div>
                                   <div class="btnArea">
                                     <ul class="links list-unstyled">
-                                      <li><a href="/parking/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
+										<form action="/favPropertyStatus/{{$houses->id}}" method="POST">
+											{{ csrf_field() }}
+											{{ method_field('PUT') }}
+											<li><button type="submit"><a><i class="fa fa-heart"></i></a></button></li>
+										</form>
                                       <li><a href="/editParkingInfo/{{$internet->id}}"><i class="fa fa-edit"></i>Edit</a></li>
                                       <li><a href="/deleteP/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
                                     </ul>
@@ -409,7 +425,11 @@
                                   </div>
                                   <div class="btnArea">
                                     <ul class="links list-unstyled">
-                                      <li><a href="/schoolvan/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
+										<form action="/favPropertyStatus/{{$houses->id}}" method="POST">
+											{{ csrf_field() }}
+											{{ method_field('PUT') }}
+											<li><button type="submit"><a><i class="fa fa-heart"></i></a></button></li>
+										</form>
                                       <li><a href="/editSchoolvanInfo/{{$internet->id}}"><i class="fa fa-edit"></i>Edit</a></li>
                                       <li><a href="/deleteSc/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
                                     </ul>
@@ -435,7 +455,11 @@
                                   </div>
                                   <div class="btnArea">
                                     <ul class="links list-unstyled">
-                                      <li><a href="/sweeper/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
+										<form action="/favPropertyStatus/{{$houses->id}}" method="POST">
+											{{ csrf_field() }}
+											{{ method_field('PUT') }}
+											<li><button type="submit"><a><i class="fa fa-heart"></i></a></button></li>
+										</form>
                                       <li><a href="/editSweeperInfo/{{$internet->id}}"><i class="fa fa-edit"></i>Edit</a></li>
                                       <li><a href="/deleteSw/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
                                     </ul>
@@ -461,7 +485,11 @@
                                   </div>
                                   <div class="btnArea">
                                     <ul class="links list-unstyled">
-                                      <li><a href="/watchman/{{$internet->id}}"><i class="fa fa-eye"></i>View</a></li>
+										<form action="/favPropertyStatus/{{$houses->id}}" method="POST">
+											{{ csrf_field() }}
+											{{ method_field('PUT') }}
+											<li><button type="submit"><a><i class="fa fa-heart"></i></a></button></li>
+										</form>
                                       <li><a href="/editWatchmanInfo/{{$internet->id}}"><i class="fa fa-edit"></i>Edit</a></li>
                                       <li><a href="/deleteW/{{$internet->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
                                     </ul>

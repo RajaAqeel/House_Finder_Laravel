@@ -26,7 +26,7 @@ class HouseOwnerController extends Controller
      */
     public function create()
     {
-        return view('data-operator-profile');
+        return view('house-owner-profile');
     }
 
     /**

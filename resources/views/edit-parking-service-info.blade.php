@@ -53,44 +53,76 @@
                             <div class="col-xs-12">
                               <div class="form-group">
                                 <label for="itemN-15">Service Title*</label>
-                                <input required name="service_title" type="text" class="form-control" placeholder="Rawalpindi DSL Providers" id="itemN-15">
+                                <input required name="service_title" type="text" class="form-control" placeholder="{{$parking->title}}" id="itemN-15">
                               </div>
                             </div>
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="form-group">
-                                <label for="itemN-16">Price/mb</label>
-                                <input required name="price" type="text" class="form-control" placeholder="3000" id="itemN-16">
-                              </div>
-							</div>
-							<div class="col-xs-12 col-sm-6">
+							<div class="col-xs-12">
 								<div class="form-group">
-								  <label for="itemN-17">Address</label>
-								  <input required name="address" type="text" class="form-control" placeholder="Address" id="itemN-17">
+								  <label for="itemN-101">Address</label>
+								  <select  required name="address" data-placeholder="" class="form-control" id="itemN-101">
+									  <option value="{{$parking->address}}">{{$parking->address}}</option>
+									</select>
 								</div>
 							  </div>
+							  <div  class="col-xs-12 col-sm-6">
+								<div class="form-group">
+								  <label for="itemN-102">City</label>
+								  <select  required name="city_id" data-placeholder="" class="form-control" id="itemN-102">
+									  <option value="{{$parking->city_id}}">{{$parking->city_id}}</option>
+									</select>
+								</div>
+							  </div>
+							  <div  class="col-xs-12 col-sm-6">
+								<div class="form-group">
+								  <label for="itemN-103">Sub Area</label>
+								  <select  required name="sub_area" data-placeholder="" class="form-control" id="itemN-103">
+									  <option value="{{$parking->sub_area_id}}">{{$parking->sub_area_id}}</option>
+									</select>
+								</div>
+							  </div>
+							  <div class="col-xs-12 col-sm-6">
+								<div class="form-group">
+								  <label for="itemN-17">Area Unit</label>
+								  <select required name="unit" data-placeholder="{{$parking->area_unit}}" class="form-control" id="itemN-17">
+									  <option value="Marla">Marla</option>
+									  <option value="Kanal">Kanal</option>
+									  <option value="Square Feet">Square Feet</option>
+									  <option value="Square Yards">Square Yards</option>
+									  <option value="Square Meters">Square Meters</option>
+									</select>
+								</div>
+							  </div>
+                            <div class="col-xs-12 col-sm-6">
+                              <div class="form-group">
+                                <label for="itemN-21">Land Area</label>
+                                <input required name="area" type="number" class="form-control" placeholder="{{$parking->area_value}}" id="itemN-21">
+                              </div>
+							</div>
 							  <div class="col-xs-12">
                                 <div class="form-group">
                                   <label for="itemN-36">Phone Number</label>
-                                  <input required name="number" type="text" class="form-control" placeholder="03000000000" id="itemN-36">
+                                  <input required name="number" type="text" class="form-control" placeholder="{{$parking->phone_number}}" id="itemN-36">
                                 </div>
                               </div>
-							  <div class="col-xs-12 col-sm-6">
+							  <div class="col-xs-12">
                                 <div class="form-group">
-                                  <label for="itemN-32">Complaint Helpline</label>
-                                  <input required name="c_hl" type="text" class="form-control" placeholder="1212" id="itemN-32">
+                                  <label for="itemN-32">Description</label>
+                                  <textarea required name="description" type="text" class="form-control" placeholder="{{$parking->description}}" id="itemN-32">
                                 </div>
 							  </div>
-							  <div class="col-xs-12 col-sm-6">
-                                <div class="form-group">
-                                  <label for="itemN-34">Customer Care Helpline</label>
-                                  <input required name="cc_hl" type="text" class="form-control" placeholder="1213" id="itemN-34">
-                                </div>
-                              </div>
-                        
+							  <h3 class="fontNeuron">Photos</h3><br>
+							  <div class="col-xs-12">
+								<div class="form-group">
+								  <label for="item-map">Upload images</label>
+								  <div class="input-group">
+									<input required name="img_url" type="file" class="form-control ">
+								  </div>
+								</div>
+							  </div>
                           </div>
                           <div class="btnArea">
 							<button class="btn btnDark"><a href="/sp_dashboard">Back</a></button>
-							<button type="submit" class="btn btnDark">Register</button>
+							<button type="submit" class="btn btnDark">Update</button>
 
                           </div>
                         </form>

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<!-- set the encoding of your site -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- set the page title -->
-	<title>My Favourite Properties</title>
+	<title>Properties</title>
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
@@ -15,6 +16,7 @@
 	<!-- include the site stylesheet -->
 	<link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
 	<!-- pageWrapper -->
 	<div id="pageWrapper">
@@ -47,7 +49,10 @@
 											<li>
 												<!-- topBarPanelListDropdown -->
 												<div class="dropdown topBarPanelListDropdown">
-													<button class="dropdown-toggle buttonReset" type="button" id="dropdownLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English<span class="caret"></span></button>
+													<button class="dropdown-toggle buttonReset" type="button"
+														id="dropdownLang" data-toggle="dropdown" aria-haspopup="true"
+														aria-expanded="false">English<span
+															class="caret"></span></button>
 													<!-- dropdownLang -->
 													<ul class="dropdown-menu" aria-labelledby="dropdownLang">
 														<li><a href="#">English</a></li>
@@ -67,33 +72,46 @@
 								<div class="row">
 									<div class="col-xs-6 col-sm-3">
 										<!-- logo -->
-										<div class="logo"><a href="home"><img src="images/logo.png" alt="LemanHouse"></a></div>
+										<div class="logo"><a href="home"><img src="/images/houseFinderLogo.png"
+													alt="LemanHouse"></a></div>
 									</div>
 									<div class="col-xs-6 col-sm-9 d-flex">
 										<!-- headerContactList -->
 										<ul class="list-unstyled headerContactList">
 											<li>
-												<a href="tel:+12463450695" class="icn icnBubble noShrink text-info"><i class="fi flaticon-24-hours"></i></a>
+												<a href="tel:+12463450695" class="icn icnBubble noShrink text-info"><i
+														class="fi flaticon-24-hours"></i></a>
 												<div class="descr hidden-xs">
-													<strong class="fwNormal elemenBlock text"><a href="#">+92 3065085832</a></strong>
-													<strong class="fwNormal elemenBlock text"><a href="#">info@housefinder.com</a></strong>
+													<strong class="fwNormal elemenBlock text"><a href="#">+92
+															3065085832</a></strong>
+													<strong class="fwNormal elemenBlock text"><a
+															href="#">info@housefinder.com</a></strong>
 												</div>
 											</li>
 											<li class="hidden-xs">
-												<span class="icn icnJumping text-info noShrink"><i class="fi flaticon-pin-1"></i></span>
+												<span class="icn icnJumping text-info noShrink"><i
+														class="fi flaticon-pin-1"></i></span>
 												<div class="descr">
-													<strong class="fwNormal elemenBlock text">Riphah International University I-14 <br>Golra Mor Islamabad, Pakistan</strong>
+													<strong class="fwNormal elemenBlock text">Riphah International
+														University I-14<br>Golra Mor Islamabad, Pakistan</strong>
 												</div>
 											</li>
 										</ul>
 										<!-- headerSearchForm -->
 										<form action="#" class="headerSearchForm">
-											<a class="headerSearchOpener roundedCircle bgWhite" role="button" data-toggle="collapse" href="#headerSearchFormcollapse" aria-expanded="false" aria-controls="headerSearchFormcollapse"><i class="fi flaticon-search btnOpen"></i><i class="fas fa-times btnClose"></i></a>
+											<a class="headerSearchOpener roundedCircle bgWhite" role="button"
+												data-toggle="collapse" href="#headerSearchFormcollapse"
+												aria-expanded="false" aria-controls="headerSearchFormcollapse"><i
+													class="fi flaticon-search btnOpen"></i><i
+													class="fas fa-times btnClose"></i></a>
 											<!-- headerSearchFormcollapse -->
-											<div class="collapse searchFormcollapse bgWhite" id="headerSearchFormcollapse" aria-expanded="false" role="form">
+											<div class="collapse searchFormcollapse bgWhite"
+												id="headerSearchFormcollapse" aria-expanded="false" role="form">
 												<div class="form-group form-group-lg">
-													<label for="s" class="labelIcn"><i class="fi flaticon-search"></i></label>
-													<input type="search" id="s" class="form-control elemenBlock" placeholder="Search&hellip;">
+													<label for="s" class="labelIcn"><i
+															class="fi flaticon-search"></i></label>
+													<input type="search" id="s" class="form-control elemenBlock"
+														placeholder="Search&hellip;">
 												</div>
 											</div>
 										</form>
@@ -104,7 +122,8 @@
 							<nav id="pageNav" class="navbar navbar-default pageNav1">
 								<!-- Brand and toggle get grouped for better mobile display -->
 								<div class="navbar-header hidden-sm hidden-md hidden-lg">
-									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+										data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 										<span class="sr-only">Toggle navigation</span>
 										<span class="icon-bar"></span>
 										<span class="icon-bar"></span>
@@ -114,24 +133,26 @@
 								<!-- navbar collapse -->
 								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 									<div class="navigation-wrapper">
-										<strong class="h elemenBlock h4 textWhite text-center hidden-sm hidden-md hidden-lg menuTitle fontNeuron" id="menu-title">Menu</strong>
+										<strong
+											class="h elemenBlock h4 textWhite text-center hidden-sm hidden-md hidden-lg menuTitle fontNeuron"
+											id="menu-title">Menu</strong>
 										<!-- pageMainNav -->
 										<ul class="nav navbar-nav pageMainNav pageMainNav1">
 											<li>
-												<a href="/" >Home<span></span></a>
-												
-											</li>
-											<li >
-												<a href="/about" >About <span ></span></a>
+												<a href="/">Home<span></span></a>
 
 											</li>
-											<li >
-												<a href="/testimonials" >Testimonials<span ></span></a>
-												
+											<li>
+												<a href="/about">About <span></span></a>
+
 											</li>
-											<li >
-												<a href="/blog-full-width" >Blog<span ></span></a>
-												
+											<li>
+												<a href="/testimonials">Testimonials<span></span></a>
+
+											</li>
+											<li>
+												<a href="/blog-full-width">Blog<span></span></a>
+
 											</li>
 											<li>
 												<a href="/contact">Contact</a>
@@ -156,41 +177,54 @@
 												<strong class="text fwNormal hidden-xs hidden-sm">Register</strong>
 											</a>
 										</li>
-										<a href="/" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i>Welcome</a>
+										<a href="/" class="headerModalOpener text-uppercase fontNeuron fwBold"><i
+												class="openerIcon"></i>Welcome</a>
 										@endguest
 										@if(isset(Auth::user()->id))
 										@if(Auth::user()->user_type=="admin")
 										<li>
 											<a href="/dashboard">
 												<i class="fi flaticon-social icn"></i>
-											<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
+												<strong
+													class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
 											</a>
 										</li>
-										<a href="/add-city" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add City</a>
+										<a href="/add-city"
+											class="headerModalOpener text-uppercase fontNeuron fwBold"><i
+												class="openerIcon"></i> Add City</a>
 										@elseif(Auth::user()->user_type=="House Owner")
 										<li>
 											<a href="/ho_dashboard">
 												<i class="fi flaticon-social icn"></i>
-											<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
+												<strong
+													class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
 											</a>
 										</li>
-										<a href="/add-house-01" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Property</a>
+										<a href="/add-house-01"
+											class="headerModalOpener text-uppercase fontNeuron fwBold"><i
+												class="openerIcon"></i> Add Property</a>
 										@elseif(Auth::user()->user_type=="Data Operator")
-											<li>
-												<a href="/do_dashboard">
-													<i class="fi flaticon-social icn"></i>
-												<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
-												</a>
-											</li>
-											<a href="/add-sub-area" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Service</a>
+										<li>
+											<a href="/do_dashboard">
+												<i class="fi flaticon-social icn"></i>
+												<strong
+													class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
+											</a>
+										</li>
+										<a href="/add-sub-area"
+											class="headerModalOpener text-uppercase fontNeuron fwBold"><i
+												class="openerIcon"></i> Add Service</a>
 										@elseif(Auth::user()->user_type=="Service Provider")
 										<li>
 											<a href="/sp_dashboard">
 												<i class="fi flaticon-social icn"></i>
-											<strong class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
+												<strong
+													class="text fwNormal hidden-xs hidden-sm">{{Auth::user()->name}}</strong>
 											</a>
 										</li>
-										<a href="/add-internetProvider-info" class="headerModalOpener text-uppercase fontNeuron fwBold"><i class="openerIcon"></i> Add Sub Area</a>
+										<a href="/add-internetProvider-info"
+											class="headerModalOpener text-uppercase fontNeuron fwBold"><i
+												class="openerIcon"></i> Add Sub Area</a>
 										@endif
 										@endif
 									</ul>
@@ -205,145 +239,112 @@
 					<!-- findFormBlock -->
 					<form action="#" class="findFormBlock findFormBlock2 bgLightDark hasShadowTop offsetHeaderTop">
 					</form>
-					<!-- content -->
-					<section id="content" class="container pabIndent">
+
+					<section class="container">
 						<!-- contentFiltersHeadingWrap -->
 						<header class="contentFiltersHeadingWrap row">
-							<div class="col-xs-12 col-sm-10">
-
-								<h1 class="fontNeuron">Profile</h1>
+							<div class="col-xs-12 col col-sm-8">
+								<h1 class="fontNeuron">{{$sweeper->name}} <a href="#"
+										class="btn btnSmall btn-success fontBase">{{$internet->status}}</a></h1>
+								<!-- captionAddress -->
 							</div>
-							<div class="col-xs-12 col-sm-2">
-								<!-- viewFilterLinks -->
+							<div class="col-xs-12 col-sm-4 justify-end">
+								<!-- captionActionsList -->
 								<ul class="list-unstyled viewFilterLinks">
-									<li><a href="#"><i class="fi flaticon-share"></i></a></li>
+									<li><a href="#"><i class="fi flaticon-repeat"></i></a></li>
+									<li>
+										<a href="#">
+											<i class="fi flaticon-share"></i>
+										</a>
+										<!-- postColumnSocial -->
+										
+									</li>
 									<li><a href="#"><i class="fi flaticon-printer"></i></a></li>
 								</ul>
+								<strong class="elemenBlock fwNormal fontNeuron subtitle w100">{{$sweeper->phone_number}}</strong>
 							</div>
 						</header>
-				      <!-- userProfile -->
-                      <div class="userProfile">
-                        <div class="row">
-                          <div class="col-xs-12 col-sm-4 col-lg-3">
-                            <!-- profileSidebar -->
-                            <aside class="profileSidebar">
-                              <header class="head">
-                                <div class="imgProfile">
-                                  <img src="storage/uploads/House Owner Profile/{{$ho->image}}" alt="" width="74" height="74">
-                                </div>
-                                <div class="info">
-                                  <span class="text">Ali Tufan</span>
-                                  <span class="text"><a href="change-password" class="link">Change Password</a></span>
-                                </div>
-                              </header>
-                              <ul class="navUser list-unstyled">
-                                <li>
-									<a href="/ho_dashboard">
-									  <i class="far fa-user"></i>
-									  <span>View Profile</span>
-									</a>
-								  </li>
-                                <li>
-                                  <a href="house-owner-profile">
-                                    <i class="far fa-user"></i>
-                                    <span>Account Settings</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="my-properties">
-                                    <i class="fi flaticon-house"></i>
-                                    <span>My Properties</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="favourite-properties">
-                                    <i class="far fa-heart"></i>
-                                    <span>Favorited Properties</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="add-house-01">
-                                    <i class="fa fa-plus"></i>
-                                    <span>Add Property</span>
-                                  </a>
-                                </li>
-                                <li>
-									<a href="{{ url('/logout') }}"
-									onclick="event.preventDefault();
-											 document.getElementById('logout-form').submit();">
-									  <i class="fa fa-sign-out-alt"></i>
-									  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-										  {{ csrf_field() }}
-									  </form>
-                                    <span>Logout</span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </aside>
-                          </div>
-                          <div class="col-xs-12 col-sm-8 col-lg-9">
-                            <!-- accountData -->
-                            <div class="accountData">
-                              <div class="head">
-                                <h4 class="fontNeuron">My Favourite Properties</h4>
-                              </div>
-							  <!-- propertiesList -->
-							  @if (isset($allHouses))
-								  @if (count($allHouses) > 0)
-								  @foreach ($allHouses as $houses)
-								  <div class="propertiesList">
-									<article class="propertyRow">
-									  <div class="info">
-										<div class="imgThumbnail">
-										<a href="/houses/{{$houses->id}}"><img src="storage/houses/{{$houses->photo}}" alt=""></a>
-										</div>
-										<div class="textBox">
-										<h4 class="fontNeuron"><a href="/houses/{{$houses->id}}">{{$houses->title}}</a></h4>
-										<address><i class="fi flaticon-pin-1"></i>{{$houses->address}}</address>
-										  <div class="priceArea">
-											<span class="price fontNeuron">{{$houses->price}}</span>
-											<time class="date" datetime="2017-02-27">{{$houses->created_at}}</time>
-										  </div>
-										</div>
-									  </div>
-									  <div class="btnArea">
-										<span class="status fontNeuron">{{$houses->status}}</span>
-										<ul class="links list-unstyled">
-										  <li><a href="/houses/{{$houses->id}}"><i class="fa fa-eye"></i>View</a></li>
-										  <li><a href="edit-property-information"><i class="fa fa-edit"></i>Edit</a></li>
-										  <li><a href="/deleteH/{{$houses->id}}" class="delete"><i class="far fa-window-close"></i></a></li>
-										</ul>
-									  </div>
-									</article>
-								  </div>
-								  @endforeach
-								  @else
-								  <div>
-									<h4 class="fontNeuron">You don't have any  favourite properties</h4>
-								  </div>
-								  @endif
-							  @endif
-							  {{$allHouses->links()}}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
 					</section>
-					<!-- signupFormAside -->
-					<form action="#" class="bgWhite signupFormAside">
-						<div class="container signupFormAsideHolder">
-							<span></span>
-							<div class="col-xs-12 col-md-offset-2 col-md-6">
-								<h3 class="fontNeuron textSecondary">Download our app</h3>
-								<p>Download our app from google play store</p>
+					<!-- twoColumns -->
+					<div class="twoColumns container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-8">
+								<!-- content -->
+								<article id="content">
+									<!-- tabs -->
+									<section class="accountData">
+										<div class="head">
+											<h4 class="fontNeuron">Description</h4>
+										</div>
+										<p>{{$sweeper->description}}</p>
+									</section>
+									<section id="address" class="accountData address">
+										<div class="head">
+											<h4 class="fontNeuron">Detail</h4>
+										</div>
+										<div class="listpanel-content widthauto address paddingzero">
+											<ul>
+												<li><span>Address</span><span class="righttext">: {{$sweeper->address}},
+													{{$sub_area_name->name}}, {{$city_name->name}}</span></li>
+												<li><span>Country</span><span class="righttext">: Pakistan</span></li>
+												<li><span>City</span><span class="righttext">:
+														{{$city_name->name}}</span></li>
+												<li><span>Sub Area</span><span class="righttext">:
+														{{$sub_area_name->name}}</span></li>
+											</ul>
+										</div>
+									</section>
+								</article>
 							</div>
-							<div class="col-xs-12 col-md-4">
-								<div class="form-group">
-									<button type="button" class="buttonReset fi flaticon-navigation"></button>
-								</div>
+							<div class="col-xs-12 col-sm-12 col-md-4">
+								<aside id="sidebar">
+									<!-- contactFormPage -->
+									<section class="contactFormPage widget">
+										<div class="hb-headarea">
+											<div class="holder">
+												<div class="pull-left">
+													<div class="hb-headcontent">
+														<span></span>
+													</div>
+												</div>
+											</div>
+											<div class="hb-numberbox text-center">
+												<h3><i class="fi flaticon-24-hours"></i>+92 3065085832</h3>
+											</div>
+										</div>
+										<form method="POST" accept="/verifyInternet" class="widgetCalcForm">
+											<div class="row">
+												<div class="col-xs-12">
+													<div class="form-group">
+														<input required name="name" type="text" placeholder="Your Name"
+															class="form-control">
+													</div>
+												</div>
+												<div class="col-xs-12">
+													<div class="form-group">
+														<input required name="number" type="tel" placeholder="Phone"
+															class="form-control">
+													</div>
+												</div>
+												<div class="col-xs-12">
+													<div class="form-group">
+														<input required name="email" type="email" placeholder="Email"
+															class="form-control">
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<textarea required name="message" class="form-control"
+													placeholder="">Hello, I hope you will be in your good health. I am agreed with ur payment for verifying my property. So i would like to verify my sweeper service with service id {{$sweeper->id}}. Thanks</textarea>
+											</div>
+											<button type="submit"
+												class="btn btnDark fontNeuron buttonXL">Submit</button>
+										</form>
+									</section>
+								</aside>
 							</div>
 						</div>
-					</form>
+					</div>
 				</main>
 			</div>
 			<!-- pageFooterBlock -->
@@ -407,8 +408,10 @@
 					</div>
 				</footer>
 				<!-- btnScrollToTop -->
-				<a href="#pageWrapper" class="btnScrollToTop smooth textWhite">Scroll Top <i class="fi flaticon-arrows btnScrollIcn"></i></a>
-				<span class="bgCover elemenBlock" style=""></span>
+				<a href="#pageWrapper" class="btnScrollToTop smooth textWhite">Scroll Top <i
+						class="fi flaticon-arrows btnScrollIcn"></i></a>
+				<span class="bgCover elemenBlock"
+					style=""></span>
 			</div>
 		</div>
 		<!-- pagePopupWrap -->
@@ -437,14 +440,18 @@
 											<span class="fakeLabel">Remember me</span>
 										</label>
 									</div>
-									<button type="submit" class="btn btnSecondary elemenBlock fontNeuron fwNormal text-uppercase btnSubmit">LOGIN</button>
+									<button type="submit"
+										class="btn btnSecondary elemenBlock fontNeuron fwNormal text-uppercase btnSubmit">LOGIN</button>
 									<a href="#" class="linkForget">Forgot Password?</a>
 								</div>
 								<div class="col">
 									<p>You Can Login using your facebook Profile or Google account</p>
-									<button type="button" class="btnSocial btnFb elemenBlock"><i class="fab fa-facebook-f btnIco"></i> Facebook Connect</button>
-									<button type="button" class="btnSocial btnTw elemenBlock"><i class="fab fa-twitter btnIco"></i> Twitter Connect</button>
-									<button type="button" class="btnSocial btnG elemenBlock"><i class="fab fa-google btnIco"></i> Google Connect</button>
+									<button type="button" class="btnSocial btnFb elemenBlock"><i
+											class="fab fa-facebook-f btnIco"></i> Facebook Connect</button>
+									<button type="button" class="btnSocial btnTw elemenBlock"><i
+											class="fab fa-twitter btnIco"></i> Twitter Connect</button>
+									<button type="button" class="btnSocial btnG elemenBlock"><i
+											class="fab fa-google btnIco"></i> Google Connect</button>
 								</div>
 							</div>
 						</div>
@@ -461,16 +468,17 @@
 										<input type="password" class="form-control elemenBlock" placeholder="Password">
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control elemenBlock" placeholder="Confirm Password">
+										<input type="password" class="form-control elemenBlock"
+											placeholder="Confirm Password">
 									</div>
 									<div class="form-group">
-										<input type="email" class="form-control elemenBlock" placeholder="Email Address">
+										<input type="email" class="form-control elemenBlock"
+											placeholder="Email Address">
 									</div>
 									<div class="form-group">
 										<select data-placeholder="Type" class="chosen-select">
 											<option value="1">House Owner</option>
 											<option value="2">Service Owner</option>
-											<option value="3">Data Operator</option>
 										</select>
 									</div>
 									<div class="form-group">
@@ -480,13 +488,17 @@
 											<span class="fakeLabel">I have read and agree to the Term of Service.</span>
 										</label>
 									</div>
-									<button type="submit" class="btn btn-primary elemenBlock fontNeuron fwNormal text-uppercase btnSubmit">REGISTER</button>
+									<button type="submit"
+										class="btn btn-primary elemenBlock fontNeuron fwNormal text-uppercase btnSubmit">REGISTER</button>
 								</div>
 								<div class="col">
 									<p>You Can Login using your facebook Profile or Google account</p>
-									<button type="button" class="btnSocial btnFb elemenBlock"><i class="fab fa-facebook-f btnIco"></i> Facebook Connect</button>
-									<button type="button" class="btnSocial btnTw elemenBlock"><i class="fab fa-twitter btnIco"></i> Twitter Connect</button>
-									<button type="button" class="btnSocial btnG elemenBlock"><i class="fab fa-google btnIco"></i> Google Connect</button>
+									<button type="button" class="btnSocial btnFb elemenBlock"><i
+											class="fab fa-facebook-f btnIco"></i> Facebook Connect</button>
+									<button type="button" class="btnSocial btnTw elemenBlock"><i
+											class="fab fa-twitter btnIco"></i> Twitter Connect</button>
+									<button type="button" class="btnSocial btnG elemenBlock"><i
+											class="fab fa-google btnIco"></i> Google Connect</button>
 								</div>
 							</div>
 						</div>
@@ -496,12 +508,23 @@
 		</div>
 	</div>
 	<!-- include jQuery library -->
-	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery.main.js"></script>
+	<script src="../js/plugins.js"></script>
+
 	<!-- include bootstrap JavaScript -->
-	<script src="js/bootstrap-slider.min.js"></script>
+	<script src="../js/bootstrap-slider.min.js"></script>
+
+	<script type="text/javascript">
+		$('.slick-carousel').slick({
+			dots:true,
+			arrows:false
+
+		});
+	</script>
+
 	<!-- include custom JavaScript -->
-	<script src="js/jquery.main.js"></script>
-	<script type="text/javascript" src="js/init.js"></script>
+	{{-- <script type="text/javascript" src="../js/init.js"></script> --}}
 </body>
+
 </html>

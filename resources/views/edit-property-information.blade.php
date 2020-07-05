@@ -79,16 +79,42 @@
                                 <label for="itemN-16">Price</label>
                                 <input required name="price" type="text" class="form-control" placeholder="{{$house->price}}" id="itemN-16">
                               </div>
-                            </div>
+							</div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
-                                <label for="itemN-17">Price</label>
+                                <label for="itemN-17">Price Negotiable</label>
                                 <select required name="negotiable" data-placeholder="{{$house->negotiable}}" class="form-control" id="itemN-17">
 									<option value="Yes">Negotiable</option>
 									<option value="No">Not Negotiable</option>
 								  </select>
                               </div>
-                            </div>
+							</div>
+							
+							<div class="col-xs-12">
+								<div class="form-group">
+								  <label for="itemN-101">Address</label>
+								  <select  required name="hello" data-placeholder="" class="form-control" id="itemN-101">
+									  <option value="{{$house->address}}">{{$house->address}}</option>
+									</select>
+								</div>
+							  </div>
+							  <div  class="col-xs-12 col-sm-6">
+								<div class="form-group">
+								  <label for="itemN-102">City</label>
+								  <select  required name="city_id" data-placeholder="" class="form-control" id="itemN-102">
+									  <option value="{{$house->city_id}}">{{$house->city_id}}</option>
+									</select>
+								</div>
+							  </div>
+							  <div  class="col-xs-12 col-sm-6">
+								<div class="form-group">
+								  <label for="itemN-103">Sub Area</label>
+								  <select  required name="sub_area" data-placeholder="" class="form-control" id="itemN-103">
+									  <option value="{{$house->sub_area_id}}">{{$house->sub_area_id}}</option>
+									</select>
+								</div>
+							  </div>
+
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-18">Bedrooms</label>
@@ -137,7 +163,7 @@
                           </div>
                           <div class="btnArea">
 							<br><button class="btn btnDark"><a href="/ho_dashboard">Back</a></button>
-							<button type="submit" class="btn btnDark">Save</button>
+							<button type="submit" class="btn btnDark">Update</button>
                           </div>
                         </form>
                       </div>

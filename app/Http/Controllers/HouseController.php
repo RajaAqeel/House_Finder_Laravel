@@ -32,10 +32,10 @@ class HouseController extends Controller
     {
         $ho = house_owner::where('user_id',Auth::user()->id)->first();
         $id =$ho->id;
-        $city_name = city::select('name')->where('id', $ho->city_id)->get();
-        $sub_area_name = sub_area::select('name')->where('id', $ho->sub_area_id)->get();
+        $city = city::where('id', $ho->city_id)->first();
+        $sub_area = sub_area::where('id', $ho->sub_area_id)->first();
         $allHouses = house::where('house_owner_id', $id)->where('favourite', 'yes')->paginate(10);
-        return view('favourite-properties')->with('allHouses', $allHouses)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name)->with('ho', $ho);
+        return view('favourite-properties')->with('allHouses', $allHouses)->with('city', $city)->with('sub_area', $sub_area)->with('ho', $ho);
     }
 
     /**
@@ -87,7 +87,7 @@ class HouseController extends Controller
         $houses->address = $request->input('address');
         $houses->favourite = 'no';
         $houses->verified = 'no';
-        $houses->status = 'Yes';
+        $houses->status = 'Avl';
         $houses->negotiable = $request->input('negotiable');
         
 
@@ -143,8 +143,8 @@ class HouseController extends Controller
     public function show($id)
     {
         
-        $allHouses = house::orderBy('created_at')->get();
-        $house = house::find($id)->first();
+        $allHouses = house::where('id', '!=', $id)->orderBy('created_at')->get();
+        $house = house::find($id);
         $houseOwner = house_owner::where('id', $house->house_onwer_id)->first();
         $city_name = city::where('id', $house->city_id)->first();
         $sub_area_name = sub_area::where('id', $house->sub_area_id)->first();
@@ -197,15 +197,12 @@ class HouseController extends Controller
         $houses->area_value = $request->input('area');
         $houses->description = $request->input('description');
         $houses->house_owner_id = $ho->id;
-        $houses->city_id = $request->input('city');
+        $houses->city_id = $request->input('city_id');
         $houses->sub_area_id = $request->input('sub_area');
-        $houses->address = $request->input('address');
+        $houses->address = $request->input('hello');
         $houses->favourite = 'no';
         $houses->verified = 'no';
         $houses->status = 'Avl';
-        $houses->address = $houses->adress;
-        $houses->city_id = $houses->city_id;
-        $houses->sub_area_id = $houses->sub_area_id;
         $houses->negotiable = $request->input('negotiable');
         if ($request->hasFile('img_url')) {
             //Get Filename with Ext

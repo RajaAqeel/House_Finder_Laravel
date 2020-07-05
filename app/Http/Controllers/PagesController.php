@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\city;
 use App\house;
+use App\house_owner;
 class PagesController extends Controller
 {
     public function home(){
