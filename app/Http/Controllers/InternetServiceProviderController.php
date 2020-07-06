@@ -67,6 +67,7 @@ class InternetServiceProviderController extends Controller
         $internet->sub_area_id = $request->get('sub_area');
         $internet->favourite = 'no';
         $internet->verified = 'no';
+        $internet->status = 'Avl';
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $internet->service_provider_id =$so->id;
         $internet->save();
@@ -112,7 +113,7 @@ class InternetServiceProviderController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'city' => ['required'],
+            'city_id' => ['required'],
             'sub_area' => ['required'],
             'service_title' => ['required', 'regex:/^[a-zA-Z]+$/u'],
             'price' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
@@ -128,10 +129,11 @@ class InternetServiceProviderController extends Controller
         $internet->complaint_helpline = $request->get('c_hl');
         $internet->customer_service_helpline = $request->get('cc_hl');
         $internet->phone_number = $request->get('number');
-        $internet->city_id = $request->get('city');
+        $internet->city_id = $request->get('city_id');
         $internet->sub_area_id = $request->get('sub_area');
         $internet->favourite = 'no';
         $internet->verified = 'no';
+        $internet->status = 'Avl';
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $internet->service_provider_id =$so->id;
         $internet->update();

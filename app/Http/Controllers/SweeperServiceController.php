@@ -54,6 +54,7 @@ class SweeperServiceController extends Controller
         $sweeper->sub_area_id = $request->get('sub_area');
         $sweeper->favourite = 'no';
         $sweeper->verified = 'no';
+        $sweeper->status = 'Avl';
         $sweeper->description = $request->input('description');
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $sweeper->service_provider_id =$so->id;
@@ -102,7 +103,7 @@ class SweeperServiceController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'city' => ['required'],
+            'city_id' => ['required'],
             'sub_area' => ['required'],
             'service_title' => ['required', 'regex:/^[a-zA-Z]+$/u'],
             'unit' => ['required'],
@@ -114,10 +115,11 @@ class SweeperServiceController extends Controller
         $sweeper->name = $request->get('name');
         $sweeper->address = $request->get('address');
         $sweeper->phone_number = $request->get('number');
-        $sweeper->city_id = $request->get('city');
+        $sweeper->city_id = $request->get('city_id');
         $sweeper->sub_area_id = $request->get('sub_area');
         $sweeper->favourite = 'no';
         $sweeper->verified = 'no';
+        $sweeper->status = 'Avl';
         $sweeper->descripton = $request->input('description');
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $sweeper->service_provider_id =$so->id;

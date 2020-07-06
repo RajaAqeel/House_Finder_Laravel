@@ -296,7 +296,7 @@
 																			@foreach ($internets as $internet)
 																			<li>
 																				<div class="alignleft">
-																					<a href="/show/internet/{{$internet->id}}"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																					<a href="/show/internet/{{$internet->id}}"><img src="images/internet.jpg" alt="image description"></a>
 																				</div>
 																				<div class="descrWrap">
 																					<h4 class="fontNeuron fwBold"><a href="/show/internet/{{$internet->id}}">{{$internet->title}}</a></h4>
@@ -312,7 +312,7 @@
 																			@foreach ($cable_op as $internet)
 																				<li>
 																					<div class="alignleft">
-																						<a href="/show/cable/{{$internet->id}}"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																						<a href="/show/cable/{{$internet->id}}"><img src="images/cable.jpg" alt="image description"></a>
 																					</div>
 																					<div class="descrWrap">
 																						<h4 class="fontNeuron fwBold"><a href="/show/cable/{{$internet->id}}">{{$internet->title}}</a></h4>
@@ -328,7 +328,7 @@
 																			@foreach ($parking as $internet)
 																			<li>
 																				<div class="alignleft">
-																					<a href="/show/parking/{{$internet->id}}"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																				<a href="/show/parking/{{$internet->id}}"><img src="storage/parking/{{$internet->image}}" alt="image description"></a>
 																				</div>
 																				<div class="descrWrap">
 																					<h4 class="fontNeuron fwBold"><a href="/show/parking/{{$internet->id}}">{{$internet->title}}</a></h4>
@@ -344,7 +344,7 @@
 																			@foreach ($school_van as $internet)
 																			<li>
 																				<div class="alignleft">
-																					<a href="/show/schoolvan/{{$internet->id}}"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																					<a href="/show/schoolvan/{{$internet->id}}"><img src="images/schoolvan.png" alt="image description"></a>
 																				</div>
 																				<div class="descrWrap">
 																					<h4 class="fontNeuron fwBold"><a href="/show/schoolvan/{{$internet->id}}">{{$internet->title}}</a></h4>
@@ -360,7 +360,7 @@
 																			@foreach ($sweeper as $internet)
 																			<li>
 																				<div class="alignleft">
-																					<a href="/show/sweeper/{{$internet->id}}"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																					<a href="/show/sweeper/{{$internet->id}}"><img src="images/sweeper.jpg" alt="image description"></a>
 																				</div>
 																				<div class="descrWrap">
 																					<h4 class="fontNeuron fwBold"><a href="/show/sweeper/{{$internet->id}}">{{$internet->name}}</a></h4>
@@ -375,7 +375,7 @@
 																			@foreach ($watch_man as $internet)
 																			<li>
 																				<div class="alignleft">
-																					<a href="/show/watchman/{{$internet->id}}"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																					<a href="/show/watchman/{{$internet->id}}"><img src="images/watchman.jpg" alt="image description"></a>
 																				</div>
 																				<div class="descrWrap">
 																					<h4 class="fontNeuron fwBold"><a href="/show/watchman/{{$internet->id}}">{{$internet->title}}</a></h4>
@@ -391,7 +391,7 @@
 																			@foreach ($house_m as $internet)
 																			<li>
 																				<div class="alignleft">
-																					<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																					<a href="properties-single2.html"><img src="images/housemaid.png" alt="image description"></a>
 																				</div>
 																				<div class="descrWrap">
 																					<h4 class="fontNeuron fwBold"><a href="properties-single2.html">Eagle Apartments</a></h4>

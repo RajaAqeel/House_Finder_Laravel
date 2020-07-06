@@ -104,7 +104,7 @@ class CableProviderServiceController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'city' => ['required',],
+            'city_id' => ['required',],
             'sub_area' => ['required'],
             'service_title' => ['required'],
             'price' => ['required', 'regex:/^[0-9]+$/', 'numeric'],
@@ -117,10 +117,11 @@ class CableProviderServiceController extends Controller
         $cable->price_month = $request->get('price');
         $cable->address = $request->get('address');
         $cable->phone_number = $request->get('number');
-        $cable->city_id = $request->get('city');
+        $cable->city_id = $request->get('city_id');
         $cable->sub_area_id = $request->get('sub_area');
         $cable->favourite = 'no';
         $cable->verified = 'no';
+        $cable->status = 'Avl';
         $cable->description = $request->input('description');
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $cable->service_provider_id =$so->id;

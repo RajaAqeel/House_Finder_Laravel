@@ -53,6 +53,7 @@ class SchoolvanServiceController extends Controller
         $schoolvan->sub_area_id = $request->get('sub_area');
         $schoolvan->favourite = 'no';
         $schoolvan->verified = 'no';
+        $schoolvan->status = 'Avl';
         $schoolvan->description = $request->input('description');
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $schoolvan->service_provider_id =$so->id;
@@ -99,7 +100,7 @@ class SchoolvanServiceController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'city' => ['required'],
+            'city_id' => ['required'],
             'sub_area' => ['required'],
             'service_title' => ['required', 'regex:/^[a-zA-Z]+$/u'],
             'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
@@ -108,10 +109,11 @@ class SchoolvanServiceController extends Controller
         $schoolvan->title = $request->get('service_title');
         $schoolvan->driver_name = $request->input('name');
         $schoolvan->phone_number = $request->get('number');
-        $schoolvan->city_id = $request->get('city');
+        $schoolvan->city_id = $request->get('city_id');
         $schoolvan->sub_area_id = $request->get('sub_area');
         $schoolvan->favourite = 'no';
         $schoolvan->verified = 'no';
+        $schoolvan->status = 'Avl';
         $schoolvan->description = $request->input('description');
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $schoolvan->service_provider_id =$so->id;

@@ -53,6 +53,7 @@ class WatchmanServiceController extends Controller
         $watchman->sub_area_id = $request->get('sub_area');
         $watchman->favourite = 'no';
         $watchman->verified = 'no';
+        $watchman->status = 'Avl';
         $watchman->description = $request->input('description');
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $watchman->service_provider_id =$so->id;
@@ -99,7 +100,7 @@ class WatchmanServiceController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'city' => ['required'],
+            'city_id' => ['required'],
             'sub_area' => ['required'],
             'service_title' => ['required', 'regex:/^[a-zA-Z]+$/u'],
             'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
@@ -108,10 +109,11 @@ class WatchmanServiceController extends Controller
         $watchman->title = $request->get('service_title');
         $watchman->guard_name = $request->get('name');
         $watchman->phone_number = $request->get('number');
-        $watchman->city_id = $request->get('city');
+        $watchman->city_id = $request->get('city_id');
         $watchman->sub_area_id = $request->get('sub_area');
         $watchman->favourite = 'no';
         $watchman->verified = 'no';
+        $watchman->status = 'Avl';
         $watchman->description = $request->input('description');
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $watchman->service_provider_id =$so->id;

@@ -165,6 +165,12 @@
                                 </div>
 							  </div>
 							  <div class="col-xs-12">
+                                <div class="form-group">
+                                  <label for="itemN-101">Address</label>
+                                  <textarea required name="description" type="text" class="form-control" placeholder="about parking" id="itemN01">
+                                </div>
+							  </div>
+							  <div class="col-xs-12">
 								<div class="form-group">
 								  <label for="item-map">Upload images</label>
 								  <div class="input-group">

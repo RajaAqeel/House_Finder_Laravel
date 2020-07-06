@@ -59,6 +59,8 @@ class ParkingServiceController extends Controller
         $parking->sub_area_id = $request->get('sub_area');
         $parking->favourite = 'no';
         $parking->verified = 'no';
+        $parking->status = 'Avl';
+        $parking->description = $request->input('description');
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $parking->service_provider_id =$so->id;
 
@@ -121,7 +123,7 @@ class ParkingServiceController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'city' => ['required'],
+            'city_id' => ['required'],
             'sub_area' => ['required'],
             'service_title' => ['required', 'regex:/^[a-zA-Z]+$/u'],
             'unit' => ['required'],
@@ -136,10 +138,12 @@ class ParkingServiceController extends Controller
         $parking->area_value = $request->get('value');
         $parking->address = $request->get('address');
         $parking->phone_number = $request->get('number');
-        $parking->city_id = $request->get('city');
+        $parking->city_id = $request->get('city_id');
         $parking->sub_area_id = $request->get('sub_area');
         $parking->favourite = 'no';
         $parking->verified = 'no';
+        $parking->status = 'Avl';
+        $parking->description = $request->input('description');
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $parking->service_provider_id =$so->id;
         if ($request->hasFile('img_url')) {

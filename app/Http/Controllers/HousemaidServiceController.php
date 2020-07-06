@@ -55,6 +55,7 @@ class HousemaidServiceController extends Controller
         $housemaid->sub_area_id = $request->get('sub_area');
         $housemaid->favourite = 'no';
         $housemaid->verified = 'no';
+        $housemaid->status = 'Avl';
         $housemaid->description = $request->input('description');
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $housemaid->service_provider_id =$so->id;
@@ -101,21 +102,22 @@ class HousemaidServiceController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'name' => ['required', 'regex:/^[a-zA-Z]+$/u'],
+            'name' => ['required', 'alpha'],
             'sub_area' => ['required'],
             'address' => ['required'],
             'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
             'description' => ['required'],
-            'city' => ['required'],
+            'city_id' => ['required'],
         ]);
         $housemaid = housemaid_service::where('id', $id)->first();
-        $housemaid->name = $request->get('service_title');
+        $housemaid->housemaid_name = $request->get('name');
         $housemaid->address = $request->get('address');
         $housemaid->phone_number = $request->get('number');
-        $housemaid->city_id = $request->get('city');
+        $housemaid->city_id = $request->get('city_id');
         $housemaid->sub_area_id = $request->get('sub_area');
         $housemaid->favourite = 'no';
         $housemaid->verified = 'no';
+        $housemaid->status = 'Avl';
         $housemaid->description = $request->input('description');
         $so = service_owner::where('user_id',Auth::user()->id)->first();
         $housemaid->service_provider_id =$so->id;
