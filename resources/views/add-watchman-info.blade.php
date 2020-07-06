@@ -83,23 +83,24 @@
 					  </ol>
 					  @if (count($errors) > 0)
 						  @foreach ($errors->all() as $error)
-				  				<div class="alert alert-danger">
+				  				<div class="alert alert-danger" role="alert">
 								  	{{$error}}
 								</div>
 						  @endforeach
 					  @endif
 					  @if (session('success'))
-						  <div class="alert alert-success">
+						  <div class="alert alert-success" role="alert">
 							  {{session('success')}}
 						  </div>
 					  @endif
 					  @if (session('error'))
-						<div class="alert alert-danger">
+						<div class="alert alert-danger" role="alert">
 							{{seesion('error')}}
 						</div>
 					  @endif
                       <div class="formContent">
-                        <form>
+						<form method="POST" action="/addWatchmanService">
+							@csrf
                           <header class="contentHead">
                             <h2 class="fontNeuron">Basic Info</h2>
                           
@@ -142,7 +143,7 @@
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-16">Phone Number</label>
-                                <input required name="number" type="number" class="form-control" placeholder="15000" min="0" max="30000" id="itemN-16">
+                                <input required name="number" type="number" class="form-control" placeholder="15000" min="0" id="itemN-16">
                               </div>
                             </div>
 

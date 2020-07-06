@@ -148,7 +148,7 @@
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-16">Land Area</label>
-                                <input required name="value" type="number" class="form-control" placeholder="5" min="0" max="9999" id="itemN-16">
+                                <input required name="value" type="number" class="form-control" placeholder="5" min="1" max="9999" id="itemN-16">
                               </div>
 							</div>
 							<div class="col-xs-12 col-sm-6">

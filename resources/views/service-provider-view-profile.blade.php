@@ -228,7 +228,7 @@
                             <aside class="profileSidebar">
                               <header class="head">
                                 <div class="imgProfile">
-									<img src="storage/uploads/Service Owner Profile/ {{$serviceOwner->image}}" alt="" width="74" height="74">
+									<img src="storage/uploads/Services Owner Profile/{{$serviceOwner->image}}" alt="hello" width="74" height="74">
                                 </div>
                                 <div class="info">
                                   <span class="text">{{Auth::user()->name}}</span>
@@ -255,7 +255,7 @@
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="favourited-services">
+                                  <a href="my-services">
                                     <i class="far fa-heart"></i>
                                     <span>Favorited Services</span>
                                   </a>
@@ -290,7 +290,7 @@
                                 <div class="accountHolder">
                                   <div class="imgProfile">
                                     <div class="imgThumbnail">
-                                      <img src="storage/uploads/Service Owner Profile/ {{$serviceOwner->image}}" alt="" width="200" height="200">
+                                      <img src="storage/uploads/Services Owner Profile/{{$serviceOwner->image}}" alt="" width="200" height="200">
                                     </div>
                                   </div>
                                   <div class="accountContent">

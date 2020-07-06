@@ -86,7 +86,7 @@ class HouseController extends Controller
         $houses->sub_area_id = $request->input('sub_area');
         $houses->address = $request->input('address');
         $houses->favourite = 'no';
-        $houses->verified = 'no';
+        $houses->verified = 'yes';
         $houses->status = 'Avl';
         $houses->negotiable = $request->input('negotiable');
         
@@ -145,7 +145,7 @@ class HouseController extends Controller
         
         $allHouses = house::where('id', '!=', $id)->orderBy('created_at')->get();
         $house = house::find($id);
-        $houseOwner = house_owner::where('id', $house->house_onwer_id)->first();
+        $houseOwner = house_owner::where('id', $house->house_owner_id)->first();
         $city_name = city::where('id', $house->city_id)->first();
         $sub_area_name = sub_area::where('id', $house->sub_area_id)->first();
         return view('properties-single2')->with('house', $house)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name)->with('allHouses', $allHouses)->with('houseOwner', $houseOwner);
@@ -201,7 +201,7 @@ class HouseController extends Controller
         $houses->sub_area_id = $request->input('sub_area');
         $houses->address = $request->input('hello');
         $houses->favourite = 'no';
-        $houses->verified = 'no';
+        $houses->verified = 'yes';
         $houses->status = 'Avl';
         $houses->negotiable = $request->input('negotiable');
         if ($request->hasFile('img_url')) {
@@ -255,14 +255,6 @@ class HouseController extends Controller
         $house->favourite = 'yes';
         $house->update();
         return redirect('/my-properties');
-    }
-    public function show1($id)
-    {
-        $house = house::find($id);
-        $houseOwner = house_owner::where('id', $house->house_onwer_id);
-        $city_name = city::where('id', $house->city_id)->first();
-        $sub_area_name = sub_area::where('id', $house->sub_area_id)->first();
-        return view('properties1-single2')->with('house', $house)->with('city_name', $city_name)->with('sub_area_name', $sub_area_name);
     }
     public function statusForm($id)
     {

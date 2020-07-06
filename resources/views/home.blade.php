@@ -692,7 +692,28 @@
 														<img src="images/islamabad.jpg" alt="image description">
 													</a>
 												</div>
-												<h2 class="fontNeuron"><a href="blog-detail.html">Getting Started Designing Apps for the Apple Watch</a></h2>
+												<h2 class="fontNeuron"><a href="blog-detail">Getting Started Designing Apps for the Apple Watch</a></h2>
+												<p>
+													<a href="#" class="btn btnSmall btn-info">Ali Tufan</a>
+													<time datetime="2011-01-12">February 9, 2017</time>
+													<a href="#" class="commentsCount">12 comment</a>
+												</p>
+												<footer class="PostColumnFoot">
+													<a href="blog-detail" class="elemenBlock readMore text-capitalize">Read Article <i class="fi flaticon-arrows readMoreIcn"></i></a>
+												</footer>
+											</article>
+										</div>
+									</div>
+									<div>
+										<div class="col-xs-12">
+											<!-- newsPostColumn -->
+											<article class="newsPostColumn">
+												<div class="aligncenter">
+													<a href="blog-detail.html">
+														<img src="images/islamabad.jpg" alt="image description">
+													</a>
+												</div>
+												<h2 class="fontNeuron"><a href="blog-detail">Take Away You Can Get From</a></h2>
 												<p>
 													<a href="#" class="btn btnSmall btn-info">Ali Tufan</a>
 													<time datetime="2011-01-12">February 9, 2017</time>
@@ -713,7 +734,7 @@
 														<img src="images/islamabad.jpg" alt="image description">
 													</a>
 												</div>
-												<h2 class="fontNeuron"><a href="blog-detail.html">Take Away You Can Get From</a></h2>
+												<h2 class="fontNeuron"><a href="blog-detail">Getting Started Designing Apps for the Apple Watch</a></h2>
 												<p>
 													<a href="#" class="btn btnSmall btn-info">Ali Tufan</a>
 													<time datetime="2011-01-12">February 9, 2017</time>
@@ -730,28 +751,7 @@
 											<!-- newsPostColumn -->
 											<article class="newsPostColumn">
 												<div class="aligncenter">
-													<a href="blog-detail.html">
-														<img src="images/islamabad.jpg" alt="image description">
-													</a>
-												</div>
-												<h2 class="fontNeuron"><a href="blog-detail.html">Getting Started Designing Apps for the Apple Watch</a></h2>
-												<p>
-													<a href="#" class="btn btnSmall btn-info">Ali Tufan</a>
-													<time datetime="2011-01-12">February 9, 2017</time>
-													<a href="#" class="commentsCount">12 comment</a>
-												</p>
-												<footer class="PostColumnFoot">
-													<a href="blog-detail.html" class="elemenBlock readMore text-capitalize">Read Article <i class="fi flaticon-arrows readMoreIcn"></i></a>
-												</footer>
-											</article>
-										</div>
-									</div>
-									<div>
-										<div class="col-xs-12">
-											<!-- newsPostColumn -->
-											<article class="newsPostColumn">
-												<div class="aligncenter">
-													<a href="blog-detail.html">
+													<a href="blog-detail">
 														<img src="images/islamabad.jpg" alt="image description">
 													</a>
 												</div>

@@ -296,10 +296,10 @@
 																			@foreach ($internets as $internet)
 																			<li>
 																				<div class="alignleft">
-																					<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																					<a href="/show/internet/{{$internet->id}}"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
 																				</div>
 																				<div class="descrWrap">
-																					<h4 class="fontNeuron fwBold"><a href="properties-single2.html">{{$internet->title}}</a></h4>
+																					<h4 class="fontNeuron fwBold"><a href="/show/internet/{{$internet->id}}">{{$internet->title}}</a></h4>
 																					<strong class="price elemenBlock fwSemi fontNeuron">  {{$internet->price_month}}</strong>
 																					<p>{{$internet->address}}</p>
 																				</div>
@@ -312,10 +312,10 @@
 																			@foreach ($cable_op as $internet)
 																				<li>
 																					<div class="alignleft">
-																						<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																						<a href="/show/cable/{{$internet->id}}"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
 																					</div>
 																					<div class="descrWrap">
-																						<h4 class="fontNeuron fwBold"><a href="properties-single2.html">{{$internet->title}}</a></h4>
+																						<h4 class="fontNeuron fwBold"><a href="/show/cable/{{$internet->id}}">{{$internet->title}}</a></h4>
 																						<strong class="price elemenBlock fwSemi fontNeuron">  {{$internet->price_month}}</strong>
 																						<p>{{$internet->address}}</p>
 																					</div>
@@ -328,10 +328,10 @@
 																			@foreach ($parking as $internet)
 																			<li>
 																				<div class="alignleft">
-																					<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																					<a href="/show/parking/{{$internet->id}}"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
 																				</div>
 																				<div class="descrWrap">
-																					<h4 class="fontNeuron fwBold"><a href="properties-single2.html">{{$internet->title}}</a></h4>
+																					<h4 class="fontNeuron fwBold"><a href="/show/parking/{{$internet->id}}">{{$internet->title}}</a></h4>
 																					<strong class="price elemenBlock fwSemi fontNeuron">phone number  {{$internet->phone_number}}</strong>
 																					<p>{{$internet->address}}</p>
 																				</div>
@@ -344,12 +344,12 @@
 																			@foreach ($school_van as $internet)
 																			<li>
 																				<div class="alignleft">
-																					<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																					<a href="/show/schoolvan/{{$internet->id}}"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
 																				</div>
 																				<div class="descrWrap">
-																					<h4 class="fontNeuron fwBold"><a href="properties-single2.html">Eagle Apartments</a></h4>
-																					<strong class="price elemenBlock fwSemi fontNeuron">  467,000</strong>
-																					<p>9364 School St. Lynchburg, NY</p>
+																					<h4 class="fontNeuron fwBold"><a href="/show/schoolvan/{{$internet->id}}">{{$internet->title}}</a></h4>
+																					<strong class="price elemenBlock fwSemi fontNeuron">Driver Name  {{$internet->driver_name}}</strong>
+																					<p>{{$internet->phone_number}}</p>
 																				</div>
 																			</li>
 																			@endforeach
@@ -360,12 +360,12 @@
 																			@foreach ($sweeper as $internet)
 																			<li>
 																				<div class="alignleft">
-																					<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																					<a href="/show/sweeper/{{$internet->id}}"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
 																				</div>
 																				<div class="descrWrap">
-																					<h4 class="fontNeuron fwBold"><a href="properties-single2.html">Eagle Apartments</a></h4>
-																					<strong class="price elemenBlock fwSemi fontNeuron">  467,000</strong>
-																					<p>9364 School St. Lynchburg, NY</p>
+																					<h4 class="fontNeuron fwBold"><a href="/show/sweeper/{{$internet->id}}">{{$internet->name}}</a></h4>
+																				<strong class="price elemenBlock fwSemi fontNeuron">Phone Number {{$internet->phone_number}}</strong>
+																					<p>{{$internet->address}}</p>
 																				</div>
 																			</li>
 																			@endforeach
@@ -375,12 +375,12 @@
 																			@foreach ($watch_man as $internet)
 																			<li>
 																				<div class="alignleft">
-																					<a href="properties-single2.html"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
+																					<a href="/show/watchman/{{$internet->id}}"><img src="https://via.placeholder.com/110x80" alt="image description"></a>
 																				</div>
 																				<div class="descrWrap">
-																					<h4 class="fontNeuron fwBold"><a href="properties-single2.html">Eagle Apartments</a></h4>
-																					<strong class="price elemenBlock fwSemi fontNeuron">  467,000</strong>
-																					<p>9364 School St. Lynchburg, NY</p>
+																					<h4 class="fontNeuron fwBold"><a href="/show/watchman/{{$internet->id}}">{{$internet->title}}</a></h4>
+																					<strong class="price elemenBlock fwSemi fontNeuron">Guard Name  {{$internet->guard_name}}</strong>
+																				<p>Phone Number {{$internet->phone_number}}</p>
 																				</div>
 																			</li>
 																			@endforeach

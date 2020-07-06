@@ -276,6 +276,21 @@
 								<!-- content -->
 								<article id="content">
 									<!-- tabs -->
+									<div class="tabSetholder tabschanges bgWhite">
+										<div class="tab-content">
+											<div id="tab1-0">
+												<div class="slick-carousel slickSlider postColumnImageSlider">
+														<div>
+															<div class="imgHolder">
+																<a href="#">
+																	<img src="../../images/internet.jpg" alt="image description">
+																</a>
+															</div>
+														</div>
+												</div>
+											</div>
+										</div>
+									</div>
 									<section class="accountData">
 										<div class="head">
 											<h4 class="fontNeuron">Complaint Helpline</h4>

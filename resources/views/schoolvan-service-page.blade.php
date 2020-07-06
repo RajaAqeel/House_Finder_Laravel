@@ -275,6 +275,21 @@
 							<div class="col-xs-12 col-sm-12 col-md-8">
 								<!-- content -->
 								<article id="content">
+									<div class="tabSetholder tabschanges bgWhite">
+										<div class="tab-content">
+											<div id="tab1-0">
+												<div class="slick-carousel slickSlider postColumnImageSlider">
+														<div>
+															<div class="imgHolder">
+																<a href="#">
+																	<img src="../images/schoolvan.png" alt="image description">
+																</a>
+															</div>
+														</div>
+												</div>
+											</div>
+										</div>
+									</div>
 									<!-- tabs -->
 									<section class="accountData">
 										<div class="head">

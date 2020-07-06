@@ -232,7 +232,7 @@
 								<img src="storage/uploads/House Owner Profile/{{$ho->image}}" alt="" width="74" height="74">
                                 </div>
                                 <div class="info">
-                                  <span class="text">Ali Tufan</span>
+                                  <span class="text">{{Auth::user()->name}}</span>
                                   <span class="text"><a href="change-password" class="link">Change Password</a></span>
                                 </div>
                               </header>

@@ -28,7 +28,7 @@ class AllServicesController extends Controller
         $allSchoolVanServices = schoolvan_service::where('service_provider_id', $id)->get();
         $allSweeperServices = sweeper_service::where('service_provider_id', $id)->get();
         $allWatchmanServices = watchman_service::where('service_provider_id', $id)->get();
-        return view('/my-services')->with('allInternetServices', $allInternetServices)->with('allCableServices', $allCableServices)->with('allHousemaidServices', $allHousemaidServices)->with('allParkingServices', $allParkingServices)->with('allSchoolVanServices', $allSchoolVanServices)->with('allSweeperServices', $allSweeperServices)->with('allWatchmanServices', $allWatchmanServices);
+        return view('/my-services')->with('allInternetServices', $allInternetServices)->with('allCableServices', $allCableServices)->with('allHousemaidServices', $allHousemaidServices)->with('allParkingServices', $allParkingServices)->with('allSchoolVanServices', $allSchoolVanServices)->with('allSweeperServices', $allSweeperServices)->with('allWatchmanServices', $allWatchmanServices)->with('so', $so);
     }
     public function allServicesAdmin()
     {

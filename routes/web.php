@@ -127,6 +127,14 @@ Route::get('/house/{id}', 'HouseController@show');
 Route::get('/hello/{id}', 'InternetServiceProviderController@show');
 Route::get('/show/property/{id}', 'TenantPagesController@view');
 
+Route::get('/show/cable/{id}', 'TenantPagesController@cable');
+Route::get('/show/housemaid/{id}', 'TenantPagesController@housemaid');
+Route::get('/show/internet/{id}', 'TenantPagesController@internet');
+Route::get('/show/parking/{id}', 'TenantPagesController@parking');
+Route::get('/show/schoolvan/{id}', 'TenantPagesController@schoolvan');
+Route::get('/show/sweeper/{id}', 'TenantPagesController@sweeper');
+Route::get('/show/watchman/{id}', 'TenantPagesController@watchman');
+
 Route::get('/housemaid-service-page', 'HousemaidServiceController@show({id})');
 Route::get('/parking-service-page', 'ParkingServiceController@show({id})');
 Route::get('/schoolvan-service-page', 'SchoolvanServiceController@show({id})');
@@ -223,6 +231,9 @@ Route::post('/addSchoolVanService', [
 ]);
 Route::post('/addSweeperService', [
     'uses' => 'SweeperServiceController@store'
+]);
+Route::post('/addWatchmanService', [
+    'uses' => 'WatchmanServiceController@store'
 ]);
 Route::post('/sendMessage', [
     'uses' => 'EmailController@store'

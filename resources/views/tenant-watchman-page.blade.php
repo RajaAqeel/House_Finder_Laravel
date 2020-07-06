@@ -248,7 +248,7 @@
 										class="btn btnSmall btn-success fontBase">{{$watchman->status}}</a></h1>
 								<!-- captionAddress -->
 								<address class="captionAddress">
-									<span class="icn"><i class="fi flaticon-pin-1"></i>Driver Name</span>
+									<span class="icn"><i class="fi flaticon-pin-1"></i>Driver Name</span><br>
 									<p>{{$watchman->guard_name}}</p>
 								</address>
 							</div>
@@ -276,6 +276,21 @@
 								<!-- content -->
 								<article id="content">
 									<!-- tabs -->
+									<div class="tabSetholder tabschanges bgWhite">
+										<div class="tab-content">
+											<div id="tab1-0">
+												<div class="slick-carousel slickSlider postColumnImageSlider">
+														<div>
+															<div class="imgHolder">
+																<a href="#">
+																	<img src="../../images/watchman.png" alt="image description">
+																</a>
+															</div>
+														</div>
+												</div>
+											</div>
+										</div>
+									</div>
 									<section class="accountData">
 										<div class="head">
 											<h4 class="fontNeuron">Description</h4>
@@ -311,7 +326,7 @@
 												</div>
 											</div>
 											<div class="hb-numberbox text-center">
-												<h3><i class="fi flaticon-24-hours"></i>+92 3065085832</h3>
+												<h3><i class="fi flaticon-24-hours"></i>{{$houseOwner->phone_number}}</h3>
 											</div>
 										</div>
 										<form method="POST" accept="/verifyInternet" class="widgetCalcForm">

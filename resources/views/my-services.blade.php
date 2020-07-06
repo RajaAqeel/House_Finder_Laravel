@@ -229,10 +229,10 @@
                             <aside class="profileSidebar">
                               <header class="head">
                                 <div class="imgProfile">
-                                  <img src="https://via.placeholder.com/74x74" alt="" width="74" height="74">
+                                  <img src="storage/uploads/Services Owner Profile/{{$so->image}}" alt="" width="74" height="74">
                                 </div>
                                 <div class="info">
-                                  <span class="text">Ali Tufan</span>
+                                  <span class="text">{{Auth::user()->name}}</span>
                                   <span class="text"><a href="change-password" class="link">Change Password</a></span>
                                 </div>
                               </header>
@@ -256,7 +256,7 @@
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="favourited-services">
+                                  <a href="my-services">
                                     <i class="far fa-heart"></i>
                                     <span>Favorited Services</span>
                                   </a>
@@ -294,7 +294,7 @@
                                 <article class="propertyRow">
                                   <div class="info">
                                     <div class="imgThumbnail">
-									<a href="/internet/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+									<a href="/internet/{{$internet->id}}"><img src="images/parking.jpg" alt=""></a>
                                     </div>
                                     <div class="textBox">
 									<h4 class="fontNeuron"><a href="/internet/{{$internet->id}}">{{$internet->title}}</a></h4>
@@ -305,7 +305,7 @@
                                   </div>
                                   <div class="btnArea">
                                     <ul class="links list-unstyled">
-										<form action="/favPropertyStatus/{{$houses->id}}" method="POST">
+										<form action="/favPropertyStatus/{{$internet->id}}" method="POST">
 											{{ csrf_field() }}
 											{{ method_field('PUT') }}
 											<li><button type="submit"><a><i class="fa fa-heart"></i></a></button></li>
@@ -324,7 +324,7 @@
                                 <article class="propertyRow">
                                   <div class="info">
                                     <div class="imgThumbnail">
-									<a href="/cable/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+									<a href="/cable/{{$internet->id}}"><img src="images/cable.jpg" alt=""></a>
                                     </div>
                                     <div class="textBox">
 									<h4 class="fontNeuron"><a href="/cable/{{$internet->id}}">{{$internet->title}}</a></h4>
@@ -335,7 +335,7 @@
                                   </div>
                                   <div class="btnArea">
                                     <ul class="links list-unstyled">
-										<form action="/favPropertyStatus/{{$houses->id}}" method="POST">
+										<form action="/favPropertyStatus/{{$internet->id}}" method="POST">
 											{{ csrf_field() }}
 											{{ method_field('PUT') }}
 											<li><button type="submit"><a><i class="fa fa-heart"></i></a></button></li>
@@ -354,7 +354,7 @@
                                 <article class="propertyRow">
                                   <div class="info">
                                     <div class="imgThumbnail">
-									<a href="/housemaid/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+									<a href="/housemaid/{{$internet->id}}"><img src="images/housemaid.png" alt=""></a>
                                     </div>
                                     <div class="textBox">
 									<h4 class="fontNeuron"><a href="/housemaid/{{$internet->id}}">{{$internet->title}}</a></h4>
@@ -365,7 +365,7 @@
                                   </div>
                                   <div class="btnArea">
                                     <ul class="links list-unstyled">
-										<form action="/favPropertyStatus/{{$houses->id}}" method="POST">
+										<form action="/favPropertyStatus/{{$internet->id}}" method="POST">
 											{{ csrf_field() }}
 											{{ method_field('PUT') }}
 											<li><button type="submit"><a><i class="fa fa-heart"></i></a></button></li>
@@ -384,7 +384,7 @@
                                 <article class="propertyRow">
                                   <div class="info">
                                     <div class="imgThumbnail">
-									<a href="/parking/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+									<a href="/parking/{{$internet->id}}"><img src="storage/parking/{{$internet->image}}" alt=""></a>
                                     </div>
                                     <div class="textBox">
 									<h4 class="fontNeuron"><a href="/parking/{{$internet->id}}">{{$internet->title}}</a></h4>
@@ -395,7 +395,7 @@
                                   </div>
                                   <div class="btnArea">
                                     <ul class="links list-unstyled">
-										<form action="/favPropertyStatus/{{$houses->id}}" method="POST">
+										<form action="/favPropertyStatus/{{$internet->id}}" method="POST">
 											{{ csrf_field() }}
 											{{ method_field('PUT') }}
 											<li><button type="submit"><a><i class="fa fa-heart"></i></a></button></li>
@@ -414,7 +414,7 @@
                                 <article class="propertyRow">
                                   <div class="info">
                                     <div class="imgThumbnail">
-									<a href="/schoolvan/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+									<a href="/schoolvan/{{$internet->id}}"><img src="images/schoolvan.png" alt=""></a>
                                     </div>
                                     <div class="textBox">
 									<h4 class="fontNeuron"><a href="/schoolvan/{{$internet->id}}">{{$internet->title}}</a></h4>
@@ -425,7 +425,7 @@
                                   </div>
                                   <div class="btnArea">
                                     <ul class="links list-unstyled">
-										<form action="/favPropertyStatus/{{$houses->id}}" method="POST">
+										<form action="/favPropertyStatus/{{$internet->id}}" method="POST">
 											{{ csrf_field() }}
 											{{ method_field('PUT') }}
 											<li><button type="submit"><a><i class="fa fa-heart"></i></a></button></li>
@@ -444,7 +444,7 @@
                                 <article class="propertyRow">
                                   <div class="info">
                                     <div class="imgThumbnail">
-									<a href="/sweeper/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+									<a href="/sweeper/{{$internet->id}}"><img src="images/sweeper.jpg" alt=""></a>
                                     </div>
                                     <div class="textBox">
 									<h4 class="fontNeuron"><a href="/sweeper/{{$internet->id}}">{{$internet->name}}</a></h4>
@@ -455,7 +455,7 @@
                                   </div>
                                   <div class="btnArea">
                                     <ul class="links list-unstyled">
-										<form action="/favPropertyStatus/{{$houses->id}}" method="POST">
+										<form action="/favPropertyStatus/{{$internet->id}}" method="POST">
 											{{ csrf_field() }}
 											{{ method_field('PUT') }}
 											<li><button type="submit"><a><i class="fa fa-heart"></i></a></button></li>
@@ -474,7 +474,7 @@
                                 <article class="propertyRow">
                                   <div class="info">
                                     <div class="imgThumbnail">
-									<a href="/watchman/{{$internet->id}}"><img src="https://via.placeholder.com/110x85" alt=""></a>
+									<a href="/watchman/{{$internet->id}}"><img src="images/watchman.png" alt=""></a>
                                     </div>
                                     <div class="textBox">
 									<h4 class="fontNeuron"><a href="/watchman/{{$internet->id}}">{{$internet->title}}</a></h4>
@@ -485,7 +485,7 @@
                                   </div>
                                   <div class="btnArea">
                                     <ul class="links list-unstyled">
-										<form action="/favPropertyStatus/{{$houses->id}}" method="POST">
+										<form action="/favPropertyStatus/{{$internet->id}}" method="POST">
 											{{ csrf_field() }}
 											{{ method_field('PUT') }}
 											<li><button type="submit"><a><i class="fa fa-heart"></i></a></button></li>

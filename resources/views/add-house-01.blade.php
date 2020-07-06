@@ -91,12 +91,12 @@
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-16">Price</label>
-                                <input required name="price" type="number" class="form-control " placeholder=" 158" id="itemN-16" required>
+                                <input required name="price" type="number" min="0" class="form-control " placeholder=" 158" id="itemN-16" required>
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
-                                <label for="itemN-17">Price</label>
+                                <label for="itemN-17">Price Negotiable</label>
                                 <select required name="negotiable" data-placeholder="Select Option" class="form-control " id="itemN-17">
 									<option value="">Select Option</option>
 									<option value="Yes">Negotiable</option>
@@ -132,7 +132,7 @@
                             <div class="col-xs-12 col-sm-6">
                               <div class="form-group">
                                 <label for="itemN-21">Land Area</label>
-                                <input required name="area" type="number" class="form-control " placeholder="1500" id="itemN-21">
+                                <input required name="area" min="1" type="number" class="form-control " placeholder="1500" id="itemN-21">
                               </div>
 							</div>
                             <div class="col-xs-12">

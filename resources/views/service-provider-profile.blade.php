@@ -257,7 +257,7 @@
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="favourited-services">
+                                  <a href="my-services">
                                     <i class="far fa-heart"></i>
                                     <span>Favorited Services</span>
                                   </a>
@@ -285,7 +285,7 @@
                           <div class="col-xs-12 col-sm-8 col-lg-9">
                             <!-- accountData -->
                             <div class="accountData">
-                              <form method="POST" action="/store2">
+                              <form method="POST" enctype="multipart/form-data" action="/store2">
 								  @csrf
 								  <div class="head">
 									<h4 class="fontNeuron">Account Settings</h4>

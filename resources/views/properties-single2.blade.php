@@ -342,17 +342,17 @@
 										<div class="hb-headarea">
 											<div class="holder">
 												<figure class="hb-author-img pull-left">
-													<a href="#"><img src=""
+												<a href="#"><img width="70" height="70" src="../storage/uploads/House Owner Profile/{{$houseOwner->image}}"
 															alt="image description"></a>
 												</figure>
 												<div class="pull-left">
 													<div class="hb-headcontent">
-													<span>{{Auth::user()->id}}</span>
+													<span>{{Auth::user()->name}}</span>
 													</div>
 												</div>
 											</div>
 											<div class="hb-numberbox text-center">
-												<h3><i class="fi flaticon-24-hours"></i>+92 3065085832</h3>
+												<h3><i class="fi flaticon-24-hours"></i>{{$houseOwner->phone_number}}</h3>
 											</div>
 										</div>
 										<form method="POST" accept="/verifyHouse" class="widgetCalcForm">

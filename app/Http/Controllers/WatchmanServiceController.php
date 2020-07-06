@@ -42,7 +42,7 @@ class WatchmanServiceController extends Controller
         $this->validate($request, [
             'city' => ['required'],
             'sub_area' => ['required'],
-            'service_title' => ['required', 'regex:/^[a-zA-Z]+$/u'],
+            'service_title' => ['required'],
             'number' => ['required', 'regex:/^[0-9]+$/', 'digits_between:11,11', 'numeric'],
         ]);
         $watchman = new watchman_service;

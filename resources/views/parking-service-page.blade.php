@@ -284,47 +284,7 @@
 													<div>
 														<div class="imgHolder">
 															<a href="#">
-																<img src="https://via.placeholder.com/780x495"
-																	alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/780x495"
-																	alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/780x495"
-																	alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/780x495"
-																	alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/780x495"
-																	alt="image description">
-															</a>
-														</div>
-													</div>
-													<div>
-														<div class="imgHolder">
-															<a href="#">
-																<img src="https://via.placeholder.com/780x495"
+															<img src="../storage/parking/{{$parking->image}}"
 																	alt="image description">
 															</a>
 														</div>
