@@ -7,6 +7,7 @@ use App\city;
 use App\sub_area;
 use App\house_owner;
 use App\service_owner;
+use App\cable_provider_service;
 use App\user;
 use Auth;
 use DB;

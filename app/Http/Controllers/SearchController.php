@@ -19,6 +19,10 @@ class SearchController extends Controller
 {
     public function searchhouse(Request $request)
     {
+        $this->validate($request, [
+            'city_id' => ['required'],
+            'sub_area' => ['required'],
+        ]);
         $city = $request->get('city_id');
         $sub_area = $request->get('sub_area');
         $bedrooms = $request->get('bedrooms');

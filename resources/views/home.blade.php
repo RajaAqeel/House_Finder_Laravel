@@ -286,7 +286,7 @@
 							<div class="row">
 								<div class="col-xs-12 col-sm-6">
 									<div class="form-group">
-										<select name="city_id"data-placeholder="All Property Types" class="form-control" id="city">
+										<select required name="city_id"data-placeholder="All Property Types" class="form-control" id="city">
 											<option value="">Select city</option>
 											@foreach ($cities as $city)
 												<option value="{{$city->id}}">{{$city->name}}</option>
@@ -296,7 +296,7 @@
 								</div>
 								<div class="col-xs-12 col-sm-6">
 									<div class="form-group">
-										<select name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
+										<select required name="sub_area" data-placeholder="Select Option" class="form-control" id="sel1">
 											<option value="">Select Sub area</option>
 										</select>
 									</div>
